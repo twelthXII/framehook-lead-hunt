@@ -1,11 +1,20 @@
 import json
 import os
+import ssl
 import time
 import urllib.error
 import urllib.parse
 import urllib.request
 
 API_BASE = "https://www.googleapis.com/youtube/v3"
+
+
+def _ssl_context():
+    try:
+        import certifi
+        return ssl.create_default_context(cafile=certifi.where())
+    except ImportError:
+        return ssl.create_default_context()
 
 
 class YouTubeError(RuntimeError):
@@ -17,6 +26,7 @@ class YouTubeClient:
         self.api_key = api_key or os.environ.get("YOUTUBE_API_KEY")
         if not self.api_key:
             raise YouTubeError("YOUTUBE_API_KEY is not set")
+        self._ssl_context = _ssl_context()
 
     def _get(self, endpoint, params):
         query = dict(params)
@@ -26,7 +36,7 @@ class YouTubeClient:
         for attempt in range(3):
             try:
                 req = urllib.request.Request(url)
-                with urllib.request.urlopen(req, timeout=20) as resp:
+                with urllib.request.urlopen(req, timeout=20, context=self._ssl_context) as resp:
                     return json.loads(resp.read().decode("utf-8"))
             except urllib.error.HTTPError as e:
                 body = e.read().decode("utf-8", "ignore")

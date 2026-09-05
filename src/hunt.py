@@ -215,10 +215,13 @@ def cmd_contact_sheet(args):
         print(json.dumps({"error": "no long-form thumbnails available"}))
         sys.exit(1)
 
+    from youtube import _ssl_context
+
     thumbs = []
+    ctx = _ssl_context()
     for v in chosen:
         req = urllib.request.Request(v["thumbnail_url"], headers={"User-Agent": "Mozilla/5.0"})
-        with urllib.request.urlopen(req, timeout=15) as resp:
+        with urllib.request.urlopen(req, timeout=15, context=ctx) as resp:
             path = os.path.join(CONTACT_SHEET_DIR, f"_tmp_{v['video_id']}.jpg")
             os.makedirs(CONTACT_SHEET_DIR, exist_ok=True)
             with open(path, "wb") as f:
