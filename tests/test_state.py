@@ -67,28 +67,27 @@ def test_should_send_true_when_due_date_passed():
     assert reason == "due_for_recheck"
 
 
-def test_classify_good_fit_survives_low_timing():
-    assert state_mod.classify(fit=91, timing="LOW") == "GOOD_FIT"
+def test_classify_good_fit_requires_pain_confirmed():
+    assert state_mod.classify(fit=91, timing="LOW", pain_confirmed=True) == "GOOD_FIT"
 
 
-def test_classify_ready_now_requires_high_timing_and_min_fit_only():
-    # Opportunity status is fit/timing only — reachability never enters here.
-    assert state_mod.classify(fit=86, timing="HIGH") == "READY_NOW"
-    assert state_mod.classify(fit=50, timing="HIGH") == "WATCH"
-    assert state_mod.classify(fit=40, timing="HIGH") == "REJECTED"
+def test_classify_ready_now_requires_high_timing_min_fit_and_pain():
+    assert state_mod.classify(fit=86, timing="HIGH", pain_confirmed=True) == "READY_NOW"
+    assert state_mod.classify(fit=50, timing="HIGH", pain_confirmed=True) == "WATCH"
+    assert state_mod.classify(fit=40, timing="HIGH", pain_confirmed=True) == "REJECTED"
 
 
 def test_classify_never_ready_now_on_fit_alone():
     # A high fit score without a real trigger is GOOD_FIT, never READY_NOW —
     # "could use better thumbnails" is not a buying trigger.
-    assert state_mod.classify(fit=99, timing="LOW") != "READY_NOW"
-    assert state_mod.classify(fit=99, timing="MEDIUM") != "READY_NOW"
+    assert state_mod.classify(fit=99, timing="LOW", pain_confirmed=True) != "READY_NOW"
+    assert state_mod.classify(fit=99, timing="MEDIUM", pain_confirmed=True) != "READY_NOW"
 
 
 def test_classify_ready_now_unaffected_by_missing_contact():
     # A missing contact must never demote READY_NOW -> GOOD_FIT. Reachability
     # is tracked entirely separately via contact_status.
-    assert state_mod.classify(fit=95, timing="HIGH") == "READY_NOW"
+    assert state_mod.classify(fit=95, timing="HIGH", pain_confirmed=True) == "READY_NOW"
 
 
 def test_classify_watch_and_rejected_bands():
@@ -96,18 +95,84 @@ def test_classify_watch_and_rejected_bands():
     assert state_mod.classify(fit=30, timing="LOW") == "REJECTED"
 
 
-def test_normalize_contact_status_only_applies_at_good_fit_or_better():
-    assert state_mod.normalize_contact_status(fit=70, contact_status="CONTACT_FOUND") == "CONTACT_FOUND"
-    assert state_mod.normalize_contact_status(fit=70, contact_status="UNREACHABLE") == "UNREACHABLE"
-    assert state_mod.normalize_contact_status(fit=50, contact_status="CONTACT_FOUND") is None
-    assert state_mod.normalize_contact_status(fit=None, contact_status="CONTACT_FOUND") is None
+# --- PAIN GATE: calibration regression tests (A, B, H, I from the spec) ---
+
+def test_pain_gate_a_money_monetization_contact_no_pain_rejected():
+    # High money + monetization + reachable contact + no confirmed pain.
+    assert state_mod.classify(fit=90, timing="MEDIUM", pain_confirmed=False) == "REJECTED"
+
+
+def test_pain_gate_b_major_launch_high_timing_no_pain_rejected():
+    # A launch/trigger with HIGH timing but no evidence-backed pain: REJECTED,
+    # not READY_NOW. This is the Aniimo case exactly.
+    assert state_mod.classify(fit=82, timing="HIGH", pain_confirmed=False) == "REJECTED"
+
+
+def test_pain_gate_h_coherent_system_no_problem_fails_gate():
+    # Professional, coherent system with no concrete problem: pain_confirmed
+    # should never be True here, so classify rejects regardless of fit.
+    assert state_mod.classify(fit=82, timing="LOW", pain_confirmed=False) == "REJECTED"
+
+
+def test_pain_gate_i_inferred_pain_is_not_confirmed_pain():
+    # A trigger exists, but if pain was only inferred (not independently
+    # confirmed), pain_confirmed must be False and the gate fails.
+    assert state_mod.classify(fit=88, timing="HIGH", pain_confirmed=False) == "REJECTED"
+
+
+def test_pain_gate_j_visual_audit_required_for_packaging_pain():
+    # A thumbnail/packaging diagnosis cannot count as confirmed pain without
+    # an actual visual audit, even if pain_confirmed=True was claimed.
+    assert state_mod.gate_pain_confirmed(True, "thumbnail system", visual_audit_done=False) is False
+    assert state_mod.gate_pain_confirmed(True, "YouTube packaging", visual_audit_done=False) is False
+    assert state_mod.gate_pain_confirmed(True, "thumbnail system", visual_audit_done=True) is True
+    # A non-visual service (e.g. editing) isn't gated by the visual audit.
+    assert state_mod.gate_pain_confirmed(True, "editing", visual_audit_done=False) is True
+
+
+def test_normalize_contact_status_only_applies_after_pain_gate():
+    assert state_mod.normalize_contact_status("GOOD_FIT", "CONTACT_FOUND") == "CONTACT_FOUND"
+    assert state_mod.normalize_contact_status("READY_NOW", "UNREACHABLE") == "UNREACHABLE"
+    assert state_mod.normalize_contact_status("WATCH", "CONTACT_FOUND") is None
+    assert state_mod.normalize_contact_status("REJECTED", "CONTACT_FOUND") is None
 
 
 def test_normalize_contact_status_defaults_to_needed():
     # Not yet researched, or an invalid/unrecognized value — default to
     # CONTACT_NEEDED, never assume UNREACHABLE.
-    assert state_mod.normalize_contact_status(fit=70, contact_status=None) == "CONTACT_NEEDED"
-    assert state_mod.normalize_contact_status(fit=70, contact_status="garbage") == "CONTACT_NEEDED"
+    assert state_mod.normalize_contact_status("GOOD_FIT", None) == "CONTACT_NEEDED"
+    assert state_mod.normalize_contact_status("GOOD_FIT", "garbage") == "CONTACT_NEEDED"
+
+
+# --- CONFIRMED_LEAD: calibration regression tests (C, D, E, F, G from the spec) ---
+
+def test_confirmed_lead_c_ready_now_no_contact_not_confirmed():
+    assert state_mod.is_confirmed_lead("READY_NOW", "CONTACT_NEEDED") is False
+
+
+def test_confirmed_lead_d_ready_now_social_contact_confirmed():
+    assert state_mod.is_confirmed_lead("READY_NOW", "CONTACT_FOUND") is True
+
+
+def test_confirmed_lead_e_good_fit_social_contact_confirmed():
+    assert state_mod.is_confirmed_lead("GOOD_FIT", "CONTACT_FOUND") is True
+
+
+def test_confirmed_lead_f_email_only_not_confirmed():
+    assert state_mod.is_confirmed_lead("GOOD_FIT", "CONTACT_EMAIL_ONLY") is False
+
+
+def test_confirmed_lead_g_youtube_handle_only_is_contact_needed_not_confirmed():
+    # A YouTube handle alone never counts as a qualifying contact — it should
+    # be reported as CONTACT_NEEDED (not a recognized contact value), and
+    # never confirms the lead.
+    status = state_mod.normalize_contact_status("GOOD_FIT", None)
+    assert status == "CONTACT_NEEDED"
+    assert state_mod.is_confirmed_lead("GOOD_FIT", status) is False
+
+
+def test_confirmed_lead_contact_alone_cannot_rescue_a_rejected_opportunity():
+    assert state_mod.is_confirmed_lead("REJECTED", "CONTACT_FOUND") is False
 
 
 def test_should_send_rejected_account_ignores_due_date_needs_fingerprint_change():
@@ -129,12 +194,12 @@ def test_should_send_rejected_account_ignores_due_date_needs_fingerprint_change(
 def test_upsert_account_does_not_overwrite_locked_pipeline_status():
     state = state_mod.default_state()
     today = date.today()
-    state_mod.upsert_account(state, "chan1", "fp1", "Chan One", "LANE_A", today, fit=80, timing="LOW")
+    state_mod.upsert_account(state, "chan1", "fp1", "Chan One", "LANE_A", today, fit=80, timing="LOW", pain_confirmed=True)
     state["accounts"]["chan1"]["status"] = "CONTACTED"
 
     state_mod.upsert_account(
         state, "chan1", "fp2", "Chan One", "LANE_A", today, fit=90, timing="HIGH",
-        contact_status="CONTACT_FOUND",
+        pain_confirmed=True, contact_status="CONTACT_FOUND",
     )
 
     assert state["accounts"]["chan1"]["status"] == "CONTACTED"
@@ -142,25 +207,62 @@ def test_upsert_account_does_not_overwrite_locked_pipeline_status():
 
 
 def test_upsert_account_ready_now_with_contact_needed_stays_ready_now():
-    # The Aniimo case: fit >= 65, timing HIGH, no contact found yet — this is
-    # still READY_NOW, with contact_status flagging the open next action.
+    # The Aniimo-shape case, corrected: fit >= 65, timing HIGH, pain CONFIRMED,
+    # no contact found yet — this is READY_NOW, with contact_status flagging
+    # the open next action.
     state = state_mod.default_state()
     today = date.today()
-    state_mod.upsert_account(state, "chan1", "fp1", "Chan One", "LANE_A", today, fit=82, timing="HIGH")
+    state_mod.upsert_account(state, "chan1", "fp1", "Chan One", "LANE_A", today, fit=82, timing="HIGH", pain_confirmed=True)
     assert state["accounts"]["chan1"]["fit_tier"] == "READY_NOW"
     assert state["accounts"]["chan1"]["status"] == "READY_NOW"
     assert state["accounts"]["chan1"]["contact_status"] == "CONTACT_NEEDED"
+    assert state["accounts"]["chan1"]["confirmed_lead"] is False
 
 
-def test_upsert_account_records_unreachable_contact():
+def test_upsert_account_rejects_without_pain_regardless_of_fit_and_timing():
+    # The corrected Aniimo case: high fit, HIGH timing, no confirmed pain.
+    state = state_mod.default_state()
+    today = date.today()
+    state_mod.upsert_account(state, "chan1", "fp1", "Chan One", "LANE_A", today, fit=82, timing="HIGH", pain_confirmed=False)
+    acc = state["accounts"]["chan1"]
+    assert acc["fit_tier"] == "REJECTED"
+    assert acc["status"] == "REJECTED"
+    assert acc["rejection_reasons"] == ["NO_CLEAR_PAIN"]
+    assert acc["contact_status"] is None
+
+
+def test_upsert_account_records_custom_rejection_reasons():
+    # The corrected Pavel/Aniimo calibration: multiple rejection reasons.
     state = state_mod.default_state()
     today = date.today()
     state_mod.upsert_account(
         state, "chan1", "fp1", "Chan One", "LANE_A", today, fit=82, timing="HIGH",
-        contact_status="UNREACHABLE",
+        pain_confirmed=False, rejection_reasons=["NO_CLEAR_PAIN", "ALREADY_WELL_RESOURCED"],
     )
-    assert state["accounts"]["chan1"]["fit_tier"] == "READY_NOW"
-    assert state["accounts"]["chan1"]["contact_status"] == "UNREACHABLE"
+    assert state["accounts"]["chan1"]["rejection_reasons"] == ["NO_CLEAR_PAIN", "ALREADY_WELL_RESOURCED"]
+
+
+def test_upsert_account_records_confirmed_lead_true_with_social_contact():
+    state = state_mod.default_state()
+    today = date.today()
+    state_mod.upsert_account(
+        state, "chan1", "fp1", "Chan One", "LANE_A", today, fit=70, timing="LOW",
+        pain_confirmed=True, contact_status="CONTACT_FOUND",
+    )
+    assert state["accounts"]["chan1"]["confirmed_lead"] is True
+
+
+def test_upsert_account_visual_audit_gate_blocks_packaging_pain():
+    # Claiming pain_confirmed=True for a packaging service without a visual
+    # audit must not reach GOOD_FIT/READY_NOW.
+    state = state_mod.default_state()
+    today = date.today()
+    state_mod.upsert_account(
+        state, "chan1", "fp1", "Chan One", "LANE_A", today, fit=80, timing="LOW",
+        pain_confirmed=True, proposed_service="thumbnail system", visual_audit_done=False,
+    )
+    assert state["accounts"]["chan1"]["fit_tier"] == "REJECTED"
+    assert state["accounts"]["chan1"]["rejection_reasons"] == ["NO_CLEAR_PAIN"]
 
 
 def test_upsert_account_omits_next_review_for_low_priority_status():

@@ -21,14 +21,31 @@ STATE_PATH = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file
 #                                       re-classification never overwrites them
 #
 # CONTACT STATUS ("contact_status") - reachability only, tracked separately
-# once an account is at least GOOD_FIT. See CONTACT_STATUSES below.
+# once an account clears the PAIN GATE into GOOD_FIT/READY_NOW. A verified
+# NON-EMAIL contact is required for CONTACT_FOUND — email alone is
+# CONTACT_EMAIL_ONLY (weaker; does not make a CONFIRMED_LEAD). See
+# CONTACT_STATUSES below.
+#
+# PAIN GATE: a commercially attractive account (fit >= FIT_ATTRACTIVE) only
+# becomes GOOD_FIT/READY_NOW if a concrete, evidence-backed Framehook-solvable
+# problem was confirmed (pain_confirmed=True) — never inferred from money,
+# subscriber count, growth, launch timing, or reachability alone. Failing the
+# gate sends a would-be GOOD_FIT/READY_NOW account straight to REJECTED
+# (reason NO_CLEAR_PAIN), not down to WATCH — WATCH is for genuinely
+# lower fit (45-64), not a landing pad for "attractive but unproven".
 FIT_ATTRACTIVE = 65
 FIT_WATCH = 45
 
 CONTACT_FOUND = "CONTACT_FOUND"
 CONTACT_NEEDED = "CONTACT_NEEDED"
+CONTACT_EMAIL_ONLY = "CONTACT_EMAIL_ONLY"
 CONTACT_UNREACHABLE = "UNREACHABLE"
-CONTACT_STATUSES = {CONTACT_FOUND, CONTACT_NEEDED, CONTACT_UNREACHABLE}
+CONTACT_STATUSES = {CONTACT_FOUND, CONTACT_NEEDED, CONTACT_EMAIL_ONLY, CONTACT_UNREACHABLE}
+
+# A proposed service that needs a visual audit before pain can be confirmed —
+# matched as a case-insensitive substring of the free-text service Claude
+# proposes (e.g. "thumbnail system", "YouTube packaging").
+VISUAL_AUDIT_REQUIRED_SUBSTRINGS = ("thumbnail", "packaging")
 
 # These never get a re-classification overwrite from a fresh Pass-1 verdict —
 # once the user has recorded real pipeline movement, a routine run shouldn't
@@ -129,28 +146,70 @@ def should_send_to_claude(account, fingerprint, today, recheck_days=None):
     return False, "unchanged_and_not_due"
 
 
-def classify(fit, timing):
-    """Opportunity status: fit and timing only. Reachability is a separate
-    axis (see normalize_contact_status) and never changes this — a strong,
-    timely opportunity with no contact found yet is still READY_NOW, just
-    one whose next action is contact research rather than outreach."""
+def requires_visual_audit(proposed_service):
+    if not proposed_service:
+        return False
+    text = proposed_service.lower()
+    return any(s in text for s in VISUAL_AUDIT_REQUIRED_SUBSTRINGS)
+
+
+def gate_pain_confirmed(pain_confirmed, proposed_service=None, visual_audit_done=False):
+    """Backstop for the PAIN GATE's visual-audit requirement: a
+    thumbnail/packaging diagnosis can never count as confirmed pain without
+    an actual visual audit, no matter what was claimed. This is enforced in
+    code, not left to discipline alone."""
+    if requires_visual_audit(proposed_service) and not visual_audit_done:
+        return False
+    return bool(pain_confirmed)
+
+
+def classify(fit, timing, pain_confirmed=False):
+    """Opportunity status: fit, timing, AND the PAIN GATE. A commercially
+    attractive account (fit >= FIT_ATTRACTIVE) only reaches GOOD_FIT/READY_NOW
+    if pain_confirmed is True — a concrete, evidence-backed Framehook-solvable
+    problem, never inferred from money/size/growth/launch/contact alone. If
+    pain isn't confirmed, a would-be GOOD_FIT/READY_NOW account is REJECTED
+    outright, not downgraded to WATCH.
+
+    Reachability is a wholly separate axis (see normalize_contact_status) and
+    never affects this — a confirmed pain + a real trigger is still READY_NOW
+    with no contact found yet, just one whose next action is contact
+    research rather than outreach."""
     if fit >= FIT_ATTRACTIVE:
+        if not pain_confirmed:
+            return "REJECTED"
         return "READY_NOW" if timing == "HIGH" else "GOOD_FIT"
     if fit >= FIT_WATCH:
         return "WATCH"
     return "REJECTED"
 
 
-def normalize_contact_status(fit, contact_status):
-    """Contact status is only meaningful once an account is at least
-    commercially attractive (GOOD_FIT or better) — WATCH/REJECTED accounts
-    don't get contact research spent on them. Defaults to CONTACT_NEEDED
-    (research not yet done) rather than assuming UNREACHABLE."""
-    if fit is None or fit < FIT_ATTRACTIVE:
+def normalize_contact_status(fit_tier, contact_status):
+    """Contact status is only meaningful once an account has cleared the
+    PAIN GATE into GOOD_FIT/READY_NOW — WATCH/REJECTED accounts don't get
+    contact research spent on them. Defaults to CONTACT_NEEDED (research not
+    yet done, or not a recognized value) rather than assuming UNREACHABLE."""
+    if fit_tier not in ("READY_NOW", "GOOD_FIT"):
         return None
     if contact_status in CONTACT_STATUSES:
         return contact_status
     return CONTACT_NEEDED
+
+
+def is_confirmed_lead(fit_tier, contact_status):
+    """CONFIRMED_LEAD requires: cleared the PAIN GATE into GOOD_FIT/READY_NOW,
+    AND at least one verified non-email contact. Email-only or no contact at
+    all never confirms a lead — a contact can never rescue a bad opportunity,
+    and a good opportunity isn't confirmed until it's reachable."""
+    return fit_tier in ("READY_NOW", "GOOD_FIT") and contact_status == CONTACT_FOUND
+
+
+def default_rejection_reasons(pain_confirmed, rejection_reasons=None):
+    if rejection_reasons:
+        return list(rejection_reasons)
+    if not pain_confirmed:
+        return ["NO_CLEAR_PAIN"]
+    return []
 
 
 def next_review_date(status, today, recheck_days=None):
@@ -163,16 +222,26 @@ JUDGED_FIT_TIERS = {"READY_NOW", "GOOD_FIT", "WATCH"}
 
 
 def upsert_account(state, channel_id, fingerprint, name, lane_id, today,
-                    fit=None, timing=None, contact_status=None):
+                    fit=None, timing=None, pain_confirmed=False,
+                    proposed_service=None, visual_audit_done=False,
+                    contact_status=None, rejection_reasons=None):
     accounts = state["accounts"]
     existing = accounts.get(channel_id, {})
-    fit_tier = classify(fit, timing) if fit is not None else existing.get("fit_tier", "WATCH")
-    contact_status = (
-        normalize_contact_status(fit, contact_status) if fit is not None else existing.get("contact_status")
-    )
+
+    if fit is not None:
+        effective_pain = gate_pain_confirmed(pain_confirmed, proposed_service, visual_audit_done)
+        fit_tier = classify(fit, timing, effective_pain)
+        contact_status = normalize_contact_status(fit_tier, contact_status)
+        reasons = default_rejection_reasons(effective_pain, rejection_reasons) if fit_tier == "REJECTED" else []
+    else:
+        effective_pain = existing.get("pain_confirmed", False)
+        fit_tier = existing.get("fit_tier", "WATCH")
+        contact_status = existing.get("contact_status")
+        reasons = existing.get("rejection_reasons", [])
 
     locked = existing.get("status") in PIPELINE_LOCKED_STATUSES
     status = existing["status"] if locked else fit_tier
+    confirmed_lead = is_confirmed_lead(fit_tier, contact_status)
 
     history = existing.get("history", [])[-4:]
     history.append({"date": today.isoformat(), "fit": fit, "timing": timing, "fit_tier": fit_tier})
@@ -182,7 +251,10 @@ def upsert_account(state, channel_id, fingerprint, name, lane_id, today,
         "fingerprint": fingerprint,
         "status": status,
         "fit_tier": fit_tier,
+        "pain_confirmed": effective_pain,
+        "rejection_reasons": reasons,
         "contact_status": contact_status,
+        "confirmed_lead": confirmed_lead,
         "last_fit": fit,
         "last_timing": timing,
         "last_reviewed": today.isoformat(),

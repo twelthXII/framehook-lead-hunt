@@ -16,6 +16,19 @@ do targeted research on those finalists only, and write the fixed-format output.
 Ask before including any lead: *would a rational Framehook founder actually spend
 time contacting this account?* If probably not, drop it — do not pad the table.
 
+## Output language: Russian (permanent rule)
+
+Every piece of user-facing prose this skill produces — lead descriptions,
+observed-pain summaries, "why now" explanations, rejection reasons, proposed
+service, contact research notes, weekly summaries, recommendations — is
+written in **Russian**. This is permanent, not a one-time instruction.
+
+Left unchanged (never translated): people's names, company/channel names,
+URLs, usernames, email addresses, and the machine-readable status codes
+themselves (`READY_NOW`, `GOOD_FIT`, `WATCH`, `REJECTED`, `CONTACT_FOUND`,
+`CONTACT_NEEDED`, `CONTACT_EMAIL_ONLY`, `UNREACHABLE`, `CONFIRMED_LEAD`,
+`NO_CLEAR_PAIN`, `ALREADY_WELL_RESOURCED`).
+
 ## Who Framehook sells to
 
 **Primary — commercial creators.** Channels that function as businesses: regular
@@ -67,11 +80,19 @@ For each pack return only structured fields — no prose:
 
 ```
 {"id", "preliminary_fit", "timing", "account_value", "expansion",
- "confidence", "missing_information", "keep"}
+ "confidence", "missing_information", "pain_hypothesis", "keep"}
 ```
 
+`pain_hypothesis` at this stage is just your working guess at what the
+concrete problem might be (e.g. "possible inconsistent thumbnail system") —
+it is NOT a confirmed diagnosis yet. Nothing is confirmed pain until it
+survives the PAIN GATE below, which for a visual claim requires an actual
+visual audit, not a Pass-1 guess from metadata alone.
+
 Select roughly 8-12 `keep: true` finalists (never more than 12 unless the crop is
-unusually strong, never above the hard 20-lead ceiling downstream).
+unusually strong, never above the hard 20-lead ceiling downstream). `keep: true`
+at this stage means "worth spending enrichment budget on to try to confirm
+pain" — it does not mean the account has already qualified.
 
 ### Fit (0-100) — a single objective score, independent of timing
 
@@ -102,29 +123,172 @@ timing are independent axes, and they map to status like this:
 "The channel could use better thumbnails" is a Framehook-solvable gap, not a
 buying trigger — it never on its own justifies READY_NOW.
 
-### Reachability is a SEPARATE axis — it never changes opportunity status
+## The PAIN GATE — the most important rule in this skill
+
+**A trigger is not a pain.** Money, monetization, sponsor count, subscriber
+count, rapid growth, upload cadence, a launch, funding, or commercial activity
+in general can make an account *interesting to look at*. None of it proves
+Framehook has something useful to sell them. TRIGGER = why this account is
+worth examining now. PAIN = the actual problem Framehook has evidence it can
+solve. A trigger can raise urgency; it cannot manufacture pain that isn't
+observed.
+
+**A lead may only become GOOD_FIT or READY_NOW if it passes this gate.**
+Before assigning either status, answer explicitly: *can we point to a
+concrete, currently observable or independently confirmed problem that
+Framehook can solve?*
+
+- If **YES** (pain confirmed) → proceed to GOOD_FIT/READY_NOW per the fit/timing
+  table above.
+- If **NO** → **REJECTED, reason `NO_CLEAR_PAIN`** — regardless of money,
+  company size, subscriber count, contact availability, timing, launch,
+  sponsorship, or commercial value. This is a hard rule, not a nudge: a
+  would-be GOOD_FIT/READY_NOW account that fails the gate goes straight to
+  REJECTED, not down to WATCH (WATCH is for genuinely lower fit, 45-64 — not
+  a landing pad for "attractive but unproven").
+
+**Never invent a hypothetical operational problem to justify a lead.**
+Unacceptable reasoning (do not write anything shaped like this): "they
+probably need more content capacity," "they may need help scaling," "the
+launch probably creates workload," "their output is high so they could use
+help," "their packaging may be limiting performance" — unless actual evidence
+supports the specific conclusion.
+
+### What counts as evidence for the PAIN GATE
+
+**Thumbnails / packaging** — acceptable: a visibly inconsistent thumbnail
+system, weak or unclear hierarchy, repeated obvious execution problems, broken
+compositing/background removal, weak series identity, poor visual
+differentiation between videos, generic/repetitive packaging that creates a
+credible business problem, a major mismatch between strong content and weak
+packaging. **Not acceptable on their own:** "their thumbnails could be
+better," "there's always room to improve." A creator already running a
+coherent, professional system is not automatically a sales opportunity —
+"pretty good, could be marginally better" is not pain.
+
+**Content / editing** — acceptable: observable inconsistency in editing/output
+quality, clearly weak editing relative to the creator's level, a specific
+content-production problem confirmed through research, a confirmed need for
+more production output or external support.
+
+**Channel / content system** — acceptable: an obvious lack of
+packaging/content consistency, a concrete evidence-backed content-operations
+problem, a confirmed external production need.
+
+### Visual audit requirement — mandatory for any thumbnail/packaging diagnosis
+
+If the proposed service is thumbnails, a thumbnail system, packaging, a
+thumbnail refresh, or visual channel packaging, **the lead cannot be
+confirmed without an actual visual audit** of recent thumbnails (see the
+Visual thumbnail audit section below). Do not give a high-confidence
+packaging diagnosis from channel metadata, subscriber count, view rate,
+monetization signals, or search snippets alone — none of that is a
+substitute for actually looking at the thumbnails. If the audit hasn't
+happened yet, the evidence is incomplete: report it as incomplete, do not
+mark pain confirmed. **This is enforced in code, not just by discipline** —
+`gate_pain_confirmed()` in `src/state.py` forces `pain_confirmed` to `False`
+for any packaging-shaped proposed service when `visual_audit_done` isn't set,
+regardless of what you submit.
+
+### Evidence discipline
+
+Always distinguish three kinds of statement:
+
+- **OBSERVED/VERIFIED** — a fact actually supported by channel data, a visual
+  audit, or research you did.
+- **INFERENCE** — a reasonable interpretation drawn from that evidence, and
+  labeled as an inference, not stated as fact.
+- **UNKNOWN** — you tried to find out and couldn't. Say so; don't guess and
+  present the guess as known.
+
+Never invent: internal production capacity, team size, dissatisfaction with
+current contractors, a lack of internal designers/editors, a need to scale
+production, marketing budget, or decision-maker intent. If you don't know it,
+say you don't know it.
+
+**Do not invent performance metrics.** Never claim a thumbnail's CTR is bad,
+that packaging is suppressing CTR, or that a redesign will improve CTR, unless
+actual CTR data exists (it essentially never will from public research). A
+visual audit can identify inconsistency, weak hierarchy, an unclear concept,
+execution problems, or poor differentiation — visual appearance alone does
+not prove anything about CTR.
+
+## Reachability is a SEPARATE axis — it never changes opportunity status
 
 Whether you've found a way to reach a decision maker does not make an
 opportunity more or less good — it only tells you what the next action is.
 **A missing contact must never demote READY_NOW to GOOD_FIT.** A funded studio
-with a confirmed launch in 11 days is a READY_NOW opportunity whether or not
-you've found the marketing team's email yet — the fit and the timing trigger
-are both real and already verified; only the contact is still open.
+with a confirmed launch in 11 days *and confirmed pain* is a READY_NOW
+opportunity whether or not you've found the marketing team's contact yet —
+fit, timing, and pain are all already verified; only the contact is still
+open. (Note: a launch alone, with no confirmed pain, is not READY_NOW at
+all — see the PAIN GATE above. Reachability only becomes relevant once an
+account has already cleared that gate.)
 
-Track `contact_status` on every GOOD_FIT-or-better account, one of:
+### Confirmed contact requires a NON-EMAIL route
 
-- **`CONTACT_FOUND`** — a named decision maker, a real business email, or (for
-  a solo creator) a business site/About-page/DM path you actually found.
-- **`CONTACT_NEEDED`** — not yet researched, or researched but inconclusive.
-  This is the default — never assume `UNREACHABLE` just because one search
-  didn't turn up a contact.
+A candidate is not a confirmed lead until at least one usable **non-email**
+outreach route has been verified. Email alone never qualifies a candidate as
+confirmed — store it as supplemental information, but it doesn't do the job
+a qualifying contact does.
+
+**Qualifying contacts**, preferred order:
+
+1. personal Telegram profile/username
+2. founder/creator Telegram
+3. personal X/Twitter
+4. founder/creator X/Twitter
+5. personal Instagram
+6. founder/creator Instagram
+7. LinkedIn decision-maker profile
+8. Discord or another genuine direct-message route
+9. (fallback) an official brand/company Instagram, X, Telegram, or other
+   social page where DM outreach is realistically possible
+
+A personal decision-maker account is stronger than a generic company account.
+
+**Never count as a qualifying contact:** email only, a website URL, a contact
+form, a YouTube channel, a YouTube handle, a person's name with no reachable
+profile, a generic search result with no verified ownership, or a social
+account that can't reasonably be connected to the creator/business.
+
+### Contact status — four values
+
+- **`CONTACT_FOUND`** — at least one verified qualifying non-email contact
+  (see the list above) exists.
+- **`CONTACT_NEEDED`** — a good opportunity, but no qualifying contact found
+  yet. This is the default — never assume `UNREACHABLE` just because one
+  search came up empty, and a YouTube handle alone still reports as
+  `CONTACT_NEEDED`, not `CONTACT_FOUND`.
+- **`CONTACT_EMAIL_ONLY`** — only an email address was found. Weaker than
+  `CONTACT_FOUND`; store the email as supplemental info, but this status does
+  not confirm the lead.
 - **`UNREACHABLE`** — you actively researched and found good reason to believe
-  there is no viable path in (e.g. a gatekept large media company with no
-  public contact surface at all). Use sparingly; this is a stronger claim than
-  "I didn't find one."
+  there is no viable path in at all (e.g. a gatekept large company with no
+  public contact surface). Use sparingly; this is a stronger claim than "I
+  didn't find one."
 
-READY_NOW + CONTACT_NEEDED means: *this is a timely opportunity — contact
-research is the next action*, not "this isn't ready yet."
+### CONFIRMED_LEAD
+
+A candidate is `CONFIRMED_LEAD: YES` only when **all** of these hold:
+
+1. correct ICP / sufficient fit
+2. passes the PAIN GATE
+3. the diagnosis is evidence-backed (not an inference presented as fact)
+4. at least one qualifying non-email contact is verified (`CONTACT_FOUND`)
+
+Worked examples:
+
+| Opportunity | Contact | CONFIRMED_LEAD |
+|---|---|---|
+| READY_NOW | CONTACT_FOUND | **YES** |
+| READY_NOW | CONTACT_NEEDED | NO |
+| GOOD_FIT | CONTACT_FOUND | **YES** |
+| GOOD_FIT | CONTACT_EMAIL_ONLY | NO |
+| REJECTED | CONTACT_FOUND | NO |
+
+**A contact can never rescue a bad opportunity**, and a good opportunity isn't
+confirmed until it's reachable through a real route.
 
 ### Account value
 
@@ -135,29 +299,52 @@ research is the next action*, not "this isn't ready yet."
 These are potential estimates from observable economics (subs, views, sponsorship
 signals, business maturity) — never claim a known budget.
 
-## Targeted enrichment (finalists only, max 10 accounts)
+## Processing order (do not skip ahead to contact research)
+
+```
+discovery (src/hunt.py, already done)
+  -> deterministic filtering (already done)
+  -> Pass 1 fit/timing scoring + pain hypothesis
+  -> evidence gathering / visual audit
+  -> PAIN GATE
+  -> business qualification (GOOD_FIT / READY_NOW / WATCH / REJECTED)
+  -> targeted enrichment (only accounts that passed the gate)
+  -> social contact research (only accounts that passed the gate)
+  -> final classification + CONFIRMED_LEAD
+```
+
+Resolve pain *before* spending any budget on contact research. Do not
+research decision-maker contacts for an account that already fails the PAIN
+GATE — that's wasted tokens and wasted search budget on an account that's
+being rejected anyway.
+
+## Targeted enrichment (only accounts that passed the PAIN GATE, max 10 accounts)
 
 Before every search ask: **what unknown fact could materially change the
 decision?** Default to **one** targeted web search per finalist (monetization
-model, decision maker, recent trigger, business model, team size — whichever is
-the actual open question for that account). Allow a second search only if a major
-qualification uncertainty remains. Hard cap: 2 searches per finalist. Do not check
-Instagram, LinkedIn, TikTok, X, the website, and Telegram all for the same
-account — only the one or two that resolve the real unknown.
+model, business model, confirming/refuting a pain hypothesis — whichever is
+the actual open question for that account). Allow a second search only if a
+major qualification uncertainty remains. Hard cap: 2 searches per finalist.
 
-For any account that scores READY_NOW or GOOD_FIT (fit ≥ 65), spend the
-search on reachability itself: is there a named contact, a business email, or
-(for a solo creator) a real business site/About page — something you'd
-actually message? A YouTube channel simply existing is not `CONTACT_FOUND`.
-If the search doesn't turn up a contact, that's `CONTACT_NEEDED` — it does
-not change the account's fit or timing, and it does not mean `UNREACHABLE`.
+Once an account has passed the PAIN GATE (GOOD_FIT or READY_NOW), spend
+research on **social contact research**: look specifically for a creator,
+founder, owner, or other decision-maker's personal social accounts (Telegram,
+X, Instagram, LinkedIn — see the qualifying-contact list above), not just
+"does this account have a website." Do not check every platform for every
+account — stop once you've found a qualifying contact, or once you've made a
+genuine attempt and come up empty (that's `CONTACT_NEEDED`, not a reason to
+keep burning searches).
 
 ## Visual thumbnail audit (5-8 finalists being considered for thumbnails/packaging)
 
 Run `python3 src/hunt.py contact-sheet --channel <id> --count 6` and Read the
-resulting PNG. Judge visual hierarchy, clarity, concept strength, consistency, and
-the observable Framehook-solvable packaging gap. Never claim or invent CTR
-numbers — you cannot observe CTR from thumbnails alone.
+resulting PNG. Judge visual hierarchy, clarity, concept strength, consistency,
+recurring system/series identity, obvious execution mistakes, and quality
+relative to the channel's commercial level — i.e. whether an actual solvable
+problem exists, per the PAIN GATE criteria above. Never claim or invent CTR
+numbers — you cannot observe CTR from thumbnails alone. If you have not run
+this audit, do not report a packaging pain as confirmed (see the visual audit
+requirement above) — say the evidence is incomplete instead.
 
 ## Persisting your verdicts (required every run)
 
@@ -166,16 +353,40 @@ After Pass 1 and enrichment, write a JSON file (e.g. to a scratch path) shaped a
 ```json
 {
   "verdicts": [
-    {"id": "channelId", "fit": 91, "timing": "HIGH", "contact_status": "CONTACT_FOUND"},
+    {
+      "id": "channelId",
+      "fit": 91,
+      "timing": "HIGH",
+      "pain_confirmed": true,
+      "proposed_service": "thumbnail system",
+      "visual_audit_done": true,
+      "contact_status": "CONTACT_FOUND",
+      "rejection_reasons": []
+    },
     ...
   ],
   "finalists_order": ["channelId1", "channelId2", ...]
 }
 ```
 
-`contact_status` is one of `CONTACT_FOUND` / `CONTACT_NEEDED` / `UNREACHABLE`;
-omit it (or leave it out for anything below GOOD_FIT) and it defaults to
-`CONTACT_NEEDED`.
+Field notes:
+
+- `pain_confirmed` — your PAIN GATE answer for this account. Omit or `false`
+  means the gate failed; `src/state.py` will send a would-be GOOD_FIT/READY_NOW
+  straight to REJECTED when this is false, regardless of fit/timing.
+- `proposed_service` — free text (e.g. "thumbnail system", "editing +
+  packaging"). Used to check whether a visual audit was required.
+- `visual_audit_done` — set `true` only if you actually ran the contact-sheet
+  audit for this account. If `proposed_service` is thumbnail/packaging-shaped
+  and this is false, `pain_confirmed` is forced to `false` regardless of what
+  you submit — the code enforces this, not just the instructions.
+- `contact_status` — one of `CONTACT_FOUND` / `CONTACT_NEEDED` /
+  `CONTACT_EMAIL_ONLY` / `UNREACHABLE`. Omit it and it defaults to
+  `CONTACT_NEEDED`. Only meaningful for accounts that passed the PAIN GATE.
+- `rejection_reasons` — a list, only meaningful when the account ends up
+  REJECTED. Include specific codes like `["NO_CLEAR_PAIN"]` or
+  `["NO_CLEAR_PAIN", "ALREADY_WELL_RESOURCED"]`. If omitted and pain wasn't
+  confirmed, it defaults to `["NO_CLEAR_PAIN"]`.
 
 Include a verdict for every pack you scored in Pass 1 (not just finalists — a
 rejected account still needs its fit/timing recorded so the recheck cadence
@@ -187,70 +398,71 @@ python3 src/hunt.py record --input <path-to-that-json>
 python3 src/hunt.py commit-state
 ```
 
-## Output format (this is the ONLY thing that goes to chat)
+## Output format (this is the ONLY thing that goes to chat — written in Russian, see above)
 
-Two axes, both shown, neither hidden: group by opportunity status
-(READY_NOW / GOOD_FIT / WATCH) as before, but order rows within READY_NOW and
-GOOD_FIT by this priority so the most actionable leads are always on top:
+The report prioritizes CONFIRMED actionable leads first. Order every
+candidate you show by this 5-tier priority (this supersedes plain
+READY_NOW-then-GOOD_FIT ordering — a confirmed GOOD_FIT outranks an
+unconfirmed READY_NOW, because it's something the user can act on today):
 
-1. READY_NOW + CONTACT_FOUND
-2. READY_NOW + CONTACT_NEEDED
-3. GOOD_FIT + CONTACT_FOUND
+1. READY_NOW + CONTACT_FOUND + CONFIRMED_LEAD
+2. GOOD_FIT + CONTACT_FOUND + CONFIRMED_LEAD
+3. READY_NOW + CONTACT_NEEDED
 4. GOOD_FIT + CONTACT_NEEDED
-5. WATCH (unordered by contact — contact research isn't spent here yet)
+5. WATCH (small, only if genuinely worth tracking — cap 5)
 
-An account marked `UNREACHABLE` stays in state at its real opportunity status
-but is left out of this table — confirmed-unreachable isn't something the user
-can act on this week, so it doesn't earn a row (it's not "rejected," just not
-actionable right now; it'll resurface if its fingerprint changes).
+An account marked `UNREACHABLE`, or `CONTACT_EMAIL_ONLY` with nothing better,
+still appears (it's a real opportunity, just not yet actionable by DM) but
+sorts below the `CONTACT_NEEDED` rows in its tier. Do not clutter the report
+with REJECTED accounts — they don't appear here at all, regardless of how
+interesting they looked before the PAIN GATE. If nothing qualifies for a
+tier, skip that heading entirely rather than printing an empty section.
 
-```
-## READY_NOW
-
-| # | Lead | Fit | Timing | ICP | Value | Opportunity | Offer | Contact |
-|---:|------|----:|--------|-----|-------|-------------|-------|---------|
-
-## GOOD_FIT
-
-| # | Lead | Fit | Timing | ICP | Value | Opportunity | Offer | Contact |
-|---:|------|----:|--------|-----|-------|-------------|-------|---------|
-
-## WATCH
-
-| # | Lead | Fit | Timing | ICP | Value | Opportunity | Offer | Contact |
-|---:|------|----:|--------|-----|-------|-------------|-------|---------|
-```
-
-- Number rows continuously across all three sections (READY_NOW #1-#3, GOOD_FIT
-  #4-#9, ...) — the numbering is what the user replies to with feedback.
-- READY_NOW + GOOD_FIT combined: maximum 20 rows, prefer 8-12. Omit a section
-  entirely if it's empty — don't print an empty table.
-- WATCH is supplementary, not part of the lead count: cap it at 5 rows and only
-  include an account there if it's genuinely worth tracking, not to pad the
-  report.
-- Opportunity: max 12 words, concrete and specific — not generic filler.
-- Offer: max 5 words, one primary entry offer (do not pitch everything at once:
-  thumbnails, thumbnail system, YouTube packaging, titles + thumbnails, editing,
-  editing + packaging, Shorts, content production, or channel management).
-- Contact: the actual contact when `CONTACT_FOUND`, or literally `CONTACT_NEEDED`
-  otherwise — never paper over an open contact gap with a vague "YouTube About
-  page" guess, and never let a missing contact talk you into writing GOOD_FIT
-  for a row whose Fit/Timing columns say READY_NOW.
-
-Then:
+For every candidate shown, use this compact card (all prose in Russian; names,
+URLs, usernames, emails, and status codes stay as-is):
 
 ```
-## STATUS CHANGES
+### N. <Название>
+
+- Ссылка на канал: <url>
+- Размер канала: <subs, если известен>
+- Opportunity Status: READY_NOW | GOOD_FIT | WATCH
+- Подтверждённый лид: ДА | НЕТ
+- Fit: <0-100>
+- Timing: HIGH | MEDIUM | LOW
+- ICP: <...>
+- Коммерческий сигнал: <...>
+- Конкретная наблюдаемая проблема: <...>
+- Доказательства: <что именно проверено — метаданные / визуальный аудит / поиск>
+- Почему сейчас: <триггер, если есть, иначе явно "триггера нет">
+- Предлагаемая услуга Framehook: <...>
+- Contact Status: CONTACT_FOUND | CONTACT_NEEDED | CONTACT_EMAIL_ONLY | UNREACHABLE
+- Найденный non-email контакт: <тип: Telegram/X/Instagram/LinkedIn/Discord, или "не найден">
+- Ссылка/username: <...>
+- Email (отдельно, если найден): <...>
+- Что делать дальше: <конкретное следующее действие>
 ```
 
-Max 5 accounts whose status materially changed since last run (e.g. moved into
-READY_NOW, or dropped out of WATCH into REJECTED). Omit this section entirely if
-nothing materially changed.
+If no real pain was found for a candidate, do not invent an offer to fill the
+report — that candidate is REJECTED and simply doesn't appear.
 
-Then exactly one stats line:
+Number cards continuously across all tiers (the numbering is what the user
+replies to with feedback). Total leads across tiers 1-4: prefer 8-12, hard
+ceiling 20.
+
+Then, if applicable:
 
 ```
-Raw: X | Filtered: X | Claude: X | Enriched: X | READY_NOW: X | GOOD_FIT: X
+## Изменения статуса
+```
+
+Max 5 accounts whose status materially changed since last run. Omit entirely
+if nothing materially changed.
+
+Then exactly one stats line (machine-readable, can stay in English):
+
+```
+Raw: X | Filtered: X | Claude: X | Enriched: X | CONFIRMED_LEAD: X | READY_NOW: X | GOOD_FIT: X
 ```
 
 **Never output:** essays, architecture explanation, a rejected-account report, a
@@ -266,3 +478,19 @@ adjusts which query lanes get budget, which is handled entirely in
 `src/state.py`, not by you). Do not modify `src/`, `config/`, or this skill file
 during a production hunt — if something is broken, report the blocker instead of
 fixing it live. Production hunts are operated, not engineered.
+
+## Learning from manual calibration feedback — generalize, don't overfit
+
+When the user manually reviews a lead and corrects its classification, that
+correction is a calibration example, not a rule about that specific account.
+Extract the general principle, not the specifics.
+
+- Correct: "commercially attractive account + no observable pain = reject."
+  Incorrect: "reject channels above 300k subscribers."
+- Correct: "a launch is timing, not proof of production pain."
+  Incorrect: "reject game studios."
+
+Manual feedback should sharpen future judgment (and, through the normal
+feedback-loop mechanism, future query-lane allocation) — it should never
+harden into a hard rule tied to one channel, one subscriber count, or one
+niche unless the user explicitly asks for that rule.

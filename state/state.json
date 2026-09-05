@@ -35,14 +35,21 @@
       "status": "SEEN"
     },
     "UC-qwaQSx8GAtUMlw3aBGSzQ": {
-      "contact_status": "CONTACT_FOUND",
+      "confirmed_lead": false,
+      "contact_status": null,
       "fingerprint": "3c34699600039407",
-      "fit_tier": "GOOD_FIT",
+      "fit_tier": "REJECTED",
       "history": [
         {
           "date": "2026-09-05",
           "fit": 82,
           "fit_tier": "GOOD_FIT",
+          "timing": "LOW"
+        },
+        {
+          "date": "2026-09-05",
+          "fit": 82,
+          "fit_tier": "REJECTED",
           "timing": "LOW"
         }
       ],
@@ -51,8 +58,11 @@
       "last_reviewed": "2026-09-05",
       "last_timing": "LOW",
       "name": "\u041f\u0430\u0432\u0435\u043b \u0425\u043c\u0443\u0440\u0447\u0438\u043a",
-      "next_review_after": "2026-09-19",
-      "status": "GOOD_FIT"
+      "pain_confirmed": false,
+      "rejection_reasons": [
+        "NO_CLEAR_PAIN"
+      ],
+      "status": "REJECTED"
     },
     "UC-xaBOY0o9lN8g5r38U0xkw": {
       "fingerprint": "cea78dd5485599c1",
@@ -124,14 +134,21 @@
       "status": "SEEN"
     },
     "UC2YdJw53sP73T-lffzrqTZA": {
-      "contact_status": "CONTACT_NEEDED",
+      "confirmed_lead": false,
+      "contact_status": null,
       "fingerprint": "73a2601db7194e3f",
-      "fit_tier": "READY_NOW",
+      "fit_tier": "REJECTED",
       "history": [
         {
           "date": "2026-09-05",
           "fit": 82,
           "fit_tier": "READY_NOW",
+          "timing": "HIGH"
+        },
+        {
+          "date": "2026-09-05",
+          "fit": 82,
+          "fit_tier": "REJECTED",
           "timing": "HIGH"
         }
       ],
@@ -140,8 +157,12 @@
       "last_reviewed": "2026-09-05",
       "last_timing": "HIGH",
       "name": "Aniimo",
-      "next_review_after": "2026-09-12",
-      "status": "READY_NOW"
+      "pain_confirmed": false,
+      "rejection_reasons": [
+        "NO_CLEAR_PAIN",
+        "ALREADY_WELL_RESOURCED"
+      ],
+      "status": "REJECTED"
     },
     "UC3G-MWHfHciif4WPmX8v5zA": {
       "fingerprint": "1cf35736f4c95f40",
@@ -154,6 +175,8 @@
       "status": "SEEN"
     },
     "UC3iyLcDyYxk2nN7M5DsYaYQ": {
+      "confirmed_lead": false,
+      "contact_status": "CONTACT_NEEDED",
       "fingerprint": "d1e3834117e8e319",
       "fit_tier": "GOOD_FIT",
       "history": [
@@ -161,6 +184,12 @@
           "date": "2026-09-05",
           "fit": 70,
           "status": "WATCHLIST",
+          "timing": "LOW"
+        },
+        {
+          "date": "2026-09-05",
+          "fit": 70,
+          "fit_tier": "GOOD_FIT",
           "timing": "LOW"
         }
       ],
@@ -170,6 +199,8 @@
       "last_timing": "LOW",
       "name": "Daniel | Tech & Data",
       "next_review_after": "2026-09-19",
+      "pain_confirmed": true,
+      "rejection_reasons": [],
       "status": "GOOD_FIT"
     },
     "UC3p5NNrlU6y9YIs4iHW6q_w": {
@@ -724,6 +755,8 @@
       "status": "SEEN"
     },
     "UCMw07uiVxGULqePlrOZnx9A": {
+      "confirmed_lead": true,
+      "contact_status": "CONTACT_FOUND",
       "fingerprint": "33d3e81b4c3de844",
       "fit_tier": "GOOD_FIT",
       "history": [
@@ -731,6 +764,12 @@
           "date": "2026-09-05",
           "fit": 82,
           "status": "WATCHLIST",
+          "timing": "MEDIUM"
+        },
+        {
+          "date": "2026-09-05",
+          "fit": 82,
+          "fit_tier": "GOOD_FIT",
           "timing": "MEDIUM"
         }
       ],
@@ -740,6 +779,8 @@
       "last_timing": "MEDIUM",
       "name": "Personal Finance with Leila - Debt Over It",
       "next_review_after": "2026-09-19",
+      "pain_confirmed": true,
+      "rejection_reasons": [],
       "status": "GOOD_FIT"
     },
     "UCN0MYJFfVFWzvovOS3vQHqw": {
@@ -866,10 +907,17 @@
       "status": "SEEN"
     },
     "UCPrVjDohW98GDxq99E8eHUQ": {
+      "confirmed_lead": false,
       "contact_status": "CONTACT_NEEDED",
       "fingerprint": "69f2a3ecb6739c4c",
       "fit_tier": "GOOD_FIT",
       "history": [
+        {
+          "date": "2026-09-05",
+          "fit": 68,
+          "fit_tier": "GOOD_FIT",
+          "timing": "LOW"
+        },
         {
           "date": "2026-09-05",
           "fit": 68,
@@ -883,6 +931,8 @@
       "last_timing": "LOW",
       "name": "Copy That!",
       "next_review_after": "2026-09-19",
+      "pain_confirmed": true,
+      "rejection_reasons": [],
       "status": "GOOD_FIT"
     },
     "UCPry3R6defNuvoi54MDKoTg": {
@@ -916,14 +966,21 @@
       "status": "SEEN"
     },
     "UCRPdsCVuH53rcbTcEkuY4uQ": {
-      "contact_status": "CONTACT_NEEDED",
+      "confirmed_lead": false,
+      "contact_status": null,
       "fingerprint": "309a36f58c262cd8",
-      "fit_tier": "GOOD_FIT",
+      "fit_tier": "REJECTED",
       "history": [
         {
           "date": "2026-09-05",
           "fit": 65,
           "fit_tier": "GOOD_FIT",
+          "timing": "LOW"
+        },
+        {
+          "date": "2026-09-05",
+          "fit": 65,
+          "fit_tier": "REJECTED",
           "timing": "LOW"
         }
       ],
@@ -932,8 +989,11 @@
       "last_reviewed": "2026-09-05",
       "last_timing": "LOW",
       "name": "Moore's Law Is Dead",
-      "next_review_after": "2026-09-19",
-      "status": "GOOD_FIT"
+      "pain_confirmed": false,
+      "rejection_reasons": [
+        "NO_CLEAR_PAIN"
+      ],
+      "status": "REJECTED"
     },
     "UCS8WNfPtyV709uQWqCBcKzw": {
       "fingerprint": "5dae613756b3bc6c",
@@ -1030,14 +1090,21 @@
       "status": "SEEN"
     },
     "UCV_DLB3VW0szIGQnwel1Nsw": {
-      "contact_status": "CONTACT_NEEDED",
+      "confirmed_lead": false,
+      "contact_status": null,
       "fingerprint": "4089029fba43ef72",
-      "fit_tier": "GOOD_FIT",
+      "fit_tier": "REJECTED",
       "history": [
         {
           "date": "2026-09-05",
           "fit": 75,
           "fit_tier": "GOOD_FIT",
+          "timing": "LOW"
+        },
+        {
+          "date": "2026-09-05",
+          "fit": 75,
+          "fit_tier": "REJECTED",
           "timing": "LOW"
         }
       ],
@@ -1046,8 +1113,11 @@
       "last_reviewed": "2026-09-05",
       "last_timing": "LOW",
       "name": "The Solo Entrepreneur",
-      "next_review_after": "2026-09-19",
-      "status": "GOOD_FIT"
+      "pain_confirmed": false,
+      "rejection_reasons": [
+        "NO_CLEAR_PAIN"
+      ],
+      "status": "REJECTED"
     },
     "UCVdRlBpp6sBgORTEnCqh73g": {
       "fingerprint": "ff159d615c4fdfaa",
@@ -1230,14 +1300,21 @@
       "status": "SEEN"
     },
     "UCbsJaeNLXZNVdjnY9y9FFXw": {
-      "contact_status": "CONTACT_NEEDED",
+      "confirmed_lead": false,
+      "contact_status": null,
       "fingerprint": "72a638730e99e740",
-      "fit_tier": "GOOD_FIT",
+      "fit_tier": "REJECTED",
       "history": [
         {
           "date": "2026-09-05",
           "fit": 72,
           "fit_tier": "GOOD_FIT",
+          "timing": "LOW"
+        },
+        {
+          "date": "2026-09-05",
+          "fit": 72,
+          "fit_tier": "REJECTED",
           "timing": "LOW"
         }
       ],
@@ -1246,8 +1323,12 @@
       "last_reviewed": "2026-09-05",
       "last_timing": "LOW",
       "name": "Mike & Sophie",
-      "next_review_after": "2026-09-19",
-      "status": "GOOD_FIT"
+      "pain_confirmed": false,
+      "rejection_reasons": [
+        "NO_CLEAR_PAIN",
+        "EVIDENCE_INCOMPLETE"
+      ],
+      "status": "REJECTED"
     },
     "UCbxmOVvHHIGbyfnu09pVPww": {
       "fingerprint": "480cd62871259c9f",
@@ -1335,14 +1416,21 @@
       "status": "SEEN"
     },
     "UCde0vB0fTwC8AT3sJofFV0w": {
-      "contact_status": "CONTACT_NEEDED",
+      "confirmed_lead": false,
+      "contact_status": null,
       "fingerprint": "80198e1885c0c5b1",
-      "fit_tier": "GOOD_FIT",
+      "fit_tier": "REJECTED",
       "history": [
         {
           "date": "2026-09-05",
           "fit": 76,
           "fit_tier": "GOOD_FIT",
+          "timing": "LOW"
+        },
+        {
+          "date": "2026-09-05",
+          "fit": 76,
+          "fit_tier": "REJECTED",
           "timing": "LOW"
         }
       ],
@@ -1351,8 +1439,11 @@
       "last_reviewed": "2026-09-05",
       "last_timing": "LOW",
       "name": "Mikey No Code",
-      "next_review_after": "2026-09-19",
-      "status": "GOOD_FIT"
+      "pain_confirmed": false,
+      "rejection_reasons": [
+        "NO_CLEAR_PAIN"
+      ],
+      "status": "REJECTED"
     },
     "UCeOlqDoElKyft8VFexJnbnA": {
       "fingerprint": "73429821d88a82d4",
@@ -1655,13 +1746,21 @@
       "status": "SEEN"
     },
     "UCm5iBOcQ0GET_2FqFI61QDA": {
+      "confirmed_lead": false,
+      "contact_status": null,
       "fingerprint": "372a5135c53df967",
-      "fit_tier": "GOOD_FIT",
+      "fit_tier": "REJECTED",
       "history": [
         {
           "date": "2026-09-05",
           "fit": 80,
           "status": "WATCHLIST",
+          "timing": "LOW"
+        },
+        {
+          "date": "2026-09-05",
+          "fit": 80,
+          "fit_tier": "REJECTED",
           "timing": "LOW"
         }
       ],
@@ -1670,8 +1769,11 @@
       "last_reviewed": "2026-09-05",
       "last_timing": "LOW",
       "name": "Cara Nicole",
-      "next_review_after": "2026-09-19",
-      "status": "GOOD_FIT"
+      "pain_confirmed": false,
+      "rejection_reasons": [
+        "NO_CLEAR_PAIN"
+      ],
+      "status": "REJECTED"
     },
     "UCm7xZ9sbqhuARuDDcckh8Jg": {
       "fingerprint": "23d2ca7dc9fd672c",
@@ -1684,10 +1786,17 @@
       "status": "SEEN"
     },
     "UCmRNXk6hpY7T8ct9gNIyMhQ": {
+      "confirmed_lead": false,
       "contact_status": "CONTACT_NEEDED",
       "fingerprint": "1619a10985791e4d",
       "fit_tier": "GOOD_FIT",
       "history": [
+        {
+          "date": "2026-09-05",
+          "fit": 70,
+          "fit_tier": "GOOD_FIT",
+          "timing": "LOW"
+        },
         {
           "date": "2026-09-05",
           "fit": 70,
@@ -1701,6 +1810,8 @@
       "last_timing": "LOW",
       "name": "Benyamin BE",
       "next_review_after": "2026-09-19",
+      "pain_confirmed": true,
+      "rejection_reasons": [],
       "status": "GOOD_FIT"
     },
     "UCmRbHAgG2k2vDUvb3xsEunQ": {
@@ -1728,10 +1839,17 @@
       "status": "REJECTED"
     },
     "UCn4Sml6YOxXxRC94qPXw5Zw": {
+      "confirmed_lead": false,
       "contact_status": "CONTACT_NEEDED",
       "fingerprint": "872d3b64dceeb929",
       "fit_tier": "GOOD_FIT",
       "history": [
+        {
+          "date": "2026-09-05",
+          "fit": 78,
+          "fit_tier": "GOOD_FIT",
+          "timing": "LOW"
+        },
         {
           "date": "2026-09-05",
           "fit": 78,
@@ -1745,6 +1863,8 @@
       "last_timing": "LOW",
       "name": "CJ Race Cars",
       "next_review_after": "2026-09-19",
+      "pain_confirmed": true,
+      "rejection_reasons": [],
       "status": "GOOD_FIT"
     },
     "UCnKzMVoSOBqgUlhoTaNtOxQ": {
@@ -2082,13 +2202,21 @@
       "status": "SEEN"
     },
     "UCy5k9Vwoug-45UZqlcYb1Sg": {
+      "confirmed_lead": false,
+      "contact_status": null,
       "fingerprint": "7c6b295e72d1b7b3",
-      "fit_tier": "GOOD_FIT",
+      "fit_tier": "REJECTED",
       "history": [
         {
           "date": "2026-09-05",
           "fit": 70,
           "status": "WATCHLIST",
+          "timing": "LOW"
+        },
+        {
+          "date": "2026-09-05",
+          "fit": 70,
+          "fit_tier": "REJECTED",
           "timing": "LOW"
         }
       ],
@@ -2097,8 +2225,12 @@
       "last_reviewed": "2026-09-05",
       "last_timing": "LOW",
       "name": "Making Money Podcast",
-      "next_review_after": "2026-09-19",
-      "status": "GOOD_FIT"
+      "pain_confirmed": false,
+      "rejection_reasons": [
+        "NO_CLEAR_PAIN",
+        "EVIDENCE_INCOMPLETE"
+      ],
+      "status": "REJECTED"
     },
     "UCy6kyFxaMqGtpE3pQTflK8A": {
       "fingerprint": "83b2158af3b70f76",
