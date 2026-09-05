@@ -1,10 +1,895 @@
 {
-  "version": 1,
-  "accounts": {},
-  "query_stats": {},
-  "lane_query_index": {},
-  "rotation_index": 0,
-  "runs": [],
+  "accounts": {
+    "UC-FIAmE9tS5jYVsLGdc5QQw": {
+      "fingerprint": "684ac9a387aa4248",
+      "history": [
+        {
+          "date": "2026-09-05",
+          "fit": 33,
+          "status": "REJECTED",
+          "timing": "LOW"
+        }
+      ],
+      "lane": "GLOBAL_PACKAGING_BUSINESS",
+      "last_fit": 33,
+      "last_reviewed": "2026-09-05",
+      "last_timing": "LOW",
+      "name": "Ecommeet",
+      "next_review_after": "2026-11-19",
+      "status": "REJECTED"
+    },
+    "UC0vHK2huPsoQZEQOrgHdcCg": {
+      "fingerprint": "4260acebf71e7fc6",
+      "lane": "GLOBAL_PACKAGING_BUSINESS",
+      "last_reviewed": "2026-09-05",
+      "name": "Coco - My Shiny Dot",
+      "next_review_after": "2026-09-19",
+      "status": "SEEN"
+    },
+    "UC1DvWD8x4ZdwlmNzpoEwS4A": {
+      "fingerprint": "4666eccea7920a3e",
+      "lane": "GLOBAL_PACKAGING_BUSINESS",
+      "last_reviewed": "2026-09-05",
+      "name": "DoziezStudio",
+      "next_review_after": "2026-09-19",
+      "status": "SEEN"
+    },
+    "UC3G-MWHfHciif4WPmX8v5zA": {
+      "fingerprint": "1cf35736f4c95f40",
+      "lane": "GLOBAL_PACKAGING_BUSINESS",
+      "last_reviewed": "2026-09-05",
+      "name": "Ruthie & Co.",
+      "next_review_after": "2026-09-19",
+      "status": "SEEN"
+    },
+    "UC3iyLcDyYxk2nN7M5DsYaYQ": {
+      "fingerprint": "d1e3834117e8e319",
+      "history": [
+        {
+          "date": "2026-09-05",
+          "fit": 70,
+          "status": "WATCHLIST",
+          "timing": "LOW"
+        }
+      ],
+      "lane": "GLOBAL_PACKAGING_AI_TECH",
+      "last_fit": 70,
+      "last_reviewed": "2026-09-05",
+      "last_timing": "LOW",
+      "name": "Daniel | Tech & Data",
+      "next_review_after": "2026-09-30",
+      "status": "WATCHLIST"
+    },
+    "UC3p5NNrlU6y9YIs4iHW6q_w": {
+      "fingerprint": "a2e40df3d8deb8d3",
+      "lane": "GLOBAL_PACKAGING_BUSINESS",
+      "last_reviewed": "2026-09-05",
+      "name": "Money verse",
+      "next_review_after": "2026-09-19",
+      "status": "SEEN"
+    },
+    "UC4OXTQRda65jftT6XOEYPOw": {
+      "fingerprint": "db075f5cc727469f",
+      "lane": "GLOBAL_PACKAGING_FINANCE",
+      "last_reviewed": "2026-09-05",
+      "name": "Personal finance and life stage investing",
+      "next_review_after": "2026-09-19",
+      "status": "SEEN"
+    },
+    "UC58IAk1i-6d5XgHZG4NnffA": {
+      "fingerprint": "a4b8c2852ec2e39a",
+      "lane": "GLOBAL_PACKAGING_FINANCE",
+      "last_reviewed": "2026-09-05",
+      "name": "SANSKRITI IAS",
+      "next_review_after": "2026-09-19",
+      "status": "SEEN"
+    },
+    "UC6ITJIW6jgrrP5irR7WoHrw": {
+      "fingerprint": "c579319a95599e1e",
+      "history": [
+        {
+          "date": "2026-09-05",
+          "fit": 48,
+          "status": "REJECTED",
+          "timing": "LOW"
+        }
+      ],
+      "lane": "GLOBAL_PACKAGING_AI_TECH",
+      "last_fit": 48,
+      "last_reviewed": "2026-09-05",
+      "last_timing": "LOW",
+      "name": "Sean Dollwet",
+      "next_review_after": "2026-11-19",
+      "status": "REJECTED"
+    },
+    "UC77ksrKd7P8uXslpuy6HAfQ": {
+      "fingerprint": "890b7238286c9192",
+      "lane": "GLOBAL_PACKAGING_FINANCE",
+      "last_reviewed": "2026-09-05",
+      "name": "Bogleheads",
+      "next_review_after": "2026-09-19",
+      "status": "SEEN"
+    },
+    "UC7eZNThpjgXe5H0QwBN-XsQ": {
+      "fingerprint": "1b8e0bd669af252f",
+      "lane": "GLOBAL_PACKAGING_FINANCE",
+      "last_reviewed": "2026-09-05",
+      "name": "MensXP",
+      "next_review_after": "2026-09-19",
+      "status": "SEEN"
+    },
+    "UC7no4CQKv-iR1_UtM9J9CXA": {
+      "fingerprint": "3ac75851e2e2978f",
+      "lane": "GLOBAL_PACKAGING_BUSINESS",
+      "last_reviewed": "2026-09-05",
+      "name": "Emma Woodthorpe",
+      "next_review_after": "2026-09-19",
+      "status": "SEEN"
+    },
+    "UC8Jvno_rGUhEUnLmRprYQTw": {
+      "fingerprint": "469452613d0ffbf3",
+      "lane": "GLOBAL_PACKAGING_AI_TECH",
+      "last_reviewed": "2026-09-05",
+      "name": "TECH & STUDY WITH K\u00cfTTY",
+      "next_review_after": "2026-09-19",
+      "status": "SEEN"
+    },
+    "UC8KoqPVct0hxxY1gQL4FGhQ": {
+      "fingerprint": "fc36d42748ed3500",
+      "lane": "GLOBAL_PACKAGING_BUSINESS",
+      "last_reviewed": "2026-09-05",
+      "name": "Chiara - Creative Business Owner",
+      "next_review_after": "2026-09-19",
+      "status": "SEEN"
+    },
+    "UCAMtUr1BeqpNU3vdEXPSPvg": {
+      "fingerprint": "92daf500b5e02f36",
+      "history": [
+        {
+          "date": "2026-09-05",
+          "fit": 58,
+          "status": "REJECTED",
+          "timing": "LOW"
+        }
+      ],
+      "lane": "GLOBAL_PACKAGING_BUSINESS",
+      "last_fit": 58,
+      "last_reviewed": "2026-09-05",
+      "last_timing": "LOW",
+      "name": "Brenna M & Co",
+      "next_review_after": "2026-11-19",
+      "status": "REJECTED"
+    },
+    "UCB0CZVWByHLSCJN2IZUoFsw": {
+      "fingerprint": "08bf2588cf9a74f8",
+      "history": [
+        {
+          "date": "2026-09-05",
+          "fit": 45,
+          "status": "REJECTED",
+          "timing": "LOW"
+        }
+      ],
+      "lane": "GLOBAL_PACKAGING_AI_TECH",
+      "last_fit": 45,
+      "last_reviewed": "2026-09-05",
+      "last_timing": "LOW",
+      "name": "Dan - Smart Tutorials",
+      "next_review_after": "2026-11-19",
+      "status": "REJECTED"
+    },
+    "UCBNJaZ64ak4GECgxhKlispA": {
+      "fingerprint": "1f653f8fb654428b",
+      "lane": "GLOBAL_PACKAGING_BUSINESS",
+      "last_reviewed": "2026-09-05",
+      "name": "Katherine Zhu",
+      "next_review_after": "2026-09-19",
+      "status": "SEEN"
+    },
+    "UCBT1rc902DkrH5qkxM2q9JA": {
+      "fingerprint": "5040f0716dfb3789",
+      "lane": "GLOBAL_PACKAGING_FINANCE",
+      "last_reviewed": "2026-09-05",
+      "name": "Sarika in America \ud83c\uddfa\ud83c\uddf8 ",
+      "next_review_after": "2026-09-19",
+      "status": "SEEN"
+    },
+    "UCCsREoj8rSRkEvxWqxr74rQ": {
+      "fingerprint": "bfb033add9510fc8",
+      "lane": "GLOBAL_PACKAGING_AI_TECH",
+      "last_reviewed": "2026-09-05",
+      "name": "Cybernews",
+      "next_review_after": "2026-09-19",
+      "status": "SEEN"
+    },
+    "UCDdAwPgrrhkla2Q2m81ER_w": {
+      "fingerprint": "68891bfa9b4e71fc",
+      "lane": "GLOBAL_PACKAGING_AI_TECH",
+      "last_reviewed": "2026-09-05",
+      "name": "AI Seekho be10X",
+      "next_review_after": "2026-09-19",
+      "status": "SEEN"
+    },
+    "UCDkMWOyugc9M_dxKn5wfNEQ": {
+      "fingerprint": "4d1bd9449cac4e96",
+      "lane": "GLOBAL_PACKAGING_BUSINESS",
+      "last_reviewed": "2026-09-05",
+      "name": "Invest Path",
+      "next_review_after": "2026-09-19",
+      "status": "SEEN"
+    },
+    "UCEjSoMnD43v0EsqcuHW2lBw": {
+      "fingerprint": "d171e0bc49ed42e3",
+      "lane": "GLOBAL_PACKAGING_FINANCE",
+      "last_reviewed": "2026-09-05",
+      "name": "Avery Shannon",
+      "next_review_after": "2026-09-19",
+      "status": "SEEN"
+    },
+    "UCEnoDgSMJfrYkp2rfIueOqg": {
+      "fingerprint": "8baba0a81aab964a",
+      "history": [
+        {
+          "date": "2026-09-05",
+          "fit": 42,
+          "status": "REJECTED",
+          "timing": "LOW"
+        }
+      ],
+      "lane": "GLOBAL_PACKAGING_FINANCE",
+      "last_fit": 42,
+      "last_reviewed": "2026-09-05",
+      "last_timing": "LOW",
+      "name": "Navan Jaiswal",
+      "next_review_after": "2026-11-19",
+      "status": "REJECTED"
+    },
+    "UCF3h1vcDK28tKodVd3vTHFw": {
+      "fingerprint": "ca0f0e625e38d48d",
+      "lane": "GLOBAL_PACKAGING_FINANCE",
+      "last_reviewed": "2026-09-05",
+      "name": "DollarWise",
+      "next_review_after": "2026-09-19",
+      "status": "SEEN"
+    },
+    "UCFBpVaKCC0ajGps1vf0AgBg": {
+      "fingerprint": "038234b03fb77004",
+      "lane": "GLOBAL_PACKAGING_FINANCE",
+      "last_reviewed": "2026-09-05",
+      "name": "Humphrey Yang",
+      "next_review_after": "2026-09-19",
+      "status": "SEEN"
+    },
+    "UCGCPcn5RFvRM0qDrooiV6LQ": {
+      "fingerprint": "4a15df292c4adf93",
+      "history": [
+        {
+          "date": "2026-09-05",
+          "fit": 45,
+          "status": "REJECTED",
+          "timing": "LOW"
+        }
+      ],
+      "lane": "GLOBAL_PACKAGING_AI_TECH",
+      "last_fit": 45,
+      "last_reviewed": "2026-09-05",
+      "last_timing": "LOW",
+      "name": "Daniel Davidson",
+      "next_review_after": "2026-11-19",
+      "status": "REJECTED"
+    },
+    "UCIUngc2SVw6ZZ9To4yBZDiw": {
+      "fingerprint": "3dd93a12c752c23d",
+      "lane": "GLOBAL_PACKAGING_BUSINESS",
+      "last_reviewed": "2026-09-05",
+      "name": "Aap Karte Kya Ho ?",
+      "next_review_after": "2026-09-19",
+      "status": "SEEN"
+    },
+    "UCJ-_lWmZTEp3fLKuiUwRoJg": {
+      "fingerprint": "2faec1dfaf2d3c07",
+      "lane": "GLOBAL_PACKAGING_BUSINESS",
+      "last_reviewed": "2026-09-05",
+      "name": "Chidimma Ossai",
+      "next_review_after": "2026-09-19",
+      "status": "SEEN"
+    },
+    "UCJI2qi_GM8WOvoNFPfWxGnA": {
+      "fingerprint": "155c896016235b79",
+      "lane": "GLOBAL_PACKAGING_AI_TECH",
+      "last_reviewed": "2026-09-05",
+      "name": "Deepali AI Reviews ",
+      "next_review_after": "2026-09-19",
+      "status": "SEEN"
+    },
+    "UCK0bQb5l-sjMSCpbiCtggOQ": {
+      "fingerprint": "16e2c0e34600f78b",
+      "lane": "GLOBAL_PACKAGING_BUSINESS",
+      "last_reviewed": "2026-09-05",
+      "name": "The Owners Theory Podcast Shorts",
+      "next_review_after": "2026-09-19",
+      "status": "SEEN"
+    },
+    "UCKXwrHEw5GbASffuIDWf3Zw": {
+      "fingerprint": "0be1d0bb1c25070c",
+      "lane": "GLOBAL_PACKAGING_BUSINESS",
+      "last_reviewed": "2026-09-05",
+      "name": "Designedbydais",
+      "next_review_after": "2026-09-19",
+      "status": "SEEN"
+    },
+    "UCM7yoOhnMcfrEZ-5i9m-WFA": {
+      "fingerprint": "43e1794e5a32894e",
+      "history": [
+        {
+          "date": "2026-09-05",
+          "fit": 52,
+          "status": "REJECTED",
+          "timing": "LOW"
+        }
+      ],
+      "lane": "GLOBAL_PACKAGING_FINANCE",
+      "last_fit": 52,
+      "last_reviewed": "2026-09-05",
+      "last_timing": "LOW",
+      "name": "Sonia Shenoy",
+      "next_review_after": "2026-11-19",
+      "status": "REJECTED"
+    },
+    "UCMFxukXVkmcFFAjoTF2rhGQ": {
+      "fingerprint": "2e900381f4a72642",
+      "lane": "GLOBAL_PACKAGING_BUSINESS",
+      "last_reviewed": "2026-09-05",
+      "name": "Will Holdren",
+      "next_review_after": "2026-09-19",
+      "status": "SEEN"
+    },
+    "UCMgWdnciFLVKwd2CVilu11A": {
+      "fingerprint": "e0a58b52c5fb986b",
+      "lane": "GLOBAL_PACKAGING_AI_TECH",
+      "last_reviewed": "2026-09-05",
+      "name": "Helpful Zone",
+      "next_review_after": "2026-09-19",
+      "status": "SEEN"
+    },
+    "UCMw07uiVxGULqePlrOZnx9A": {
+      "fingerprint": "33d3e81b4c3de844",
+      "history": [
+        {
+          "date": "2026-09-05",
+          "fit": 82,
+          "status": "WATCHLIST",
+          "timing": "MEDIUM"
+        }
+      ],
+      "lane": "GLOBAL_PACKAGING_FINANCE",
+      "last_fit": 82,
+      "last_reviewed": "2026-09-05",
+      "last_timing": "MEDIUM",
+      "name": "Personal Finance with Leila - Debt Over It",
+      "next_review_after": "2026-09-30",
+      "status": "WATCHLIST"
+    },
+    "UCNXWqRPePQc9UYkki6uy3FA": {
+      "fingerprint": "9cac9c86b0e968f5",
+      "lane": "GLOBAL_PACKAGING_FINANCE",
+      "last_reviewed": "2026-09-05",
+      "name": "Wealths Hacks",
+      "next_review_after": "2026-09-19",
+      "status": "SEEN"
+    },
+    "UCNdNJJNfKtLq-jn9Uud12Gg": {
+      "fingerprint": "4c958e4b05d1c5ad",
+      "lane": "GLOBAL_PACKAGING_FINANCE",
+      "last_reviewed": "2026-09-05",
+      "name": "InfoByte",
+      "next_review_after": "2026-09-19",
+      "status": "SEEN"
+    },
+    "UCQ_AFiT74oS9BmLZIHpJCYg": {
+      "fingerprint": "486a7e2b896396dc",
+      "lane": "GLOBAL_PACKAGING_BUSINESS",
+      "last_reviewed": "2026-09-05",
+      "name": "The Orderly Mom",
+      "next_review_after": "2026-09-19",
+      "status": "SEEN"
+    },
+    "UCR9Z-4R1Xqq1mlpOBjqQNiw": {
+      "fingerprint": "0be6ef5c2165ace8",
+      "lane": "GLOBAL_PACKAGING_FINANCE",
+      "last_reviewed": "2026-09-05",
+      "name": "Personal Finance",
+      "next_review_after": "2026-09-19",
+      "status": "SEEN"
+    },
+    "UCTL6B3G7RBH7ALVRiJLnDRw": {
+      "fingerprint": "ef746069ac9680b3",
+      "lane": "GLOBAL_PACKAGING_BUSINESS",
+      "last_reviewed": "2026-09-05",
+      "name": "Jay Thadeshwar",
+      "next_review_after": "2026-09-19",
+      "status": "SEEN"
+    },
+    "UCTyvAMnHg_Zta5AecsD83eA": {
+      "fingerprint": "07a5e39eeddb3735",
+      "lane": "GLOBAL_PACKAGING_BUSINESS",
+      "last_reviewed": "2026-09-05",
+      "name": "Unfiltered with Aarjav",
+      "next_review_after": "2026-09-19",
+      "status": "SEEN"
+    },
+    "UCU0rpyae8upfKm30VeSVyDg": {
+      "fingerprint": "9b3cf2beacc6062c",
+      "lane": "GLOBAL_PACKAGING_BUSINESS",
+      "last_reviewed": "2026-09-05",
+      "name": "doggymentality",
+      "next_review_after": "2026-09-19",
+      "status": "SEEN"
+    },
+    "UCVCa-_J1CLBzpT52EwuZ3yQ": {
+      "fingerprint": "9492e0cb29a03294",
+      "lane": "GLOBAL_PACKAGING_BUSINESS",
+      "last_reviewed": "2026-09-05",
+      "name": "VisionX Lab",
+      "next_review_after": "2026-09-19",
+      "status": "SEEN"
+    },
+    "UCVdRlBpp6sBgORTEnCqh73g": {
+      "fingerprint": "ff159d615c4fdfaa",
+      "lane": "GLOBAL_PACKAGING_BUSINESS",
+      "last_reviewed": "2026-09-05",
+      "name": "DBC CREATIONS | Fashion Business",
+      "next_review_after": "2026-09-19",
+      "status": "SEEN"
+    },
+    "UCX843E2jz5UkX0x8_CAaGCw": {
+      "fingerprint": "7b58bf67b33e1166",
+      "lane": "GLOBAL_PACKAGING_AI_TECH",
+      "last_reviewed": "2026-09-05",
+      "name": "AI ToolKit",
+      "next_review_after": "2026-09-19",
+      "status": "SEEN"
+    },
+    "UCY6N8zZhs2V7gNTUxPuKWoQ": {
+      "fingerprint": "466997f896dab810",
+      "lane": "GLOBAL_PACKAGING_AI_TECH",
+      "last_reviewed": "2026-09-05",
+      "name": "Ishan Sharma",
+      "next_review_after": "2026-09-19",
+      "status": "SEEN"
+    },
+    "UCYFmJbZymkDPorFbFalFOlQ": {
+      "fingerprint": "e4f6e41bdea4fe8a",
+      "lane": "GLOBAL_PACKAGING_FINANCE",
+      "last_reviewed": "2026-09-05",
+      "name": "Next Dollar",
+      "next_review_after": "2026-09-19",
+      "status": "SEEN"
+    },
+    "UCZKJ_hgLq_jjoNtXF0PBDSw": {
+      "fingerprint": "859c720c03d65779",
+      "lane": "GLOBAL_PACKAGING_AI_TECH",
+      "last_reviewed": "2026-09-05",
+      "name": "Nivedan Rathi",
+      "next_review_after": "2026-09-19",
+      "status": "SEEN"
+    },
+    "UC_DunzgxDrqK343shToJICA": {
+      "fingerprint": "061df830a7778fda",
+      "lane": "GLOBAL_PACKAGING_BUSINESS",
+      "last_reviewed": "2026-09-05",
+      "name": "Onlyfounders",
+      "next_review_after": "2026-09-19",
+      "status": "SEEN"
+    },
+    "UCbBEkjzkcgOZgxDwGgicIcg": {
+      "fingerprint": "e63afdedf064fde2",
+      "lane": "GLOBAL_PACKAGING_AI_TECH",
+      "last_reviewed": "2026-09-05",
+      "name": "TutoNova",
+      "next_review_after": "2026-09-19",
+      "status": "SEEN"
+    },
+    "UCc0K9qu3XAIYcXuBzpDPWTA": {
+      "fingerprint": "0c9f6a566f585226",
+      "lane": "GLOBAL_PACKAGING_BUSINESS",
+      "last_reviewed": "2026-09-05",
+      "name": "Pierre du Plessis",
+      "next_review_after": "2026-09-19",
+      "status": "SEEN"
+    },
+    "UCcLTeuDmHE84Rb8fPmqpT2g": {
+      "fingerprint": "13cbb492faf89047",
+      "lane": "GLOBAL_PACKAGING_FINANCE",
+      "last_reviewed": "2026-09-05",
+      "name": "Shaor Info",
+      "next_review_after": "2026-09-19",
+      "status": "SEEN"
+    },
+    "UCcpRlXeJ7A_SJ5bxIz_RvrQ": {
+      "fingerprint": "3f86fcf94368f629",
+      "lane": "GLOBAL_PACKAGING_BUSINESS",
+      "last_reviewed": "2026-09-05",
+      "name": "Accidentally Qualified Podcast",
+      "next_review_after": "2026-09-19",
+      "status": "SEEN"
+    },
+    "UCcruVINgi1B5zJ9MgTyjU_g": {
+      "fingerprint": "09c7c9286c5b284c",
+      "lane": "GLOBAL_PACKAGING_BUSINESS",
+      "last_reviewed": "2026-09-05",
+      "name": "Ganesh Bugatha",
+      "next_review_after": "2026-09-19",
+      "status": "SEEN"
+    },
+    "UCdTzzwf2A8WcXtOJGlMeCMg": {
+      "fingerprint": "84c337530880568b",
+      "lane": "GLOBAL_PACKAGING_BUSINESS",
+      "last_reviewed": "2026-09-05",
+      "name": "Dilse Omni : Talks - with Saurabh Agrawal",
+      "next_review_after": "2026-09-19",
+      "status": "SEEN"
+    },
+    "UCeOlqDoElKyft8VFexJnbnA": {
+      "fingerprint": "73429821d88a82d4",
+      "lane": "GLOBAL_PACKAGING_BUSINESS",
+      "last_reviewed": "2026-09-05",
+      "name": "Grind Rich ",
+      "next_review_after": "2026-09-19",
+      "status": "SEEN"
+    },
+    "UCf5G5U3Y9pxyUWtx_gYKPbQ": {
+      "fingerprint": "20ab28b0e1ea9d5c",
+      "lane": "GLOBAL_PACKAGING_BUSINESS",
+      "last_reviewed": "2026-09-05",
+      "name": "Founder Signal",
+      "next_review_after": "2026-09-19",
+      "status": "SEEN"
+    },
+    "UCfMEz1FHN9aQNY2Gtt1BGXw": {
+      "fingerprint": "6df05032e799a56a",
+      "lane": "GLOBAL_PACKAGING_FINANCE",
+      "last_reviewed": "2026-09-05",
+      "name": "Boss Wallah (Kannada)",
+      "next_review_after": "2026-09-19",
+      "status": "SEEN"
+    },
+    "UCggPd3Vf9ooG2r4I_ZNWBzA": {
+      "fingerprint": "662c6966244ad2fb",
+      "history": [
+        {
+          "date": "2026-09-05",
+          "fit": 55,
+          "status": "REJECTED",
+          "timing": "LOW"
+        }
+      ],
+      "lane": "GLOBAL_PACKAGING_FINANCE",
+      "last_fit": 55,
+      "last_reviewed": "2026-09-05",
+      "last_timing": "LOW",
+      "name": "Wint Wealth",
+      "next_review_after": "2026-11-19",
+      "status": "REJECTED"
+    },
+    "UCgxj31L32Z0LBybG0XbEeaw": {
+      "fingerprint": "1330b0d271caefa1",
+      "history": [
+        {
+          "date": "2026-09-05",
+          "fit": 50,
+          "status": "REJECTED",
+          "timing": "LOW"
+        }
+      ],
+      "lane": "GLOBAL_PACKAGING_AI_TECH",
+      "last_fit": 50,
+      "last_reviewed": "2026-09-05",
+      "last_timing": "LOW",
+      "name": "Shahzad AI",
+      "next_review_after": "2026-11-19",
+      "status": "REJECTED"
+    },
+    "UChPwGY5vg-p4a6UehR83wHQ": {
+      "fingerprint": "d3e98484fe3d7fcd",
+      "history": [
+        {
+          "date": "2026-09-05",
+          "fit": 58,
+          "status": "REJECTED",
+          "timing": "LOW"
+        }
+      ],
+      "lane": "GLOBAL_PACKAGING_BUSINESS",
+      "last_fit": 58,
+      "last_reviewed": "2026-09-05",
+      "last_timing": "LOW",
+      "name": "School of Hard Knocks Podcast",
+      "next_review_after": "2026-11-19",
+      "status": "REJECTED"
+    },
+    "UChZkKFm9d7ZvhRESa3JLxjQ": {
+      "fingerprint": "022fb225a69a5530",
+      "lane": "GLOBAL_PACKAGING_BUSINESS",
+      "last_reviewed": "2026-09-05",
+      "name": "Chandan Dubey",
+      "next_review_after": "2026-09-19",
+      "status": "SEEN"
+    },
+    "UCjkBbBdN2wa9saELKFtocOA": {
+      "fingerprint": "81e2202d203e1193",
+      "lane": "GLOBAL_PACKAGING_FINANCE",
+      "last_reviewed": "2026-09-05",
+      "name": "Roy Finance",
+      "next_review_after": "2026-09-19",
+      "status": "SEEN"
+    },
+    "UCk6ntaC4zukSWRgBJMnZGng": {
+      "fingerprint": "5136bb9fd970459f",
+      "lane": "GLOBAL_PACKAGING_BUSINESS",
+      "last_reviewed": "2026-09-05",
+      "name": "Abu Lahya life ",
+      "next_review_after": "2026-09-19",
+      "status": "SEEN"
+    },
+    "UCkEJ8GPCcL08XenGdlFQNRw": {
+      "fingerprint": "9bff103e7dff0f2c",
+      "lane": "GLOBAL_PACKAGING_AI_TECH",
+      "last_reviewed": "2026-09-05",
+      "name": "Bytes Media",
+      "next_review_after": "2026-09-19",
+      "status": "SEEN"
+    },
+    "UCm2DweYV3pIQD84hyxZnMwg": {
+      "fingerprint": "466b960b72ecbe61",
+      "lane": "GLOBAL_PACKAGING_BUSINESS",
+      "last_reviewed": "2026-09-05",
+      "name": "Chad Cohen",
+      "next_review_after": "2026-09-19",
+      "status": "SEEN"
+    },
+    "UCm5iBOcQ0GET_2FqFI61QDA": {
+      "fingerprint": "372a5135c53df967",
+      "history": [
+        {
+          "date": "2026-09-05",
+          "fit": 80,
+          "status": "WATCHLIST",
+          "timing": "LOW"
+        }
+      ],
+      "lane": "GLOBAL_PACKAGING_FINANCE",
+      "last_fit": 80,
+      "last_reviewed": "2026-09-05",
+      "last_timing": "LOW",
+      "name": "Cara Nicole",
+      "next_review_after": "2026-09-30",
+      "status": "WATCHLIST"
+    },
+    "UCm7xZ9sbqhuARuDDcckh8Jg": {
+      "fingerprint": "23d2ca7dc9fd672c",
+      "lane": "GLOBAL_PACKAGING_FINANCE",
+      "last_reviewed": "2026-09-05",
+      "name": "INDmoney",
+      "next_review_after": "2026-09-19",
+      "status": "SEEN"
+    },
+    "UCnVPiOF7iK5GAXl3G6aKwww": {
+      "fingerprint": "f4532234828f69db",
+      "lane": "GLOBAL_PACKAGING_BUSINESS",
+      "last_reviewed": "2026-09-05",
+      "name": "Rebel Jones ",
+      "next_review_after": "2026-09-19",
+      "status": "SEEN"
+    },
+    "UCpjdipKgSX-p_fBzTGiFr-g": {
+      "fingerprint": "5bcaa321b78a54ab",
+      "lane": "GLOBAL_PACKAGING_BUSINESS",
+      "last_reviewed": "2026-09-05",
+      "name": "Journey Rose Beauty",
+      "next_review_after": "2026-09-19",
+      "status": "SEEN"
+    },
+    "UCsI6AfGWcnqeCQ4FA3teJkw": {
+      "fingerprint": "aa65fcd93f3c8aa4",
+      "lane": "GLOBAL_PACKAGING_FINANCE",
+      "last_reviewed": "2026-09-05",
+      "name": "Money Matters ",
+      "next_review_after": "2026-09-19",
+      "status": "SEEN"
+    },
+    "UCsm6EOn4Qdbk6lchMolxS7A": {
+      "fingerprint": "6d3455247052dbf7",
+      "history": [
+        {
+          "date": "2026-09-05",
+          "fit": 35,
+          "status": "REJECTED",
+          "timing": "LOW"
+        }
+      ],
+      "lane": "GLOBAL_PACKAGING_AI_TECH",
+      "last_fit": 35,
+      "last_reviewed": "2026-09-05",
+      "last_timing": "LOW",
+      "name": "Marketing Island",
+      "next_review_after": "2026-11-19",
+      "status": "REJECTED"
+    },
+    "UCsqT53mykSpJZr2J3LYTfWA": {
+      "fingerprint": "171108a8ddd6d7c1",
+      "lane": "GLOBAL_PACKAGING_AI_TECH",
+      "last_reviewed": "2026-09-05",
+      "name": "AIToolSpott",
+      "next_review_after": "2026-09-19",
+      "status": "SEEN"
+    },
+    "UCv6cJDchz6AyLDK3Fl5FHZw": {
+      "fingerprint": "8d83a68082cca41d",
+      "lane": "GLOBAL_PACKAGING_BUSINESS",
+      "last_reviewed": "2026-09-05",
+      "name": "Brittney Foreman",
+      "next_review_after": "2026-09-19",
+      "status": "SEEN"
+    },
+    "UCvOKCA1sZ10NTd2BPGQKmfg": {
+      "fingerprint": "3aa9c7f196e1bc26",
+      "lane": "GLOBAL_PACKAGING_BUSINESS",
+      "last_reviewed": "2026-09-05",
+      "name": "Gobinath",
+      "next_review_after": "2026-09-19",
+      "status": "SEEN"
+    },
+    "UCvwSxRQpKKMPjIkYmY_d3zw": {
+      "fingerprint": "20a716570335e12c",
+      "lane": "GLOBAL_PACKAGING_BUSINESS",
+      "last_reviewed": "2026-09-05",
+      "name": "Natasha \u0c68\u09ce",
+      "next_review_after": "2026-09-19",
+      "status": "SEEN"
+    },
+    "UCwVEhEzsjLym_u1he4XWFkg": {
+      "fingerprint": "c09873e1630df777",
+      "lane": "GLOBAL_PACKAGING_FINANCE",
+      "last_reviewed": "2026-09-05",
+      "name": "Finance With Sharan",
+      "next_review_after": "2026-09-19",
+      "status": "SEEN"
+    },
+    "UCxG1llmgOZ8GTioOhm-QjsA": {
+      "fingerprint": "83036baddb361d74",
+      "lane": "GLOBAL_PACKAGING_BUSINESS",
+      "last_reviewed": "2026-09-05",
+      "name": "Renee Haye",
+      "next_review_after": "2026-09-19",
+      "status": "SEEN"
+    },
+    "UCxUWzNF4GZ_5lv5liGPBdAA": {
+      "fingerprint": "20af2c77d5282dd5",
+      "lane": "GLOBAL_PACKAGING_BUSINESS",
+      "last_reviewed": "2026-09-05",
+      "name": "Elena Iuldasheva",
+      "next_review_after": "2026-09-19",
+      "status": "SEEN"
+    },
+    "UCxi13wzhDETxKkGkwNQ1-7Q": {
+      "fingerprint": "ea66b1329838f4cd",
+      "lane": "GLOBAL_PACKAGING_AI_TECH",
+      "last_reviewed": "2026-09-05",
+      "name": "Daily Digital Reviews",
+      "next_review_after": "2026-09-19",
+      "status": "SEEN"
+    },
+    "UCy5k9Vwoug-45UZqlcYb1Sg": {
+      "fingerprint": "7c6b295e72d1b7b3",
+      "history": [
+        {
+          "date": "2026-09-05",
+          "fit": 70,
+          "status": "WATCHLIST",
+          "timing": "LOW"
+        }
+      ],
+      "lane": "GLOBAL_PACKAGING_FINANCE",
+      "last_fit": 70,
+      "last_reviewed": "2026-09-05",
+      "last_timing": "LOW",
+      "name": "Making Money Podcast",
+      "next_review_after": "2026-09-30",
+      "status": "WATCHLIST"
+    },
+    "UCyqgXN-ZUghY2GO1-VTwwmA": {
+      "fingerprint": "154a4e9365e1171c",
+      "lane": "GLOBAL_PACKAGING_BUSINESS",
+      "last_reviewed": "2026-09-05",
+      "name": "Emily Cromwell Designs",
+      "next_review_after": "2026-09-19",
+      "status": "SEEN"
+    },
+    "UCzIWiqlJ3CakJ7QpNaPHJNw": {
+      "fingerprint": "833dab9084060ddb",
+      "lane": "GLOBAL_PACKAGING_AI_TECH",
+      "last_reviewed": "2026-09-05",
+      "name": "Mariselle Hartwell",
+      "next_review_after": "2026-09-19",
+      "status": "SEEN"
+    },
+    "UCzaRorDlS1gd6EROE-xGm-Q": {
+      "fingerprint": "d7f62fbccccf7a97",
+      "lane": "GLOBAL_PACKAGING_FINANCE",
+      "last_reviewed": "2026-09-05",
+      "name": "Boss Wallah (Telugu)",
+      "next_review_after": "2026-09-19",
+      "status": "SEEN"
+    },
+    "UCzhwmIuZW699hbPzTzzBC2g": {
+      "fingerprint": "0f5e1a42f5d5903f",
+      "lane": "GLOBAL_PACKAGING_BUSINESS",
+      "last_reviewed": "2026-09-05",
+      "name": "Issie Hanley",
+      "next_review_after": "2026-09-19",
+      "status": "SEEN"
+    },
+    "UCzwCEE_PchiBULMnAJqhGVg": {
+      "fingerprint": "00077897f63805cc",
+      "lane": "GLOBAL_PACKAGING_BUSINESS",
+      "last_reviewed": "2026-09-05",
+      "name": "Raj Shamani",
+      "next_review_after": "2026-09-19",
+      "status": "SEEN"
+    }
+  },
   "feedback": {},
-  "last_output": []
+  "lane_query_index": {
+    "GLOBAL_PACKAGING_AI_TECH": 1,
+    "GLOBAL_PACKAGING_BUSINESS": 2,
+    "GLOBAL_PACKAGING_FINANCE": 1
+  },
+  "last_output": [
+    {
+      "channel_id": "UCMw07uiVxGULqePlrOZnx9A",
+      "name": "Personal Finance with Leila - Debt Over It",
+      "num": 1
+    },
+    {
+      "channel_id": "UCm5iBOcQ0GET_2FqFI61QDA",
+      "name": "Cara Nicole",
+      "num": 2
+    },
+    {
+      "channel_id": "UC3iyLcDyYxk2nN7M5DsYaYQ",
+      "name": "Daniel | Tech & Data",
+      "num": 3
+    },
+    {
+      "channel_id": "UCy5k9Vwoug-45UZqlcYb1Sg",
+      "name": "Making Money Podcast",
+      "num": 4
+    }
+  ],
+  "query_stats": {
+    "GLOBAL_PACKAGING_AI_TECH": {
+      "runs": 1,
+      "shown": 6
+    },
+    "GLOBAL_PACKAGING_BUSINESS": {
+      "runs": 1,
+      "shown": 3
+    },
+    "GLOBAL_PACKAGING_FINANCE": {
+      "runs": 1,
+      "shown": 6
+    }
+  },
+  "rotation_index": 1,
+  "runs": [
+    {
+      "claude_packs": 15,
+      "date": "2026-09-05",
+      "filtered_survivors": 18,
+      "raw_channels": 89,
+      "raw_videos": 100
+    }
+  ],
+  "version": 1
 }
