@@ -1,0 +1,15 @@
+{
+  "_comment": "SCHEMA ONLY — not evaluation data. Only add entries after a human has reviewed a real weekly hunt result and confirmed the verdict was correct. Never add invented or synthetic leads here. Production runs must not load this file.",
+  "_schema_example_do_not_use_for_eval": {
+    "channel_id": "UCxxxxxxxxxxxxxxxxxxxxxx",
+    "name": "Example Channel",
+    "lane": "GLOBAL_PACKAGING_BUSINESS",
+    "expected_fit_range": [80, 95],
+    "expected_timing": "MEDIUM",
+    "expected_keep": true,
+    "reviewed_by": "human",
+    "reviewed_date": "2026-01-01",
+    "notes": "Why this verdict is correct, for future regression comparison."
+  },
+  "entries": []
+}

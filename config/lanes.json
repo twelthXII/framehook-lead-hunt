@@ -1,0 +1,209 @@
+{
+  "weekly_query_budget": 16,
+  "exploration_share": 0.2,
+  "longform_min_seconds": 180,
+  "claude_shortlist_max": 25,
+  "max_per_lane_in_shortlist": 6,
+  "recheck_days": {
+    "HOT": 10,
+    "STRONG": 10,
+    "WATCHLIST": 25,
+    "REJECTED": 75,
+    "CONTACTED": 21,
+    "REPLIED": 30,
+    "DEFAULT": 14
+  },
+  "subscriber_ranges": {
+    "commercial_creator": { "min": 20000, "max": 500000, "stretch_max": 1000000 },
+    "founder_led": { "min": 1000, "max": 500000, "stretch_max": 1000000 },
+    "cis_editing": { "min": 5000, "max": 500000, "stretch_max": 1000000 },
+    "agency": { "min": 0, "max": 2000000, "stretch_max": 5000000 }
+  },
+  "lanes": [
+    {
+      "id": "GLOBAL_PACKAGING_BUSINESS",
+      "icp": "commercial_creator",
+      "geography": "global",
+      "language": "en",
+      "eligible_offers": ["thumbnails", "youtube_packaging", "titles_thumbnails"],
+      "base_weight": 1.0,
+      "queries": [
+        "entrepreneur interview podcast",
+        "business owner vlog behind the scenes",
+        "startup founder Q&A"
+      ]
+    },
+    {
+      "id": "GLOBAL_PACKAGING_AI_TECH",
+      "icp": "commercial_creator",
+      "geography": "global",
+      "language": "en",
+      "eligible_offers": ["thumbnails", "youtube_packaging", "titles_thumbnails"],
+      "base_weight": 1.0,
+      "queries": [
+        "AI tools review 2026",
+        "SaaS founder tech breakdown",
+        "coding tutorial full course"
+      ]
+    },
+    {
+      "id": "GLOBAL_PACKAGING_FINANCE",
+      "icp": "commercial_creator",
+      "geography": "global",
+      "language": "en",
+      "eligible_offers": ["thumbnails", "youtube_packaging", "titles_thumbnails"],
+      "base_weight": 1.0,
+      "queries": [
+        "personal finance investing tips",
+        "stock market analysis this week",
+        "how I built my business finances"
+      ]
+    },
+    {
+      "id": "GLOBAL_PACKAGING_EDUCATION",
+      "icp": "commercial_creator",
+      "geography": "global",
+      "language": "en",
+      "eligible_offers": ["thumbnails", "youtube_packaging", "titles_thumbnails"],
+      "base_weight": 0.9,
+      "queries": [
+        "online course launch",
+        "study tips full lecture",
+        "learn skill masterclass"
+      ]
+    },
+    {
+      "id": "GLOBAL_PACKAGING_FITNESS",
+      "icp": "commercial_creator",
+      "geography": "global",
+      "language": "en",
+      "eligible_offers": ["thumbnails", "youtube_packaging", "titles_thumbnails"],
+      "base_weight": 0.9,
+      "queries": [
+        "workout program full session",
+        "fitness coach client transformation",
+        "nutrition coach meal plan"
+      ]
+    },
+    {
+      "id": "GLOBAL_PACKAGING_AUTOMOTIVE",
+      "icp": "commercial_creator",
+      "geography": "global",
+      "language": "en",
+      "eligible_offers": ["thumbnails", "youtube_packaging", "titles_thumbnails"],
+      "base_weight": 0.8,
+      "queries": [
+        "car build project update",
+        "car review full test drive"
+      ]
+    },
+    {
+      "id": "GLOBAL_PACKAGING_GAMING",
+      "icp": "commercial_creator",
+      "geography": "global",
+      "language": "en",
+      "eligible_offers": ["thumbnails", "youtube_packaging", "titles_thumbnails"],
+      "base_weight": 0.8,
+      "queries": [
+        "gaming full playthrough commentary",
+        "esports team behind the scenes"
+      ]
+    },
+    {
+      "id": "GLOBAL_PACKAGING_ENTERTAINMENT",
+      "icp": "commercial_creator",
+      "geography": "global",
+      "language": "en",
+      "eligible_offers": ["thumbnails", "youtube_packaging", "titles_thumbnails"],
+      "base_weight": 0.8,
+      "queries": [
+        "podcast full episode interview",
+        "reaction video full episode"
+      ]
+    },
+    {
+      "id": "CIS_EDITING_GAMING",
+      "icp": "cis_editing",
+      "geography": "cis",
+      "language": "ru",
+      "eligible_offers": ["editing", "editing_packaging"],
+      "base_weight": 1.0,
+      "queries": [
+        "полное прохождение игры стрим",
+        "обзор игры новинка"
+      ]
+    },
+    {
+      "id": "CIS_EDITING_BUSINESS",
+      "icp": "cis_editing",
+      "geography": "cis",
+      "language": "ru",
+      "eligible_offers": ["editing", "editing_packaging"],
+      "base_weight": 1.0,
+      "queries": [
+        "бизнес интервью подкаст",
+        "предприниматель личный опыт"
+      ]
+    },
+    {
+      "id": "CIS_EDITING_TECH",
+      "icp": "cis_editing",
+      "geography": "cis",
+      "language": "ru",
+      "eligible_offers": ["editing", "editing_packaging"],
+      "base_weight": 0.9,
+      "queries": [
+        "обзор технологий IT подкаст",
+        "разработчик путь в профессию"
+      ]
+    },
+    {
+      "id": "CIS_EDITING_EDUCATION",
+      "icp": "cis_editing",
+      "geography": "cis",
+      "language": "ru",
+      "eligible_offers": ["editing", "editing_packaging"],
+      "base_weight": 0.8,
+      "queries": [
+        "онлайн курс обучение полное видео",
+        "лекция полная версия"
+      ]
+    },
+    {
+      "id": "CIS_EDITING_ENTERTAINMENT",
+      "icp": "cis_editing",
+      "geography": "cis",
+      "language": "ru",
+      "eligible_offers": ["editing", "editing_packaging"],
+      "base_weight": 0.8,
+      "queries": [
+        "влог полное видео",
+        "шоу подкаст выпуск"
+      ]
+    },
+    {
+      "id": "FOUNDER_LED_EXPLORATION",
+      "icp": "founder_led",
+      "geography": "global",
+      "language": "en",
+      "eligible_offers": ["thumbnails", "youtube_packaging", "editing", "content_production"],
+      "base_weight": 0.8,
+      "queries": [
+        "founder building in public update",
+        "CEO interview our story"
+      ]
+    },
+    {
+      "id": "AGENCY_EXPLORATION",
+      "icp": "agency",
+      "geography": "global",
+      "language": "en",
+      "eligible_offers": ["white_label_editing", "white_label_packaging"],
+      "base_weight": 0.7,
+      "queries": [
+        "youtube growth agency case study",
+        "personal branding agency client results"
+      ]
+    }
+  ]
+}
