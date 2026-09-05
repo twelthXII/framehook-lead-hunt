@@ -488,6 +488,21 @@ Then exactly one stats line (machine-readable, can stay in English):
 Raw: X | Filtered: X | Claude: X | Enriched: X | CONFIRMED_LEAD: X | READY_NOW: X | GOOD_FIT: X
 ```
 
+Then one short operational note, in Russian, always present even when
+everything went smoothly:
+
+- сколько уже известных/ранее отклонённых аккаунтов было пропущено благодаря
+  дедупликации (`skipped_unchanged_rejected` from `discover`'s stats, plus any
+  accounts skipped because their status is `WON`/`CONTACTED`/`REPLIED`/
+  `LOST` and nothing material changed);
+- закоммичен ли `state/state.json` успешно (`commit-state`'s result) — если
+  нет, скажи почему (например, `state_conflict` — другой запуск уже обновил
+  состояние);
+- работал ли какой-либо этап в деградированном режиме (например, визуальный
+  аудит был пропущен из-за ошибки загрузки миниатюр, YouTube quota оказалась
+  ограничена, поиск контактов не проводился для части лидов) — если всё
+  прошло штатно, так и скажи одной фразой, не нужно ничего изобретать.
+
 **Never output:** essays, architecture explanation, a rejected-account report, a
 raw source dump, development commentary, or drafted outreach messages. If the
 user later asks to "expand #4", research and show detail only for that one
