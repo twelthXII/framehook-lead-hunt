@@ -12,6 +12,7 @@ BLOCKLIST_KEYWORDS = [
     "official movie", "television network", "broadcasting corporation",
     "record label", "music label", "vevo", "news network", "government of",
     "ministry of", "archive footage", "compilation channel", "tv channel",
+    "university", "college of", "institute of technology", "school district",
 ]
 
 DURATION_RE = re.compile(r"^PT(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?$")
