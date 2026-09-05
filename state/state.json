@@ -366,6 +366,32 @@
       "last_reviewed": "2026-09-05",
       "status": "SEEN"
     },
+    "UC9k--dE_UE0Faxzgb_DDkYQ": {
+      "confirmed_lead": false,
+      "contact_platform": null,
+      "contact_status": null,
+      "contact_value": null,
+      "fingerprint": "2d30ebe232803a2f",
+      "fit_tier": "REJECTED",
+      "history": [
+        {
+          "date": "2026-09-05",
+          "fit": 35,
+          "fit_tier": "REJECTED",
+          "timing": "LOW"
+        }
+      ],
+      "lane": "ADHOC:cs2_thumbnails",
+      "last_fit": 35,
+      "last_reviewed": "2026-09-05",
+      "last_timing": "LOW",
+      "name": "BLAST Premier",
+      "pain_confirmed": false,
+      "rejection_reasons": [
+        "ALREADY_WELL_RESOURCED"
+      ],
+      "status": "REJECTED"
+    },
     "UC9tZB_VUXD2nYPAA1Iph9hQ": {
       "fingerprint": "4405103efe4a7b09",
       "last_reviewed": "2026-09-05",
@@ -429,6 +455,32 @@
       "next_review_after": "2026-09-30",
       "status": "WATCH"
     },
+    "UCBKXQ-XSihIdD5Xh82F8MpA": {
+      "confirmed_lead": false,
+      "contact_platform": null,
+      "contact_status": null,
+      "contact_value": null,
+      "fingerprint": "ab02e9dee6321532",
+      "fit_tier": "REJECTED",
+      "history": [
+        {
+          "date": "2026-09-05",
+          "fit": 70,
+          "fit_tier": "REJECTED",
+          "timing": "LOW"
+        }
+      ],
+      "lane": "ADHOC:cs2_thumbnails",
+      "last_fit": 70,
+      "last_reviewed": "2026-09-05",
+      "last_timing": "LOW",
+      "name": "Elmapuddy",
+      "pain_confirmed": false,
+      "rejection_reasons": [
+        "NO_CLEAR_PAIN"
+      ],
+      "status": "REJECTED"
+    },
     "UCBNJaZ64ak4GECgxhKlispA": {
       "fingerprint": "1f653f8fb654428b",
       "last_reviewed": "2026-09-05",
@@ -454,6 +506,31 @@
       "last_reviewed": "2026-09-05",
       "status": "SEEN"
     },
+    "UCC0-NtJNSdfYZ9pImGsVWuw": {
+      "confirmed_lead": true,
+      "contact_platform": "Instagram",
+      "contact_status": "CONTACT_FOUND",
+      "contact_value": "instagram.com/louiecs2",
+      "fingerprint": "e8fe44010bb5d3fe",
+      "fit_tier": "GOOD_FIT",
+      "history": [
+        {
+          "date": "2026-09-05",
+          "fit": 68,
+          "fit_tier": "GOOD_FIT",
+          "timing": "LOW"
+        }
+      ],
+      "lane": "ADHOC:cs2_thumbnails",
+      "last_fit": 68,
+      "last_reviewed": "2026-09-05",
+      "last_timing": "LOW",
+      "name": "louiecs2",
+      "next_review_after": "2026-09-19",
+      "pain_confirmed": true,
+      "rejection_reasons": [],
+      "status": "GOOD_FIT"
+    },
     "UCC5was5yEe5knSTjx01McQg": {
       "fingerprint": "8207e9ce8aab1eb8",
       "fit_tier": "WATCH",
@@ -477,6 +554,32 @@
       "fingerprint": "63672d57e55bb80b",
       "last_reviewed": "2026-09-05",
       "status": "SEEN"
+    },
+    "UCCra1t-eIlO3ULyXQQMD9Xw": {
+      "confirmed_lead": false,
+      "contact_platform": null,
+      "contact_status": null,
+      "contact_value": null,
+      "fingerprint": "b823db4a56d4c06d",
+      "fit_tier": "REJECTED",
+      "history": [
+        {
+          "date": "2026-09-05",
+          "fit": 42,
+          "fit_tier": "REJECTED",
+          "timing": "LOW"
+        }
+      ],
+      "lane": "ADHOC:cs2_thumbnails",
+      "last_fit": 42,
+      "last_reviewed": "2026-09-05",
+      "last_timing": "LOW",
+      "name": "Remia Aotsuki \u3010VSPO! EN\u3011",
+      "pain_confirmed": false,
+      "rejection_reasons": [
+        "WRONG_ICP"
+      ],
+      "status": "REJECTED"
     },
     "UCCsREoj8rSRkEvxWqxr74rQ": {
       "fingerprint": "bfb033add9510fc8",
@@ -512,6 +615,31 @@
       "fingerprint": "fd315814f2daf9b9",
       "last_reviewed": "2026-09-05",
       "status": "SEEN"
+    },
+    "UCERwo6x4GbVHS4-ROXRrvNw": {
+      "confirmed_lead": false,
+      "contact_platform": null,
+      "contact_status": null,
+      "contact_value": null,
+      "fingerprint": "010919d48ea65835",
+      "fit_tier": "WATCH",
+      "history": [
+        {
+          "date": "2026-09-05",
+          "fit": 58,
+          "fit_tier": "WATCH",
+          "timing": "LOW"
+        }
+      ],
+      "lane": "ADHOC:cs2_thumbnails",
+      "last_fit": 58,
+      "last_reviewed": "2026-09-05",
+      "last_timing": "LOW",
+      "name": "zephraN",
+      "next_review_after": "2026-09-30",
+      "pain_confirmed": true,
+      "rejection_reasons": [],
+      "status": "WATCH"
     },
     "UCEjSoMnD43v0EsqcuHW2lBw": {
       "fingerprint": "d171e0bc49ed42e3",
@@ -561,6 +689,32 @@
       "fingerprint": "838266c319244676",
       "last_reviewed": "2026-09-05",
       "status": "SEEN"
+    },
+    "UCFE9IFdVxGKF9Z9Q9kMNwWA": {
+      "confirmed_lead": false,
+      "contact_platform": null,
+      "contact_status": null,
+      "contact_value": null,
+      "fingerprint": "81fa9622a06e85c2",
+      "fit_tier": "REJECTED",
+      "history": [
+        {
+          "date": "2026-09-05",
+          "fit": 30,
+          "fit_tier": "REJECTED",
+          "timing": "LOW"
+        }
+      ],
+      "lane": "ADHOC:cs2_thumbnails",
+      "last_fit": 30,
+      "last_reviewed": "2026-09-05",
+      "last_timing": "LOW",
+      "name": "xQc Gaming ",
+      "pain_confirmed": false,
+      "rejection_reasons": [
+        "WRONG_ICP"
+      ],
+      "status": "REJECTED"
     },
     "UCFqmbJBvFHaNxwvIM4ZstVQ": {
       "fingerprint": "aaf5b5d748c4a506",
@@ -634,6 +788,31 @@
       "fingerprint": "2bce1f538fdb41a4",
       "last_reviewed": "2026-09-05",
       "status": "SEEN"
+    },
+    "UCHtcNb0dDFEE1CCjufx0_HQ": {
+      "confirmed_lead": false,
+      "contact_platform": null,
+      "contact_status": "CONTACT_EMAIL_ONLY",
+      "contact_value": null,
+      "fingerprint": "aa73c112bdb242c6",
+      "fit_tier": "GOOD_FIT",
+      "history": [
+        {
+          "date": "2026-09-05",
+          "fit": 68,
+          "fit_tier": "GOOD_FIT",
+          "timing": "LOW"
+        }
+      ],
+      "lane": "ADHOC:cs2_thumbnails",
+      "last_fit": 68,
+      "last_reviewed": "2026-09-05",
+      "last_timing": "LOW",
+      "name": "Counter Strike Proland",
+      "next_review_after": "2026-09-19",
+      "pain_confirmed": true,
+      "rejection_reasons": [],
+      "status": "GOOD_FIT"
     },
     "UCI1OuM8hAOOAcsmo0x6ykZA": {
       "fingerprint": "3a756e96561f00f2",
@@ -1157,6 +1336,31 @@
       "last_reviewed": "2026-09-05",
       "status": "SEEN"
     },
+    "UCWkIV8xqWoDEZ15xSBxTr3Q": {
+      "confirmed_lead": true,
+      "contact_platform": "X",
+      "contact_status": "CONTACT_FOUND",
+      "contact_value": "x.com/STYKOcs",
+      "fingerprint": "e7d4d3de7f0494eb",
+      "fit_tier": "GOOD_FIT",
+      "history": [
+        {
+          "date": "2026-09-05",
+          "fit": 72,
+          "fit_tier": "GOOD_FIT",
+          "timing": "LOW"
+        }
+      ],
+      "lane": "ADHOC:cs2_thumbnails",
+      "last_fit": 72,
+      "last_reviewed": "2026-09-05",
+      "last_timing": "LOW",
+      "name": "STYKO",
+      "next_review_after": "2026-09-19",
+      "pain_confirmed": true,
+      "rejection_reasons": [],
+      "status": "GOOD_FIT"
+    },
     "UCWu6v5jfsW3wO948jOHMEiA": {
       "fingerprint": "6ee22ea56d10281b",
       "last_reviewed": "2026-09-05",
@@ -1301,6 +1505,32 @@
       "fingerprint": "e7b804864836a0c9",
       "last_reviewed": "2026-09-05",
       "status": "SEEN"
+    },
+    "UCbWA4nLSXvfWnOS2Q4yP48A": {
+      "confirmed_lead": false,
+      "contact_platform": null,
+      "contact_status": null,
+      "contact_value": null,
+      "fingerprint": "345fb0a4e09f54a0",
+      "fit_tier": "REJECTED",
+      "history": [
+        {
+          "date": "2026-09-05",
+          "fit": 40,
+          "fit_tier": "REJECTED",
+          "timing": "LOW"
+        }
+      ],
+      "lane": "ADHOC:cs2_thumbnails",
+      "last_fit": 40,
+      "last_reviewed": "2026-09-05",
+      "last_timing": "LOW",
+      "name": "BLAST Premier CS2 Highlights",
+      "pain_confirmed": false,
+      "rejection_reasons": [
+        "ALREADY_WELL_RESOURCED"
+      ],
+      "status": "REJECTED"
     },
     "UCbgq4Y6WypFnBBzrBDgR0zA": {
       "fingerprint": "59bbb01b04a3a054",
@@ -1472,6 +1702,32 @@
       "fingerprint": "b49cbae880dffcb1",
       "last_reviewed": "2026-09-05",
       "status": "SEEN"
+    },
+    "UCef7TE-TfKtAHukBHfXBhvA": {
+      "confirmed_lead": false,
+      "contact_platform": null,
+      "contact_status": null,
+      "contact_value": null,
+      "fingerprint": "0fcfae2565f6770f",
+      "fit_tier": "REJECTED",
+      "history": [
+        {
+          "date": "2026-09-05",
+          "fit": 35,
+          "fit_tier": "REJECTED",
+          "timing": "LOW"
+        }
+      ],
+      "lane": "ADHOC:cs2_thumbnails",
+      "last_fit": 35,
+      "last_reviewed": "2026-09-05",
+      "last_timing": "LOW",
+      "name": "EWC Extra",
+      "pain_confirmed": false,
+      "rejection_reasons": [
+        "ALREADY_WELL_RESOURCED"
+      ],
+      "status": "REJECTED"
     },
     "UCefl-5pmhZmljwZTE2KrcdA": {
       "fingerprint": "54608d32aa6d01cb",
@@ -1792,6 +2048,31 @@
       "fingerprint": "87bbb5f505dd929c",
       "last_reviewed": "2026-09-05",
       "status": "SEEN"
+    },
+    "UCmL5KW_gOuCBvj376xNCs1A": {
+      "confirmed_lead": false,
+      "contact_platform": null,
+      "contact_status": null,
+      "contact_value": null,
+      "fingerprint": "78ddb907371d21fd",
+      "fit_tier": "WATCH",
+      "history": [
+        {
+          "date": "2026-09-05",
+          "fit": 48,
+          "fit_tier": "WATCH",
+          "timing": "LOW"
+        }
+      ],
+      "lane": "ADHOC:cs2_thumbnails",
+      "last_fit": 48,
+      "last_reviewed": "2026-09-05",
+      "last_timing": "LOW",
+      "name": "riaricsgo",
+      "next_review_after": "2026-09-30",
+      "pain_confirmed": true,
+      "rejection_reasons": [],
+      "status": "WATCH"
     },
     "UCmRNXk6hpY7T8ct9gNIyMhQ": {
       "confirmed_lead": false,
@@ -2353,74 +2634,29 @@
   },
   "last_output": [
     {
-      "channel_id": "UC2YdJw53sP73T-lffzrqTZA",
-      "name": "Aniimo",
+      "channel_id": "UCWkIV8xqWoDEZ15xSBxTr3Q",
+      "name": "STYKO",
       "num": 1
     },
     {
-      "channel_id": "UCn4Sml6YOxXxRC94qPXw5Zw",
-      "name": "CJ Race Cars",
+      "channel_id": "UCC0-NtJNSdfYZ9pImGsVWuw",
+      "name": "louiecs2",
       "num": 2
     },
     {
-      "channel_id": "UC-qwaQSx8GAtUMlw3aBGSzQ",
-      "name": "\u041f\u0430\u0432\u0435\u043b \u0425\u043c\u0443\u0440\u0447\u0438\u043a",
+      "channel_id": "UCHtcNb0dDFEE1CCjufx0_HQ",
+      "name": "Counter Strike Proland",
       "num": 3
     },
     {
-      "channel_id": "UCde0vB0fTwC8AT3sJofFV0w",
-      "name": "Mikey No Code",
+      "channel_id": "UCERwo6x4GbVHS4-ROXRrvNw",
+      "name": "zephraN",
       "num": 4
     },
     {
-      "channel_id": "UCV_DLB3VW0szIGQnwel1Nsw",
-      "name": "The Solo Entrepreneur",
+      "channel_id": "UCmL5KW_gOuCBvj376xNCs1A",
+      "name": "riaricsgo",
       "num": 5
-    },
-    {
-      "channel_id": "UCbsJaeNLXZNVdjnY9y9FFXw",
-      "name": "Mike & Sophie",
-      "num": 6
-    },
-    {
-      "channel_id": "UCmRNXk6hpY7T8ct9gNIyMhQ",
-      "name": "Benyamin BE",
-      "num": 7
-    },
-    {
-      "channel_id": "UCPrVjDohW98GDxq99E8eHUQ",
-      "name": "Copy That!",
-      "num": 8
-    },
-    {
-      "channel_id": "UCRPdsCVuH53rcbTcEkuY4uQ",
-      "name": "Moore's Law Is Dead",
-      "num": 9
-    },
-    {
-      "channel_id": "UCC5was5yEe5knSTjx01McQg",
-      "name": "We Trade Waves",
-      "num": 10
-    },
-    {
-      "channel_id": "UCVNKdkLzWuy1oLuCuCv4NCA",
-      "name": "Lehto Files",
-      "num": 11
-    },
-    {
-      "channel_id": "UCh6EaKNcFhtxgF27KUQGw1w",
-      "name": "Code Brew Labs",
-      "num": 12
-    },
-    {
-      "channel_id": "UCnxOVhbMG-SAqBqqXoV2jHg",
-      "name": "Kyron Helldiver \u2620\ufe0f",
-      "num": 13
-    },
-    {
-      "channel_id": "UC-xaBOY0o9lN8g5r38U0xkw",
-      "name": "BawkbaVods",
-      "num": 14
     }
   ],
   "query_stats": {
