@@ -59,13 +59,15 @@ def fetch_channel_signals(yt, channel_item, now=None):
         ]
         video_items = yt.get_videos(video_ids)
         for v in video_items:
+            # Live/upcoming broadcasts and a few other edge cases omit
+            # contentDetails.duration and/or statistics entirely.
             recent_videos.append({
                 "video_id": v["id"],
                 "title": v["snippet"]["title"],
                 "description": v["snippet"].get("description", ""),
                 "published_at": v["snippet"]["publishedAt"],
-                "duration_seconds": scoring.parse_duration_seconds(v["contentDetails"]["duration"]),
-                "view_count": int(v["statistics"].get("viewCount", 0) or 0),
+                "duration_seconds": scoring.parse_duration_seconds(v.get("contentDetails", {}).get("duration", "")),
+                "view_count": int(v.get("statistics", {}).get("viewCount", 0) or 0),
                 "thumbnail_url": (
                     v["snippet"].get("thumbnails", {}).get("high", {}).get("url")
                     or v["snippet"].get("thumbnails", {}).get("default", {}).get("url")
@@ -123,7 +125,7 @@ def cmd_discover(args):
         existing_account = state["accounts"].get(channel_id)
 
         if not keep:
-            state_mod.record_seen_only(state, channel_id, fingerprint, signals["name"], lane["id"], today)
+            state_mod.record_seen_only(state, channel_id, fingerprint, today)
             continue
 
         due, due_reason = state_mod.should_send_to_claude(existing_account, fingerprint, today)
@@ -265,6 +267,7 @@ def cmd_record(args):
         state_mod.upsert_account(
             state, channel_id, meta["fingerprint"], meta["name"], meta["lane"], today,
             fit=verdict.get("fit"), timing=verdict.get("timing"),
+            contact_found=bool(verdict.get("contact_found", False)),
         )
 
     finalists = []

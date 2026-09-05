@@ -119,16 +119,29 @@ def should_send_to_claude(account, fingerprint, today, recheck_days=None):
     return False, "unchanged_and_not_due"
 
 
-def classify(fit, timing):
-    """A single fit/timing verdict maps to exactly one of the four
-    user-facing statuses. A trigger (timing HIGH) is required for READY_NOW —
-    a high fit score alone (e.g. "could use better thumbnails") is GOOD_FIT,
-    never READY_NOW."""
+def classify(fit, timing, contact_found=False):
+    """A single fit/timing/reachability verdict maps to exactly one of the
+    four user-facing statuses. READY_NOW requires all three: fit >=
+    FIT_ATTRACTIVE, a real trigger (timing HIGH), AND a verified reachable
+    contact — a high-fit, high-timing account with no known way to reach a
+    decision maker is not "ready to contact", it's GOOD_FIT with contact
+    research still outstanding (see contact_marker)."""
     if fit >= FIT_ATTRACTIVE:
-        return "READY_NOW" if timing == "HIGH" else "GOOD_FIT"
+        if timing == "HIGH" and contact_found:
+            return "READY_NOW"
+        return "GOOD_FIT"
     if fit >= FIT_WATCH:
         return "WATCH"
     return "REJECTED"
+
+
+def contact_marker(fit, contact_found):
+    """FOUND/CONTACT_NEEDED is only meaningful once an account is at least
+    commercially attractive (GOOD_FIT or better) — WATCH/REJECTED accounts
+    don't get contact research spent on them yet."""
+    if fit is None or fit < FIT_ATTRACTIVE:
+        return None
+    return "FOUND" if contact_found else "CONTACT_NEEDED"
 
 
 def next_review_date(status, today, recheck_days=None):
@@ -137,47 +150,63 @@ def next_review_date(status, today, recheck_days=None):
     return (today + timedelta(days=days)).isoformat()
 
 
-def upsert_account(state, channel_id, fingerprint, name, lane_id, today, fit=None, timing=None):
+JUDGED_FIT_TIERS = {"READY_NOW", "GOOD_FIT", "WATCH"}
+
+
+def upsert_account(state, channel_id, fingerprint, name, lane_id, today,
+                    fit=None, timing=None, contact_found=False):
     accounts = state["accounts"]
     existing = accounts.get(channel_id, {})
-    fit_tier = classify(fit, timing) if fit is not None else existing.get("fit_tier", "WATCH")
+    fit_tier = classify(fit, timing, contact_found) if fit is not None else existing.get("fit_tier", "WATCH")
+    contact_status = contact_marker(fit, contact_found) if fit is not None else existing.get("contact_status")
 
     locked = existing.get("status") in PIPELINE_LOCKED_STATUSES
     status = existing["status"] if locked else fit_tier
 
     history = existing.get("history", [])[-4:]
     history.append({"date": today.isoformat(), "fit": fit, "timing": timing, "fit_tier": fit_tier})
-    accounts[channel_id] = {
+    record = {
         "name": name,
         "lane": lane_id,
         "fingerprint": fingerprint,
         "status": status,
         "fit_tier": fit_tier,
+        "contact_status": contact_status,
         "last_fit": fit,
         "last_timing": timing,
         "last_reviewed": today.isoformat(),
-        "next_review_after": next_review_date(status, today),
         "history": history,
     }
-    return accounts[channel_id]
+    # next_review_after only matters for statuses should_send_to_claude
+    # actually consults on a schedule (LOW_PRIORITY_STATUSES resurface only
+    # via fingerprint change, so the date is dead weight for them).
+    if status not in LOW_PRIORITY_STATUSES:
+        record["next_review_after"] = next_review_date(status, today)
+    accounts[channel_id] = record
+    return record
 
 
-def record_seen_only(state, channel_id, fingerprint, name, lane_id, today):
+def record_seen_only(state, channel_id, fingerprint, today):
     """Track a candidate seen this run that failed the deterministic
-    prefilter before ever reaching Claude. Never downgrades a real pipeline
-    or fit-tier status that was already recorded for this account."""
+    prefilter before ever reaching Claude. This is a bounded dedupe
+    tombstone, not a full account record — just enough to skip
+    re-processing an unchanged channel next time: fingerprint, last-seen
+    date, and the SEEN marker (channel_id is already the dict key). Never
+    downgrades a real pipeline outcome or an already-judged fit tier
+    (READY_NOW/GOOD_FIT/WATCH) that a previous Claude pass assigned — those
+    keep their full record; only their freshness fields move."""
     accounts = state["accounts"]
     existing = accounts.get(channel_id, {})
-    locked = existing.get("status") in PIPELINE_LOCKED_STATUSES
-    status = existing["status"] if locked else "SEEN"
+    existing_status = existing.get("status")
+
+    if existing_status in PIPELINE_LOCKED_STATUSES or existing_status in JUDGED_FIT_TIERS:
+        accounts[channel_id] = {**existing, "fingerprint": fingerprint, "last_reviewed": today.isoformat()}
+        return
+
     accounts[channel_id] = {
-        **existing,
-        "name": name,
-        "lane": lane_id,
         "fingerprint": fingerprint,
-        "status": status,
         "last_reviewed": today.isoformat(),
-        "next_review_after": existing.get("next_review_after") or next_review_date(status, today),
+        "status": "SEEN",
     }
 
 

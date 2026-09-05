@@ -71,22 +71,36 @@ def test_classify_good_fit_survives_low_timing():
     assert state_mod.classify(fit=91, timing="LOW") == "GOOD_FIT"
 
 
-def test_classify_ready_now_requires_high_timing_and_min_fit():
-    assert state_mod.classify(fit=86, timing="HIGH") == "READY_NOW"
-    assert state_mod.classify(fit=50, timing="HIGH") == "WATCH"
-    assert state_mod.classify(fit=40, timing="HIGH") == "REJECTED"
+def test_classify_ready_now_requires_high_timing_min_fit_and_contact():
+    assert state_mod.classify(fit=86, timing="HIGH", contact_found=True) == "READY_NOW"
+    assert state_mod.classify(fit=50, timing="HIGH", contact_found=True) == "WATCH"
+    assert state_mod.classify(fit=40, timing="HIGH", contact_found=True) == "REJECTED"
 
 
 def test_classify_never_ready_now_on_fit_alone():
     # A high fit score without a real trigger is GOOD_FIT, never READY_NOW —
     # "could use better thumbnails" is not a buying trigger.
-    assert state_mod.classify(fit=99, timing="LOW") != "READY_NOW"
-    assert state_mod.classify(fit=99, timing="MEDIUM") != "READY_NOW"
+    assert state_mod.classify(fit=99, timing="LOW", contact_found=True) != "READY_NOW"
+    assert state_mod.classify(fit=99, timing="MEDIUM", contact_found=True) != "READY_NOW"
+
+
+def test_classify_never_ready_now_without_a_reachable_contact():
+    # Strong fit + a real trigger but no verified way to reach a decision
+    # maker: still GOOD_FIT, not "ready to contact".
+    assert state_mod.classify(fit=95, timing="HIGH", contact_found=False) == "GOOD_FIT"
+    assert state_mod.classify(fit=95, timing="HIGH") == "GOOD_FIT"  # contact_found defaults False
 
 
 def test_classify_watch_and_rejected_bands():
     assert state_mod.classify(fit=50, timing="LOW") == "WATCH"
     assert state_mod.classify(fit=30, timing="LOW") == "REJECTED"
+
+
+def test_contact_marker_only_applies_at_good_fit_or_better():
+    assert state_mod.contact_marker(fit=70, contact_found=True) == "FOUND"
+    assert state_mod.contact_marker(fit=70, contact_found=False) == "CONTACT_NEEDED"
+    assert state_mod.contact_marker(fit=50, contact_found=False) is None
+    assert state_mod.contact_marker(fit=None, contact_found=False) is None
 
 
 def test_should_send_rejected_account_ignores_due_date_needs_fingerprint_change():
@@ -111,18 +125,60 @@ def test_upsert_account_does_not_overwrite_locked_pipeline_status():
     state_mod.upsert_account(state, "chan1", "fp1", "Chan One", "LANE_A", today, fit=80, timing="LOW")
     state["accounts"]["chan1"]["status"] = "CONTACTED"
 
-    state_mod.upsert_account(state, "chan1", "fp2", "Chan One", "LANE_A", today, fit=90, timing="HIGH")
+    state_mod.upsert_account(
+        state, "chan1", "fp2", "Chan One", "LANE_A", today, fit=90, timing="HIGH", contact_found=True,
+    )
 
     assert state["accounts"]["chan1"]["status"] == "CONTACTED"
     assert state["accounts"]["chan1"]["fit_tier"] == "READY_NOW"
+
+
+def test_upsert_account_sets_contact_needed_when_no_contact_found():
+    state = state_mod.default_state()
+    today = date.today()
+    state_mod.upsert_account(state, "chan1", "fp1", "Chan One", "LANE_A", today, fit=85, timing="HIGH")
+    assert state["accounts"]["chan1"]["fit_tier"] == "GOOD_FIT"
+    assert state["accounts"]["chan1"]["contact_status"] == "CONTACT_NEEDED"
+
+
+def test_upsert_account_omits_next_review_for_low_priority_status():
+    state = state_mod.default_state()
+    today = date.today()
+    state_mod.upsert_account(state, "chan1", "fp1", "Chan One", "LANE_A", today, fit=20, timing="LOW")
+    assert state["accounts"]["chan1"]["status"] == "REJECTED"
+    assert "next_review_after" not in state["accounts"]["chan1"]
 
 
 def test_record_seen_only_does_not_downgrade_locked_status():
     state = state_mod.default_state()
     today = date.today()
     state["accounts"]["chan1"] = {"name": "Chan One", "lane": "LANE_A", "status": "WON"}
-    state_mod.record_seen_only(state, "chan1", "fp1", "Chan One", "LANE_A", today)
+    state_mod.record_seen_only(state, "chan1", "fp1", today)
     assert state["accounts"]["chan1"]["status"] == "WON"
+
+
+def test_record_seen_only_does_not_downgrade_a_judged_fit_tier():
+    state = state_mod.default_state()
+    today = date.today()
+    state["accounts"]["chan1"] = {
+        "name": "Chan One", "lane": "LANE_A", "status": "GOOD_FIT",
+        "fit_tier": "GOOD_FIT", "last_fit": 80, "history": [{"date": "2026-01-01", "fit": 80}],
+    }
+    state_mod.record_seen_only(state, "chan1", "fp2", today)
+    assert state["accounts"]["chan1"]["status"] == "GOOD_FIT"
+    assert state["accounts"]["chan1"]["last_fit"] == 80
+    assert state["accounts"]["chan1"]["fingerprint"] == "fp2"
+
+
+def test_record_seen_only_is_a_minimal_tombstone_for_a_true_reject():
+    state = state_mod.default_state()
+    today = date.today()
+    state_mod.record_seen_only(state, "chan1", "fp1", today)
+    assert state["accounts"]["chan1"] == {
+        "fingerprint": "fp1",
+        "last_reviewed": today.isoformat(),
+        "status": "SEEN",
+    }
 
 
 def test_prune_stale_accounts_removes_only_old_low_priority_entries():

@@ -2,18 +2,12 @@
   "accounts": {
     "UC--l-iSYptNQ1TACkig4r_A": {
       "fingerprint": "7f5bf81704840ff7",
-      "lane": "CIS_EDITING_BUSINESS",
       "last_reviewed": "2026-09-05",
-      "name": "\u0428\u043e\u0443 \u041f\u043b\u0430\u043d\u0451\u0440\u043a\u0430",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UC-28WyFrBlFtZlvShIY6fnQ": {
       "fingerprint": "317f9c9aaf8eacda",
-      "lane": "CIS_EDITING_BUSINESS",
       "last_reviewed": "2026-09-05",
-      "name": "\u041c\u0430\u0440\u0438\u044f \u0412\u0430\u0440\u043b\u0430\u0445\u043e\u0432\u0430 ",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UC-FIAmE9tS5jYVsLGdc5QQw": {
@@ -37,13 +31,11 @@
     },
     "UC-GJbheknHZhSM7-Jgn63jg": {
       "fingerprint": "29fe7704b75c0b46",
-      "lane": "GLOBAL_PACKAGING_AUTOMOTIVE",
       "last_reviewed": "2026-09-05",
-      "name": "What Car?",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UC-qwaQSx8GAtUMlw3aBGSzQ": {
+      "contact_status": "FOUND",
       "fingerprint": "3c34699600039407",
       "fit_tier": "GOOD_FIT",
       "history": [
@@ -83,87 +75,58 @@
     },
     "UC0-71sulp6nA34L_q-MFMVg": {
       "fingerprint": "041838a3827b435a",
-      "lane": "GLOBAL_PACKAGING_FITNESS",
       "last_reviewed": "2026-09-05",
-      "name": "Protein Chefs",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UC0vHK2huPsoQZEQOrgHdcCg": {
       "fingerprint": "4260acebf71e7fc6",
-      "lane": "GLOBAL_PACKAGING_BUSINESS",
       "last_reviewed": "2026-09-05",
-      "name": "Coco - My Shiny Dot",
-      "next_review_after": "2026-09-19",
       "status": "SEEN"
     },
     "UC1DvWD8x4ZdwlmNzpoEwS4A": {
       "fingerprint": "4666eccea7920a3e",
-      "lane": "GLOBAL_PACKAGING_BUSINESS",
       "last_reviewed": "2026-09-05",
-      "name": "DoziezStudio",
-      "next_review_after": "2026-09-19",
       "status": "SEEN"
     },
     "UC1GFqqHIBaiCW1ivJJCFTvg": {
       "fingerprint": "1871beb69b73133b",
-      "lane": "GLOBAL_PACKAGING_GAMING",
       "last_reviewed": "2026-09-05",
-      "name": "amustycow",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UC1GVeEeIKkVca5OKCsQVuBA": {
       "fingerprint": "b06329fdc5659c42",
-      "lane": "CIS_EDITING_TECH",
       "last_reviewed": "2026-09-05",
-      "name": "Pot Luck Food Talks - Podcast",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UC1bwliGvJogr7cWK0nT2Eag": {
       "fingerprint": "3439f69fb9d7f559",
-      "lane": "GLOBAL_PACKAGING_GAMING",
       "last_reviewed": "2026-09-05",
-      "name": "MKIceAndFire",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UC1ol5-4wpNzBLRdLOySAUlg": {
       "fingerprint": "e59fed35e38b6bb3",
-      "lane": "GLOBAL_PACKAGING_FITNESS",
       "last_reviewed": "2026-09-05",
-      "name": "Sajee",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UC23_r1bpkTWaBltbXsQxysA": {
       "fingerprint": "724c5867c0cf7c1b",
-      "lane": "GLOBAL_PACKAGING_ENTERTAINMENT",
       "last_reviewed": "2026-09-05",
-      "name": "Joe Budden TV",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UC2QdvcrxWMb0i8Ix1ezpVVg": {
       "fingerprint": "da6acb766ef3a2ee",
-      "lane": "GLOBAL_PACKAGING_AUTOMOTIVE",
       "last_reviewed": "2026-09-05",
-      "name": "AVANTS",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UC2WOg5o2bVnzARrKf6iNHIQ": {
       "fingerprint": "e032124f1b67733a",
-      "lane": "GLOBAL_PACKAGING_BUSINESS",
       "last_reviewed": "2026-09-05",
-      "name": "Munich Business School",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UC2YdJw53sP73T-lffzrqTZA": {
+      "contact_status": "CONTACT_NEEDED",
       "fingerprint": "73a2601db7194e3f",
-      "fit_tier": "READY_NOW",
+      "fit_tier": "GOOD_FIT",
       "history": [
         {
           "date": "2026-09-05",
@@ -177,23 +140,17 @@
       "last_reviewed": "2026-09-05",
       "last_timing": "HIGH",
       "name": "Aniimo",
-      "next_review_after": "2026-09-12",
-      "status": "READY_NOW"
+      "next_review_after": "2026-09-19",
+      "status": "GOOD_FIT"
     },
     "UC3G-MWHfHciif4WPmX8v5zA": {
       "fingerprint": "1cf35736f4c95f40",
-      "lane": "GLOBAL_PACKAGING_BUSINESS",
       "last_reviewed": "2026-09-05",
-      "name": "Ruthie & Co.",
-      "next_review_after": "2026-09-19",
       "status": "SEEN"
     },
     "UC3USFIkG_OTJzyNQu_7cimA": {
       "fingerprint": "80bde4d3286e790e",
-      "lane": "GLOBAL_PACKAGING_EDUCATION",
       "last_reviewed": "2026-09-05",
-      "name": "ieva \u2022 @coursecreationlab ",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UC3iyLcDyYxk2nN7M5DsYaYQ": {
@@ -217,58 +174,37 @@
     },
     "UC3p5NNrlU6y9YIs4iHW6q_w": {
       "fingerprint": "a2e40df3d8deb8d3",
-      "lane": "GLOBAL_PACKAGING_BUSINESS",
       "last_reviewed": "2026-09-05",
-      "name": "Money verse",
-      "next_review_after": "2026-09-19",
       "status": "SEEN"
     },
     "UC3qM33hHgedfi7qTKKgIApg": {
       "fingerprint": "a83a6076ba2da644",
-      "lane": "GLOBAL_PACKAGING_AUTOMOTIVE",
       "last_reviewed": "2026-09-05",
-      "name": "Auto Buyers Guide | Alex on Autos",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UC4OXTQRda65jftT6XOEYPOw": {
       "fingerprint": "db075f5cc727469f",
-      "lane": "GLOBAL_PACKAGING_FINANCE",
       "last_reviewed": "2026-09-05",
-      "name": "Personal finance and life stage investing",
-      "next_review_after": "2026-09-19",
       "status": "SEEN"
     },
     "UC58IAk1i-6d5XgHZG4NnffA": {
       "fingerprint": "a4b8c2852ec2e39a",
-      "lane": "GLOBAL_PACKAGING_FINANCE",
       "last_reviewed": "2026-09-05",
-      "name": "SANSKRITI IAS",
-      "next_review_after": "2026-09-19",
       "status": "SEEN"
     },
     "UC5HYoAFhsITnWha5Tn0nMWA": {
       "fingerprint": "bdc138c5175e46d4",
-      "lane": "GLOBAL_PACKAGING_FITNESS",
       "last_reviewed": "2026-09-05",
-      "name": "Ryan Lee",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UC5riGfitD_8hv1m8cUapjXw": {
       "fingerprint": "091c21135c2b26a8",
-      "lane": "GLOBAL_PACKAGING_FITNESS",
       "last_reviewed": "2026-09-05",
-      "name": "Tim Flack",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UC6H_-Pj7cgmU_lQPIQbcIhA": {
       "fingerprint": "6e2cd98ae3400c9f",
-      "lane": "GLOBAL_PACKAGING_FITNESS",
       "last_reviewed": "2026-09-05",
-      "name": "Zach Luciano",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UC6ITJIW6jgrrP5irR7WoHrw": {
@@ -292,98 +228,62 @@
     },
     "UC6eLZLJbvStE4J2ksmIul2g": {
       "fingerprint": "2df0b741eb1e52fe",
-      "lane": "CIS_EDITING_EDUCATION",
       "last_reviewed": "2026-09-05",
-      "name": "\u0414\u0430\u043d\u0438\u0438\u043b \u041b\u0430\u043f\u0442\u0435\u0432 | \u0414\u0415\u0412 \u0420\u041e\u0419",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UC77ksrKd7P8uXslpuy6HAfQ": {
       "fingerprint": "890b7238286c9192",
-      "lane": "GLOBAL_PACKAGING_FINANCE",
       "last_reviewed": "2026-09-05",
-      "name": "Bogleheads",
-      "next_review_after": "2026-09-19",
       "status": "SEEN"
     },
     "UC7BSalpwO3UBZLz1t3rtRrg": {
       "fingerprint": "5c6bcbafd01e0082",
-      "lane": "GLOBAL_PACKAGING_FITNESS",
       "last_reviewed": "2026-09-05",
-      "name": "HunchoProgramTransformations",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UC7LJr1VobrzhJYL9vXydLLg": {
       "fingerprint": "39a654ff93271f60",
-      "lane": "GLOBAL_PACKAGING_AI_TECH",
       "last_reviewed": "2026-09-05",
-      "name": "SaaS Strategist",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UC7eAfUjR9gdIjoaoQaS0W-A": {
       "fingerprint": "e5777ceced44cb28",
-      "lane": "GLOBAL_PACKAGING_GAMING",
       "last_reviewed": "2026-09-05",
-      "name": "Shirrako",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UC7eZNThpjgXe5H0QwBN-XsQ": {
       "fingerprint": "1b8e0bd669af252f",
-      "lane": "GLOBAL_PACKAGING_FINANCE",
       "last_reviewed": "2026-09-05",
-      "name": "MensXP",
-      "next_review_after": "2026-09-19",
       "status": "SEEN"
     },
     "UC7gEY57xeKEsFElhQfKh8UA": {
       "fingerprint": "ccc02a620edf1f5c",
-      "lane": "GLOBAL_PACKAGING_FITNESS",
       "last_reviewed": "2026-09-05",
-      "name": "Gymbro001 | Workout Form & Muscle Growth",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UC7htuVs06oduI3xSfTdcxPA": {
       "fingerprint": "84766b2c75481f8b",
-      "lane": "GLOBAL_PACKAGING_ENTERTAINMENT",
       "last_reviewed": "2026-09-05",
-      "name": "48 Hours",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UC7imP-cJhytGgRFC0HvayVQ": {
       "fingerprint": "95c0f12024bd4b5f",
-      "lane": "GLOBAL_PACKAGING_FITNESS",
       "last_reviewed": "2026-09-05",
-      "name": "ABHINAV MAHAJAN",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UC7no4CQKv-iR1_UtM9J9CXA": {
       "fingerprint": "3ac75851e2e2978f",
-      "lane": "GLOBAL_PACKAGING_BUSINESS",
       "last_reviewed": "2026-09-05",
-      "name": "Emma Woodthorpe",
-      "next_review_after": "2026-09-19",
       "status": "SEEN"
     },
     "UC8Jvno_rGUhEUnLmRprYQTw": {
       "fingerprint": "469452613d0ffbf3",
-      "lane": "GLOBAL_PACKAGING_AI_TECH",
       "last_reviewed": "2026-09-05",
-      "name": "TECH & STUDY WITH K\u00cfTTY",
-      "next_review_after": "2026-09-19",
       "status": "SEEN"
     },
     "UC8KoqPVct0hxxY1gQL4FGhQ": {
       "fingerprint": "fc36d42748ed3500",
-      "lane": "GLOBAL_PACKAGING_BUSINESS",
       "last_reviewed": "2026-09-05",
-      "name": "Chiara - Creative Business Owner",
-      "next_review_after": "2026-09-19",
       "status": "SEEN"
     },
     "UC8aPgmbaduIocE9OZM3yQ8Q": {
@@ -407,74 +307,47 @@
     },
     "UC8luibVMVbxZIP6BffWGV-g": {
       "fingerprint": "dc0e92db2ffee63c",
-      "lane": "GLOBAL_PACKAGING_GAMING",
       "last_reviewed": "2026-09-05",
-      "name": "Screen Brief",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UC92geW3SLehtWvLjdi2EMiA": {
       "fingerprint": "fb02a2f2bdba64be",
-      "lane": "GLOBAL_PACKAGING_GAMING",
       "last_reviewed": "2026-09-05",
-      "name": "Nilesh Agrawal ",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UC9DXAsBD4-ITVuvpd68401Q": {
       "fingerprint": "e425c0b2f6ec13ad",
-      "lane": "GLOBAL_PACKAGING_AUTOMOTIVE",
       "last_reviewed": "2026-09-05",
-      "name": "AutoTopNL",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UC9HtxqMZ3OWIU4JrYNhDd_A": {
       "fingerprint": "5318b8b4c590e906",
-      "lane": "GLOBAL_PACKAGING_FITNESS",
       "last_reviewed": "2026-09-05",
-      "name": "Jaclyn Nguyen",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UC9LjrPL1bLjJ2oIU3NSdcMQ": {
       "fingerprint": "d52429b90d4efaee",
-      "lane": "GLOBAL_PACKAGING_AUTOMOTIVE",
       "last_reviewed": "2026-09-05",
-      "name": "MotoWagon",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UC9Md5k92gK__STt3szc5Igg": {
       "fingerprint": "abd3f17237289501",
-      "lane": "GLOBAL_PACKAGING_FITNESS",
       "last_reviewed": "2026-09-05",
-      "name": "Blaine McConnell",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UC9tZB_VUXD2nYPAA1Iph9hQ": {
       "fingerprint": "4405103efe4a7b09",
-      "lane": "GLOBAL_PACKAGING_FITNESS",
       "last_reviewed": "2026-09-05",
-      "name": "GRIND Training",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UC9weDtwaNTntsyjA4DeSBYg": {
       "fingerprint": "7d498644877516f6",
-      "lane": "CIS_EDITING_BUSINESS",
       "last_reviewed": "2026-09-05",
-      "name": "Legend Club",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCA5OImadHx2-MN_KD-nDr6Q": {
       "fingerprint": "83f448056968bb31",
-      "lane": "GLOBAL_PACKAGING_FITNESS",
       "last_reviewed": "2026-09-05",
-      "name": "Felix Nieves - Fat Loss Coach for Business Owners",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCAMtUr1BeqpNU3vdEXPSPvg": {
@@ -498,18 +371,12 @@
     },
     "UCAy45-BCu6fVAvB18mexGPA": {
       "fingerprint": "c0ddcceb47da08af",
-      "lane": "GLOBAL_PACKAGING_EDUCATION",
       "last_reviewed": "2026-09-05",
-      "name": "Louisa Chan",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCAzZQUlj_tpj6HPNmEFetqw": {
       "fingerprint": "e3b31a5281596e10",
-      "lane": "GLOBAL_PACKAGING_FITNESS",
       "last_reviewed": "2026-09-05",
-      "name": "The Bossticks",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCB0CZVWByHLSCJN2IZUoFsw": {
@@ -533,42 +400,27 @@
     },
     "UCBNJaZ64ak4GECgxhKlispA": {
       "fingerprint": "1f653f8fb654428b",
-      "lane": "GLOBAL_PACKAGING_BUSINESS",
       "last_reviewed": "2026-09-05",
-      "name": "Katherine Zhu",
-      "next_review_after": "2026-09-19",
       "status": "SEEN"
     },
     "UCBT1rc902DkrH5qkxM2q9JA": {
       "fingerprint": "5040f0716dfb3789",
-      "lane": "GLOBAL_PACKAGING_FINANCE",
       "last_reviewed": "2026-09-05",
-      "name": "Sarika in America \ud83c\uddfa\ud83c\uddf8 ",
-      "next_review_after": "2026-09-19",
       "status": "SEEN"
     },
     "UCBYvr4SqfGQd5fTmOXVQ4Zw": {
       "fingerprint": "139a4b34cf925446",
-      "lane": "CIS_EDITING_ENTERTAINMENT",
       "last_reviewed": "2026-09-05",
-      "name": "\u0413\u041b\u0415\u041d\u0422",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCBaSfVghs12kGNQTK8KKwRw": {
       "fingerprint": "c47aa2f9dfa377f8",
-      "lane": "CIS_EDITING_TECH",
       "last_reviewed": "2026-09-05",
-      "name": "\u0421\u0435\u0440\u0433\u0435\u0439 \u041c\u0430\u043b\u043e\u0437\u0451\u043c\u043e\u0432",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCBl_W5_GtiObF0Cu4NKM1ng": {
       "fingerprint": "2c82cb235775b9c3",
-      "lane": "GLOBAL_PACKAGING_ENTERTAINMENT",
       "last_reviewed": "2026-09-05",
-      "name": "Balaji Telefilms Ltd",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCC5was5yEe5knSTjx01McQg": {
@@ -592,82 +444,52 @@
     },
     "UCCBEm5Y3WVDY7NdUC-dj1xA": {
       "fingerprint": "63672d57e55bb80b",
-      "lane": "GLOBAL_PACKAGING_GAMING",
       "last_reviewed": "2026-09-05",
-      "name": "CallMeLou",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCCsREoj8rSRkEvxWqxr74rQ": {
       "fingerprint": "bfb033add9510fc8",
-      "lane": "GLOBAL_PACKAGING_AI_TECH",
       "last_reviewed": "2026-09-05",
-      "name": "Cybernews",
-      "next_review_after": "2026-09-19",
       "status": "SEEN"
     },
     "UCDdAwPgrrhkla2Q2m81ER_w": {
       "fingerprint": "68891bfa9b4e71fc",
-      "lane": "GLOBAL_PACKAGING_AI_TECH",
       "last_reviewed": "2026-09-05",
-      "name": "AI Seekho be10X",
-      "next_review_after": "2026-09-19",
       "status": "SEEN"
     },
     "UCDkMWOyugc9M_dxKn5wfNEQ": {
       "fingerprint": "4d1bd9449cac4e96",
-      "lane": "GLOBAL_PACKAGING_BUSINESS",
       "last_reviewed": "2026-09-05",
-      "name": "Invest Path",
-      "next_review_after": "2026-09-19",
       "status": "SEEN"
     },
     "UCDsxd7FVqC4n9AiggDXHUqQ": {
       "fingerprint": "2745755b74d7b3ef",
-      "lane": "GLOBAL_PACKAGING_BUSINESS",
       "last_reviewed": "2026-09-05",
-      "name": "ICICI Bank",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCENNtCRTPTdH_IGXs42LuHQ": {
       "fingerprint": "76e36f0e285ac391",
-      "lane": "GLOBAL_PACKAGING_GAMING",
       "last_reviewed": "2026-09-05",
-      "name": "Esports World Cup",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCENeeLCbbDNAP-664-t26FA": {
       "fingerprint": "c27f4344e8dfafd7",
-      "lane": "CIS_EDITING_GAMING",
       "last_reviewed": "2026-09-05",
-      "name": "RusGameTactics",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCEPLXTg2Z81VzDpEHmKIzgA": {
       "fingerprint": "fd315814f2daf9b9",
-      "lane": "GLOBAL_PACKAGING_BUSINESS",
       "last_reviewed": "2026-09-05",
-      "name": "Pure Value Talks ",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCEjSoMnD43v0EsqcuHW2lBw": {
       "fingerprint": "d171e0bc49ed42e3",
-      "lane": "GLOBAL_PACKAGING_FINANCE",
       "last_reviewed": "2026-09-05",
-      "name": "Avery Shannon",
-      "next_review_after": "2026-09-19",
       "status": "SEEN"
     },
     "UCEk5D5RfUgAJd3VfCz3vWTw": {
       "fingerprint": "a512aa82650821a3",
-      "lane": "GLOBAL_PACKAGING_FINANCE",
       "last_reviewed": "2026-09-05",
-      "name": "Kunal Saraogi",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCEnoDgSMJfrYkp2rfIueOqg": {
@@ -691,58 +513,37 @@
     },
     "UCF3h1vcDK28tKodVd3vTHFw": {
       "fingerprint": "ca0f0e625e38d48d",
-      "lane": "GLOBAL_PACKAGING_FINANCE",
       "last_reviewed": "2026-09-05",
-      "name": "DollarWise",
-      "next_review_after": "2026-09-19",
       "status": "SEEN"
     },
     "UCF58Qs39bQDHkEW4mZny-MQ": {
       "fingerprint": "62ceb42204d3f305",
-      "lane": "GLOBAL_PACKAGING_AUTOMOTIVE",
       "last_reviewed": "2026-09-05",
-      "name": "Velocity Kings",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCFBpVaKCC0ajGps1vf0AgBg": {
       "fingerprint": "038234b03fb77004",
-      "lane": "GLOBAL_PACKAGING_FINANCE",
       "last_reviewed": "2026-09-05",
-      "name": "Humphrey Yang",
-      "next_review_after": "2026-09-19",
       "status": "SEEN"
     },
     "UCFDn8HaA3kw30dVw2dzLLXw": {
       "fingerprint": "838266c319244676",
-      "lane": "GLOBAL_PACKAGING_BUSINESS",
       "last_reviewed": "2026-09-05",
-      "name": "GetOcusell",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCFqmbJBvFHaNxwvIM4ZstVQ": {
       "fingerprint": "aaf5b5d748c4a506",
-      "lane": "GLOBAL_PACKAGING_AUTOMOTIVE",
       "last_reviewed": "2026-09-05",
-      "name": "WoodArt Lab",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCFrMX0vCWLdBtKJ4tsJC67Q": {
       "fingerprint": "b8c232d98cb3313d",
-      "lane": "GLOBAL_PACKAGING_FITNESS",
       "last_reviewed": "2026-09-05",
-      "name": "Petras Fitness",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCFuToVhieO0ojmOZfiKtHNw": {
       "fingerprint": "a82e15fdf02049e9",
-      "lane": "GLOBAL_PACKAGING_EDUCATION",
       "last_reviewed": "2026-09-05",
-      "name": "ADI HEALTH N SCIENCES",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCGCPcn5RFvRM0qDrooiV6LQ": {
@@ -766,26 +567,17 @@
     },
     "UCGIlqlLBKIY1SphqAl3huDw": {
       "fingerprint": "25f7e91528594b42",
-      "lane": "GLOBAL_PACKAGING_AI_TECH",
       "last_reviewed": "2026-09-05",
-      "name": "Product Growth Stories",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCGwq-i6OgZ0KNCiYhX4rIGQ": {
       "fingerprint": "fc10cc208a8a497d",
-      "lane": "GLOBAL_PACKAGING_GAMING",
       "last_reviewed": "2026-09-05",
-      "name": "MTuTech Printer",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCH9AiQStTnuA8_Ks6mF_awg": {
       "fingerprint": "6f8ea6db7f30725c",
-      "lane": "GLOBAL_PACKAGING_FITNESS",
       "last_reviewed": "2026-09-05",
-      "name": "Dhinesh Fitness",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCHoMFGNx1BTCYNMO-L4mHYQ": {
@@ -809,122 +601,77 @@
     },
     "UCHtOKabBXhGhzVprvrVHGOg": {
       "fingerprint": "2bce1f538fdb41a4",
-      "lane": "GLOBAL_PACKAGING_BUSINESS",
       "last_reviewed": "2026-09-05",
-      "name": "HoaQ Club",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCI1OuM8hAOOAcsmo0x6ykZA": {
       "fingerprint": "3a756e96561f00f2",
-      "lane": "CIS_EDITING_ENTERTAINMENT",
       "last_reviewed": "2026-09-05",
-      "name": "M Z",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCIUngc2SVw6ZZ9To4yBZDiw": {
       "fingerprint": "3dd93a12c752c23d",
-      "lane": "GLOBAL_PACKAGING_BUSINESS",
       "last_reviewed": "2026-09-05",
-      "name": "Aap Karte Kya Ho ?",
-      "next_review_after": "2026-09-19",
       "status": "SEEN"
     },
     "UCIq3f8LthInbHDp10L62I2g": {
       "fingerprint": "7a448b6fcbef083a",
-      "lane": "CIS_EDITING_ENTERTAINMENT",
       "last_reviewed": "2026-09-05",
-      "name": "Eva_Pro",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCJ-_lWmZTEp3fLKuiUwRoJg": {
       "fingerprint": "2faec1dfaf2d3c07",
-      "lane": "GLOBAL_PACKAGING_BUSINESS",
       "last_reviewed": "2026-09-05",
-      "name": "Chidimma Ossai",
-      "next_review_after": "2026-09-19",
       "status": "SEEN"
     },
     "UCJI2qi_GM8WOvoNFPfWxGnA": {
       "fingerprint": "155c896016235b79",
-      "lane": "GLOBAL_PACKAGING_AI_TECH",
       "last_reviewed": "2026-09-05",
-      "name": "Deepali AI Reviews ",
-      "next_review_after": "2026-09-19",
       "status": "SEEN"
     },
     "UCJdojA93nOeHEXQ5Rwq4ugw": {
       "fingerprint": "f9b9634288922ecd",
-      "lane": "GLOBAL_PACKAGING_AI_TECH",
       "last_reviewed": "2026-09-05",
-      "name": "Sync With AI",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCK0bQb5l-sjMSCpbiCtggOQ": {
       "fingerprint": "16e2c0e34600f78b",
-      "lane": "GLOBAL_PACKAGING_BUSINESS",
       "last_reviewed": "2026-09-05",
-      "name": "The Owners Theory Podcast Shorts",
-      "next_review_after": "2026-09-19",
       "status": "SEEN"
     },
     "UCKL5hAuzgFQsyrsQKgU0Qng": {
       "fingerprint": "ccc1828e0213110d",
-      "lane": "GLOBAL_PACKAGING_ENTERTAINMENT",
       "last_reviewed": "2026-09-05",
-      "name": "GMA Network",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCKXwrHEw5GbASffuIDWf3Zw": {
       "fingerprint": "0be1d0bb1c25070c",
-      "lane": "GLOBAL_PACKAGING_BUSINESS",
       "last_reviewed": "2026-09-05",
-      "name": "Designedbydais",
-      "next_review_after": "2026-09-19",
       "status": "SEEN"
     },
     "UCKuEXKnxNfLHEteHJ1Zkvqw": {
       "fingerprint": "503b85720ddf81c9",
-      "lane": "GLOBAL_PACKAGING_AUTOMOTIVE",
       "last_reviewed": "2026-09-05",
-      "name": "Truck Mini Project",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCLL5dVnel0uRX3aiyVXQYkw": {
       "fingerprint": "850f536286641c30",
-      "lane": "CIS_EDITING_GAMING",
       "last_reviewed": "2026-09-05",
-      "name": "TheGideonGames",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCLWIFKtbI4xHew0NyJUQZuw": {
       "fingerprint": "f06c7e79bb881e0f",
-      "lane": "GLOBAL_PACKAGING_BUSINESS",
       "last_reviewed": "2026-09-05",
-      "name": "Learn2lead Consult",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCLe6TpkrjKVWt_zND3_MKBw": {
       "fingerprint": "01a43ebe6029c387",
-      "lane": "GLOBAL_PACKAGING_AI_TECH",
       "last_reviewed": "2026-09-05",
-      "name": "Agami Technologies ",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCLnOom9ukG12eOBACPhSzMQ": {
       "fingerprint": "3089985104048668",
-      "lane": "GLOBAL_PACKAGING_AUTOMOTIVE",
       "last_reviewed": "2026-09-05",
-      "name": "Range Rover 2.0",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCM7yoOhnMcfrEZ-5i9m-WFA": {
@@ -948,50 +695,32 @@
     },
     "UCMCW4nO_BYnuTYKSjJ_boAA": {
       "fingerprint": "4c27212a4b74b14e",
-      "lane": "GLOBAL_PACKAGING_GAMING",
       "last_reviewed": "2026-09-05",
-      "name": "Zish Gaming",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCMFxukXVkmcFFAjoTF2rhGQ": {
       "fingerprint": "2e900381f4a72642",
-      "lane": "GLOBAL_PACKAGING_BUSINESS",
       "last_reviewed": "2026-09-05",
-      "name": "Will Holdren",
-      "next_review_after": "2026-09-19",
       "status": "SEEN"
     },
     "UCMJdom_peRDekbwqebylDOQ": {
       "fingerprint": "3a2e4371fbde90cc",
-      "lane": "GLOBAL_PACKAGING_AUTOMOTIVE",
       "last_reviewed": "2026-09-05",
-      "name": "Crafted Legends",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCMgWdnciFLVKwd2CVilu11A": {
       "fingerprint": "e0a58b52c5fb986b",
-      "lane": "GLOBAL_PACKAGING_AI_TECH",
       "last_reviewed": "2026-09-05",
-      "name": "Helpful Zone",
-      "next_review_after": "2026-09-19",
       "status": "SEEN"
     },
     "UCMhCQN9vNKjLB4Pfv-9cJlg": {
       "fingerprint": "c541e4e55f7a49cd",
-      "lane": "GLOBAL_PACKAGING_FITNESS",
       "last_reviewed": "2026-09-05",
-      "name": "Precision Personal Training ",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCMqVDR6m8rfTwIYDO4TrLyQ": {
       "fingerprint": "e15f43b7312fb52e",
-      "lane": "GLOBAL_PACKAGING_EDUCATION",
       "last_reviewed": "2026-09-05",
-      "name": "ONBOARD DIGITAL CLASS",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCMw07uiVxGULqePlrOZnx9A": {
@@ -1015,34 +744,22 @@
     },
     "UCN0MYJFfVFWzvovOS3vQHqw": {
       "fingerprint": "c9f136a2c14a9fd5",
-      "lane": "CIS_EDITING_BUSINESS",
       "last_reviewed": "2026-09-05",
-      "name": "\u0417\u0430\u0440\u0438\u043d\u0430 \u0412\u0435\u043b\u0438\u0447\u043a\u0438\u043d\u0430",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCNU9oR7HzWD02LShddSOoeg": {
       "fingerprint": "fabdf1611ff18a50",
-      "lane": "CIS_EDITING_ENTERTAINMENT",
       "last_reviewed": "2026-09-05",
-      "name": "Osia",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCNXWqRPePQc9UYkki6uy3FA": {
       "fingerprint": "9cac9c86b0e968f5",
-      "lane": "GLOBAL_PACKAGING_FINANCE",
       "last_reviewed": "2026-09-05",
-      "name": "Wealths Hacks",
-      "next_review_after": "2026-09-19",
       "status": "SEEN"
     },
     "UCNdNJJNfKtLq-jn9Uud12Gg": {
       "fingerprint": "4c958e4b05d1c5ad",
-      "lane": "GLOBAL_PACKAGING_FINANCE",
       "last_reviewed": "2026-09-05",
-      "name": "InfoByte",
-      "next_review_after": "2026-09-19",
       "status": "SEEN"
     },
     "UCNopQIzBSbRCNjslnsdYp7A": {
@@ -1085,109 +802,71 @@
     },
     "UCO0B_1pYVAv9DaT4buPmesA": {
       "fingerprint": "5dfab87bd0aaa74c",
-      "lane": "GLOBAL_PACKAGING_BUSINESS",
       "last_reviewed": "2026-09-05",
-      "name": "1 Million Cups Lincoln",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCO8YHPk43zHgfUFWv9FUttg": {
       "fingerprint": "9f537b7aac971872",
-      "lane": "CIS_EDITING_EDUCATION",
       "last_reviewed": "2026-09-05",
-      "name": "\u0421\u0442\u0430\u043b\u0438\u043a \u0425\u0430\u043d\u043a\u0438\u0448\u0438\u0435\u0432",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCOO1R-H68cdwXFN748O8ZkA": {
       "fingerprint": "3ffb4cd782e7c025",
-      "lane": "GLOBAL_PACKAGING_FITNESS",
       "last_reviewed": "2026-09-05",
-      "name": "Fitness By Mol",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCOOozAzn2OdsV13hSmvBFzg": {
       "fingerprint": "cb9296971d38d43b",
-      "lane": "GLOBAL_PACKAGING_FITNESS",
       "last_reviewed": "2026-09-05",
-      "name": "Harry Longworth",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCOmQK13PhdtEJp3_4PxH07g": {
       "fingerprint": "fd179cd31dc9688d",
-      "lane": "GLOBAL_PACKAGING_BUSINESS",
       "last_reviewed": "2026-09-05",
-      "name": "THE / DVIZH",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCOyct1i3qxk3QlDk2MT6KMQ": {
       "fingerprint": "1a0875b863efe4ae",
-      "lane": "GLOBAL_PACKAGING_FITNESS",
       "last_reviewed": "2026-09-05",
-      "name": "Richard Shi | Online Coach | Fitness Pro",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCOzHUgAqUgTS6h6pMSBkFcw": {
       "fingerprint": "996a6f328e7e6503",
-      "lane": "CIS_EDITING_BUSINESS",
       "last_reviewed": "2026-09-05",
-      "name": "\u0411\u0438\u0437\u043d\u0435\u0441 \u0410\u043a\u0443\u043b\u0430",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCP4idhz0FPi80KlyLK-1wyA": {
       "fingerprint": "ec83c31035149be8",
-      "lane": "CIS_EDITING_EDUCATION",
       "last_reviewed": "2026-09-05",
-      "name": "BURN IT \u2014 \u043e\u043d\u043b\u0430\u0439\u043d-\u0448\u043a\u043e\u043b\u0430 \u0430\u043d\u0433\u043b\u0438\u0439\u0441\u043a\u043e\u0433\u043e \u044f\u0437\u044b\u043a\u0430",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCP7WmQ_U4GB3K51Od9QvM0w": {
       "fingerprint": "07172ca5e39d90d8",
-      "lane": "CIS_EDITING_TECH",
       "last_reviewed": "2026-09-05",
-      "name": "David Bombal",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCPDQphtNnNiY2h7vAVfwuCg": {
       "fingerprint": "0eae11804ed88810",
-      "lane": "CIS_EDITING_BUSINESS",
       "last_reviewed": "2026-09-05",
-      "name": "\u041d\u0443\u043b\u043b\u0438\u0430\u0440\u0434\u0435\u0440",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCPF4bAZimS4T8w1TlbeIAYg": {
       "fingerprint": "b31b232a58607bab",
-      "lane": "GLOBAL_PACKAGING_AUTOMOTIVE",
       "last_reviewed": "2026-09-05",
-      "name": "Faisal Khan",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCPUBgWSsvuYwyRsGQ_Vt8lg": {
       "fingerprint": "826174452f94688e",
-      "lane": "GLOBAL_PACKAGING_AI_TECH",
       "last_reviewed": "2026-09-05",
-      "name": "Super SQA | QA Automation",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCPbwhExawYrn9xxI21TFfyw": {
       "fingerprint": "6a01f40930d293e4",
-      "lane": "CIS_EDITING_TECH",
       "last_reviewed": "2026-09-05",
-      "name": "The Pragmatic Engineer",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCPrVjDohW98GDxq99E8eHUQ": {
+      "contact_status": "CONTACT_NEEDED",
       "fingerprint": "69f2a3ecb6739c4c",
       "fit_tier": "GOOD_FIT",
       "history": [
@@ -1208,53 +887,36 @@
     },
     "UCPry3R6defNuvoi54MDKoTg": {
       "fingerprint": "554f0d5a42b21067",
-      "lane": "GLOBAL_PACKAGING_FITNESS",
       "last_reviewed": "2026-09-05",
-      "name": "Colin Pasque",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCPvcUzYGik49O8hZReEl-Ag": {
       "fingerprint": "78faffe95e971d78",
-      "lane": "CIS_EDITING_EDUCATION",
       "last_reviewed": "2026-09-05",
-      "name": "Immigrant.Today - \u0438\u043c\u043c\u0438\u0433\u0440\u0430\u0446\u0438\u044f \u0432 \u041a\u0430\u043d\u0430\u0434\u0443",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCQIycDaLsBpMKjOCeaKUYVg": {
       "fingerprint": "d955af1d6370b0b1",
-      "lane": "GLOBAL_PACKAGING_FINANCE",
       "last_reviewed": "2026-09-05",
-      "name": "CNBC Awaaz.",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCQ_AFiT74oS9BmLZIHpJCYg": {
       "fingerprint": "486a7e2b896396dc",
-      "lane": "GLOBAL_PACKAGING_BUSINESS",
       "last_reviewed": "2026-09-05",
-      "name": "The Orderly Mom",
-      "next_review_after": "2026-09-19",
       "status": "SEEN"
     },
     "UCQoxJOkwaCgyzQtiuAIDcuw": {
       "fingerprint": "40fd00396a63a675",
-      "lane": "GLOBAL_PACKAGING_ENTERTAINMENT",
       "last_reviewed": "2026-09-05",
-      "name": "Club Shay Shay",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCR9Z-4R1Xqq1mlpOBjqQNiw": {
       "fingerprint": "0be6ef5c2165ace8",
-      "lane": "GLOBAL_PACKAGING_FINANCE",
       "last_reviewed": "2026-09-05",
-      "name": "Personal Finance",
-      "next_review_after": "2026-09-19",
       "status": "SEEN"
     },
     "UCRPdsCVuH53rcbTcEkuY4uQ": {
+      "contact_status": "CONTACT_NEEDED",
       "fingerprint": "309a36f58c262cd8",
       "fit_tier": "GOOD_FIT",
       "history": [
@@ -1275,114 +937,72 @@
     },
     "UCS8WNfPtyV709uQWqCBcKzw": {
       "fingerprint": "5dae613756b3bc6c",
-      "lane": "GLOBAL_PACKAGING_AUTOMOTIVE",
       "last_reviewed": "2026-09-05",
-      "name": "FP Driving",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCSChftzAtfsOOb5opd9SYYA": {
       "fingerprint": "7a8f25d59c7c28c2",
-      "lane": "GLOBAL_PACKAGING_GAMING",
       "last_reviewed": "2026-09-05",
-      "name": "TIMENG",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCSKqKPXmxfRZYvA9Z1YDgpw": {
       "fingerprint": "2aba06b1e6dc8683",
-      "lane": "CIS_EDITING_ENTERTAINMENT",
       "last_reviewed": "2026-09-05",
-      "name": "\u042e\u043b\u0438\u044f \u0413\u0443\u0441\u0435\u043b\u044c\u043d\u0438\u043a\u043e\u0432\u0430",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCSdQyusMFMRZ95s2wFUWCXQ": {
       "fingerprint": "d77dfbbce0d826c8",
-      "lane": "CIS_EDITING_BUSINESS",
       "last_reviewed": "2026-09-05",
-      "name": "\u0417\u0430\u044f\u0446 \u041f\u0430\u0432\u0435\u043b",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCT0OLv_X6UOUifAspdmOU0A": {
       "fingerprint": "dfbaa836d4648bbf",
-      "lane": "GLOBAL_PACKAGING_FINANCE",
       "last_reviewed": "2026-09-05",
-      "name": "Acmt Market Talk",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCTL6B3G7RBH7ALVRiJLnDRw": {
       "fingerprint": "ef746069ac9680b3",
-      "lane": "GLOBAL_PACKAGING_BUSINESS",
       "last_reviewed": "2026-09-05",
-      "name": "Jay Thadeshwar",
-      "next_review_after": "2026-09-19",
       "status": "SEEN"
     },
     "UCTQKT5QqO3h7y32G8VzuySQ": {
       "fingerprint": "b9da7a8db85c8e70",
-      "lane": "GLOBAL_PACKAGING_GAMING",
       "last_reviewed": "2026-09-05",
-      "name": "dota2",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCTyvAMnHg_Zta5AecsD83eA": {
       "fingerprint": "07a5e39eeddb3735",
-      "lane": "GLOBAL_PACKAGING_BUSINESS",
       "last_reviewed": "2026-09-05",
-      "name": "Unfiltered with Aarjav",
-      "next_review_after": "2026-09-19",
       "status": "SEEN"
     },
     "UCU-WsSO7_NuNXkvNTRftqmA": {
       "fingerprint": "6b8e9bc987c8bf8c",
-      "lane": "GLOBAL_PACKAGING_GAMING",
       "last_reviewed": "2026-09-05",
-      "name": "Apex FF \ud83c\udd65",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCU0rpyae8upfKm30VeSVyDg": {
       "fingerprint": "9b3cf2beacc6062c",
-      "lane": "GLOBAL_PACKAGING_BUSINESS",
       "last_reviewed": "2026-09-05",
-      "name": "doggymentality",
-      "next_review_after": "2026-09-19",
       "status": "SEEN"
     },
     "UCUQR1yBKJf68o5Bbww4-vXg": {
       "fingerprint": "d736879b733fa70e",
-      "lane": "GLOBAL_PACKAGING_FITNESS",
       "last_reviewed": "2026-09-05",
-      "name": "Jackson Findley | Men's Fitness Coach",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCUvaFlGctnsY8hg9kEGM0TA": {
       "fingerprint": "c7547a3af22a9c5b",
-      "lane": "CIS_EDITING_ENTERTAINMENT",
       "last_reviewed": "2026-09-05",
-      "name": "\u0414\u0415\u0414 \u0418 \u0411\u0410\u0411\u041a\u0410",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCVCa-_J1CLBzpT52EwuZ3yQ": {
       "fingerprint": "9492e0cb29a03294",
-      "lane": "GLOBAL_PACKAGING_BUSINESS",
       "last_reviewed": "2026-09-05",
-      "name": "VisionX Lab",
-      "next_review_after": "2026-09-19",
       "status": "SEEN"
     },
     "UCVGJU6GdVD8c9O3x7Rs1jSA": {
       "fingerprint": "ad733af57031b83e",
-      "lane": "GLOBAL_PACKAGING_EDUCATION",
       "last_reviewed": "2026-09-05",
-      "name": "Course Creator Hub",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCVNKdkLzWuy1oLuCuCv4NCA": {
@@ -1406,13 +1026,11 @@
     },
     "UCVZ__FB0Sar9kjzg7zCNRnQ": {
       "fingerprint": "5d50172438e1630e",
-      "lane": "CIS_EDITING_EDUCATION",
       "last_reviewed": "2026-09-05",
-      "name": "\u041e\u043d\u043b\u0430\u0439\u043d \u0448\u043a\u043e\u043b\u0430 \u0448\u0438\u0442\u044c\u044f Bespoked",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCV_DLB3VW0szIGQnwel1Nsw": {
+      "contact_status": "CONTACT_NEEDED",
       "fingerprint": "4089029fba43ef72",
       "fit_tier": "GOOD_FIT",
       "history": [
@@ -1433,293 +1051,186 @@
     },
     "UCVdRlBpp6sBgORTEnCqh73g": {
       "fingerprint": "ff159d615c4fdfaa",
-      "lane": "GLOBAL_PACKAGING_BUSINESS",
       "last_reviewed": "2026-09-05",
-      "name": "DBC CREATIONS | Fashion Business",
-      "next_review_after": "2026-09-19",
       "status": "SEEN"
     },
     "UCVmSl5cZvbknbZ6zmZhmxxQ": {
       "fingerprint": "862952a6c63b0a5f",
-      "lane": "GLOBAL_PACKAGING_AI_TECH",
       "last_reviewed": "2026-09-05",
-      "name": "Vaibhav Pandey (Surendr)",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCVnj1BuBYfezPczrZa7kyJQ": {
       "fingerprint": "cc77e0e8c469d7ff",
-      "lane": "CIS_EDITING_ENTERTAINMENT",
       "last_reviewed": "2026-09-05",
-      "name": "Lady Diana VLOG",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCW8Biq5ZMLiHD9c1lMlqCvA": {
       "fingerprint": "5a157c5276950fd4",
-      "lane": "GLOBAL_PACKAGING_FITNESS",
       "last_reviewed": "2026-09-05",
-      "name": "Lucie Braunschweig - Home Workout",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCWF1FEGOP1kIsIUbaMbJqOw": {
       "fingerprint": "0422df237dd43336",
-      "lane": "CIS_EDITING_ENTERTAINMENT",
       "last_reviewed": "2026-09-05",
-      "name": "Grazhina",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCWabu0vYfIQA_va-AydZCIA": {
       "fingerprint": "2f8b1ac6a11bacba",
-      "lane": "GLOBAL_PACKAGING_AI_TECH",
       "last_reviewed": "2026-09-05",
-      "name": "Deal Alert AI",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCWu6v5jfsW3wO948jOHMEiA": {
       "fingerprint": "6ee22ea56d10281b",
-      "lane": "GLOBAL_PACKAGING_FITNESS",
       "last_reviewed": "2026-09-05",
-      "name": "Movesmethod",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCWwgaK7x0_FR1goeSRazfsQ": {
       "fingerprint": "05cb5e58c5d06b8c",
-      "lane": "GLOBAL_PACKAGING_GAMING",
       "last_reviewed": "2026-09-05",
-      "name": "Samsung",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCX843E2jz5UkX0x8_CAaGCw": {
       "fingerprint": "7b58bf67b33e1166",
-      "lane": "GLOBAL_PACKAGING_AI_TECH",
       "last_reviewed": "2026-09-05",
-      "name": "AI ToolKit",
-      "next_review_after": "2026-09-19",
       "status": "SEEN"
     },
     "UCY6N8zZhs2V7gNTUxPuKWoQ": {
       "fingerprint": "466997f896dab810",
-      "lane": "GLOBAL_PACKAGING_AI_TECH",
       "last_reviewed": "2026-09-05",
-      "name": "Ishan Sharma",
-      "next_review_after": "2026-09-19",
       "status": "SEEN"
     },
     "UCY7GnoXDqfWMy6KjS1SmEew": {
       "fingerprint": "52fedcc4010af226",
-      "lane": "GLOBAL_PACKAGING_BUSINESS",
       "last_reviewed": "2026-09-05",
-      "name": "Startup Alliance Korea",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCYFmJbZymkDPorFbFalFOlQ": {
       "fingerprint": "e4f6e41bdea4fe8a",
-      "lane": "GLOBAL_PACKAGING_FINANCE",
       "last_reviewed": "2026-09-05",
-      "name": "Next Dollar",
-      "next_review_after": "2026-09-19",
       "status": "SEEN"
     },
     "UCYH5pSOuA1NOHOj1zyPbr1w": {
       "fingerprint": "f2a106e1dfdda1db",
-      "lane": "CIS_EDITING_ENTERTAINMENT",
       "last_reviewed": "2026-09-05",
-      "name": "Vlad Shumilov",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCYcpg9vw372W4NLg9OBgapg": {
       "fingerprint": "0c0aff14f4cba9ee",
-      "lane": "GLOBAL_PACKAGING_EDUCATION",
       "last_reviewed": "2026-09-05",
-      "name": "Reetu Maz ",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCYgzwgt29lL6KhV4_B9phOQ": {
       "fingerprint": "e2fa46013e8b4908",
-      "lane": "GLOBAL_PACKAGING_AI_TECH",
       "last_reviewed": "2026-09-05",
-      "name": "Asset Culture",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCZ8deBISX4aVcWlTjxfrA-g": {
       "fingerprint": "c39f3cb1668f2731",
-      "lane": "GLOBAL_PACKAGING_FITNESS",
       "last_reviewed": "2026-09-05",
-      "name": "Fit chines",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCZGRQllSXCu8lEAuWngVMmA": {
       "fingerprint": "bfc739d8dc58a4b5",
-      "lane": "GLOBAL_PACKAGING_AUTOMOTIVE",
       "last_reviewed": "2026-09-05",
-      "name": "fish.baits0",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCZKJ_hgLq_jjoNtXF0PBDSw": {
       "fingerprint": "859c720c03d65779",
-      "lane": "GLOBAL_PACKAGING_AI_TECH",
       "last_reviewed": "2026-09-05",
-      "name": "Nivedan Rathi",
-      "next_review_after": "2026-09-19",
       "status": "SEEN"
     },
     "UCZMLNVZW6RVGzyYOfos4TYg": {
       "fingerprint": "642969ccfa6311f1",
-      "lane": "GLOBAL_PACKAGING_FITNESS",
       "last_reviewed": "2026-09-05",
-      "name": "Keenan Malloy",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCZN0hGPlkKT63n2vm3ka33Q": {
       "fingerprint": "a5601b662c36e648",
-      "lane": "GLOBAL_PACKAGING_BUSINESS",
       "last_reviewed": "2026-09-05",
-      "name": "Matt - Global Day Zero",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCZpqwb8ud7T5uY01AKX-oYA": {
       "fingerprint": "b36d6886eefc0cba",
-      "lane": "GLOBAL_PACKAGING_FITNESS",
       "last_reviewed": "2026-09-05",
-      "name": "Sarah Parker",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCZtHjF_PmRI2MNfEhi9ADFg": {
       "fingerprint": "36894e9a9b1e9e95",
-      "lane": "GLOBAL_PACKAGING_AUTOMOTIVE",
       "last_reviewed": "2026-09-05",
-      "name": "Tiny Build Restore\u2b50",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UC_3oKG5Szq-m6Xz-MjRZgpw": {
       "fingerprint": "5c27785b9cdf54ae",
-      "lane": "CIS_EDITING_EDUCATION",
       "last_reviewed": "2026-09-05",
-      "name": "\u0410\u041d\u0413\u041b\u0418\u0419\u0421\u041a\u0418\u0419 \u042f\u0417\u042b\u041a \u041f\u041e \u041f\u041b\u0415\u0419\u041b\u0418\u0421\u0422\u0410\u041c",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UC_ArFU4JDMF8tgs6uKbWV9g": {
       "fingerprint": "38128ad0220f398e",
-      "lane": "GLOBAL_PACKAGING_FITNESS",
       "last_reviewed": "2026-09-05",
-      "name": "Fitness  @Studio",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UC_DlcI0msjcMdRM736f3cnQ": {
       "fingerprint": "e68a049c852eb692",
-      "lane": "GLOBAL_PACKAGING_AI_TECH",
       "last_reviewed": "2026-09-05",
-      "name": "Joey Krosch",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UC_DunzgxDrqK343shToJICA": {
       "fingerprint": "061df830a7778fda",
-      "lane": "GLOBAL_PACKAGING_BUSINESS",
       "last_reviewed": "2026-09-05",
-      "name": "Onlyfounders",
-      "next_review_after": "2026-09-19",
       "status": "SEEN"
     },
     "UC_H0aZQd1G8xsiM-hsF6Npw": {
       "fingerprint": "c2ed529e118c4f3f",
-      "lane": "GLOBAL_PACKAGING_EDUCATION",
       "last_reviewed": "2026-09-05",
-      "name": "Vedang Teachers' Point ",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UC_dd6GbjaWEhLGzxvcxWuGw": {
       "fingerprint": "db8a608dc4b81b6d",
-      "lane": "GLOBAL_PACKAGING_BUSINESS",
       "last_reviewed": "2026-09-05",
-      "name": "inABLE org",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UC_ec-x00g7RNAlGcaVm4QNg": {
       "fingerprint": "3af5534b45dc7ad4",
-      "lane": "GLOBAL_PACKAGING_EDUCATION",
       "last_reviewed": "2026-09-05",
-      "name": "Built In Hungary",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCafpueX9hFLls24ed6UddEQ": {
       "fingerprint": "74a42c3a95a512d7",
-      "lane": "GLOBAL_PACKAGING_EDUCATION",
       "last_reviewed": "2026-09-05",
-      "name": "Drishti IAS : English",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCasiZ0I5jhmhmn3HCxdeIFw": {
       "fingerprint": "8c4ced631a8eb62a",
-      "lane": "GLOBAL_PACKAGING_AUTOMOTIVE",
       "last_reviewed": "2026-09-05",
-      "name": "WoodenAutoForge",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCb2ZVjZtH9Nne_INYEpOqcA": {
       "fingerprint": "17e069f73b306825",
-      "lane": "GLOBAL_PACKAGING_FITNESS",
       "last_reviewed": "2026-09-05",
-      "name": "Dirk Germon",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCbB4TsL50V1RQkm1f65z59A": {
       "fingerprint": "deeb09a9f858f8bd",
-      "lane": "GLOBAL_PACKAGING_BUSINESS",
       "last_reviewed": "2026-09-05",
-      "name": "Algorizin",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCbBEkjzkcgOZgxDwGgicIcg": {
       "fingerprint": "e63afdedf064fde2",
-      "lane": "GLOBAL_PACKAGING_AI_TECH",
       "last_reviewed": "2026-09-05",
-      "name": "TutoNova",
-      "next_review_after": "2026-09-19",
       "status": "SEEN"
     },
     "UCbJR36yIOzXrrAhs23wmxEA": {
       "fingerprint": "e7b804864836a0c9",
-      "lane": "GLOBAL_PACKAGING_AI_TECH",
       "last_reviewed": "2026-09-05",
-      "name": "buildwithashwani",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCbgq4Y6WypFnBBzrBDgR0zA": {
       "fingerprint": "59bbb01b04a3a054",
-      "lane": "GLOBAL_PACKAGING_GAMING",
       "last_reviewed": "2026-09-05",
-      "name": "NODWIN Gaming",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCbsJaeNLXZNVdjnY9y9FFXw": {
+      "contact_status": "CONTACT_NEEDED",
       "fingerprint": "72a638730e99e740",
       "fit_tier": "GOOD_FIT",
       "history": [
@@ -1740,141 +1251,91 @@
     },
     "UCbxmOVvHHIGbyfnu09pVPww": {
       "fingerprint": "480cd62871259c9f",
-      "lane": "CIS_EDITING_EDUCATION",
       "last_reviewed": "2026-09-05",
-      "name": "\u0427\u0422\u0418\u0412\u041e",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCc0K9qu3XAIYcXuBzpDPWTA": {
       "fingerprint": "0c9f6a566f585226",
-      "lane": "GLOBAL_PACKAGING_BUSINESS",
       "last_reviewed": "2026-09-05",
-      "name": "Pierre du Plessis",
-      "next_review_after": "2026-09-19",
       "status": "SEEN"
     },
     "UCc5KviTLyHSeKeC-hge3Y3w": {
       "fingerprint": "e103722a8129975b",
-      "lane": "CIS_EDITING_BUSINESS",
       "last_reviewed": "2026-09-05",
-      "name": "\u0420\u043e\u043c\u0430\u043d \u0414\u0430\u0439\u043d\u0435\u043a\u043e",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCcA1Y70g5VjN-GRQqu0_f3A": {
       "fingerprint": "d3989de8ca5304f8",
-      "lane": "GLOBAL_PACKAGING_GAMING",
       "last_reviewed": "2026-09-05",
-      "name": "Gaming Your Jisun",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCcEJ5OUqbmv6M-8cy8Sf0Ig": {
       "fingerprint": "80c669969132c472",
-      "lane": "GLOBAL_PACKAGING_FITNESS",
       "last_reviewed": "2026-09-05",
-      "name": "FIT CHINESE ",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCcI6f5fx1ZTjE5Cyj09NAkQ": {
       "fingerprint": "4239bcf2758b972b",
-      "lane": "CIS_EDITING_BUSINESS",
       "last_reviewed": "2026-09-05",
-      "name": "\u0421\u0432\u0435\u0442\u043b\u0430\u043d\u0430 \u0421\u043e\u043b\u043e\u0434\u043a\u0438\u043d\u0430. \u0421\u0438\u044f\u043d\u0438\u0435 \u0436\u0435\u043d\u0449\u0438\u043d\u044b",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCcJ7i3QEVCY-AYgdYZsJ3IA": {
       "fingerprint": "16c1f225a8795de4",
-      "lane": "GLOBAL_PACKAGING_GAMING",
       "last_reviewed": "2026-09-05",
-      "name": "Rush B: Esports Manager",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCcLTeuDmHE84Rb8fPmqpT2g": {
       "fingerprint": "13cbb492faf89047",
-      "lane": "GLOBAL_PACKAGING_FINANCE",
       "last_reviewed": "2026-09-05",
-      "name": "Shaor Info",
-      "next_review_after": "2026-09-19",
       "status": "SEEN"
     },
     "UCcLYOTz3ct6_lk9iLToxxAw": {
       "fingerprint": "648835425a8a2364",
-      "lane": "GLOBAL_PACKAGING_AUTOMOTIVE",
       "last_reviewed": "2026-09-05",
-      "name": "Mat Armstrong",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCcVqCJ_9owb1zM43vqswMNQ": {
       "fingerprint": "7bbf2ae51f33519e",
-      "lane": "GLOBAL_PACKAGING_ENTERTAINMENT",
       "last_reviewed": "2026-09-05",
-      "name": "BETNetworks",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCcol6Mzd6jz9CI8AYWo7tQg": {
       "fingerprint": "c24f09dba55c9711",
-      "lane": "GLOBAL_PACKAGING_BUSINESS",
       "last_reviewed": "2026-09-05",
-      "name": "Founder Institute",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCcpRlXeJ7A_SJ5bxIz_RvrQ": {
       "fingerprint": "3f86fcf94368f629",
-      "lane": "GLOBAL_PACKAGING_BUSINESS",
       "last_reviewed": "2026-09-05",
-      "name": "Accidentally Qualified Podcast",
-      "next_review_after": "2026-09-19",
       "status": "SEEN"
     },
     "UCcrYxvtT9tp60RBsK9HvpqQ": {
       "fingerprint": "ebd12c6775d3ed22",
-      "lane": "CIS_EDITING_TECH",
       "last_reviewed": "2026-09-05",
-      "name": "Tamsen Fadal",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCcruVINgi1B5zJ9MgTyjU_g": {
       "fingerprint": "09c7c9286c5b284c",
-      "lane": "GLOBAL_PACKAGING_BUSINESS",
       "last_reviewed": "2026-09-05",
-      "name": "Ganesh Bugatha",
-      "next_review_after": "2026-09-19",
       "status": "SEEN"
     },
     "UCctI0doUr2CiA8FfzZnm_5A": {
       "fingerprint": "b6e328db011fc4d9",
-      "lane": "GLOBAL_PACKAGING_EDUCATION",
       "last_reviewed": "2026-09-05",
-      "name": "Greger Hillman",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCdTzzwf2A8WcXtOJGlMeCMg": {
       "fingerprint": "84c337530880568b",
-      "lane": "GLOBAL_PACKAGING_BUSINESS",
       "last_reviewed": "2026-09-05",
-      "name": "Dilse Omni : Talks - with Saurabh Agrawal",
-      "next_review_after": "2026-09-19",
       "status": "SEEN"
     },
     "UCddkM3pn1hiMIrYOLZUSQzw": {
       "fingerprint": "044ee68bbd300e24",
-      "lane": "GLOBAL_PACKAGING_BUSINESS",
       "last_reviewed": "2026-09-05",
-      "name": "Catalysr",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCde0vB0fTwC8AT3sJofFV0w": {
+      "contact_status": "CONTACT_NEEDED",
       "fingerprint": "80198e1885c0c5b1",
       "fit_tier": "GOOD_FIT",
       "history": [
@@ -1895,106 +1356,67 @@
     },
     "UCeOlqDoElKyft8VFexJnbnA": {
       "fingerprint": "73429821d88a82d4",
-      "lane": "GLOBAL_PACKAGING_BUSINESS",
       "last_reviewed": "2026-09-05",
-      "name": "Grind Rich ",
-      "next_review_after": "2026-09-19",
       "status": "SEEN"
     },
     "UCeXvN8PxRKe6c6_fakTLyUw": {
       "fingerprint": "0f3c9d865e583a8b",
-      "lane": "CIS_EDITING_TECH",
       "last_reviewed": "2026-09-05",
-      "name": "BHADRESH NAYAK",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCeY0bbntWzzVIaj2z3QigXg": {
       "fingerprint": "def85d0cbf470e7e",
-      "lane": "GLOBAL_PACKAGING_ENTERTAINMENT",
       "last_reviewed": "2026-09-05",
-      "name": "NBC News",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCeZeIWVcA0LYAC6EmA4pRUg": {
       "fingerprint": "b49cbae880dffcb1",
-      "lane": "GLOBAL_PACKAGING_BUSINESS",
       "last_reviewed": "2026-09-05",
-      "name": "Startup Canada",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCefl-5pmhZmljwZTE2KrcdA": {
       "fingerprint": "54608d32aa6d01cb",
-      "lane": "GLOBAL_PACKAGING_AUTOMOTIVE",
       "last_reviewed": "2026-09-05",
-      "name": "VINwiki",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCeiBi8gptAwNoIHrZ3OUUbw": {
       "fingerprint": "62f7b7e8c40ac693",
-      "lane": "GLOBAL_PACKAGING_AUTOMOTIVE",
       "last_reviewed": "2026-09-05",
-      "name": "Winding Road Magazine",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCejavngItrzh2Kf6Dla0RMQ": {
       "fingerprint": "2122b4facba026ba",
-      "lane": "GLOBAL_PACKAGING_FITNESS",
       "last_reviewed": "2026-09-05",
-      "name": "Pairformance_Fit",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCf5G5U3Y9pxyUWtx_gYKPbQ": {
       "fingerprint": "20ab28b0e1ea9d5c",
-      "lane": "GLOBAL_PACKAGING_BUSINESS",
       "last_reviewed": "2026-09-05",
-      "name": "Founder Signal",
-      "next_review_after": "2026-09-19",
       "status": "SEEN"
     },
     "UCfDJfdU0aCiMTluHXKDahYg": {
       "fingerprint": "62f7a88e0c2c957c",
-      "lane": "CIS_EDITING_ENTERTAINMENT",
       "last_reviewed": "2026-09-05",
-      "name": "Heghineh Cooking Show in Russian",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCfMEz1FHN9aQNY2Gtt1BGXw": {
       "fingerprint": "6df05032e799a56a",
-      "lane": "GLOBAL_PACKAGING_FINANCE",
       "last_reviewed": "2026-09-05",
-      "name": "Boss Wallah (Kannada)",
-      "next_review_after": "2026-09-19",
       "status": "SEEN"
     },
     "UCfjC7haue0jIqDaFfhW89bA": {
       "fingerprint": "7ddc62418470f90b",
-      "lane": "GLOBAL_PACKAGING_GAMING",
       "last_reviewed": "2026-09-05",
-      "name": "GRAVITY MEDIA",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCfocHZTpBcD1CIZ4EJ6kT4A": {
       "fingerprint": "61600708b5f90cad",
-      "lane": "GLOBAL_PACKAGING_EDUCATION",
       "last_reviewed": "2026-09-05",
-      "name": "Choir of the Earth",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCgKTJAN-IrVyX-jIJ5INEhA": {
       "fingerprint": "a0fc360b39945117",
-      "lane": "GLOBAL_PACKAGING_ENTERTAINMENT",
       "last_reviewed": "2026-09-05",
-      "name": "Chris Hansen",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCggPd3Vf9ooG2r4I_ZNWBzA": {
@@ -2037,10 +1459,7 @@
     },
     "UCgy2GfMMXRuHmWGaIZzQYbQ": {
       "fingerprint": "a6d6122815955aa8",
-      "lane": "CIS_EDITING_BUSINESS",
       "last_reviewed": "2026-09-05",
-      "name": "\u0411\u044b\u0442\u044c CTO \u2013 \u043f\u043e\u0434\u043a\u0430\u0441\u0442 \u043e c-level \u043a\u0430\u0440\u044c\u0435\u0440\u0435 \u0432 \u0430\u0439\u0442\u0438",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCh6EaKNcFhtxgF27KUQGw1w": {
@@ -2064,18 +1483,12 @@
     },
     "UChAjEW5Xj4qLI8mPvGK1SPg": {
       "fingerprint": "1a99b9747235a189",
-      "lane": "GLOBAL_PACKAGING_BUSINESS",
       "last_reviewed": "2026-09-05",
-      "name": "Talentpilot",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UChJURHebSGJtyl_2eVG03VA": {
       "fingerprint": "7d4ee58161cb4e32",
-      "lane": "CIS_EDITING_ENTERTAINMENT",
       "last_reviewed": "2026-09-05",
-      "name": "AN.WINZER",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UChPwGY5vg-p4a6UehR83wHQ": {
@@ -2099,26 +1512,17 @@
     },
     "UChQ17UlC6lAYyWPnWeB_1vA": {
       "fingerprint": "927a1c63a7ecb3e1",
-      "lane": "GLOBAL_PACKAGING_AI_TECH",
       "last_reviewed": "2026-09-05",
-      "name": "Brand Tech Authority",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UChZkKFm9d7ZvhRESa3JLxjQ": {
       "fingerprint": "022fb225a69a5530",
-      "lane": "GLOBAL_PACKAGING_BUSINESS",
       "last_reviewed": "2026-09-05",
-      "name": "Chandan Dubey",
-      "next_review_after": "2026-09-19",
       "status": "SEEN"
     },
     "UCh_8vIjMBBI5IdwBvxN12Mw": {
       "fingerprint": "a4305f7ea30628c9",
-      "lane": "CIS_EDITING_BUSINESS",
       "last_reviewed": "2026-09-05",
-      "name": "\u0411\u0438\u0437\u043d\u0435\u0441-\u041d\u0438\u043d\u0434\u0437\u044f [by \u041a\u043e\u043b\u044f \u041f\u0430\u043a]",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UChjRM_qQAaOAiLNbOGbYcRA": {
@@ -2142,178 +1546,112 @@
     },
     "UCi7GJNg51C3jgmYTUwqoUXA": {
       "fingerprint": "7afe8b05a53f615e",
-      "lane": "GLOBAL_PACKAGING_ENTERTAINMENT",
       "last_reviewed": "2026-09-05",
-      "name": "Team Coco",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCiDQrA4M5dPUhb8zsMwbEqg": {
       "fingerprint": "6b954109a6923be6",
-      "lane": "GLOBAL_PACKAGING_AI_TECH",
       "last_reviewed": "2026-09-05",
-      "name": "Coding Wrap",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCiF52fQwIFBcHfmuk086cUA": {
       "fingerprint": "90c30882ab049181",
-      "lane": "GLOBAL_PACKAGING_BUSINESS",
       "last_reviewed": "2026-09-05",
-      "name": "LeapSheep",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCiZVMOinTQGb8HQu53VbV4Q": {
       "fingerprint": "fa19674d602b7f3e",
-      "lane": "GLOBAL_PACKAGING_GAMING",
       "last_reviewed": "2026-09-05",
-      "name": "Gamer's Little Playground",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCiglVNXBgjgzRniFCdWFVJA": {
       "fingerprint": "750794148522f208",
-      "lane": "CIS_EDITING_GAMING",
       "last_reviewed": "2026-09-05",
-      "name": "\u041f\u0435\u0440\u0432\u044b\u0439 \u0425\u043e\u0440\u0440\u043e\u0440 \u041a\u0430\u043d\u0430\u043b",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCitnv5n8T5yYvpGl5UNPa-g": {
       "fingerprint": "49eb73e8db9fb642",
-      "lane": "GLOBAL_PACKAGING_AI_TECH",
       "last_reviewed": "2026-09-05",
-      "name": "Leverage Audio",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCj9yUGuMVVdm2DqyvJPUeUQ": {
       "fingerprint": "6470e87fcde5bc76",
-      "lane": "GLOBAL_PACKAGING_AUTOMOTIVE",
       "last_reviewed": "2026-09-05",
-      "name": "Kelley Blue Book",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCjWs7BxyjO5SLqevxSmp4vQ": {
       "fingerprint": "99f7994283b38e9d",
-      "lane": "GLOBAL_PACKAGING_AUTOMOTIVE",
       "last_reviewed": "2026-09-05",
-      "name": "Autocar India",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCjXIw1GlwaY1IzpW_jN9iCQ": {
       "fingerprint": "651ffecc08096a4e",
-      "lane": "GLOBAL_PACKAGING_ENTERTAINMENT",
       "last_reviewed": "2026-09-05",
-      "name": "The Overlap",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCjY5iJvottq-9k_L6VAR5sA": {
       "fingerprint": "73811288d87c82f0",
-      "lane": "GLOBAL_PACKAGING_AI_TECH",
       "last_reviewed": "2026-09-05",
-      "name": "Techdots",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCjkBbBdN2wa9saELKFtocOA": {
       "fingerprint": "81e2202d203e1193",
-      "lane": "GLOBAL_PACKAGING_FINANCE",
       "last_reviewed": "2026-09-05",
-      "name": "Roy Finance",
-      "next_review_after": "2026-09-19",
       "status": "SEEN"
     },
     "UCk2OpuAnsKolaxG5Ilg5xBQ": {
       "fingerprint": "569126b63075e9f8",
-      "lane": "GLOBAL_PACKAGING_AI_TECH",
       "last_reviewed": "2026-09-05",
-      "name": "Matteo Isenburg",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCk6ntaC4zukSWRgBJMnZGng": {
       "fingerprint": "5136bb9fd970459f",
-      "lane": "GLOBAL_PACKAGING_BUSINESS",
       "last_reviewed": "2026-09-05",
-      "name": "Abu Lahya life ",
-      "next_review_after": "2026-09-19",
       "status": "SEEN"
     },
     "UCkBUdbYVLJ9rkq8jzZ7l4lg": {
       "fingerprint": "0e65ffa622dddae6",
-      "lane": "CIS_EDITING_BUSINESS",
       "last_reviewed": "2026-09-05",
-      "name": "EDGES OF KNOWLEDGE",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCkEJ8GPCcL08XenGdlFQNRw": {
       "fingerprint": "9bff103e7dff0f2c",
-      "lane": "GLOBAL_PACKAGING_AI_TECH",
       "last_reviewed": "2026-09-05",
-      "name": "Bytes Media",
-      "next_review_after": "2026-09-19",
       "status": "SEEN"
     },
     "UCkI6_znnhPXSFEwju_DFtBw": {
       "fingerprint": "49f9b1e464893434",
-      "lane": "CIS_EDITING_BUSINESS",
       "last_reviewed": "2026-09-05",
-      "name": "\u041c\u0438\u043b\u043b\u0438\u043e\u043d\u0449\u0438\u043a\u0438",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCkJZQddO3XTCdcLjN019FjA": {
       "fingerprint": "6b8f9792b4dab380",
-      "lane": "GLOBAL_PACKAGING_ENTERTAINMENT",
       "last_reviewed": "2026-09-05",
-      "name": "PINKVILLA",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCkRi7fWSsLvETZDYrGpMfDg": {
       "fingerprint": "5f3211413c54c0e9",
-      "lane": "CIS_EDITING_EDUCATION",
       "last_reviewed": "2026-09-05",
-      "name": "\u0421\u0432\u0435\u0442\u043b\u0430\u043d\u0430 \u0413\u043e\u0440\u0431\u0430\u0447",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCkoujZQZatbqy4KGcgjpVxQ": {
       "fingerprint": "619ccd23de4b54de",
-      "lane": "CIS_EDITING_TECH",
       "last_reviewed": "2026-09-05",
-      "name": "Shawn Ryan Show",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCkrTVqPpPcelShkUhkpspVQ": {
       "fingerprint": "162f2480b1be2a04",
-      "lane": "GLOBAL_PACKAGING_AUTOMOTIVE",
       "last_reviewed": "2026-09-05",
-      "name": "Schwartz Performance",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCm2DweYV3pIQD84hyxZnMwg": {
       "fingerprint": "466b960b72ecbe61",
-      "lane": "GLOBAL_PACKAGING_BUSINESS",
       "last_reviewed": "2026-09-05",
-      "name": "Chad Cohen",
-      "next_review_after": "2026-09-19",
       "status": "SEEN"
     },
     "UCm4WlDrdOOSbht-NKQ0uTeg": {
       "fingerprint": "8dc2426e1b9d8c87",
-      "lane": "GLOBAL_PACKAGING_GAMING",
       "last_reviewed": "2026-09-05",
-      "name": "RabidRetrospectGames",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCm5iBOcQ0GET_2FqFI61QDA": {
@@ -2337,21 +1675,16 @@
     },
     "UCm7xZ9sbqhuARuDDcckh8Jg": {
       "fingerprint": "23d2ca7dc9fd672c",
-      "lane": "GLOBAL_PACKAGING_FINANCE",
       "last_reviewed": "2026-09-05",
-      "name": "INDmoney",
-      "next_review_after": "2026-09-19",
       "status": "SEEN"
     },
     "UCm9LWVclwLzNYoBSJ5Qit_Q": {
       "fingerprint": "87bbb5f505dd929c",
-      "lane": "GLOBAL_PACKAGING_AI_TECH",
       "last_reviewed": "2026-09-05",
-      "name": "Aditya Sharma",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCmRNXk6hpY7T8ct9gNIyMhQ": {
+      "contact_status": "CONTACT_NEEDED",
       "fingerprint": "1619a10985791e4d",
       "fit_tier": "GOOD_FIT",
       "history": [
@@ -2372,10 +1705,7 @@
     },
     "UCmRbHAgG2k2vDUvb3xsEunQ": {
       "fingerprint": "049ffd923c9b3982",
-      "lane": "GLOBAL_PACKAGING_FINANCE",
       "last_reviewed": "2026-09-05",
-      "name": "CNBC-TV18",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCmbhzzSH8Rh7N8mJbpeTALQ": {
@@ -2398,6 +1728,7 @@
       "status": "REJECTED"
     },
     "UCn4Sml6YOxXxRC94qPXw5Zw": {
+      "contact_status": "CONTACT_NEEDED",
       "fingerprint": "872d3b64dceeb929",
       "fit_tier": "GOOD_FIT",
       "history": [
@@ -2418,50 +1749,32 @@
     },
     "UCnKzMVoSOBqgUlhoTaNtOxQ": {
       "fingerprint": "55f826eb89932623",
-      "lane": "GLOBAL_PACKAGING_BUSINESS",
       "last_reviewed": "2026-09-05",
-      "name": "RenewCred Carbon Credits",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCnUJX2S0MIlDPcxkZ17GxvA": {
       "fingerprint": "5965a6d2c2093de6",
-      "lane": "GLOBAL_PACKAGING_FITNESS",
       "last_reviewed": "2026-09-05",
-      "name": "DayByDee",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCnVPiOF7iK5GAXl3G6aKwww": {
       "fingerprint": "f4532234828f69db",
-      "lane": "GLOBAL_PACKAGING_BUSINESS",
       "last_reviewed": "2026-09-05",
-      "name": "Rebel Jones ",
-      "next_review_after": "2026-09-19",
       "status": "SEEN"
     },
     "UCneyi-aYq4VIBYIAQgWmk_w": {
       "fingerprint": "eb66191697102134",
-      "lane": "GLOBAL_PACKAGING_ENTERTAINMENT",
       "last_reviewed": "2026-09-05",
-      "name": "Ranveer Allahbadia",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCnoL5lk6OYVkGpLSmGFzRWg": {
       "fingerprint": "5d96954d3a410909",
-      "lane": "GLOBAL_PACKAGING_EDUCATION",
       "last_reviewed": "2026-09-05",
-      "name": "Kamila von Retteg",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCnua9kp_BvcSdei-lgv6YzA": {
       "fingerprint": "2cd462354e74e44d",
-      "lane": "CIS_EDITING_ENTERTAINMENT",
       "last_reviewed": "2026-09-05",
-      "name": "Diana Borodinchik",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCnxOVhbMG-SAqBqqXoV2jHg": {
@@ -2485,10 +1798,7 @@
     },
     "UCoJhc-NXOPYH0nVUTSjOjaQ": {
       "fingerprint": "8af0eea52062f96a",
-      "lane": "GLOBAL_PACKAGING_FITNESS",
       "last_reviewed": "2026-09-05",
-      "name": "FITXFEARLESS CLIPS",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCoPA478mf3B4NSXQrq5EFOg": {
@@ -2512,106 +1822,67 @@
     },
     "UCoiiIMZUxu0LxabtFk6PfVA": {
       "fingerprint": "7b3f4c7b54bcfb49",
-      "lane": "GLOBAL_PACKAGING_EDUCATION",
       "last_reviewed": "2026-09-05",
-      "name": "Adda247 Teaching Exams ",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCpOrOzBNdHhBiAlbC1WsPYw": {
       "fingerprint": "8d6b49509491f8d5",
-      "lane": "CIS_EDITING_EDUCATION",
       "last_reviewed": "2026-09-05",
-      "name": "\u0412\u0438\u0434\u0435\u043e\u0443\u0440\u043e\u043a\u0438 \u041f\u0414\u0414 \u0420\u0443\u043b\u0438 \u041e\u043d\u043b\u0430\u0439\u043d \u0434\u043b\u044f \u0443\u0447\u0430\u0449\u0438\u0445\u0441\u044f \u0430\u0432\u0442\u043e\u0448\u043a\u043e\u043b",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCpjdipKgSX-p_fBzTGiFr-g": {
       "fingerprint": "5bcaa321b78a54ab",
-      "lane": "GLOBAL_PACKAGING_BUSINESS",
       "last_reviewed": "2026-09-05",
-      "name": "Journey Rose Beauty",
-      "next_review_after": "2026-09-19",
       "status": "SEEN"
     },
     "UCpm6vCgiehSKHtMFFS5ukiA": {
       "fingerprint": "a2505b4b008769d8",
-      "lane": "CIS_EDITING_ENTERTAINMENT",
       "last_reviewed": "2026-09-05",
-      "name": "Katy LifeVlog",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCpwFVuATxG2m4A4vSqWCvDA": {
       "fingerprint": "04d2158d5baa66cc",
-      "lane": "CIS_EDITING_ENTERTAINMENT",
       "last_reviewed": "2026-09-05",
-      "name": "love korea",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCqPkccJz-TWlXcW8jX1SVUA": {
       "fingerprint": "2c1d88b94fd38fb4",
-      "lane": "GLOBAL_PACKAGING_AUTOMOTIVE",
       "last_reviewed": "2026-09-05",
-      "name": "Just Alex On Wheels",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCqf7vO_607vqItoM_CplBng": {
       "fingerprint": "be0622bf928c791d",
-      "lane": "GLOBAL_PACKAGING_FITNESS",
       "last_reviewed": "2026-09-05",
-      "name": "fitwithbhoomika",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCqwpFAykqf7SYvuPOWK6wSQ": {
       "fingerprint": "7c6da257fb54b530",
-      "lane": "GLOBAL_PACKAGING_AI_TECH",
       "last_reviewed": "2026-09-05",
-      "name": "DBB Software - Build Products in Weeks, Not Months",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCrK65GyBnBv3wlo50WyBm6w": {
       "fingerprint": "2a92e7c9137a1928",
-      "lane": "GLOBAL_PACKAGING_EDUCATION",
       "last_reviewed": "2026-09-05",
-      "name": "Al Muslim Online Quran Academy",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCrcO-kybe8OI5nKP2s7tAiA": {
       "fingerprint": "5aa0c04c1c90fa5e",
-      "lane": "GLOBAL_PACKAGING_FITNESS",
       "last_reviewed": "2026-09-05",
-      "name": "UNIVERSAL WRESTLING ",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCsI6AfGWcnqeCQ4FA3teJkw": {
       "fingerprint": "aa65fcd93f3c8aa4",
-      "lane": "GLOBAL_PACKAGING_FINANCE",
       "last_reviewed": "2026-09-05",
-      "name": "Money Matters ",
-      "next_review_after": "2026-09-19",
       "status": "SEEN"
     },
     "UCsJjHUsdxewOuD8SWccvG8w": {
       "fingerprint": "ce081fe05a8bdebe",
-      "lane": "GLOBAL_PACKAGING_AUTOMOTIVE",
       "last_reviewed": "2026-09-05",
-      "name": "old talent Ai",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCsc80Vz4m9izHAAnAD0TDfA": {
       "fingerprint": "b088288b4e1ed20f",
-      "lane": "GLOBAL_PACKAGING_EDUCATION",
       "last_reviewed": "2026-09-05",
-      "name": "Kaola Income Insider",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCsm6EOn4Qdbk6lchMolxS7A": {
@@ -2635,82 +1906,52 @@
     },
     "UCsqT53mykSpJZr2J3LYTfWA": {
       "fingerprint": "171108a8ddd6d7c1",
-      "lane": "GLOBAL_PACKAGING_AI_TECH",
       "last_reviewed": "2026-09-05",
-      "name": "AIToolSpott",
-      "next_review_after": "2026-09-19",
       "status": "SEEN"
     },
     "UCtI9TnVME5uoFq8J3aaMQbA": {
       "fingerprint": "6d5b5028122233d9",
-      "lane": "GLOBAL_PACKAGING_AUTOMOTIVE",
       "last_reviewed": "2026-09-05",
-      "name": "By Any Memes",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCtuJzZ86MTla-foLdr1MGgQ": {
       "fingerprint": "767ce25d65445d7a",
-      "lane": "GLOBAL_PACKAGING_EDUCATION",
       "last_reviewed": "2026-09-05",
-      "name": "CellBotics",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCuEBUmKX5yY2m29_YS6u3Lw": {
       "fingerprint": "5c1213266b3971a0",
-      "lane": "GLOBAL_PACKAGING_FITNESS",
       "last_reviewed": "2026-09-05",
-      "name": "Pratyush Singh",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCuOWD7F10U_TdT1O7UiDb9g": {
       "fingerprint": "13d0073a5d04fd2e",
-      "lane": "CIS_EDITING_ENTERTAINMENT",
       "last_reviewed": "2026-09-05",
-      "name": "\u041d\u0430\u0442\u0430\u043b\u044c\u044f \u0412\u043e\u043b\u043e\u0434\u0438\u043d\u0430",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCuUARy0G5Z_jBqer4d9jfMg": {
       "fingerprint": "6faa620d519d0c66",
-      "lane": "GLOBAL_PACKAGING_FITNESS",
       "last_reviewed": "2026-09-05",
-      "name": "Your Fitness Coach",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCv6cJDchz6AyLDK3Fl5FHZw": {
       "fingerprint": "8d83a68082cca41d",
-      "lane": "GLOBAL_PACKAGING_BUSINESS",
       "last_reviewed": "2026-09-05",
-      "name": "Brittney Foreman",
-      "next_review_after": "2026-09-19",
       "status": "SEEN"
     },
     "UCvGIwxoZToGrDzz0fkPBihA": {
       "fingerprint": "a7e53948d25bf8cc",
-      "lane": "GLOBAL_PACKAGING_BUSINESS",
       "last_reviewed": "2026-09-05",
-      "name": "StartUp Health",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCvOKCA1sZ10NTd2BPGQKmfg": {
       "fingerprint": "3aa9c7f196e1bc26",
-      "lane": "GLOBAL_PACKAGING_BUSINESS",
       "last_reviewed": "2026-09-05",
-      "name": "Gobinath",
-      "next_review_after": "2026-09-19",
       "status": "SEEN"
     },
     "UCvfIQ4bB0bCj7GVoL2L9IaA": {
       "fingerprint": "8f8eec2da88a24b7",
-      "lane": "CIS_EDITING_EDUCATION",
       "last_reviewed": "2026-09-05",
-      "name": "Belly Dance with Valeria",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCvv4fwj_uxsUZMx-Dq5W71A": {
@@ -2734,10 +1975,7 @@
     },
     "UCvwSxRQpKKMPjIkYmY_d3zw": {
       "fingerprint": "20a716570335e12c",
-      "lane": "GLOBAL_PACKAGING_BUSINESS",
       "last_reviewed": "2026-09-05",
-      "name": "Natasha \u0c68\u09ce",
-      "next_review_after": "2026-09-19",
       "status": "SEEN"
     },
     "UCw3Dp6cTx78WSIdMKJF252A": {
@@ -2761,58 +1999,37 @@
     },
     "UCwSvdxAPRQcO5962ZMo4RYw": {
       "fingerprint": "66833ea65623eedc",
-      "lane": "GLOBAL_PACKAGING_AI_TECH",
       "last_reviewed": "2026-09-05",
-      "name": "Fringe Lines",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCwV1tQmFyrFfl29BU5cJK4A": {
       "fingerprint": "7da1fc84324e41da",
-      "lane": "GLOBAL_PACKAGING_ENTERTAINMENT",
       "last_reviewed": "2026-09-05",
-      "name": "LOL Podcast ",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCwVEhEzsjLym_u1he4XWFkg": {
       "fingerprint": "c09873e1630df777",
-      "lane": "GLOBAL_PACKAGING_FINANCE",
       "last_reviewed": "2026-09-05",
-      "name": "Finance With Sharan",
-      "next_review_after": "2026-09-19",
       "status": "SEEN"
     },
     "UCwhgTrIv4YkZZrhzLePMO5w": {
       "fingerprint": "143c62a96af48588",
-      "lane": "CIS_EDITING_BUSINESS",
       "last_reviewed": "2026-09-05",
-      "name": "\u0411\u0410\u0417\u0410 \u0417\u0410 \u0411\u0410\u0417\u041e\u0419",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCwthPiepHVdSBkl7emGbs4Q": {
       "fingerprint": "de660f56a36cd063",
-      "lane": "GLOBAL_PACKAGING_BUSINESS",
       "last_reviewed": "2026-09-05",
-      "name": "Qmarkets",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCx-KWLTKlB83hDI6UKECtJQ": {
       "fingerprint": "cc2f4a353313ae66",
-      "lane": "GLOBAL_PACKAGING_ENTERTAINMENT",
       "last_reviewed": "2026-09-05",
-      "name": "HBO Max",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCxG1llmgOZ8GTioOhm-QjsA": {
       "fingerprint": "83036baddb361d74",
-      "lane": "GLOBAL_PACKAGING_BUSINESS",
       "last_reviewed": "2026-09-05",
-      "name": "Renee Haye",
-      "next_review_after": "2026-09-19",
       "status": "SEEN"
     },
     "UCxGZ1QEs2WFt490DewEQhoA": {
@@ -2836,50 +2053,32 @@
     },
     "UCxUWzNF4GZ_5lv5liGPBdAA": {
       "fingerprint": "20af2c77d5282dd5",
-      "lane": "GLOBAL_PACKAGING_BUSINESS",
       "last_reviewed": "2026-09-05",
-      "name": "Elena Iuldasheva",
-      "next_review_after": "2026-09-19",
       "status": "SEEN"
     },
     "UCxXD3Xqn8oI7zhBmSuBnuGg": {
       "fingerprint": "03550d1bf264075f",
-      "lane": "GLOBAL_PACKAGING_FITNESS",
       "last_reviewed": "2026-09-05",
-      "name": "The How Guy",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCxa4NqcWwf41vzOvpBdV1Ng": {
       "fingerprint": "fb857468da40faf2",
-      "lane": "GLOBAL_PACKAGING_GAMING",
       "last_reviewed": "2026-09-05",
-      "name": "Reactor BABU",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCxi13wzhDETxKkGkwNQ1-7Q": {
       "fingerprint": "ea66b1329838f4cd",
-      "lane": "GLOBAL_PACKAGING_AI_TECH",
       "last_reviewed": "2026-09-05",
-      "name": "Daily Digital Reviews",
-      "next_review_after": "2026-09-19",
       "status": "SEEN"
     },
     "UCxsBTw0W3PeyTeApRJNG2rw": {
       "fingerprint": "a41d343beed183a6",
-      "lane": "CIS_EDITING_TECH",
       "last_reviewed": "2026-09-05",
-      "name": "\u0415\u041e\u041f\u0422 | \u0415\u0449\u0451 \u043e\u0434\u0438\u043d \u043f\u043e\u0434\u043a\u0430\u0441\u0442 \u043e \u0442\u0435\u0445\u043d\u043e\u043b\u043e\u0433\u0438\u044f\u0445 |",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCxy-XUoNikLApTvaYgnJl1w": {
       "fingerprint": "06326f8ea373ccdd",
-      "lane": "GLOBAL_PACKAGING_EDUCATION",
       "last_reviewed": "2026-09-05",
-      "name": "Business Lab AI",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCy5k9Vwoug-45UZqlcYb1Sg": {
@@ -2903,50 +2102,32 @@
     },
     "UCy6kyFxaMqGtpE3pQTflK8A": {
       "fingerprint": "83b2158af3b70f76",
-      "lane": "GLOBAL_PACKAGING_ENTERTAINMENT",
       "last_reviewed": "2026-09-05",
-      "name": "Real Time with Bill Maher",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCy9-W-75rFCge1cwqzFeBUg": {
       "fingerprint": "9a28c6e4bddcbaed",
-      "lane": "GLOBAL_PACKAGING_FINANCE",
       "last_reviewed": "2026-09-05",
-      "name": "Stocks with AG Analyst",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCyGi3eCuxko37WB6uUr7LjA": {
       "fingerprint": "318119758417ed28",
-      "lane": "GLOBAL_PACKAGING_ENTERTAINMENT",
       "last_reviewed": "2026-09-05",
-      "name": "Call Her Daddy",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCyjGdVmEhYLXgyPf9jNHPrw": {
       "fingerprint": "6f917248372b4e79",
-      "lane": "CIS_EDITING_BUSINESS",
       "last_reviewed": "2026-09-05",
-      "name": "\u0411\u0438\u0437\u043d\u0435\u0441 \u043d\u0430 \u0441\u0430\u043b\u0444\u0435\u0442\u043a\u0435",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCyqgXN-ZUghY2GO1-VTwwmA": {
       "fingerprint": "154a4e9365e1171c",
-      "lane": "GLOBAL_PACKAGING_BUSINESS",
       "last_reviewed": "2026-09-05",
-      "name": "Emily Cromwell Designs",
-      "next_review_after": "2026-09-19",
       "status": "SEEN"
     },
     "UCyz7mC3jmj1Zi76mxcdy25w": {
       "fingerprint": "d0e8740c921e2efc",
-      "lane": "CIS_EDITING_EDUCATION",
       "last_reviewed": "2026-09-05",
-      "name": "FreelStep Shorts",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCz9wYvDKycD7CgYxJICU_Aw": {
@@ -2970,74 +2151,47 @@
     },
     "UCzIWiqlJ3CakJ7QpNaPHJNw": {
       "fingerprint": "833dab9084060ddb",
-      "lane": "GLOBAL_PACKAGING_AI_TECH",
       "last_reviewed": "2026-09-05",
-      "name": "Mariselle Hartwell",
-      "next_review_after": "2026-09-19",
       "status": "SEEN"
     },
     "UCzJXNzqz6VMHSNInQt_7q6w": {
       "fingerprint": "ad7a1081e4cbe5ea",
-      "lane": "GLOBAL_PACKAGING_ENTERTAINMENT",
       "last_reviewed": "2026-09-05",
-      "name": "Megyn Kelly",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCzP_0GYzuoQpCdbD-C5zXrw": {
       "fingerprint": "e9132a6d54491c95",
-      "lane": "GLOBAL_PACKAGING_GAMING",
       "last_reviewed": "2026-09-05",
-      "name": "Last Free Nation DotA",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCzQUP1qoWDoEbmsQxvdjxgQ": {
       "fingerprint": "26286a7d69be1ca6",
-      "lane": "GLOBAL_PACKAGING_ENTERTAINMENT",
       "last_reviewed": "2026-09-05",
-      "name": "PowerfulJRE",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCzaRorDlS1gd6EROE-xGm-Q": {
       "fingerprint": "d7f62fbccccf7a97",
-      "lane": "GLOBAL_PACKAGING_FINANCE",
       "last_reviewed": "2026-09-05",
-      "name": "Boss Wallah (Telugu)",
-      "next_review_after": "2026-09-19",
       "status": "SEEN"
     },
     "UCzhwmIuZW699hbPzTzzBC2g": {
       "fingerprint": "0f5e1a42f5d5903f",
-      "lane": "GLOBAL_PACKAGING_BUSINESS",
       "last_reviewed": "2026-09-05",
-      "name": "Issie Hanley",
-      "next_review_after": "2026-09-19",
       "status": "SEEN"
     },
     "UCzoKAyx-3STueEI71QkvMgw": {
       "fingerprint": "258e8a8fbb9fd35d",
-      "lane": "GLOBAL_PACKAGING_FITNESS",
       "last_reviewed": "2026-09-05",
-      "name": "Bengoa Physical Therapy",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     },
     "UCzwCEE_PchiBULMnAJqhGVg": {
       "fingerprint": "00077897f63805cc",
-      "lane": "GLOBAL_PACKAGING_BUSINESS",
       "last_reviewed": "2026-09-05",
-      "name": "Raj Shamani",
-      "next_review_after": "2026-09-19",
       "status": "SEEN"
     },
     "UCzz6SFVhFdVe_pbrIrvru0A": {
       "fingerprint": "bd09d4ca99bd8058",
-      "lane": "GLOBAL_PACKAGING_AUTOMOTIVE",
       "last_reviewed": "2026-09-05",
-      "name": "Hardy Drives India",
-      "next_review_after": "2026-11-19",
       "status": "SEEN"
     }
   },

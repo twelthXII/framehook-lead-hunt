@@ -90,19 +90,25 @@ new product/course signal, a visible content-quality gap that *just appeared*, a
 recent upload spike. **Never invent a trigger.** No trigger observed = LOW timing,
 which is fine — a high-fit account with LOW timing is still worth including.
 
-**A high fit score is never enough by itself for the urgent status.** Fit and
-timing are independent axes, and they map to status like this:
+**A high fit score is never enough by itself for the urgent status.** READY_NOW
+requires all three of: fit ≥ 65, a real trigger (timing HIGH), AND a verified
+reachable contact — a named decision maker, a real business email, or (for a
+solo creator) a business site/About-page contact you actually found, not just
+"the channel exists." A high-fit, high-timing account with no verified way to
+reach anyone is not "ready to contact" — it's GOOD_FIT with contact research
+still outstanding.
 
-| | Timing HIGH (real trigger) | Timing MEDIUM/LOW (no live trigger) |
-|---|---|---|
-| Fit ≥ 65 | **READY_NOW** | **GOOD_FIT** |
-| Fit 45-64 | WATCH | WATCH |
-| Fit < 45 | REJECTED | REJECTED |
+| | Timing HIGH + contact found | Timing HIGH, no contact yet | Timing MEDIUM/LOW |
+|---|---|---|---|
+| Fit ≥ 65 | **READY_NOW** | GOOD_FIT (mark `CONTACT_NEEDED`) | GOOD_FIT |
+| Fit 45-64 | WATCH | WATCH | WATCH |
+| Fit < 45 | REJECTED | REJECTED | REJECTED |
 
 "The channel could use better thumbnails" is a Framehook-solvable gap, not a
-buying trigger — it never on its own justifies READY_NOW. Reserve READY_NOW for
-an account that is both a strong fit *and* has a real, observed reason to reach
-out now.
+buying trigger — it never on its own justifies READY_NOW. Don't skip the
+contact-research step just because fit and timing already look great — a
+company you can't reach isn't actionable this week regardless of how good the
+account looks on paper.
 
 ### Account value
 
@@ -123,6 +129,13 @@ qualification uncertainty remains. Hard cap: 2 searches per finalist. Do not che
 Instagram, LinkedIn, TikTok, X, the website, and Telegram all for the same
 account — only the one or two that resolve the real unknown.
 
+For any account that could plausibly be READY_NOW (fit ≥ 65, timing HIGH), the
+open question your search should resolve is reachability itself: is there a
+named contact, a business email, or (for a solo creator) a real business
+site/About page — something you'd actually message? A YouTube channel simply
+existing is not a verified contact. Only mark `contact_found: true` when you
+found something you'd actually use to reach out.
+
 ## Visual thumbnail audit (5-8 finalists being considered for thumbnails/packaging)
 
 Run `python3 src/hunt.py contact-sheet --channel <id> --count 6` and Read the
@@ -136,10 +149,16 @@ After Pass 1 and enrichment, write a JSON file (e.g. to a scratch path) shaped a
 
 ```json
 {
-  "verdicts": [{"id": "channelId", "fit": 91, "timing": "HIGH"}, ...],
+  "verdicts": [
+    {"id": "channelId", "fit": 91, "timing": "HIGH", "contact_found": true},
+    ...
+  ],
   "finalists_order": ["channelId1", "channelId2", ...]
 }
 ```
+
+`contact_found` defaults to false if omitted — only set it true when enrichment
+actually turned up a reachable contact (see the reachability note above).
 
 Include a verdict for every pack you scored in Pass 1 (not just finalists — a
 rejected account still needs its fit/timing recorded so the recheck cadence
@@ -185,6 +204,10 @@ into up to three sections, each the same table shape:
 - Offer: max 5 words, one primary entry offer (do not pitch everything at once:
   thumbnails, thumbnail system, YouTube packaging, titles + thumbnails, editing,
   editing + packaging, Shorts, content production, or channel management).
+- Contact: the actual contact you found, or literally `CONTACT_NEEDED` if this
+  is a GOOD_FIT account that would otherwise qualify for READY_NOW but
+  reachability hasn't been verified yet — don't paper over that gap with a
+  generic "YouTube About page" guess.
 
 Then:
 
