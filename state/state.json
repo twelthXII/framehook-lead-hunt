@@ -529,7 +529,7 @@
       "next_review_after": "2026-09-19",
       "pain_confirmed": true,
       "rejection_reasons": [],
-      "status": "GOOD_FIT"
+      "status": "CONTACTED"
     },
     "UCC5was5yEe5knSTjx01McQg": {
       "fingerprint": "8207e9ce8aab1eb8",
@@ -639,7 +639,7 @@
       "next_review_after": "2026-09-30",
       "pain_confirmed": true,
       "rejection_reasons": [],
-      "status": "WATCH"
+      "status": "REJECTED"
     },
     "UCEjSoMnD43v0EsqcuHW2lBw": {
       "fingerprint": "d171e0bc49ed42e3",
@@ -812,7 +812,7 @@
       "next_review_after": "2026-09-19",
       "pain_confirmed": true,
       "rejection_reasons": [],
-      "status": "GOOD_FIT"
+      "status": "CONTACTED"
     },
     "UCI1OuM8hAOOAcsmo0x6ykZA": {
       "fingerprint": "3a756e96561f00f2",
@@ -1359,7 +1359,7 @@
       "next_review_after": "2026-09-19",
       "pain_confirmed": true,
       "rejection_reasons": [],
-      "status": "GOOD_FIT"
+      "status": "WON"
     },
     "UCWu6v5jfsW3wO948jOHMEiA": {
       "fingerprint": "6ee22ea56d10281b",
@@ -2616,7 +2616,24 @@
       "status": "SEEN"
     }
   },
-  "feedback": {},
+  "feedback": {
+    "UCC0-NtJNSdfYZ9pImGsVWuw": {
+      "date": "2026-09-05",
+      "label": "CONTACTED"
+    },
+    "UCERwo6x4GbVHS4-ROXRrvNw": {
+      "date": "2026-09-05",
+      "label": "BAD_FIT"
+    },
+    "UCHtcNb0dDFEE1CCjufx0_HQ": {
+      "date": "2026-09-05",
+      "label": "CONTACTED"
+    },
+    "UCWkIV8xqWoDEZ15xSBxTr3Q": {
+      "date": "2026-09-05",
+      "label": "WON"
+    }
+  },
   "lane_query_index": {
     "CIS_EDITING_BUSINESS": 1,
     "CIS_EDITING_EDUCATION": 1,
@@ -2660,6 +2677,11 @@
     }
   ],
   "query_stats": {
+    "ADHOC:cs2_thumbnails": {
+      "contacted": 2,
+      "rejected": 1,
+      "won": 1
+    },
     "CIS_EDITING_BUSINESS": {
       "runs": 1
     },
