@@ -755,8 +755,10 @@
       "status": "SEEN"
     },
     "UCMw07uiVxGULqePlrOZnx9A": {
-      "confirmed_lead": true,
-      "contact_status": "CONTACT_FOUND",
+      "confirmed_lead": false,
+      "contact_platform": "LinkedIn",
+      "contact_status": "CONTACT_LINKEDIN_ONLY",
+      "contact_value": "linkedin.com/in/leila-kartforosh",
       "fingerprint": "33d3e81b4c3de844",
       "fit_tier": "GOOD_FIT",
       "history": [
@@ -764,6 +766,12 @@
           "date": "2026-09-05",
           "fit": 82,
           "status": "WATCHLIST",
+          "timing": "MEDIUM"
+        },
+        {
+          "date": "2026-09-05",
+          "fit": 82,
+          "fit_tier": "GOOD_FIT",
           "timing": "MEDIUM"
         },
         {

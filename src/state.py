@@ -22,9 +22,10 @@ STATE_PATH = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file
 #
 # CONTACT STATUS ("contact_status") - reachability only, tracked separately
 # once an account clears the PAIN GATE into GOOD_FIT/READY_NOW. A verified
-# NON-EMAIL contact is required for CONTACT_FOUND — email alone is
-# CONTACT_EMAIL_ONLY (weaker; does not make a CONFIRMED_LEAD). See
-# CONTACT_STATUSES below.
+# NON-EMAIL, NON-LINKEDIN direct social/DM contact (Telegram, X, Instagram, or
+# an equivalent DM-capable profile) is required for CONTACT_FOUND. Email
+# alone is CONTACT_EMAIL_ONLY and LinkedIn alone is CONTACT_LINKEDIN_ONLY —
+# both weaker, neither makes a CONFIRMED_LEAD. See CONTACT_STATUSES below.
 #
 # PAIN GATE: a commercially attractive account (fit >= FIT_ATTRACTIVE) only
 # becomes GOOD_FIT/READY_NOW if a concrete, evidence-backed Framehook-solvable
@@ -39,8 +40,11 @@ FIT_WATCH = 45
 CONTACT_FOUND = "CONTACT_FOUND"
 CONTACT_NEEDED = "CONTACT_NEEDED"
 CONTACT_EMAIL_ONLY = "CONTACT_EMAIL_ONLY"
+CONTACT_LINKEDIN_ONLY = "CONTACT_LINKEDIN_ONLY"
 CONTACT_UNREACHABLE = "UNREACHABLE"
-CONTACT_STATUSES = {CONTACT_FOUND, CONTACT_NEEDED, CONTACT_EMAIL_ONLY, CONTACT_UNREACHABLE}
+CONTACT_STATUSES = {
+    CONTACT_FOUND, CONTACT_NEEDED, CONTACT_EMAIL_ONLY, CONTACT_LINKEDIN_ONLY, CONTACT_UNREACHABLE,
+}
 
 # A proposed service that needs a visual audit before pain can be confirmed —
 # matched as a case-insensitive substring of the free-text service Claude
@@ -93,7 +97,11 @@ def default_state():
     }
 
 
-def load_state(path=STATE_PATH):
+def load_state(path=None):
+    # path=None (not path=STATE_PATH) so this re-reads the current value of
+    # the module-level STATE_PATH at call time — a default bound at def-time
+    # would silently ignore tests monkeypatching state_mod.STATE_PATH.
+    path = path or STATE_PATH
     if not os.path.exists(path):
         return default_state()
     with open(path, "r", encoding="utf-8") as f:
@@ -103,9 +111,10 @@ def load_state(path=STATE_PATH):
     return base
 
 
-def save_state(state, path=STATE_PATH):
+def save_state(state, path=None):
     """Atomic write: a crash mid-write leaves the previous state.json intact
     rather than a truncated/corrupt file."""
+    path = path or STATE_PATH
     os.makedirs(os.path.dirname(path), exist_ok=True)
     tmp_path = f"{path}.tmp{os.getpid()}"
     with open(tmp_path, "w", encoding="utf-8") as f:
@@ -224,7 +233,8 @@ JUDGED_FIT_TIERS = {"READY_NOW", "GOOD_FIT", "WATCH"}
 def upsert_account(state, channel_id, fingerprint, name, lane_id, today,
                     fit=None, timing=None, pain_confirmed=False,
                     proposed_service=None, visual_audit_done=False,
-                    contact_status=None, rejection_reasons=None):
+                    contact_status=None, rejection_reasons=None,
+                    contact_platform=None, contact_value=None):
     accounts = state["accounts"]
     existing = accounts.get(channel_id, {})
 
@@ -254,6 +264,8 @@ def upsert_account(state, channel_id, fingerprint, name, lane_id, today,
         "pain_confirmed": effective_pain,
         "rejection_reasons": reasons,
         "contact_status": contact_status,
+        "contact_platform": contact_platform if fit is not None else existing.get("contact_platform"),
+        "contact_value": contact_value if fit is not None else existing.get("contact_value"),
         "confirmed_lead": confirmed_lead,
         "last_fit": fit,
         "last_timing": timing,

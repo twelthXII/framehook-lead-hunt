@@ -171,6 +171,137 @@ def cmd_discover(args):
     }, indent=2, default=str))
 
 
+def parse_comma_list(text):
+    if not text:
+        return []
+    return [item.strip() for item in text.split(",") if item.strip()]
+
+
+def build_adhoc_lane(label=None, icp="commercial_creator", geography="global", language="en", offers=None):
+    """Pure, in-memory lane shape for one AD_HOC_HUNT run. Never written to
+    config/lanes.json — natural-language interpretation happens at the Skill
+    layer; this just gives the deterministic pipeline a structured lane to
+    run the same discovery/filter/evidence-pack code against."""
+    return {
+        "id": f"ADHOC:{label}" if label else "ADHOC",
+        "icp": icp,
+        "geography": geography,
+        "language": language,
+        "eligible_offers": offers or ["thumbnails", "youtube_packaging"],
+    }
+
+
+def build_adhoc_subscriber_ranges(base_ranges, icp, subs_min=None, subs_max=None):
+    """Returns a NEW dict with a temporary override for one icp's subscriber
+    range; never mutates base_ranges (production config stays untouched). An
+    explicit subs_max is a hard ceiling the user asked for — it also caps
+    stretch_max, rather than silently stretching past what was requested."""
+    ranges = dict(base_ranges)
+    if subs_min is not None or subs_max is not None:
+        base = ranges.get(icp, {"min": 0, "max": 10**9, "stretch_max": 10**9})
+        subs_max_val = subs_max if subs_max is not None else base["max"]
+        stretch_max_val = subs_max if subs_max is not None else base.get("stretch_max", subs_max_val)
+        ranges[icp] = {
+            "min": subs_min if subs_min is not None else base["min"],
+            "max": subs_max_val,
+            "stretch_max": stretch_max_val,
+        }
+    return ranges
+
+
+def cmd_adhoc(args):
+    """A temporary, one-off targeted search (AD_HOC_HUNT) that reuses the
+    exact same discovery/filter/evidence-pack/qualification pipeline as the
+    weekly hunt, but never touches config/lanes.json or the weekly bookkeeping
+    (query_stats, lane_query_index, rotation_index, runs) in state.json.
+    state.json is read (for dedupe against known accounts) but never written
+    here — only `record` (run afterwards, same as the weekly flow) writes to
+    the shared `accounts` registry."""
+    lanes_config = load_lanes_config()
+    yt = YouTubeClient()
+    today = date.today()
+    now = datetime.now(timezone.utc)
+
+    icp = args.icp or "commercial_creator"
+    subscriber_ranges = build_adhoc_subscriber_ranges(
+        lanes_config["subscriber_ranges"], icp, args.subs_min, args.subs_max,
+    )
+    lane = build_adhoc_lane(
+        label=args.label, icp=icp,
+        geography=args.region or "global", language=args.language or "en",
+        offers=parse_comma_list(args.offers) or None,
+    )
+    queries = parse_comma_list(args.queries)
+    if not queries:
+        print(json.dumps({"error": "--queries is required, e.g. --queries \"CS2 highlights,CS2 tournament recap\""}))
+        sys.exit(1)
+
+    published_after = (now - timedelta(days=args.window_days)).strftime("%Y-%m-%dT%H:%M:%SZ")
+    state = state_mod.load_state()  # read-only: used for dedupe, never saved back
+
+    video_items_by_lane = []
+    raw_video_count = 0
+    for query in queries:
+        items = yt.search_videos(
+            query, published_after, max_results=args.max_results,
+            relevance_language=lane["language"],
+            region_code=None if lane["geography"] == "global" else lane["geography"],
+        )
+        raw_video_count += len(items)
+        video_items_by_lane.append((lane["id"], items))
+
+    channel_hits = dedupe_channel_hits(video_items_by_lane)
+    channel_ids = list(channel_hits.keys())
+    channel_items = yt.get_channels(channel_ids)
+
+    scored_candidates = []
+    pending_updates = {}
+    skipped_unchanged_rejected = 0
+    for channel_item in channel_items:
+        channel_id = channel_item["id"]
+        signals, _ = fetch_channel_signals(yt, channel_item, now=now)
+        fingerprint = state_mod.compute_fingerprint(signals)
+
+        keep, _reason, score = scoring.prefilter(signals, lane, subscriber_ranges)
+        if not keep:
+            continue
+
+        existing_account = state["accounts"].get(channel_id)
+        due, due_reason = state_mod.should_send_to_claude(existing_account, fingerprint, today)
+        if not due:
+            if due_reason == "rejected_no_new_signal":
+                skipped_unchanged_rejected += 1
+            continue
+
+        pack = scoring.build_evidence_pack(signals, lane)
+        scored_candidates.append({"lane": lane, "score": score, "pack": pack})
+        pending_updates[channel_id] = {"fingerprint": fingerprint, "name": signals["name"], "lane": lane["id"]}
+
+    shortlist = scoring.select_shortlist(
+        scored_candidates,
+        max_total=lanes_config["claude_shortlist_max"],
+        max_per_lane=lanes_config["claude_shortlist_max"],
+    )
+    shortlist_ids = {c["pack"]["id"] for c in shortlist}
+
+    pending = load_pending()
+    pending.update({cid: meta for cid, meta in pending_updates.items() if cid in shortlist_ids})
+    save_pending(pending)
+
+    print(json.dumps({
+        "mode": "adhoc",
+        "lane": lane,
+        "stats": {
+            "raw_videos": raw_video_count,
+            "raw_channels": len(channel_ids),
+            "filtered_survivors": len(scored_candidates),
+            "skipped_unchanged_rejected": skipped_unchanged_rejected,
+            "claude_packs": len(shortlist),
+        },
+        "candidates": [c["pack"] for c in shortlist],
+    }, indent=2, default=str))
+
+
 def cmd_lookup(args):
     lanes_config = load_lanes_config()
     lanes_by_id = {lane["id"]: lane for lane in lanes_config["lanes"]}
@@ -272,6 +403,8 @@ def cmd_record(args):
             visual_audit_done=bool(verdict.get("visual_audit_done", False)),
             contact_status=verdict.get("contact_status"),
             rejection_reasons=verdict.get("rejection_reasons"),
+            contact_platform=verdict.get("contact_platform"),
+            contact_value=verdict.get("contact_value"),
         )
 
     finalists = []
@@ -363,6 +496,20 @@ def main():
     p_discover.add_argument("--window-days", type=int, default=14)
     p_discover.add_argument("--verbose", action="store_true")
     p_discover.set_defaults(func=cmd_discover)
+
+    p_adhoc = sub.add_parser("adhoc", help="AD_HOC_HUNT: one temporary targeted search, never touches weekly config")
+    p_adhoc.add_argument("--queries", required=True, help="Comma-separated search query strings")
+    p_adhoc.add_argument("--icp", default="commercial_creator",
+                          help="One of the icp keys in config/lanes.json subscriber_ranges")
+    p_adhoc.add_argument("--language", default=None, help="YouTube relevanceLanguage, e.g. ru, en")
+    p_adhoc.add_argument("--region", default=None, help="YouTube regionCode, e.g. RU")
+    p_adhoc.add_argument("--subs-min", type=int, default=None)
+    p_adhoc.add_argument("--subs-max", type=int, default=None)
+    p_adhoc.add_argument("--offers", default=None, help="Comma-separated eligible_offers, e.g. thumbnails,editing")
+    p_adhoc.add_argument("--window-days", type=int, default=14)
+    p_adhoc.add_argument("--max-results", type=int, default=25)
+    p_adhoc.add_argument("--label", default=None, help="Short label for this run, shown in the lane id")
+    p_adhoc.set_defaults(func=cmd_adhoc)
 
     p_lookup = sub.add_parser("lookup", help="Build one evidence pack for a channel found via web research")
     p_lookup.add_argument("--channel", required=True, help="Channel ID or @handle")

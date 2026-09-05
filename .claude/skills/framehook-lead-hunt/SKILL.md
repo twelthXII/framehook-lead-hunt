@@ -26,8 +26,8 @@ written in **Russian**. This is permanent, not a one-time instruction.
 Left unchanged (never translated): people's names, company/channel names,
 URLs, usernames, email addresses, and the machine-readable status codes
 themselves (`READY_NOW`, `GOOD_FIT`, `WATCH`, `REJECTED`, `CONTACT_FOUND`,
-`CONTACT_NEEDED`, `CONTACT_EMAIL_ONLY`, `UNREACHABLE`, `CONFIRMED_LEAD`,
-`NO_CLEAR_PAIN`, `ALREADY_WELL_RESOURCED`).
+`CONTACT_NEEDED`, `CONTACT_EMAIL_ONLY`, `CONTACT_LINKEDIN_ONLY`,
+`UNREACHABLE`, `CONFIRMED_LEAD`, `NO_CLEAR_PAIN`, `ALREADY_WELL_RESOURCED`).
 
 ## Who Framehook sells to
 
@@ -225,12 +225,15 @@ open. (Note: a launch alone, with no confirmed pain, is not READY_NOW at
 all — see the PAIN GATE above. Reachability only becomes relevant once an
 account has already cleared that gate.)
 
-### Confirmed contact requires a NON-EMAIL route
+### Confirmed contact requires a NON-EMAIL, NON-LINKEDIN social/DM route
 
-A candidate is not a confirmed lead until at least one usable **non-email**
-outreach route has been verified. Email alone never qualifies a candidate as
-confirmed — store it as supplemental information, but it doesn't do the job
-a qualifying contact does.
+A candidate is not a confirmed lead until at least one usable direct
+social/DM outreach route has been verified. **Neither email nor LinkedIn
+qualifies a candidate as confirmed** — store both as supplemental
+information if found, but neither does the job a qualifying contact does.
+LinkedIn was previously treated as qualifying; it no longer is, because a
+LinkedIn profile alone rarely translates into a realistic DM-able route for
+this kind of outreach.
 
 **Qualifying contacts**, preferred order:
 
@@ -240,22 +243,23 @@ a qualifying contact does.
 4. founder/creator X/Twitter
 5. personal Instagram
 6. founder/creator Instagram
-7. LinkedIn decision-maker profile
-8. Discord or another genuine direct-message route
-9. (fallback) an official brand/company Instagram, X, Telegram, or other
+7. Discord or another genuine direct-message route
+8. (fallback) an official brand/company Instagram, X, Telegram, or other
    social page where DM outreach is realistically possible
 
 A personal decision-maker account is stronger than a generic company account.
 
-**Never count as a qualifying contact:** email only, a website URL, a contact
-form, a YouTube channel, a YouTube handle, a person's name with no reachable
-profile, a generic search result with no verified ownership, or a social
-account that can't reasonably be connected to the creator/business.
+**Never count as a qualifying contact:** email only, LinkedIn only, a website
+URL, a contact form, a YouTube channel, a YouTube handle, a person's name
+with no reachable profile, a generic search result with no verified
+ownership, or a social account that can't reasonably be connected to the
+creator/business.
 
-### Contact status — four values
+### Contact status — five values
 
-- **`CONTACT_FOUND`** — at least one verified qualifying non-email contact
-  (see the list above) exists.
+- **`CONTACT_FOUND`** — at least one verified qualifying social/DM contact
+  (see the list above — Telegram, X, Instagram, Discord, or an equivalent)
+  exists.
 - **`CONTACT_NEEDED`** — a good opportunity, but no qualifying contact found
   yet. This is the default — never assume `UNREACHABLE` just because one
   search came up empty, and a YouTube handle alone still reports as
@@ -263,10 +267,17 @@ account that can't reasonably be connected to the creator/business.
 - **`CONTACT_EMAIL_ONLY`** — only an email address was found. Weaker than
   `CONTACT_FOUND`; store the email as supplemental info, but this status does
   not confirm the lead.
+- **`CONTACT_LINKEDIN_ONLY`** — only a LinkedIn profile was found. Same
+  weakness as `CONTACT_EMAIL_ONLY` — store it as supplemental info, but it
+  does not confirm the lead either.
 - **`UNREACHABLE`** — you actively researched and found good reason to believe
   there is no viable path in at all (e.g. a gatekept large company with no
   public contact surface). Use sparingly; this is a stronger claim than "I
   didn't find one."
+
+When you record a verdict with `contact_status: "CONTACT_FOUND"`, also record
+`contact_platform` (e.g. `"Telegram"`, `"X"`, `"Instagram"`) and
+`contact_value` (the actual handle/link) — the report needs to show these.
 
 ### CONFIRMED_LEAD
 
@@ -275,7 +286,8 @@ A candidate is `CONFIRMED_LEAD: YES` only when **all** of these hold:
 1. correct ICP / sufficient fit
 2. passes the PAIN GATE
 3. the diagnosis is evidence-backed (not an inference presented as fact)
-4. at least one qualifying non-email contact is verified (`CONTACT_FOUND`)
+4. at least one qualifying social/DM contact is verified (`CONTACT_FOUND`) —
+   email or LinkedIn alone is not enough
 
 Worked examples:
 
@@ -285,10 +297,11 @@ Worked examples:
 | READY_NOW | CONTACT_NEEDED | NO |
 | GOOD_FIT | CONTACT_FOUND | **YES** |
 | GOOD_FIT | CONTACT_EMAIL_ONLY | NO |
+| GOOD_FIT | CONTACT_LINKEDIN_ONLY | NO |
 | REJECTED | CONTACT_FOUND | NO |
 
 **A contact can never rescue a bad opportunity**, and a good opportunity isn't
-confirmed until it's reachable through a real route.
+confirmed until it's reachable through a real social/DM route.
 
 ### Account value
 
@@ -328,12 +341,13 @@ major qualification uncertainty remains. Hard cap: 2 searches per finalist.
 
 Once an account has passed the PAIN GATE (GOOD_FIT or READY_NOW), spend
 research on **social contact research**: look specifically for a creator,
-founder, owner, or other decision-maker's personal social accounts (Telegram,
-X, Instagram, LinkedIn — see the qualifying-contact list above), not just
-"does this account have a website." Do not check every platform for every
-account — stop once you've found a qualifying contact, or once you've made a
-genuine attempt and come up empty (that's `CONTACT_NEEDED`, not a reason to
-keep burning searches).
+founder, owner, or other decision-maker's personal Telegram, X, or Instagram
+(see the qualifying-contact list above — LinkedIn does NOT qualify, treat a
+LinkedIn hit the same as an email: worth storing, not worth confirming a lead
+over), not just "does this account have a website." Do not check every
+platform for every account — stop once you've found a qualifying contact, or
+once you've made a genuine attempt and come up empty (that's `CONTACT_NEEDED`,
+not a reason to keep burning searches).
 
 ## Visual thumbnail audit (5-8 finalists being considered for thumbnails/packaging)
 
@@ -361,6 +375,8 @@ After Pass 1 and enrichment, write a JSON file (e.g. to a scratch path) shaped a
       "proposed_service": "thumbnail system",
       "visual_audit_done": true,
       "contact_status": "CONTACT_FOUND",
+      "contact_platform": "Telegram",
+      "contact_value": "@handle",
       "rejection_reasons": []
     },
     ...
@@ -381,8 +397,13 @@ Field notes:
   and this is false, `pain_confirmed` is forced to `false` regardless of what
   you submit — the code enforces this, not just the instructions.
 - `contact_status` — one of `CONTACT_FOUND` / `CONTACT_NEEDED` /
-  `CONTACT_EMAIL_ONLY` / `UNREACHABLE`. Omit it and it defaults to
-  `CONTACT_NEEDED`. Only meaningful for accounts that passed the PAIN GATE.
+  `CONTACT_EMAIL_ONLY` / `CONTACT_LINKEDIN_ONLY` / `UNREACHABLE`. Omit it and
+  it defaults to `CONTACT_NEEDED`. Only meaningful for accounts that passed
+  the PAIN GATE. LinkedIn found but nothing better → `CONTACT_LINKEDIN_ONLY`,
+  not `CONTACT_FOUND`.
+- `contact_platform` / `contact_value` — only when `contact_status` is
+  `CONTACT_FOUND`: which platform (`"Telegram"`, `"X"`, `"Instagram"`, ...)
+  and the actual handle/link. The report needs both.
 - `rejection_reasons` — a list, only meaningful when the account ends up
   REJECTED. Include specific codes like `["NO_CLEAR_PAIN"]` or
   `["NO_CLEAR_PAIN", "ALREADY_WELL_RESOURCED"]`. If omitted and pain wasn't
@@ -411,12 +432,13 @@ unconfirmed READY_NOW, because it's something the user can act on today):
 4. GOOD_FIT + CONTACT_NEEDED
 5. WATCH (small, only if genuinely worth tracking — cap 5)
 
-An account marked `UNREACHABLE`, or `CONTACT_EMAIL_ONLY` with nothing better,
-still appears (it's a real opportunity, just not yet actionable by DM) but
-sorts below the `CONTACT_NEEDED` rows in its tier. Do not clutter the report
-with REJECTED accounts — they don't appear here at all, regardless of how
-interesting they looked before the PAIN GATE. If nothing qualifies for a
-tier, skip that heading entirely rather than printing an empty section.
+An account marked `UNREACHABLE`, `CONTACT_EMAIL_ONLY`, or
+`CONTACT_LINKEDIN_ONLY` with nothing better still appears (it's a real
+opportunity, just not yet actionable by DM) but sorts below the
+`CONTACT_NEEDED` rows in its tier. Do not clutter the report with REJECTED
+accounts — they don't appear here at all, regardless of how interesting they
+looked before the PAIN GATE. If nothing qualifies for a tier, skip that
+heading entirely rather than printing an empty section.
 
 For every candidate shown, use this compact card (all prose in Russian; names,
 URLs, usernames, emails, and status codes stay as-is):
@@ -432,14 +454,15 @@ URLs, usernames, emails, and status codes stay as-is):
 - Timing: HIGH | MEDIUM | LOW
 - ICP: <...>
 - Коммерческий сигнал: <...>
-- Конкретная наблюдаемая проблема: <...>
+- Наблюдаемая проблема: <...>
 - Доказательства: <что именно проверено — метаданные / визуальный аудит / поиск>
 - Почему сейчас: <триггер, если есть, иначе явно "триггера нет">
 - Предлагаемая услуга Framehook: <...>
-- Contact Status: CONTACT_FOUND | CONTACT_NEEDED | CONTACT_EMAIL_ONLY | UNREACHABLE
-- Найденный non-email контакт: <тип: Telegram/X/Instagram/LinkedIn/Discord, или "не найден">
+- Contact Status: CONTACT_FOUND | CONTACT_NEEDED | CONTACT_EMAIL_ONLY | CONTACT_LINKEDIN_ONLY | UNREACHABLE
+- Telegram / X / Instagram / qualifying DM-контакт: <тип и что найдено, или "не найден">
 - Ссылка/username: <...>
 - Email (отдельно, если найден): <...>
+- LinkedIn (отдельно, если найден): <...>
 - Что делать дальше: <конкретное следующее действие>
 ```
 
@@ -470,6 +493,97 @@ raw source dump, development commentary, or drafted outreach messages. If the
 user later asks to "expand #4", research and show detail only for that one
 account — do not produce per-lead detail reports by default.
 
+## AD_HOC_HUNT — a temporary, natural-language targeted search
+
+The user can ask for a one-off targeted search in plain language at any time,
+separately from the weekly hunt — e.g. "Найди мне CS2 ютуберов", "Найди
+русских CS2 каналов", "Найди SaaS-компании с плохими YouTube превью", "Найди
+автомобильных блогеров 50k–500k подписчиков", "Найди англоязычных
+AI-ютуберов, которым можно продавать packaging". Recognize these as
+AD_HOC_HUNT requests.
+
+**This is temporary by design and must never permanently change the weekly
+system.** Never touch `config/lanes.json`, the weekly query budget, the
+production ICP/subscriber defaults, or `query_stats`/`lane_query_index`/
+`rotation_index`/`runs` in state — those stay exactly as the weekly hunt left
+them, unless the user explicitly says something like "сохрани это в еженедельный
+поиск" / "apply this to the weekly hunt". "Найди мне CS2 ютуберов" must not
+turn the production system into a CS2-only search.
+
+### Interpreting the request (your job, not code's)
+
+Infer temporary constraints from the request — niche/topic/game, creator vs.
+company, geography, language, subscriber range, desired Framehook service,
+platform, any other explicit constraint. If the user only gives a topic
+("Найди мне CS2 ютуберов"), fill in everything else with normal Framehook
+defaults (global thumbnails/packaging targeting, no editing-specific
+language restriction, standard 20k-500k range) — do not ask clarifying
+questions first; make a reasonable call and let the results speak.
+
+Translate your interpretation into real YouTube search query strings and
+pass them to:
+
+```
+python3 src/hunt.py adhoc \
+  --queries "<comma-separated search strings you composed>" \
+  --icp commercial_creator \
+  --language ru --region RU \
+  --subs-min 50000 --subs-max 500000 \
+  --offers editing \
+  --label cs2_ru
+```
+
+This is a thin, purely mechanical layer — it builds one temporary in-memory
+lane, runs the exact same search/prefilter/evidence-pack code the weekly hunt
+uses, and prints a shortlist, exactly like `discover`. It never writes
+`config/lanes.json` and never touches weekly bookkeeping in state.json.
+
+### Same standards, no exceptions
+
+AD_HOC_HUNT uses the identical qualification pipeline as the weekly hunt —
+do not lower the bar just because the user asked for a specific niche:
+
+```
+natural-language request -> temporary query config (you build this)
+  -> python3 src/hunt.py adhoc (discovery + deterministic filtering)
+  -> evidence collection / visual audit where relevant
+  -> PAIN GATE
+  -> business/ICP qualification
+  -> targeted enrichment
+  -> social contact research (same non-email, non-LinkedIn rule)
+  -> final classification, same READY_NOW/GOOD_FIT/WATCH/REJECTED + CONFIRMED_LEAD
+```
+
+"Найди CS2 ютуберов" does not mean "return every CS2 creator" — it still
+requires real confirmed pain, business fit, and Framehook relevance. Most
+niche searches will still turn up mostly REJECTED accounts; that's expected
+and correct, not a bug.
+
+### State and dedupe
+
+`adhoc` reads `state/state.json` to skip re-analyzing an unchanged, already-
+REJECTED channel (same as the weekly hunt's fingerprint check) — if the user
+says "проверь его заново", that overrides the skip for that one account. After
+Claude's judgment, persist verdicts through the same `record` command used by
+the weekly hunt (it writes to the shared `accounts` registry only — never to
+query lanes or weekly bookkeeping).
+
+### Output
+
+All in Russian, following the same CONFIRMED-first priority, but with its own
+headings:
+
+```
+## ПОДТВЕРЖДЁННЫЕ ЛИДЫ
+## ПЕРСПЕКТИВНЫЕ, НО НУЖЕН КОНТАКТ
+## WATCH   (optional, small)
+```
+
+Same per-candidate fields as the weekly report (channel, link, subs, niche,
+Fit, Timing, concrete pain, evidence, proposed service, Telegram/X/Instagram
+contact, Contact Status, Подтверждённый лид). Do not dump large REJECTED lists
+unless the user asks for them.
+
 ## What this skill will never do
 
 Do not rewrite scoring weights, subscriber ranges, or keyword lists based on one
@@ -478,6 +592,12 @@ adjusts which query lanes get budget, which is handled entirely in
 `src/state.py`, not by you). Do not modify `src/`, `config/`, or this skill file
 during a production hunt — if something is broken, report the blocker instead of
 fixing it live. Production hunts are operated, not engineered.
+
+An AD_HOC_HUNT request never edits `config/lanes.json`, never changes the
+weekly query budget or ICP defaults, and never writes to `query_stats`,
+`lane_query_index`, `rotation_index`, or `runs` — even when the user's request
+is oddly specific ("Найди только Valorant-каналы"). Those files/fields belong
+to the weekly hunt alone.
 
 ## Learning from manual calibration feedback — generalize, don't overfit
 
