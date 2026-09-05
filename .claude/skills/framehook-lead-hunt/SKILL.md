@@ -510,26 +510,61 @@ them, unless the user explicitly says something like "сохрани это в �
 поиск" / "apply this to the weekly hunt". "Найди мне CS2 ютуберов" must not
 turn the production system into a CS2-only search.
 
-### Interpreting the request (your job, not code's)
+### Interpreting the request — explicit constraints only, nothing inferred
 
-Infer temporary constraints from the request — niche/topic/game, creator vs.
-company, geography, language, subscriber range, desired Framehook service,
-platform, any other explicit constraint. If the user only gives a topic
-("Найди мне CS2 ютуберов"), fill in everything else with normal Framehook
-defaults (global thumbnails/packaging targeting, no editing-specific
-language restriction, standard 20k-500k range) — do not ask clarifying
-questions first; make a reasonable call and let the results speak.
+**Rule: EXPLICIT USER CONSTRAINTS become hard temporary constraints.
+UNSPECIFIED FIELDS stay neutral / use broad Framehook discovery defaults.**
+Never fill in an unspecified field by inferring it from a *different*
+explicit field — geography/language never implies a service, and a service
+never implies geography/language. Each constraint the user actually stated
+maps to exactly one `adhoc` flag; nothing else.
+
+- **Geography/language stated** ("русских", "англоязычных") → set
+  `--language`/`--region` to that. Do NOT also set `--offers` from it. Russian
+  language/geography does not by itself prove editing is the right offer —
+  it only affects the geography-specific editing rule if a service ends up
+  being editing after the PAIN GATE (see Service geography, above).
+- **Language/geography not stated** ("Найди CS2 ютуберов", with nothing about
+  language) → leave `--language`/`--region` unset entirely. Do not default to
+  English. An unset `--language` runs a broad, language-neutral search
+  (`relevanceLanguage` is simply omitted) — that is the true neutral default,
+  not "en".
+- **Service/offer stated explicitly** ("которым нужны превью" → thumbnails,
+  "для монтажа" → editing) → set `--offers` to that, and if it's editing,
+  that's also where a CIS-leaning `--icp cis_editing`/`--region` becomes
+  justified (the service implies the ICP here, not the other way around).
+- **Service/offer not stated** → do NOT set `--offers` at all (it falls back
+  to the neutral thumbnails+packaging baseline, which is informational context
+  for Claude, not a restriction). The actual service you propose per account
+  is decided **after** evidence collection and the PAIN GATE, per-candidate —
+  never pre-committed from the request text.
+- **Subscriber range stated** ("50k–500k подписчиков") → set
+  `--subs-min`/`--subs-max` to exactly that. Not stated → leave both unset
+  (normal ICP default range applies).
+- **Niche/topic/game** → always comes through as the actual search query
+  strings you compose for `--queries`. This is the one thing every AD_HOC_HUNT
+  request specifies by definition.
+
+Worked examples:
+
+| Request | `--language`/`--region` | `--offers` | `--icp` |
+|---|---|---|---|
+| "Найди русских CS2 ютуберов" | `ru` / `RU` (stated) | unset — decide after evidence | default |
+| "Найди CS2 ютуберов" | unset (not stated) | unset — decide after evidence | default |
+| "Найди CS2 ютуберов, которым нужны превью" | unset | `thumbnails` (stated) | default |
+| "Найди русских CS2 ютуберов для монтажа" | `ru` / `RU` (stated) | `editing` (stated) | `cis_editing` (justified by the stated service) |
+
+Do not ask clarifying questions first for anything left unspecified — run
+with the neutral default and let the results speak.
 
 Translate your interpretation into real YouTube search query strings and
-pass them to:
+pass them to `adhoc`, e.g. for "Найди русских CS2 ютуберов" (language stated,
+service not):
 
 ```
 python3 src/hunt.py adhoc \
   --queries "<comma-separated search strings you composed>" \
-  --icp commercial_creator \
   --language ru --region RU \
-  --subs-min 50000 --subs-max 500000 \
-  --offers editing \
   --label cs2_ru
 ```
 

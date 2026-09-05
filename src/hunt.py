@@ -177,11 +177,16 @@ def parse_comma_list(text):
     return [item.strip() for item in text.split(",") if item.strip()]
 
 
-def build_adhoc_lane(label=None, icp="commercial_creator", geography="global", language="en", offers=None):
+def build_adhoc_lane(label=None, icp="commercial_creator", geography="global", language=None, offers=None):
     """Pure, in-memory lane shape for one AD_HOC_HUNT run. Never written to
     config/lanes.json — natural-language interpretation happens at the Skill
     layer; this just gives the deterministic pipeline a structured lane to
-    run the same discovery/filter/evidence-pack code against."""
+    run the same discovery/filter/evidence-pack code against.
+
+    language=None means no relevanceLanguage restriction at all (broad
+    search) — this is the neutral default. It must never be silently forced
+    to "en" or any other language just because the caller didn't specify
+    one; only an explicit user constraint should set it."""
     return {
         "id": f"ADHOC:{label}" if label else "ADHOC",
         "icp": icp,
@@ -228,7 +233,7 @@ def cmd_adhoc(args):
     )
     lane = build_adhoc_lane(
         label=args.label, icp=icp,
-        geography=args.region or "global", language=args.language or "en",
+        geography=args.region or "global", language=args.language,
         offers=parse_comma_list(args.offers) or None,
     )
     queries = parse_comma_list(args.queries)

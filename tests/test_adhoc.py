@@ -30,6 +30,75 @@ def test_c_subscriber_range_override_respected():
     assert ranges["commercial_creator"] == {"min": 50000, "max": 500000, "stretch_max": 500000}
 
 
+# --- Calibration: explicit constraints only, nothing inferred across fields ---
+
+def test_unspecified_language_defaults_to_none_not_english():
+    # "Найди CS2 ютуберов" with no language mentioned must run a
+    # language-neutral search, not silently default to English.
+    lane = hunt.build_adhoc_lane(label="cs2")
+    assert lane["language"] is None
+
+
+def test_russian_geography_does_not_imply_editing_offer():
+    # "Найди русских CS2 ютуберов": language/region stated, service NOT
+    # stated. Must not auto-set offers to editing just because the audience
+    # is Russian-speaking — the offer is decided after evidence + PAIN GATE.
+    lane = hunt.build_adhoc_lane(label="cs2_ru", language="ru", geography="RU")
+    assert lane["eligible_offers"] == ["thumbnails", "youtube_packaging"]
+    assert "editing" not in lane["eligible_offers"]
+
+
+def test_explicit_service_request_sets_offers_independent_of_language():
+    # "Найди CS2 ютуберов, которым нужны превью": service stated, language
+    # not. Offers reflects the stated service; language stays neutral.
+    lane = hunt.build_adhoc_lane(label="cs2_thumbnails", offers=["thumbnails"])
+    assert lane["language"] is None
+    assert lane["eligible_offers"] == ["thumbnails"]
+
+
+def test_explicit_russian_editing_request_sets_both_independently():
+    # "Найди русских CS2 ютуберов для монтажа": both language AND service are
+    # stated explicitly — both flow through, each from its own explicit
+    # constraint, not from each other.
+    lane = hunt.build_adhoc_lane(
+        label="cs2_ru_editing", language="ru", geography="RU",
+        icp="cis_editing", offers=["editing"],
+    )
+    assert lane["language"] == "ru"
+    assert lane["geography"] == "RU"
+    assert lane["eligible_offers"] == ["editing"]
+    assert lane["icp"] == "cis_editing"
+
+
+def test_adhoc_cli_defaults_leave_language_and_offers_unset(monkeypatch, tmp_path, capsys):
+    # End-to-end through cmd_adhoc's own argument handling (not just the pure
+    # helper): a request with no --language/--offers flags must not end up
+    # with English or a forced service baked into the lane it builds.
+    state_path = str(tmp_path / "state.json")
+    pending_path = str(tmp_path / "pending.json")
+    monkeypatch.setattr(state_mod, "STATE_PATH", state_path)
+    monkeypatch.setattr(hunt, "PENDING_PATH", pending_path)
+
+    class _EmptyClient:
+        def search_videos(self, *a, **kw):
+            return []
+
+        def get_channels(self, channel_ids):
+            return []
+
+    monkeypatch.setattr(hunt, "YouTubeClient", lambda: _EmptyClient())
+
+    args = argparse_namespace(
+        queries="CS2 highlights", icp="commercial_creator", language=None, region=None,
+        subs_min=None, subs_max=None, offers=None, window_days=14,
+        max_results=25, label="cs2",
+    )
+    hunt.cmd_adhoc(args)
+    output = json.loads(capsys.readouterr().out)
+    assert output["lane"]["language"] is None
+    assert output["lane"]["eligible_offers"] == ["thumbnails", "youtube_packaging"]
+
+
 def test_d_adhoc_config_does_not_mutate_base_ranges_dict():
     base_ranges = {"commercial_creator": {"min": 20000, "max": 500000, "stretch_max": 1000000}}
     original = json.loads(json.dumps(base_ranges))
