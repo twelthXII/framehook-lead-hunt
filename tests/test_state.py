@@ -71,24 +71,24 @@ def test_classify_good_fit_survives_low_timing():
     assert state_mod.classify(fit=91, timing="LOW") == "GOOD_FIT"
 
 
-def test_classify_ready_now_requires_high_timing_min_fit_and_contact():
-    assert state_mod.classify(fit=86, timing="HIGH", contact_found=True) == "READY_NOW"
-    assert state_mod.classify(fit=50, timing="HIGH", contact_found=True) == "WATCH"
-    assert state_mod.classify(fit=40, timing="HIGH", contact_found=True) == "REJECTED"
+def test_classify_ready_now_requires_high_timing_and_min_fit_only():
+    # Opportunity status is fit/timing only — reachability never enters here.
+    assert state_mod.classify(fit=86, timing="HIGH") == "READY_NOW"
+    assert state_mod.classify(fit=50, timing="HIGH") == "WATCH"
+    assert state_mod.classify(fit=40, timing="HIGH") == "REJECTED"
 
 
 def test_classify_never_ready_now_on_fit_alone():
     # A high fit score without a real trigger is GOOD_FIT, never READY_NOW —
     # "could use better thumbnails" is not a buying trigger.
-    assert state_mod.classify(fit=99, timing="LOW", contact_found=True) != "READY_NOW"
-    assert state_mod.classify(fit=99, timing="MEDIUM", contact_found=True) != "READY_NOW"
+    assert state_mod.classify(fit=99, timing="LOW") != "READY_NOW"
+    assert state_mod.classify(fit=99, timing="MEDIUM") != "READY_NOW"
 
 
-def test_classify_never_ready_now_without_a_reachable_contact():
-    # Strong fit + a real trigger but no verified way to reach a decision
-    # maker: still GOOD_FIT, not "ready to contact".
-    assert state_mod.classify(fit=95, timing="HIGH", contact_found=False) == "GOOD_FIT"
-    assert state_mod.classify(fit=95, timing="HIGH") == "GOOD_FIT"  # contact_found defaults False
+def test_classify_ready_now_unaffected_by_missing_contact():
+    # A missing contact must never demote READY_NOW -> GOOD_FIT. Reachability
+    # is tracked entirely separately via contact_status.
+    assert state_mod.classify(fit=95, timing="HIGH") == "READY_NOW"
 
 
 def test_classify_watch_and_rejected_bands():
@@ -96,11 +96,18 @@ def test_classify_watch_and_rejected_bands():
     assert state_mod.classify(fit=30, timing="LOW") == "REJECTED"
 
 
-def test_contact_marker_only_applies_at_good_fit_or_better():
-    assert state_mod.contact_marker(fit=70, contact_found=True) == "FOUND"
-    assert state_mod.contact_marker(fit=70, contact_found=False) == "CONTACT_NEEDED"
-    assert state_mod.contact_marker(fit=50, contact_found=False) is None
-    assert state_mod.contact_marker(fit=None, contact_found=False) is None
+def test_normalize_contact_status_only_applies_at_good_fit_or_better():
+    assert state_mod.normalize_contact_status(fit=70, contact_status="CONTACT_FOUND") == "CONTACT_FOUND"
+    assert state_mod.normalize_contact_status(fit=70, contact_status="UNREACHABLE") == "UNREACHABLE"
+    assert state_mod.normalize_contact_status(fit=50, contact_status="CONTACT_FOUND") is None
+    assert state_mod.normalize_contact_status(fit=None, contact_status="CONTACT_FOUND") is None
+
+
+def test_normalize_contact_status_defaults_to_needed():
+    # Not yet researched, or an invalid/unrecognized value — default to
+    # CONTACT_NEEDED, never assume UNREACHABLE.
+    assert state_mod.normalize_contact_status(fit=70, contact_status=None) == "CONTACT_NEEDED"
+    assert state_mod.normalize_contact_status(fit=70, contact_status="garbage") == "CONTACT_NEEDED"
 
 
 def test_should_send_rejected_account_ignores_due_date_needs_fingerprint_change():
@@ -126,19 +133,34 @@ def test_upsert_account_does_not_overwrite_locked_pipeline_status():
     state["accounts"]["chan1"]["status"] = "CONTACTED"
 
     state_mod.upsert_account(
-        state, "chan1", "fp2", "Chan One", "LANE_A", today, fit=90, timing="HIGH", contact_found=True,
+        state, "chan1", "fp2", "Chan One", "LANE_A", today, fit=90, timing="HIGH",
+        contact_status="CONTACT_FOUND",
     )
 
     assert state["accounts"]["chan1"]["status"] == "CONTACTED"
     assert state["accounts"]["chan1"]["fit_tier"] == "READY_NOW"
 
 
-def test_upsert_account_sets_contact_needed_when_no_contact_found():
+def test_upsert_account_ready_now_with_contact_needed_stays_ready_now():
+    # The Aniimo case: fit >= 65, timing HIGH, no contact found yet — this is
+    # still READY_NOW, with contact_status flagging the open next action.
     state = state_mod.default_state()
     today = date.today()
-    state_mod.upsert_account(state, "chan1", "fp1", "Chan One", "LANE_A", today, fit=85, timing="HIGH")
-    assert state["accounts"]["chan1"]["fit_tier"] == "GOOD_FIT"
+    state_mod.upsert_account(state, "chan1", "fp1", "Chan One", "LANE_A", today, fit=82, timing="HIGH")
+    assert state["accounts"]["chan1"]["fit_tier"] == "READY_NOW"
+    assert state["accounts"]["chan1"]["status"] == "READY_NOW"
     assert state["accounts"]["chan1"]["contact_status"] == "CONTACT_NEEDED"
+
+
+def test_upsert_account_records_unreachable_contact():
+    state = state_mod.default_state()
+    today = date.today()
+    state_mod.upsert_account(
+        state, "chan1", "fp1", "Chan One", "LANE_A", today, fit=82, timing="HIGH",
+        contact_status="UNREACHABLE",
+    )
+    assert state["accounts"]["chan1"]["fit_tier"] == "READY_NOW"
+    assert state["accounts"]["chan1"]["contact_status"] == "UNREACHABLE"
 
 
 def test_upsert_account_omits_next_review_for_low_priority_status():

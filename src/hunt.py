@@ -267,7 +267,7 @@ def cmd_record(args):
         state_mod.upsert_account(
             state, channel_id, meta["fingerprint"], meta["name"], meta["lane"], today,
             fit=verdict.get("fit"), timing=verdict.get("timing"),
-            contact_found=bool(verdict.get("contact_found", False)),
+            contact_status=verdict.get("contact_status"),
         )
 
     finalists = []

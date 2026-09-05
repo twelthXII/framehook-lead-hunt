@@ -90,25 +90,41 @@ new product/course signal, a visible content-quality gap that *just appeared*, a
 recent upload spike. **Never invent a trigger.** No trigger observed = LOW timing,
 which is fine — a high-fit account with LOW timing is still worth including.
 
-**A high fit score is never enough by itself for the urgent status.** READY_NOW
-requires all three of: fit ≥ 65, a real trigger (timing HIGH), AND a verified
-reachable contact — a named decision maker, a real business email, or (for a
-solo creator) a business site/About-page contact you actually found, not just
-"the channel exists." A high-fit, high-timing account with no verified way to
-reach anyone is not "ready to contact" — it's GOOD_FIT with contact research
-still outstanding.
+**A high fit score is never enough by itself for the urgent status.** Fit and
+timing are independent axes, and they map to status like this:
 
-| | Timing HIGH + contact found | Timing HIGH, no contact yet | Timing MEDIUM/LOW |
-|---|---|---|---|
-| Fit ≥ 65 | **READY_NOW** | GOOD_FIT (mark `CONTACT_NEEDED`) | GOOD_FIT |
-| Fit 45-64 | WATCH | WATCH | WATCH |
-| Fit < 45 | REJECTED | REJECTED | REJECTED |
+| | Timing HIGH (real trigger) | Timing MEDIUM/LOW (no live trigger) |
+|---|---|---|
+| Fit ≥ 65 | **READY_NOW** | **GOOD_FIT** |
+| Fit 45-64 | WATCH | WATCH |
+| Fit < 45 | REJECTED | REJECTED |
 
 "The channel could use better thumbnails" is a Framehook-solvable gap, not a
-buying trigger — it never on its own justifies READY_NOW. Don't skip the
-contact-research step just because fit and timing already look great — a
-company you can't reach isn't actionable this week regardless of how good the
-account looks on paper.
+buying trigger — it never on its own justifies READY_NOW.
+
+### Reachability is a SEPARATE axis — it never changes opportunity status
+
+Whether you've found a way to reach a decision maker does not make an
+opportunity more or less good — it only tells you what the next action is.
+**A missing contact must never demote READY_NOW to GOOD_FIT.** A funded studio
+with a confirmed launch in 11 days is a READY_NOW opportunity whether or not
+you've found the marketing team's email yet — the fit and the timing trigger
+are both real and already verified; only the contact is still open.
+
+Track `contact_status` on every GOOD_FIT-or-better account, one of:
+
+- **`CONTACT_FOUND`** — a named decision maker, a real business email, or (for
+  a solo creator) a business site/About-page/DM path you actually found.
+- **`CONTACT_NEEDED`** — not yet researched, or researched but inconclusive.
+  This is the default — never assume `UNREACHABLE` just because one search
+  didn't turn up a contact.
+- **`UNREACHABLE`** — you actively researched and found good reason to believe
+  there is no viable path in (e.g. a gatekept large media company with no
+  public contact surface at all). Use sparingly; this is a stronger claim than
+  "I didn't find one."
+
+READY_NOW + CONTACT_NEEDED means: *this is a timely opportunity — contact
+research is the next action*, not "this isn't ready yet."
 
 ### Account value
 
@@ -129,12 +145,12 @@ qualification uncertainty remains. Hard cap: 2 searches per finalist. Do not che
 Instagram, LinkedIn, TikTok, X, the website, and Telegram all for the same
 account — only the one or two that resolve the real unknown.
 
-For any account that could plausibly be READY_NOW (fit ≥ 65, timing HIGH), the
-open question your search should resolve is reachability itself: is there a
-named contact, a business email, or (for a solo creator) a real business
-site/About page — something you'd actually message? A YouTube channel simply
-existing is not a verified contact. Only mark `contact_found: true` when you
-found something you'd actually use to reach out.
+For any account that scores READY_NOW or GOOD_FIT (fit ≥ 65), spend the
+search on reachability itself: is there a named contact, a business email, or
+(for a solo creator) a real business site/About page — something you'd
+actually message? A YouTube channel simply existing is not `CONTACT_FOUND`.
+If the search doesn't turn up a contact, that's `CONTACT_NEEDED` — it does
+not change the account's fit or timing, and it does not mean `UNREACHABLE`.
 
 ## Visual thumbnail audit (5-8 finalists being considered for thumbnails/packaging)
 
@@ -150,15 +166,16 @@ After Pass 1 and enrichment, write a JSON file (e.g. to a scratch path) shaped a
 ```json
 {
   "verdicts": [
-    {"id": "channelId", "fit": 91, "timing": "HIGH", "contact_found": true},
+    {"id": "channelId", "fit": 91, "timing": "HIGH", "contact_status": "CONTACT_FOUND"},
     ...
   ],
   "finalists_order": ["channelId1", "channelId2", ...]
 }
 ```
 
-`contact_found` defaults to false if omitted — only set it true when enrichment
-actually turned up a reachable contact (see the reachability note above).
+`contact_status` is one of `CONTACT_FOUND` / `CONTACT_NEEDED` / `UNREACHABLE`;
+omit it (or leave it out for anything below GOOD_FIT) and it defaults to
+`CONTACT_NEEDED`.
 
 Include a verdict for every pack you scored in Pass 1 (not just finalists — a
 rejected account still needs its fit/timing recorded so the recheck cadence
@@ -172,9 +189,20 @@ python3 src/hunt.py commit-state
 
 ## Output format (this is the ONLY thing that goes to chat)
 
-One status system, used consistently everywhere — the account's own status in
-`state/state.json`, this report's grouping, and nothing else. Group finalists
-into up to three sections, each the same table shape:
+Two axes, both shown, neither hidden: group by opportunity status
+(READY_NOW / GOOD_FIT / WATCH) as before, but order rows within READY_NOW and
+GOOD_FIT by this priority so the most actionable leads are always on top:
+
+1. READY_NOW + CONTACT_FOUND
+2. READY_NOW + CONTACT_NEEDED
+3. GOOD_FIT + CONTACT_FOUND
+4. GOOD_FIT + CONTACT_NEEDED
+5. WATCH (unordered by contact — contact research isn't spent here yet)
+
+An account marked `UNREACHABLE` stays in state at its real opportunity status
+but is left out of this table — confirmed-unreachable isn't something the user
+can act on this week, so it doesn't earn a row (it's not "rejected," just not
+actionable right now; it'll resurface if its fingerprint changes).
 
 ```
 ## READY_NOW
@@ -204,10 +232,10 @@ into up to three sections, each the same table shape:
 - Offer: max 5 words, one primary entry offer (do not pitch everything at once:
   thumbnails, thumbnail system, YouTube packaging, titles + thumbnails, editing,
   editing + packaging, Shorts, content production, or channel management).
-- Contact: the actual contact you found, or literally `CONTACT_NEEDED` if this
-  is a GOOD_FIT account that would otherwise qualify for READY_NOW but
-  reachability hasn't been verified yet — don't paper over that gap with a
-  generic "YouTube About page" guess.
+- Contact: the actual contact when `CONTACT_FOUND`, or literally `CONTACT_NEEDED`
+  otherwise — never paper over an open contact gap with a vague "YouTube About
+  page" guess, and never let a missing contact talk you into writing GOOD_FIT
+  for a row whose Fit/Timing columns say READY_NOW.
 
 Then:
 

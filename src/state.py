@@ -5,10 +5,12 @@ from datetime import date, datetime, timedelta
 
 STATE_PATH = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "state", "state.json")
 
-# One status system, used everywhere: the account's own "status" field, the
-# weekly report's grouping, and the recheck cadence below all read the same
-# values. There is no separate internal HOT/STRONG concept anymore.
+# Two independent axes, never conflated:
 #
+# OPPORTUNITY STATUS ("status" / "fit_tier") - fit and timing only. Whether a
+# decision maker has been found yet does not change how good the opportunity
+# is — a company with a real trigger and no contact yet is still a timely
+# opportunity, just one with an open next action.
 #   READY_NOW  - fit >= FIT_ATTRACTIVE and a real trigger (timing HIGH)
 #   GOOD_FIT   - fit >= FIT_ATTRACTIVE but no live trigger
 #   WATCH      - fit >= FIT_WATCH but not yet commercially compelling
@@ -17,8 +19,16 @@ STATE_PATH = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file
 #   CONTACTED / REPLIED / WON / LOST - pipeline outcomes set only via user
 #                                       feedback; a later discovery run's
 #                                       re-classification never overwrites them
+#
+# CONTACT STATUS ("contact_status") - reachability only, tracked separately
+# once an account is at least GOOD_FIT. See CONTACT_STATUSES below.
 FIT_ATTRACTIVE = 65
 FIT_WATCH = 45
+
+CONTACT_FOUND = "CONTACT_FOUND"
+CONTACT_NEEDED = "CONTACT_NEEDED"
+CONTACT_UNREACHABLE = "UNREACHABLE"
+CONTACT_STATUSES = {CONTACT_FOUND, CONTACT_NEEDED, CONTACT_UNREACHABLE}
 
 # These never get a re-classification overwrite from a fresh Pass-1 verdict —
 # once the user has recorded real pipeline movement, a routine run shouldn't
@@ -119,29 +129,28 @@ def should_send_to_claude(account, fingerprint, today, recheck_days=None):
     return False, "unchanged_and_not_due"
 
 
-def classify(fit, timing, contact_found=False):
-    """A single fit/timing/reachability verdict maps to exactly one of the
-    four user-facing statuses. READY_NOW requires all three: fit >=
-    FIT_ATTRACTIVE, a real trigger (timing HIGH), AND a verified reachable
-    contact — a high-fit, high-timing account with no known way to reach a
-    decision maker is not "ready to contact", it's GOOD_FIT with contact
-    research still outstanding (see contact_marker)."""
+def classify(fit, timing):
+    """Opportunity status: fit and timing only. Reachability is a separate
+    axis (see normalize_contact_status) and never changes this — a strong,
+    timely opportunity with no contact found yet is still READY_NOW, just
+    one whose next action is contact research rather than outreach."""
     if fit >= FIT_ATTRACTIVE:
-        if timing == "HIGH" and contact_found:
-            return "READY_NOW"
-        return "GOOD_FIT"
+        return "READY_NOW" if timing == "HIGH" else "GOOD_FIT"
     if fit >= FIT_WATCH:
         return "WATCH"
     return "REJECTED"
 
 
-def contact_marker(fit, contact_found):
-    """FOUND/CONTACT_NEEDED is only meaningful once an account is at least
+def normalize_contact_status(fit, contact_status):
+    """Contact status is only meaningful once an account is at least
     commercially attractive (GOOD_FIT or better) — WATCH/REJECTED accounts
-    don't get contact research spent on them yet."""
+    don't get contact research spent on them. Defaults to CONTACT_NEEDED
+    (research not yet done) rather than assuming UNREACHABLE."""
     if fit is None or fit < FIT_ATTRACTIVE:
         return None
-    return "FOUND" if contact_found else "CONTACT_NEEDED"
+    if contact_status in CONTACT_STATUSES:
+        return contact_status
+    return CONTACT_NEEDED
 
 
 def next_review_date(status, today, recheck_days=None):
@@ -154,11 +163,13 @@ JUDGED_FIT_TIERS = {"READY_NOW", "GOOD_FIT", "WATCH"}
 
 
 def upsert_account(state, channel_id, fingerprint, name, lane_id, today,
-                    fit=None, timing=None, contact_found=False):
+                    fit=None, timing=None, contact_status=None):
     accounts = state["accounts"]
     existing = accounts.get(channel_id, {})
-    fit_tier = classify(fit, timing, contact_found) if fit is not None else existing.get("fit_tier", "WATCH")
-    contact_status = contact_marker(fit, contact_found) if fit is not None else existing.get("contact_status")
+    fit_tier = classify(fit, timing) if fit is not None else existing.get("fit_tier", "WATCH")
+    contact_status = (
+        normalize_contact_status(fit, contact_status) if fit is not None else existing.get("contact_status")
+    )
 
     locked = existing.get("status") in PIPELINE_LOCKED_STATUSES
     status = existing["status"] if locked else fit_tier

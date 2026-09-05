@@ -35,7 +35,7 @@
       "status": "SEEN"
     },
     "UC-qwaQSx8GAtUMlw3aBGSzQ": {
-      "contact_status": "FOUND",
+      "contact_status": "CONTACT_FOUND",
       "fingerprint": "3c34699600039407",
       "fit_tier": "GOOD_FIT",
       "history": [
@@ -126,7 +126,7 @@
     "UC2YdJw53sP73T-lffzrqTZA": {
       "contact_status": "CONTACT_NEEDED",
       "fingerprint": "73a2601db7194e3f",
-      "fit_tier": "GOOD_FIT",
+      "fit_tier": "READY_NOW",
       "history": [
         {
           "date": "2026-09-05",
@@ -140,8 +140,8 @@
       "last_reviewed": "2026-09-05",
       "last_timing": "HIGH",
       "name": "Aniimo",
-      "next_review_after": "2026-09-19",
-      "status": "GOOD_FIT"
+      "next_review_after": "2026-09-12",
+      "status": "READY_NOW"
     },
     "UC3G-MWHfHciif4WPmX8v5zA": {
       "fingerprint": "1cf35736f4c95f40",
