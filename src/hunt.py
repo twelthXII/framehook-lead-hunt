@@ -147,12 +147,17 @@ def cmd_discover(args):
         if shown:
             state_mod.record_shown(state, lane_id, count=shown)
 
+    pruned = state_mod.prune_stale_accounts(
+        state, today, retention_days=lanes_config.get("state_retention_days", state_mod.STATE_RETENTION_DAYS_DEFAULT)
+    )
+
     run_summary = {
         "date": today.isoformat(),
         "raw_videos": raw_video_count,
         "raw_channels": len(channel_ids),
         "filtered_survivors": len(scored_candidates),
         "claude_packs": len(shortlist),
+        "pruned_accounts": pruned,
     }
     state_mod.record_run(state, run_summary)
     state_mod.save_state(state)
@@ -288,21 +293,57 @@ def cmd_commit_state(args):
     if not diff.stdout.strip():
         print(json.dumps({"committed": False, "reason": "no changes"}))
         return
+
+    fetch = subprocess.run(["git", "fetch", "origin", "main"], cwd=ROOT, capture_output=True, text=True)
+    if fetch.returncode != 0:
+        print(json.dumps({"committed": False, "error": "fetch_failed", "detail": fetch.stderr[:500]}))
+        sys.exit(1)
+
+    # Refuse if origin has moved since our clone's base — another run already
+    # committed production state. Better to stop and report than to silently
+    # overwrite or attempt a risky auto-merge of a JSON file.
+    ancestor_check = subprocess.run(
+        ["git", "merge-base", "--is-ancestor", "origin/main", "HEAD"], cwd=ROOT,
+    )
+    if ancestor_check.returncode != 0:
+        print(json.dumps({
+            "committed": False,
+            "error": "state_conflict",
+            "detail": (
+                "origin/main has commits this run's clone doesn't have — another run "
+                "already updated production state. Not overwriting it. Re-run discover "
+                "against a fresh clone instead of retrying this commit."
+            ),
+        }))
+        sys.exit(1)
+
     subprocess.run(["git", "add", "state/state.json"], cwd=ROOT, check=True)
     subprocess.run(
         ["git", "commit", "-m", f"state: update after weekly hunt {date.today().isoformat()}"],
         cwd=ROOT, check=True,
     )
-    subprocess.run(["git", "push"], cwd=ROOT, check=True)
+
+    push = subprocess.run(["git", "push", "origin", "main"], cwd=ROOT, capture_output=True, text=True)
+    if push.returncode != 0:
+        print(json.dumps({"committed": False, "error": "push_rejected", "detail": push.stderr[:500]}))
+        sys.exit(1)
+
     print(json.dumps({"committed": True}))
 
 
 def cmd_stats(args):
     state = state_mod.load_state()
+    accounts = state.get("accounts", {})
+    by_status = {}
+    for account in accounts.values():
+        status = account.get("status", "UNKNOWN")
+        by_status[status] = by_status.get(status, 0) + 1
     print(json.dumps({
         "runs": state.get("runs", [])[-5:],
         "query_stats": state.get("query_stats", {}),
-        "account_count": len(state.get("accounts", {})),
+        "account_count": len(accounts),
+        "accounts_by_status": by_status,
+        "state_file_bytes": os.path.getsize(state_mod.STATE_PATH) if os.path.exists(state_mod.STATE_PATH) else 0,
     }, indent=2))
 
 

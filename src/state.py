@@ -5,10 +5,37 @@ from datetime import date, datetime, timedelta
 
 STATE_PATH = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "state", "state.json")
 
+# One status system, used everywhere: the account's own "status" field, the
+# weekly report's grouping, and the recheck cadence below all read the same
+# values. There is no separate internal HOT/STRONG concept anymore.
+#
+#   READY_NOW  - fit >= FIT_ATTRACTIVE and a real trigger (timing HIGH)
+#   GOOD_FIT   - fit >= FIT_ATTRACTIVE but no live trigger
+#   WATCH      - fit >= FIT_WATCH but not yet commercially compelling
+#   REJECTED   - fit below FIT_WATCH
+#   SEEN       - never reached Claude (failed the deterministic prefilter)
+#   CONTACTED / REPLIED / WON / LOST - pipeline outcomes set only via user
+#                                       feedback; a later discovery run's
+#                                       re-classification never overwrites them
+FIT_ATTRACTIVE = 65
+FIT_WATCH = 45
+
+# These never get a re-classification overwrite from a fresh Pass-1 verdict —
+# once the user has recorded real pipeline movement, a routine run shouldn't
+# silently reset it back to a fit-tier label.
+PIPELINE_LOCKED_STATUSES = {"CONTACTED", "REPLIED", "WON", "LOST"}
+
+# These only resurface on a genuine signal change (fingerprint change), never
+# merely because a recheck date passed — matches "not worth spending future
+# Claude analysis on unless meaningful external signals change".
+LOW_PRIORITY_STATUSES = {"REJECTED", "SEEN", "LOST", "DO_NOT_CONTACT"}
+
 RECHECK_DAYS_DEFAULT = {
-    "HOT": 10, "STRONG": 10, "WATCHLIST": 25, "REJECTED": 75,
-    "CONTACTED": 21, "REPLIED": 30, "DEFAULT": 14,
+    "READY_NOW": 7, "GOOD_FIT": 14, "WATCH": 25, "REJECTED": 75, "SEEN": 75,
+    "CONTACTED": 21, "REPLIED": 30, "WON": 90, "LOST": 60, "DEFAULT": 14,
 }
+
+STATE_RETENTION_DAYS_DEFAULT = 180
 
 FEEDBACK_LABELS = {
     "GOOD": {"status": None, "lane_delta": {"approved": 1}},
@@ -50,10 +77,14 @@ def load_state(path=STATE_PATH):
 
 
 def save_state(state, path=STATE_PATH):
+    """Atomic write: a crash mid-write leaves the previous state.json intact
+    rather than a truncated/corrupt file."""
     os.makedirs(os.path.dirname(path), exist_ok=True)
-    with open(path, "w", encoding="utf-8") as f:
+    tmp_path = f"{path}.tmp{os.getpid()}"
+    with open(tmp_path, "w", encoding="utf-8") as f:
         json.dump(state, f, indent=2, sort_keys=True)
         f.write("\n")
+    os.replace(tmp_path, path)
 
 
 def compute_fingerprint(signals):
@@ -81,21 +112,23 @@ def should_send_to_claude(account, fingerprint, today, recheck_days=None):
         return True, "new_account"
     if account.get("fingerprint") != fingerprint:
         return True, "fingerprint_changed"
+    if account.get("status") in LOW_PRIORITY_STATUSES:
+        return False, "rejected_no_new_signal"
     if is_due_for_review(account, today, recheck_days):
         return True, "due_for_recheck"
     return False, "unchanged_and_not_due"
 
 
 def classify(fit, timing):
-    if fit >= 85:
-        base = "STRONG"
-    elif fit >= 65:
-        base = "WATCHLIST"
-    else:
-        base = "REJECTED"
-    if timing == "HIGH" and fit >= 65:
-        return "HOT"
-    return base
+    """A single fit/timing verdict maps to exactly one of the four
+    user-facing statuses. A trigger (timing HIGH) is required for READY_NOW —
+    a high fit score alone (e.g. "could use better thumbnails") is GOOD_FIT,
+    never READY_NOW."""
+    if fit >= FIT_ATTRACTIVE:
+        return "READY_NOW" if timing == "HIGH" else "GOOD_FIT"
+    if fit >= FIT_WATCH:
+        return "WATCH"
+    return "REJECTED"
 
 
 def next_review_date(status, today, recheck_days=None):
@@ -107,14 +140,19 @@ def next_review_date(status, today, recheck_days=None):
 def upsert_account(state, channel_id, fingerprint, name, lane_id, today, fit=None, timing=None):
     accounts = state["accounts"]
     existing = accounts.get(channel_id, {})
-    status = classify(fit, timing) if fit is not None else existing.get("status", "WATCHLIST")
+    fit_tier = classify(fit, timing) if fit is not None else existing.get("fit_tier", "WATCH")
+
+    locked = existing.get("status") in PIPELINE_LOCKED_STATUSES
+    status = existing["status"] if locked else fit_tier
+
     history = existing.get("history", [])[-4:]
-    history.append({"date": today.isoformat(), "fit": fit, "timing": timing, "status": status})
+    history.append({"date": today.isoformat(), "fit": fit, "timing": timing, "fit_tier": fit_tier})
     accounts[channel_id] = {
         "name": name,
         "lane": lane_id,
         "fingerprint": fingerprint,
         "status": status,
+        "fit_tier": fit_tier,
         "last_fit": fit,
         "last_timing": timing,
         "last_reviewed": today.isoformat(),
@@ -125,18 +163,42 @@ def upsert_account(state, channel_id, fingerprint, name, lane_id, today, fit=Non
 
 
 def record_seen_only(state, channel_id, fingerprint, name, lane_id, today):
-    """Track a candidate seen this run without a Claude verdict yet (kept out of shortlist)."""
+    """Track a candidate seen this run that failed the deterministic
+    prefilter before ever reaching Claude. Never downgrades a real pipeline
+    or fit-tier status that was already recorded for this account."""
     accounts = state["accounts"]
     existing = accounts.get(channel_id, {})
+    locked = existing.get("status") in PIPELINE_LOCKED_STATUSES
+    status = existing["status"] if locked else "SEEN"
     accounts[channel_id] = {
         **existing,
         "name": name,
         "lane": lane_id,
         "fingerprint": fingerprint,
-        "status": existing.get("status", "SEEN"),
-        "last_reviewed": existing.get("last_reviewed", today.isoformat()),
-        "next_review_after": existing.get("next_review_after", next_review_date("DEFAULT", today)),
+        "status": status,
+        "last_reviewed": today.isoformat(),
+        "next_review_after": existing.get("next_review_after") or next_review_date(status, today),
     }
+
+
+def prune_stale_accounts(state, today, retention_days=STATE_RETENTION_DAYS_DEFAULT):
+    """Evict low-priority accounts (SEEN/REJECTED/LOST/DO_NOT_CONTACT) that
+    haven't been touched in a long time, so state.json stays bounded. Real
+    leads (READY_NOW/GOOD_FIT/WATCH/CONTACTED/REPLIED/WON) are never pruned.
+    Re-discovering a pruned account later just creates a fresh record — no
+    correctness is lost, only some rediscovery history."""
+    accounts = state["accounts"]
+    cutoff = today - timedelta(days=retention_days)
+    stale_ids = []
+    for channel_id, account in accounts.items():
+        if account.get("status") not in LOW_PRIORITY_STATUSES:
+            continue
+        last_reviewed = account.get("last_reviewed")
+        if last_reviewed and date.fromisoformat(last_reviewed) < cutoff:
+            stale_ids.append(channel_id)
+    for channel_id in stale_ids:
+        del accounts[channel_id]
+    return len(stale_ids)
 
 
 def lane_score(lane_id, query_stats):

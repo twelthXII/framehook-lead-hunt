@@ -2,6 +2,7 @@
   "accounts": {
     "UC-FIAmE9tS5jYVsLGdc5QQw": {
       "fingerprint": "684ac9a387aa4248",
+      "fit_tier": "REJECTED",
       "history": [
         {
           "date": "2026-09-05",
@@ -44,6 +45,7 @@
     },
     "UC3iyLcDyYxk2nN7M5DsYaYQ": {
       "fingerprint": "d1e3834117e8e319",
+      "fit_tier": "GOOD_FIT",
       "history": [
         {
           "date": "2026-09-05",
@@ -57,8 +59,8 @@
       "last_reviewed": "2026-09-05",
       "last_timing": "LOW",
       "name": "Daniel | Tech & Data",
-      "next_review_after": "2026-09-30",
-      "status": "WATCHLIST"
+      "next_review_after": "2026-09-19",
+      "status": "GOOD_FIT"
     },
     "UC3p5NNrlU6y9YIs4iHW6q_w": {
       "fingerprint": "a2e40df3d8deb8d3",
@@ -86,6 +88,7 @@
     },
     "UC6ITJIW6jgrrP5irR7WoHrw": {
       "fingerprint": "c579319a95599e1e",
+      "fit_tier": "WATCH",
       "history": [
         {
           "date": "2026-09-05",
@@ -99,8 +102,8 @@
       "last_reviewed": "2026-09-05",
       "last_timing": "LOW",
       "name": "Sean Dollwet",
-      "next_review_after": "2026-11-19",
-      "status": "REJECTED"
+      "next_review_after": "2026-09-30",
+      "status": "WATCH"
     },
     "UC77ksrKd7P8uXslpuy6HAfQ": {
       "fingerprint": "890b7238286c9192",
@@ -144,6 +147,7 @@
     },
     "UCAMtUr1BeqpNU3vdEXPSPvg": {
       "fingerprint": "92daf500b5e02f36",
+      "fit_tier": "WATCH",
       "history": [
         {
           "date": "2026-09-05",
@@ -157,11 +161,12 @@
       "last_reviewed": "2026-09-05",
       "last_timing": "LOW",
       "name": "Brenna M & Co",
-      "next_review_after": "2026-11-19",
-      "status": "REJECTED"
+      "next_review_after": "2026-09-30",
+      "status": "WATCH"
     },
     "UCB0CZVWByHLSCJN2IZUoFsw": {
       "fingerprint": "08bf2588cf9a74f8",
+      "fit_tier": "WATCH",
       "history": [
         {
           "date": "2026-09-05",
@@ -175,8 +180,8 @@
       "last_reviewed": "2026-09-05",
       "last_timing": "LOW",
       "name": "Dan - Smart Tutorials",
-      "next_review_after": "2026-11-19",
-      "status": "REJECTED"
+      "next_review_after": "2026-09-30",
+      "status": "WATCH"
     },
     "UCBNJaZ64ak4GECgxhKlispA": {
       "fingerprint": "1f653f8fb654428b",
@@ -228,6 +233,7 @@
     },
     "UCEnoDgSMJfrYkp2rfIueOqg": {
       "fingerprint": "8baba0a81aab964a",
+      "fit_tier": "REJECTED",
       "history": [
         {
           "date": "2026-09-05",
@@ -262,6 +268,7 @@
     },
     "UCGCPcn5RFvRM0qDrooiV6LQ": {
       "fingerprint": "4a15df292c4adf93",
+      "fit_tier": "WATCH",
       "history": [
         {
           "date": "2026-09-05",
@@ -275,8 +282,8 @@
       "last_reviewed": "2026-09-05",
       "last_timing": "LOW",
       "name": "Daniel Davidson",
-      "next_review_after": "2026-11-19",
-      "status": "REJECTED"
+      "next_review_after": "2026-09-30",
+      "status": "WATCH"
     },
     "UCIUngc2SVw6ZZ9To4yBZDiw": {
       "fingerprint": "3dd93a12c752c23d",
@@ -320,6 +327,7 @@
     },
     "UCM7yoOhnMcfrEZ-5i9m-WFA": {
       "fingerprint": "43e1794e5a32894e",
+      "fit_tier": "WATCH",
       "history": [
         {
           "date": "2026-09-05",
@@ -333,8 +341,8 @@
       "last_reviewed": "2026-09-05",
       "last_timing": "LOW",
       "name": "Sonia Shenoy",
-      "next_review_after": "2026-11-19",
-      "status": "REJECTED"
+      "next_review_after": "2026-09-30",
+      "status": "WATCH"
     },
     "UCMFxukXVkmcFFAjoTF2rhGQ": {
       "fingerprint": "2e900381f4a72642",
@@ -354,6 +362,7 @@
     },
     "UCMw07uiVxGULqePlrOZnx9A": {
       "fingerprint": "33d3e81b4c3de844",
+      "fit_tier": "GOOD_FIT",
       "history": [
         {
           "date": "2026-09-05",
@@ -367,8 +376,8 @@
       "last_reviewed": "2026-09-05",
       "last_timing": "MEDIUM",
       "name": "Personal Finance with Leila - Debt Over It",
-      "next_review_after": "2026-09-30",
-      "status": "WATCHLIST"
+      "next_review_after": "2026-09-19",
+      "status": "GOOD_FIT"
     },
     "UCNXWqRPePQc9UYkki6uy3FA": {
       "fingerprint": "9cac9c86b0e968f5",
@@ -556,6 +565,7 @@
     },
     "UCggPd3Vf9ooG2r4I_ZNWBzA": {
       "fingerprint": "662c6966244ad2fb",
+      "fit_tier": "WATCH",
       "history": [
         {
           "date": "2026-09-05",
@@ -569,11 +579,12 @@
       "last_reviewed": "2026-09-05",
       "last_timing": "LOW",
       "name": "Wint Wealth",
-      "next_review_after": "2026-11-19",
-      "status": "REJECTED"
+      "next_review_after": "2026-09-30",
+      "status": "WATCH"
     },
     "UCgxj31L32Z0LBybG0XbEeaw": {
       "fingerprint": "1330b0d271caefa1",
+      "fit_tier": "WATCH",
       "history": [
         {
           "date": "2026-09-05",
@@ -587,11 +598,12 @@
       "last_reviewed": "2026-09-05",
       "last_timing": "LOW",
       "name": "Shahzad AI",
-      "next_review_after": "2026-11-19",
-      "status": "REJECTED"
+      "next_review_after": "2026-09-30",
+      "status": "WATCH"
     },
     "UChPwGY5vg-p4a6UehR83wHQ": {
       "fingerprint": "d3e98484fe3d7fcd",
+      "fit_tier": "WATCH",
       "history": [
         {
           "date": "2026-09-05",
@@ -605,8 +617,8 @@
       "last_reviewed": "2026-09-05",
       "last_timing": "LOW",
       "name": "School of Hard Knocks Podcast",
-      "next_review_after": "2026-11-19",
-      "status": "REJECTED"
+      "next_review_after": "2026-09-30",
+      "status": "WATCH"
     },
     "UChZkKFm9d7ZvhRESa3JLxjQ": {
       "fingerprint": "022fb225a69a5530",
@@ -650,6 +662,7 @@
     },
     "UCm5iBOcQ0GET_2FqFI61QDA": {
       "fingerprint": "372a5135c53df967",
+      "fit_tier": "GOOD_FIT",
       "history": [
         {
           "date": "2026-09-05",
@@ -663,8 +676,8 @@
       "last_reviewed": "2026-09-05",
       "last_timing": "LOW",
       "name": "Cara Nicole",
-      "next_review_after": "2026-09-30",
-      "status": "WATCHLIST"
+      "next_review_after": "2026-09-19",
+      "status": "GOOD_FIT"
     },
     "UCm7xZ9sbqhuARuDDcckh8Jg": {
       "fingerprint": "23d2ca7dc9fd672c",
@@ -700,6 +713,7 @@
     },
     "UCsm6EOn4Qdbk6lchMolxS7A": {
       "fingerprint": "6d3455247052dbf7",
+      "fit_tier": "REJECTED",
       "history": [
         {
           "date": "2026-09-05",
@@ -782,6 +796,7 @@
     },
     "UCy5k9Vwoug-45UZqlcYb1Sg": {
       "fingerprint": "7c6b295e72d1b7b3",
+      "fit_tier": "GOOD_FIT",
       "history": [
         {
           "date": "2026-09-05",
@@ -795,8 +810,8 @@
       "last_reviewed": "2026-09-05",
       "last_timing": "LOW",
       "name": "Making Money Podcast",
-      "next_review_after": "2026-09-30",
-      "status": "WATCHLIST"
+      "next_review_after": "2026-09-19",
+      "status": "GOOD_FIT"
     },
     "UCyqgXN-ZUghY2GO1-VTwwmA": {
       "fingerprint": "154a4e9365e1171c",

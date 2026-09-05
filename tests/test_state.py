@@ -67,18 +67,78 @@ def test_should_send_true_when_due_date_passed():
     assert reason == "due_for_recheck"
 
 
-def test_classify_strong_survives_low_timing():
-    assert state_mod.classify(fit=91, timing="LOW") == "STRONG"
+def test_classify_good_fit_survives_low_timing():
+    assert state_mod.classify(fit=91, timing="LOW") == "GOOD_FIT"
 
 
-def test_classify_hot_requires_high_timing_and_min_fit():
-    assert state_mod.classify(fit=86, timing="HIGH") == "HOT"
+def test_classify_ready_now_requires_high_timing_and_min_fit():
+    assert state_mod.classify(fit=86, timing="HIGH") == "READY_NOW"
+    assert state_mod.classify(fit=50, timing="HIGH") == "WATCH"
     assert state_mod.classify(fit=40, timing="HIGH") == "REJECTED"
 
 
-def test_classify_watchlist_and_rejected_bands():
-    assert state_mod.classify(fit=70, timing="LOW") == "WATCHLIST"
+def test_classify_never_ready_now_on_fit_alone():
+    # A high fit score without a real trigger is GOOD_FIT, never READY_NOW —
+    # "could use better thumbnails" is not a buying trigger.
+    assert state_mod.classify(fit=99, timing="LOW") != "READY_NOW"
+    assert state_mod.classify(fit=99, timing="MEDIUM") != "READY_NOW"
+
+
+def test_classify_watch_and_rejected_bands():
+    assert state_mod.classify(fit=50, timing="LOW") == "WATCH"
     assert state_mod.classify(fit=30, timing="LOW") == "REJECTED"
+
+
+def test_should_send_rejected_account_ignores_due_date_needs_fingerprint_change():
+    today = date.today()
+    account = {
+        "fingerprint": "fp1",
+        "status": "REJECTED",
+        "next_review_after": (today - timedelta(days=5)).isoformat(),
+    }
+    due, reason = state_mod.should_send_to_claude(account, "fp1", today)
+    assert due is False
+    assert reason == "rejected_no_new_signal"
+
+    due, reason = state_mod.should_send_to_claude(account, "fp2", today)
+    assert due is True
+    assert reason == "fingerprint_changed"
+
+
+def test_upsert_account_does_not_overwrite_locked_pipeline_status():
+    state = state_mod.default_state()
+    today = date.today()
+    state_mod.upsert_account(state, "chan1", "fp1", "Chan One", "LANE_A", today, fit=80, timing="LOW")
+    state["accounts"]["chan1"]["status"] = "CONTACTED"
+
+    state_mod.upsert_account(state, "chan1", "fp2", "Chan One", "LANE_A", today, fit=90, timing="HIGH")
+
+    assert state["accounts"]["chan1"]["status"] == "CONTACTED"
+    assert state["accounts"]["chan1"]["fit_tier"] == "READY_NOW"
+
+
+def test_record_seen_only_does_not_downgrade_locked_status():
+    state = state_mod.default_state()
+    today = date.today()
+    state["accounts"]["chan1"] = {"name": "Chan One", "lane": "LANE_A", "status": "WON"}
+    state_mod.record_seen_only(state, "chan1", "fp1", "Chan One", "LANE_A", today)
+    assert state["accounts"]["chan1"]["status"] == "WON"
+
+
+def test_prune_stale_accounts_removes_only_old_low_priority_entries():
+    state = state_mod.default_state()
+    today = date.today()
+    old = (today - timedelta(days=200)).isoformat()
+    recent = (today - timedelta(days=5)).isoformat()
+    state["accounts"] = {
+        "stale_rejected": {"status": "REJECTED", "last_reviewed": old},
+        "fresh_rejected": {"status": "REJECTED", "last_reviewed": recent},
+        "stale_but_good_fit": {"status": "GOOD_FIT", "last_reviewed": old},
+        "stale_seen": {"status": "SEEN", "last_reviewed": old},
+    }
+    pruned = state_mod.prune_stale_accounts(state, today, retention_days=180)
+    assert pruned == 2
+    assert set(state["accounts"].keys()) == {"fresh_rejected", "stale_but_good_fit"}
 
 
 def test_allocate_query_budget_uses_full_budget_and_never_zeroes_a_lane():
@@ -124,7 +184,7 @@ def test_parse_feedback_text_with_commas_and_hash():
 
 def test_apply_feedback_updates_status_and_lane_stats():
     state = state_mod.default_state()
-    state["accounts"]["chan1"] = {"name": "Chan One", "lane": "LANE_A", "status": "WATCHLIST"}
+    state["accounts"]["chan1"] = {"name": "Chan One", "lane": "LANE_A", "status": "GOOD_FIT"}
     state["last_output"] = [{"num": 1, "channel_id": "chan1", "name": "Chan One"}]
 
     applied = state_mod.apply_feedback(state, {1: "CONTACTED"})
@@ -137,11 +197,11 @@ def test_apply_feedback_updates_status_and_lane_stats():
 def test_state_save_load_round_trip(tmp_path):
     path = str(tmp_path / "state.json")
     state = state_mod.default_state()
-    state["accounts"]["chan1"] = {"name": "X", "status": "HOT"}
+    state["accounts"]["chan1"] = {"name": "X", "status": "READY_NOW"}
     state_mod.save_state(state, path=path)
 
     loaded = state_mod.load_state(path=path)
-    assert loaded["accounts"]["chan1"]["status"] == "HOT"
+    assert loaded["accounts"]["chan1"]["status"] == "READY_NOW"
 
     with open(path, "r", encoding="utf-8") as f:
         raw = json.load(f)

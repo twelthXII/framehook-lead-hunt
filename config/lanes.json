@@ -4,15 +4,7 @@
   "longform_min_seconds": 180,
   "claude_shortlist_max": 25,
   "max_per_lane_in_shortlist": 6,
-  "recheck_days": {
-    "HOT": 10,
-    "STRONG": 10,
-    "WATCHLIST": 25,
-    "REJECTED": 75,
-    "CONTACTED": 21,
-    "REPLIED": 30,
-    "DEFAULT": 14
-  },
+  "state_retention_days": 180,
   "subscriber_ranges": {
     "commercial_creator": { "min": 20000, "max": 500000, "stretch_max": 1000000 },
     "founder_led": { "min": 1000, "max": 500000, "stretch_max": 1000000 },

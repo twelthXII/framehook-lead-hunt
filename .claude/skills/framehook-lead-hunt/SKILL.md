@@ -86,16 +86,23 @@ unusually strong, never above the hard 20-lead ceiling downstream).
 ### Timing — HIGH / MEDIUM / LOW, scored separately from fit
 
 Timing reflects buying triggers only: a new sponsor keyword, a cadence change, a
-new product/course signal, a visible content-quality gap that just appeared, a
+new product/course signal, a visible content-quality gap that *just appeared*, a
 recent upload spike. **Never invent a trigger.** No trigger observed = LOW timing,
 which is fine — a high-fit account with LOW timing is still worth including.
 
-**Do not require a trigger for a high score.** A previous version of this system
-wrongly gated qualification on buying triggers — that was corrected. Fit and
-timing are independent axes:
+**A high fit score is never enough by itself for the urgent status.** Fit and
+timing are independent axes, and they map to status like this:
 
-- Fit 91, Timing LOW → still STRONG.
-- Fit 86, Timing HIGH → potentially HOT.
+| | Timing HIGH (real trigger) | Timing MEDIUM/LOW (no live trigger) |
+|---|---|---|
+| Fit ≥ 65 | **READY_NOW** | **GOOD_FIT** |
+| Fit 45-64 | WATCH | WATCH |
+| Fit < 45 | REJECTED | REJECTED |
+
+"The channel could use better thumbnails" is a Framehook-solvable gap, not a
+buying trigger — it never on its own justifies READY_NOW. Reserve READY_NOW for
+an account that is both a strong fit *and* has a real, observed reason to reach
+out now.
 
 ### Account value
 
@@ -146,14 +153,34 @@ python3 src/hunt.py commit-state
 
 ## Output format (this is the ONLY thing that goes to chat)
 
+One status system, used consistently everywhere — the account's own status in
+`state/state.json`, this report's grouping, and nothing else. Group finalists
+into up to three sections, each the same table shape:
+
 ```
-## READY TO CONTACT
+## READY_NOW
+
+| # | Lead | Fit | Timing | ICP | Value | Opportunity | Offer | Contact |
+|---:|------|----:|--------|-----|-------|-------------|-------|---------|
+
+## GOOD_FIT
+
+| # | Lead | Fit | Timing | ICP | Value | Opportunity | Offer | Contact |
+|---:|------|----:|--------|-----|-------|-------------|-------|---------|
+
+## WATCH
 
 | # | Lead | Fit | Timing | ICP | Value | Opportunity | Offer | Contact |
 |---:|------|----:|--------|-----|-------|-------------|-------|---------|
 ```
 
-- Maximum 20 rows, prefer 8-12.
+- Number rows continuously across all three sections (READY_NOW #1-#3, GOOD_FIT
+  #4-#9, ...) — the numbering is what the user replies to with feedback.
+- READY_NOW + GOOD_FIT combined: maximum 20 rows, prefer 8-12. Omit a section
+  entirely if it's empty — don't print an empty table.
+- WATCH is supplementary, not part of the lead count: cap it at 5 rows and only
+  include an account there if it's genuinely worth tracking, not to pad the
+  report.
 - Opportunity: max 12 words, concrete and specific — not generic filler.
 - Offer: max 5 words, one primary entry offer (do not pitch everything at once:
   thumbnails, thumbnail system, YouTube packaging, titles + thumbnails, editing,
@@ -162,16 +189,17 @@ python3 src/hunt.py commit-state
 Then:
 
 ```
-## WATCHLIST MOVES
+## STATUS CHANGES
 ```
 
-Max 5 accounts whose status materially changed since last run (new HOT, dropped
-off watchlist, etc.). Omit this section entirely if nothing materially changed.
+Max 5 accounts whose status materially changed since last run (e.g. moved into
+READY_NOW, or dropped out of WATCH into REJECTED). Omit this section entirely if
+nothing materially changed.
 
 Then exactly one stats line:
 
 ```
-Raw: X | Filtered: X | Claude: X | Enriched: X | HOT: X | STRONG: X
+Raw: X | Filtered: X | Claude: X | Enriched: X | READY_NOW: X | GOOD_FIT: X
 ```
 
 **Never output:** essays, architecture explanation, a rejected-account report, a
