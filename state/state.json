@@ -34,6 +34,46 @@
       "last_reviewed": "2026-09-05",
       "status": "SEEN"
     },
+    "UC-Yys-S81sa4g2HDREeSpyg": {
+      "fingerprint": "ac8af1b45f02c3e7",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
+    "UC-eGMlIYDgiAwPX7nMcZlgA": {
+      "fingerprint": "f5900eaf0670be4b",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
+    "UC-j9xKUf03QpI-HljSlqK3A": {
+      "confirmed_lead": false,
+      "contact_platform": null,
+      "contact_status": "CONTACT_NEEDED",
+      "contact_value": null,
+      "fingerprint": "dcf3cd87ff057486",
+      "fit_tier": "GOOD_FIT",
+      "history": [
+        {
+          "date": "2026-09-07",
+          "fit": 72,
+          "fit_tier": "GOOD_FIT",
+          "timing": "LOW"
+        }
+      ],
+      "lane": "CIS_EDITING_BUSINESS",
+      "last_fit": 72,
+      "last_reviewed": "2026-09-07",
+      "last_timing": "LOW",
+      "name": "\u041f\u0430\u0448\u0430 \u0412\u041a\u043e\u043d\u0442\u0435\u043a\u0441\u0442\u0435",
+      "next_review_after": "2026-09-21",
+      "pain_confirmed": true,
+      "rejection_reasons": [],
+      "status": "GOOD_FIT"
+    },
+    "UC-nnxU1jKe7dDd8SuNGbESw": {
+      "fingerprint": "82220fbaee2ce0f5",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
     "UC-qwaQSx8GAtUMlw3aBGSzQ": {
       "confirmed_lead": false,
       "contact_status": null,
@@ -88,9 +128,54 @@
       "last_reviewed": "2026-09-05",
       "status": "SEEN"
     },
+    "UC06PnJPleeN0UweUQ7WuR7g": {
+      "fingerprint": "cf8201e98157adee",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
+    "UC0EB8ZiayPHPwxWiWFv2kiw": {
+      "fingerprint": "6cca19395b7d89fe",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
+    "UC0LxcfejP3TawbnXFr663yw": {
+      "fingerprint": "50151a72d2b036ca",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
+    "UC0OH3AYEpMjXBGcz3N6Fmnw": {
+      "fingerprint": "e0ff680b0fb78473",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
+    "UC0QHWhjbe5fGJEPz3sVb6nw": {
+      "fingerprint": "32e158d1be4f876e",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
+    "UC0ohVyiCEKT5i4iDd6RYKng": {
+      "fingerprint": "985c29389ba75539",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
+    "UC0q2mG1APGvgKMKwlJ_34Bg": {
+      "fingerprint": "1a71b1f0296bb1f7",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
     "UC0vHK2huPsoQZEQOrgHdcCg": {
       "fingerprint": "4260acebf71e7fc6",
       "last_reviewed": "2026-09-05",
+      "status": "SEEN"
+    },
+    "UC12K7FCbzFG5BOMJrHn-sog": {
+      "fingerprint": "fbd4b0ca0ebba794",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
+    "UC1D31M_mxQ-gj_QUvaLtp4w": {
+      "fingerprint": "a82f82c3f81a4ae7",
+      "last_reviewed": "2026-09-07",
       "status": "SEEN"
     },
     "UC1DvWD8x4ZdwlmNzpoEwS4A": {
@@ -99,8 +184,8 @@
       "status": "SEEN"
     },
     "UC1GFqqHIBaiCW1ivJJCFTvg": {
-      "fingerprint": "1871beb69b73133b",
-      "last_reviewed": "2026-09-05",
+      "fingerprint": "c625e22168134455",
+      "last_reviewed": "2026-09-07",
       "status": "SEEN"
     },
     "UC1GVeEeIKkVca5OKCsQVuBA": {
@@ -108,9 +193,24 @@
       "last_reviewed": "2026-09-05",
       "status": "SEEN"
     },
+    "UC1Myj674wRVXB9I4c6Hm5zA": {
+      "fingerprint": "1dc7581d99734252",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
+    "UC1PWJsv9i5fCp_mi9YERCHg": {
+      "fingerprint": "15cc03c9a4641965",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
     "UC1bwliGvJogr7cWK0nT2Eag": {
-      "fingerprint": "3439f69fb9d7f559",
-      "last_reviewed": "2026-09-05",
+      "fingerprint": "9242dec16de09cbc",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
+    "UC1k8UFx2meFHRkrVWJyqSnQ": {
+      "fingerprint": "e4942b9128259857",
+      "last_reviewed": "2026-09-07",
       "status": "SEEN"
     },
     "UC1ol5-4wpNzBLRdLOySAUlg": {
@@ -124,8 +224,8 @@
       "status": "SEEN"
     },
     "UC2QdvcrxWMb0i8Ix1ezpVVg": {
-      "fingerprint": "da6acb766ef3a2ee",
-      "last_reviewed": "2026-09-05",
+      "fingerprint": "21c01eb6d48a587d",
+      "last_reviewed": "2026-09-07",
       "status": "SEEN"
     },
     "UC2WOg5o2bVnzARrKf6iNHIQ": {
@@ -135,8 +235,10 @@
     },
     "UC2YdJw53sP73T-lffzrqTZA": {
       "confirmed_lead": false,
+      "contact_platform": null,
       "contact_status": null,
-      "fingerprint": "73a2601db7194e3f",
+      "contact_value": null,
+      "fingerprint": "4f5038c2f54b2920",
       "fit_tier": "REJECTED",
       "history": [
         {
@@ -150,19 +252,35 @@
           "fit": 82,
           "fit_tier": "REJECTED",
           "timing": "HIGH"
+        },
+        {
+          "date": "2026-09-07",
+          "fit": 40,
+          "fit_tier": "REJECTED",
+          "timing": "HIGH"
         }
       ],
       "lane": "GLOBAL_PACKAGING_GAMING",
-      "last_fit": 82,
-      "last_reviewed": "2026-09-05",
+      "last_fit": 40,
+      "last_reviewed": "2026-09-07",
       "last_timing": "HIGH",
       "name": "Aniimo",
       "pain_confirmed": false,
       "rejection_reasons": [
-        "NO_CLEAR_PAIN",
-        "ALREADY_WELL_RESOURCED"
+        "ALREADY_WELL_RESOURCED",
+        "NO_CLEAR_PAIN"
       ],
       "status": "REJECTED"
+    },
+    "UC2rhhAZjuSZFkWVErqZKRDg": {
+      "fingerprint": "fb08c249db6870d8",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
+    "UC3EjQyUeaLxfUWbqwcIx_Tw": {
+      "fingerprint": "4d68eee35770788f",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
     },
     "UC3G-MWHfHciif4WPmX8v5zA": {
       "fingerprint": "1cf35736f4c95f40",
@@ -203,9 +321,14 @@
       "rejection_reasons": [],
       "status": "GOOD_FIT"
     },
+    "UC3jwwdXPihFIOF73ovusufQ": {
+      "fingerprint": "67da8ef57dbfb817",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
     "UC3p5NNrlU6y9YIs4iHW6q_w": {
-      "fingerprint": "a2e40df3d8deb8d3",
-      "last_reviewed": "2026-09-05",
+      "fingerprint": "c353f9ab0ba473c0",
+      "last_reviewed": "2026-09-07",
       "status": "SEEN"
     },
     "UC3qM33hHgedfi7qTKKgIApg": {
@@ -213,14 +336,99 @@
       "last_reviewed": "2026-09-05",
       "status": "SEEN"
     },
+    "UC3vywUwv6B-JB4jmdhZnX7A": {
+      "fingerprint": "32b1831d9adbd29a",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
+    "UC4-79UOlP48-QNGgCko5p2g": {
+      "fingerprint": "e08068718e5a5d9a",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
+    "UC4-aq86VncDjzxEP6OWqMTw": {
+      "fingerprint": "9463bf3d0f888543",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
+    "UC40gOYrHpm7S_30qd79Oo3A": {
+      "fingerprint": "96618a052421ccc7",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
+    "UC4JX40jDee_tINbkjycV4Sg": {
+      "fingerprint": "424cc6ed814466a5",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
+    "UC4LD8VDi7k8oG6MxYb8cLPA": {
+      "confirmed_lead": true,
+      "contact_platform": "Instagram",
+      "contact_status": "CONTACT_FOUND",
+      "contact_value": "@bonge.gumede",
+      "fingerprint": "c4991c206f05211e",
+      "fit_tier": "GOOD_FIT",
+      "history": [
+        {
+          "date": "2026-09-07",
+          "fit": 78,
+          "fit_tier": "GOOD_FIT",
+          "timing": "LOW"
+        }
+      ],
+      "lane": "GLOBAL_PACKAGING_FITNESS",
+      "last_fit": 78,
+      "last_reviewed": "2026-09-07",
+      "last_timing": "LOW",
+      "name": "Bonge Gumede",
+      "next_review_after": "2026-09-21",
+      "pain_confirmed": true,
+      "rejection_reasons": [],
+      "status": "GOOD_FIT"
+    },
     "UC4OXTQRda65jftT6XOEYPOw": {
       "fingerprint": "db075f5cc727469f",
       "last_reviewed": "2026-09-05",
       "status": "SEEN"
     },
+    "UC4TH-kYHsR0jeyQQpQsvUjg": {
+      "fingerprint": "a24e72410a7d7c59",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
+    "UC4WAsHhtleuEGKX9x_Kbd9w": {
+      "fingerprint": "496de846e98e3668",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
+    "UC4e_XPBiiIO4fo4_CucxQeg": {
+      "fingerprint": "35ed21e64d77726a",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
+    "UC4fw9h20Aa48qXAMyFSEY8A": {
+      "fingerprint": "7b535f73abf8e2a8",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
+    "UC57eJ6UNw0LPMpv3PgE-YVA": {
+      "fingerprint": "0d7c70ce7d4c7e0c",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
     "UC58IAk1i-6d5XgHZG4NnffA": {
       "fingerprint": "a4b8c2852ec2e39a",
       "last_reviewed": "2026-09-05",
+      "status": "SEEN"
+    },
+    "UC5AQEUAwCh1sGDvkQtkDWUQ": {
+      "fingerprint": "beb64b48cb979108",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
+    "UC5Gt56Bw2ncsI6-zsBIR7Ww": {
+      "fingerprint": "441f007269974919",
+      "last_reviewed": "2026-09-07",
       "status": "SEEN"
     },
     "UC5HYoAFhsITnWha5Tn0nMWA": {
@@ -233,33 +441,106 @@
       "last_reviewed": "2026-09-05",
       "status": "SEEN"
     },
+    "UC5yOIm4Z_WcI4WkcZN9ZcGw": {
+      "confirmed_lead": false,
+      "contact_platform": null,
+      "contact_status": null,
+      "contact_value": null,
+      "fingerprint": "7b7cc72d2299269b",
+      "fit_tier": "REJECTED",
+      "history": [
+        {
+          "date": "2026-09-07",
+          "fit": 35,
+          "fit_tier": "REJECTED",
+          "timing": "LOW"
+        }
+      ],
+      "lane": "GLOBAL_PACKAGING_ENTERTAINMENT",
+      "last_fit": 35,
+      "last_reviewed": "2026-09-07",
+      "last_timing": "LOW",
+      "name": "bunnytailsREACTS",
+      "pain_confirmed": false,
+      "rejection_reasons": [
+        "NO_CLEAR_PAIN"
+      ],
+      "status": "REJECTED"
+    },
     "UC6H_-Pj7cgmU_lQPIQbcIhA": {
       "fingerprint": "6e2cd98ae3400c9f",
       "last_reviewed": "2026-09-05",
       "status": "SEEN"
     },
     "UC6ITJIW6jgrrP5irR7WoHrw": {
-      "fingerprint": "c579319a95599e1e",
-      "fit_tier": "WATCH",
+      "confirmed_lead": true,
+      "contact_platform": "X",
+      "contact_status": "CONTACT_FOUND",
+      "contact_value": "@seandollwet",
+      "fingerprint": "25763b3675091000",
+      "fit_tier": "GOOD_FIT",
       "history": [
         {
           "date": "2026-09-05",
           "fit": 48,
           "status": "REJECTED",
           "timing": "LOW"
+        },
+        {
+          "date": "2026-09-07",
+          "fit": 89,
+          "fit_tier": "GOOD_FIT",
+          "timing": "LOW"
         }
       ],
-      "lane": "GLOBAL_PACKAGING_AI_TECH",
-      "last_fit": 48,
-      "last_reviewed": "2026-09-05",
+      "lane": "GLOBAL_PACKAGING_FINANCE",
+      "last_fit": 89,
+      "last_reviewed": "2026-09-07",
       "last_timing": "LOW",
       "name": "Sean Dollwet",
-      "next_review_after": "2026-09-30",
-      "status": "WATCH"
+      "next_review_after": "2026-09-21",
+      "pain_confirmed": true,
+      "rejection_reasons": [],
+      "status": "GOOD_FIT"
+    },
+    "UC6XZOhnHQ94D6E6la5M84Pg": {
+      "fingerprint": "8063fd9710fe1b04",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
+    "UC6Z0LUZI6YE0xzL0iushjpg": {
+      "fingerprint": "b27b914e5ae2dc91",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
+    "UC6atuV59rVjreM1S0wFkT8Q": {
+      "fingerprint": "dd7fb086ff01ed3a",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
     },
     "UC6eLZLJbvStE4J2ksmIul2g": {
       "fingerprint": "2df0b741eb1e52fe",
-      "last_reviewed": "2026-09-05",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
+    "UC6gB0MiLIvvFqtqrxbLl8tQ": {
+      "fingerprint": "0d85e5c11eb02128",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
+    "UC6kbWrBinmlQihI-BksayBw": {
+      "fingerprint": "1a4ada0967285454",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
+    "UC76KXISRKvx0rdk0HnYiqew": {
+      "fingerprint": "d600ee12fa5111d4",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
+    "UC772yc3Kp-d_W3UnCg8DADg": {
+      "fingerprint": "9467e8574782e617",
+      "last_reviewed": "2026-09-07",
       "status": "SEEN"
     },
     "UC77ksrKd7P8uXslpuy6HAfQ": {
@@ -272,14 +553,45 @@
       "last_reviewed": "2026-09-05",
       "status": "SEEN"
     },
+    "UC7GN1MKlJmNJ0ETQMTYoRSQ": {
+      "fingerprint": "e8dfb14eb4405d91",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
+    "UC7L8hndz-DlVrHFpOYY009w": {
+      "confirmed_lead": false,
+      "contact_platform": null,
+      "contact_status": null,
+      "contact_value": null,
+      "fingerprint": "f4b6efcb1a10aef2",
+      "fit_tier": "REJECTED",
+      "history": [
+        {
+          "date": "2026-09-07",
+          "fit": 35,
+          "fit_tier": "REJECTED",
+          "timing": "LOW"
+        }
+      ],
+      "lane": "CIS_EDITING_ENTERTAINMENT",
+      "last_fit": 35,
+      "last_reviewed": "2026-09-07",
+      "last_timing": "LOW",
+      "name": "SHIROKOV LITE",
+      "pain_confirmed": false,
+      "rejection_reasons": [
+        "NO_CLEAR_PAIN"
+      ],
+      "status": "REJECTED"
+    },
     "UC7LJr1VobrzhJYL9vXydLLg": {
       "fingerprint": "39a654ff93271f60",
       "last_reviewed": "2026-09-05",
       "status": "SEEN"
     },
     "UC7eAfUjR9gdIjoaoQaS0W-A": {
-      "fingerprint": "e5777ceced44cb28",
-      "last_reviewed": "2026-09-05",
+      "fingerprint": "1821c10b1acd6f1d",
+      "last_reviewed": "2026-09-07",
       "status": "SEEN"
     },
     "UC7eZNThpjgXe5H0QwBN-XsQ": {
@@ -293,8 +605,8 @@
       "status": "SEEN"
     },
     "UC7htuVs06oduI3xSfTdcxPA": {
-      "fingerprint": "84766b2c75481f8b",
-      "last_reviewed": "2026-09-05",
+      "fingerprint": "0f3549928db3ef18",
+      "last_reviewed": "2026-09-07",
       "status": "SEEN"
     },
     "UC7imP-cJhytGgRFC0HvayVQ": {
@@ -307,6 +619,16 @@
       "last_reviewed": "2026-09-05",
       "status": "SEEN"
     },
+    "UC839LimbBVOPh6Kh9_02bQA": {
+      "fingerprint": "d1a5a22b424fa5dc",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
+    "UC8BzJM6_VbZTdiNLD4R1jxQ": {
+      "fingerprint": "678055ffcd5df1ef",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
     "UC8Jvno_rGUhEUnLmRprYQTw": {
       "fingerprint": "469452613d0ffbf3",
       "last_reviewed": "2026-09-05",
@@ -315,6 +637,11 @@
     "UC8KoqPVct0hxxY1gQL4FGhQ": {
       "fingerprint": "fc36d42748ed3500",
       "last_reviewed": "2026-09-05",
+      "status": "SEEN"
+    },
+    "UC8Ql5Y00jompVwsPoT-aGRg": {
+      "fingerprint": "4eb3b306314acdbe",
+      "last_reviewed": "2026-09-07",
       "status": "SEEN"
     },
     "UC8aPgmbaduIocE9OZM3yQ8Q": {
@@ -336,14 +663,19 @@
       "next_review_after": "2026-11-19",
       "status": "REJECTED"
     },
+    "UC8butISFwT-Wl7EV0hUK0BQ": {
+      "fingerprint": "0606cc864d672b1f",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
     "UC8luibVMVbxZIP6BffWGV-g": {
       "fingerprint": "dc0e92db2ffee63c",
       "last_reviewed": "2026-09-05",
       "status": "SEEN"
     },
     "UC92geW3SLehtWvLjdi2EMiA": {
-      "fingerprint": "fb02a2f2bdba64be",
-      "last_reviewed": "2026-09-05",
+      "fingerprint": "813562f38bec714e",
+      "last_reviewed": "2026-09-07",
       "status": "SEEN"
     },
     "UC9DXAsBD4-ITVuvpd68401Q": {
@@ -407,6 +739,11 @@
       "last_reviewed": "2026-09-05",
       "status": "SEEN"
     },
+    "UCAL7oQEN2f2w8DSJTQisCMQ": {
+      "fingerprint": "d4d5e537fde15638",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
     "UCAMtUr1BeqpNU3vdEXPSPvg": {
       "fingerprint": "92daf500b5e02f36",
       "fit_tier": "WATCH",
@@ -425,6 +762,11 @@
       "name": "Brenna M & Co",
       "next_review_after": "2026-09-30",
       "status": "WATCH"
+    },
+    "UCAxUtcgLiq_gopO87VaZM5w": {
+      "fingerprint": "a060da8e6a468a11",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
     },
     "UCAy45-BCu6fVAvB18mexGPA": {
       "fingerprint": "c0ddcceb47da08af",
@@ -454,6 +796,16 @@
       "name": "Dan - Smart Tutorials",
       "next_review_after": "2026-09-30",
       "status": "WATCH"
+    },
+    "UCB9viY9-SBvpx3BdCNLY6FQ": {
+      "fingerprint": "be52d8a78ab805d2",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
+    "UCBJCFQQB18iW57AfEDcjXkg": {
+      "fingerprint": "e98217b338c5ca31",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
     },
     "UCBKXQ-XSihIdD5Xh82F8MpA": {
       "confirmed_lead": false,
@@ -501,9 +853,29 @@
       "last_reviewed": "2026-09-05",
       "status": "SEEN"
     },
+    "UCBiSK_egXfRLYytJLgCswVA": {
+      "fingerprint": "beba5f3c04705174",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
     "UCBl_W5_GtiObF0Cu4NKM1ng": {
       "fingerprint": "2c82cb235775b9c3",
       "last_reviewed": "2026-09-05",
+      "status": "SEEN"
+    },
+    "UCBqg58ZKeKFahL3DVhzaiPQ": {
+      "fingerprint": "7bba999f46c19040",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
+    "UCBrwVHhnSOkq0vRyMYJ9zGQ": {
+      "fingerprint": "d5f9b4eb6b26517f",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
+    "UCBuL1t_4A7OjqSMzOMA7Rsg": {
+      "fingerprint": "d9d2351fd7523263",
+      "last_reviewed": "2026-09-07",
       "status": "SEEN"
     },
     "UCC0-NtJNSdfYZ9pImGsVWuw": {
@@ -550,9 +922,19 @@
       "next_review_after": "2026-09-30",
       "status": "WATCH"
     },
+    "UCCABNvVKvXxO-YqdS9CM8WA": {
+      "fingerprint": "5322029aa5a64f44",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
     "UCCBEm5Y3WVDY7NdUC-dj1xA": {
-      "fingerprint": "63672d57e55bb80b",
-      "last_reviewed": "2026-09-05",
+      "fingerprint": "681a81308da7d679",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
+    "UCCYQrdCvZOPoQO1QFpauPeg": {
+      "fingerprint": "bcab4d83c6b81793",
+      "last_reviewed": "2026-09-07",
       "status": "SEEN"
     },
     "UCCra1t-eIlO3ULyXQQMD9Xw": {
@@ -586,24 +968,74 @@
       "last_reviewed": "2026-09-05",
       "status": "SEEN"
     },
+    "UCCuZZEMuSjmxYO0VbDVJJiQ": {
+      "fingerprint": "0c173c7b466caf0d",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
+    "UCDISGwI24-IIed9QMFyFR4g": {
+      "fingerprint": "cebca7bad44736f6",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
     "UCDdAwPgrrhkla2Q2m81ER_w": {
       "fingerprint": "68891bfa9b4e71fc",
       "last_reviewed": "2026-09-05",
       "status": "SEEN"
     },
     "UCDkMWOyugc9M_dxKn5wfNEQ": {
-      "fingerprint": "4d1bd9449cac4e96",
-      "last_reviewed": "2026-09-05",
+      "fingerprint": "57b9b56d40afe483",
+      "last_reviewed": "2026-09-07",
       "status": "SEEN"
+    },
+    "UCDqAevmQ5Zdmlr6e67KVEhQ": {
+      "confirmed_lead": false,
+      "contact_platform": null,
+      "contact_status": null,
+      "contact_value": null,
+      "fingerprint": "658e35306fc5197d",
+      "fit_tier": "WATCH",
+      "history": [
+        {
+          "date": "2026-09-07",
+          "fit": 55,
+          "fit_tier": "WATCH",
+          "timing": "LOW"
+        }
+      ],
+      "lane": "GLOBAL_PACKAGING_AUTOMOTIVE",
+      "last_fit": 55,
+      "last_reviewed": "2026-09-07",
+      "last_timing": "LOW",
+      "name": "Tofu Auto Works",
+      "next_review_after": "2026-10-02",
+      "pain_confirmed": false,
+      "rejection_reasons": [],
+      "status": "WATCH"
     },
     "UCDsxd7FVqC4n9AiggDXHUqQ": {
       "fingerprint": "2745755b74d7b3ef",
       "last_reviewed": "2026-09-05",
       "status": "SEEN"
     },
+    "UCDzXMJ3WtO-Xk4pfo9HcNQg": {
+      "fingerprint": "e9205634af99a6e3",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
+    "UCEFXABp-urEBEAzR4mq0NFA": {
+      "fingerprint": "ff17f50d077768ca",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
+    "UCEKy74t9zeGpUkB2sIWy8cQ": {
+      "fingerprint": "bd37627143ec86ba",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
     "UCENNtCRTPTdH_IGXs42LuHQ": {
       "fingerprint": "76e36f0e285ac391",
-      "last_reviewed": "2026-09-05",
+      "last_reviewed": "2026-09-07",
       "status": "SEEN"
     },
     "UCENeeLCbbDNAP-664-t26FA": {
@@ -641,6 +1073,16 @@
       "rejection_reasons": [],
       "status": "REJECTED"
     },
+    "UCEW_Fg9lQ2VaS7DLVma01Cg": {
+      "fingerprint": "c26dc62b2584431b",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
+    "UCEXhPLVPylv2sNxlrgUAqbA": {
+      "fingerprint": "80bead2c562779a2",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
     "UCEjSoMnD43v0EsqcuHW2lBw": {
       "fingerprint": "d171e0bc49ed42e3",
       "last_reviewed": "2026-09-05",
@@ -670,14 +1112,19 @@
       "next_review_after": "2026-11-19",
       "status": "REJECTED"
     },
+    "UCErLVQRwd-UXOs0TaNe9zyA": {
+      "fingerprint": "10c852d708d96bc1",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
     "UCF3h1vcDK28tKodVd3vTHFw": {
       "fingerprint": "ca0f0e625e38d48d",
       "last_reviewed": "2026-09-05",
       "status": "SEEN"
     },
     "UCF58Qs39bQDHkEW4mZny-MQ": {
-      "fingerprint": "62ceb42204d3f305",
-      "last_reviewed": "2026-09-05",
+      "fingerprint": "b96aec229fefe7f5",
+      "last_reviewed": "2026-09-07",
       "status": "SEEN"
     },
     "UCFBpVaKCC0ajGps1vf0AgBg": {
@@ -731,6 +1178,16 @@
       "last_reviewed": "2026-09-05",
       "status": "SEEN"
     },
+    "UCG-OuoJc6Zn1vT8l4Jk1X0g": {
+      "fingerprint": "fe039935efedece9",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
+    "UCG8oRHqNm90ZXtAoJMCLeww": {
+      "fingerprint": "f615c3f42213b168",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
     "UCGCPcn5RFvRM0qDrooiV6LQ": {
       "fingerprint": "4a15df292c4adf93",
       "fit_tier": "WATCH",
@@ -755,15 +1212,61 @@
       "last_reviewed": "2026-09-05",
       "status": "SEEN"
     },
+    "UCGLxFgt-x7vARDqWV0hVwZA": {
+      "fingerprint": "f182b803d19a6f20",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
+    "UCGTj5rxqPcxNQMdrCiQVTQg": {
+      "fingerprint": "acec1a66d727f97e",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
+    "UCGq-a57w-aPwyi3pW7XLiHw": {
+      "fingerprint": "7b2bff8b966ff757",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
+    "UCGttrUON87gWfU6dMWm1fcA": {
+      "fingerprint": "75f960ba5687de2f",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
     "UCGwq-i6OgZ0KNCiYhX4rIGQ": {
       "fingerprint": "fc10cc208a8a497d",
-      "last_reviewed": "2026-09-05",
+      "last_reviewed": "2026-09-07",
       "status": "SEEN"
     },
     "UCH9AiQStTnuA8_Ks6mF_awg": {
       "fingerprint": "6f8ea6db7f30725c",
       "last_reviewed": "2026-09-05",
       "status": "SEEN"
+    },
+    "UCHSxl5c1nobpsKtBIyvjKvQ": {
+      "confirmed_lead": false,
+      "contact_platform": null,
+      "contact_status": null,
+      "contact_value": null,
+      "fingerprint": "fe93519bb3cd3f62",
+      "fit_tier": "REJECTED",
+      "history": [
+        {
+          "date": "2026-09-07",
+          "fit": 65,
+          "fit_tier": "REJECTED",
+          "timing": "LOW"
+        }
+      ],
+      "lane": "GLOBAL_PACKAGING_FITNESS",
+      "last_fit": 65,
+      "last_reviewed": "2026-09-07",
+      "last_timing": "LOW",
+      "name": "Michelle Roots Fitness & Nutrition Coach",
+      "pain_confirmed": false,
+      "rejection_reasons": [
+        "NO_CLEAR_PAIN"
+      ],
+      "status": "REJECTED"
     },
     "UCHoMFGNx1BTCYNMO-L4mHYQ": {
       "fingerprint": "7332ce24fd7e45af",
@@ -783,6 +1286,11 @@
       "name": "Startup Grind Local",
       "next_review_after": "2026-09-30",
       "status": "WATCH"
+    },
+    "UCHso6zNngtJlNPGmBHHjPQw": {
+      "fingerprint": "ab900cd6a3eb0152",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
     },
     "UCHtOKabBXhGhzVprvrVHGOg": {
       "fingerprint": "2bce1f538fdb41a4",
@@ -819,6 +1327,16 @@
       "last_reviewed": "2026-09-05",
       "status": "SEEN"
     },
+    "UCI1bdA44MI3IYLO9QspqjgQ": {
+      "fingerprint": "29a374e7415e7dcd",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
+    "UCIQn_PdawKZXdjG9gsZauKA": {
+      "fingerprint": "748c2e0e7022edf2",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
     "UCIUngc2SVw6ZZ9To4yBZDiw": {
       "fingerprint": "3dd93a12c752c23d",
       "last_reviewed": "2026-09-05",
@@ -834,6 +1352,16 @@
       "last_reviewed": "2026-09-05",
       "status": "SEEN"
     },
+    "UCJ-oXMb0r2BjKPiB63nhGcw": {
+      "fingerprint": "a4a1b4ba9af7164d",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
+    "UCJ2Tig1kywPjqjNh0mb54Ug": {
+      "fingerprint": "f0bfd629478f5175",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
     "UCJI2qi_GM8WOvoNFPfWxGnA": {
       "fingerprint": "155c896016235b79",
       "last_reviewed": "2026-09-05",
@@ -842,6 +1370,11 @@
     "UCJdojA93nOeHEXQ5Rwq4ugw": {
       "fingerprint": "f9b9634288922ecd",
       "last_reviewed": "2026-09-05",
+      "status": "SEEN"
+    },
+    "UCK-ybKcDIqnGPAF_AqD2Gew": {
+      "fingerprint": "0c44734c925641d1",
+      "last_reviewed": "2026-09-07",
       "status": "SEEN"
     },
     "UCK0bQb5l-sjMSCpbiCtggOQ": {
@@ -859,9 +1392,50 @@
       "last_reviewed": "2026-09-05",
       "status": "SEEN"
     },
+    "UCKgUCbGaYNE65idBgVSmKbQ": {
+      "confirmed_lead": false,
+      "contact_platform": null,
+      "contact_status": null,
+      "contact_value": null,
+      "fingerprint": "56c903153bba298f",
+      "fit_tier": "REJECTED",
+      "history": [
+        {
+          "date": "2026-09-07",
+          "fit": 40,
+          "fit_tier": "REJECTED",
+          "timing": "LOW"
+        }
+      ],
+      "lane": "GLOBAL_PACKAGING_FINANCE",
+      "last_fit": 40,
+      "last_reviewed": "2026-09-07",
+      "last_timing": "LOW",
+      "name": "Division",
+      "pain_confirmed": false,
+      "rejection_reasons": [
+        "NO_CLEAR_PAIN"
+      ],
+      "status": "REJECTED"
+    },
+    "UCKm5wtFWx0BB2Ln9ijRdz1Q": {
+      "fingerprint": "46535f03ac15c131",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
     "UCKuEXKnxNfLHEteHJ1Zkvqw": {
       "fingerprint": "503b85720ddf81c9",
       "last_reviewed": "2026-09-05",
+      "status": "SEEN"
+    },
+    "UCL-HTw4Wfi9Igh9r1CBrrDA": {
+      "fingerprint": "032a897f2f33de6d",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
+    "UCLBwctrI2cVsTheATmwscGQ": {
+      "fingerprint": "2e559cc7b356bb18",
+      "last_reviewed": "2026-09-07",
       "status": "SEEN"
     },
     "UCLL5dVnel0uRX3aiyVXQYkw": {
@@ -877,6 +1451,11 @@
     "UCLe6TpkrjKVWt_zND3_MKBw": {
       "fingerprint": "01a43ebe6029c387",
       "last_reviewed": "2026-09-05",
+      "status": "SEEN"
+    },
+    "UCLe_q9axMaeTbjN0hy1Z9xA": {
+      "fingerprint": "8615378b8fd9f9ac",
+      "last_reviewed": "2026-09-07",
       "status": "SEEN"
     },
     "UCLnOom9ukG12eOBACPhSzMQ": {
@@ -903,9 +1482,19 @@
       "next_review_after": "2026-09-30",
       "status": "WATCH"
     },
+    "UCMAPmhtSb4nkayU8owftAAA": {
+      "fingerprint": "d42e92e25ec0348e",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
+    "UCMBh7ZEMCgkDp6ZytxDg6gQ": {
+      "fingerprint": "137f00f716966a86",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
     "UCMCW4nO_BYnuTYKSjJ_boAA": {
-      "fingerprint": "4c27212a4b74b14e",
-      "last_reviewed": "2026-09-05",
+      "fingerprint": "2a41a7ebad7ad617",
+      "last_reviewed": "2026-09-07",
       "status": "SEEN"
     },
     "UCMFxukXVkmcFFAjoTF2rhGQ": {
@@ -926,6 +1515,11 @@
     "UCMhCQN9vNKjLB4Pfv-9cJlg": {
       "fingerprint": "c541e4e55f7a49cd",
       "last_reviewed": "2026-09-05",
+      "status": "SEEN"
+    },
+    "UCMknq3WMbfdFHM3-4zHok-g": {
+      "fingerprint": "e97c629f85bb97e9",
+      "last_reviewed": "2026-09-07",
       "status": "SEEN"
     },
     "UCMqVDR6m8rfTwIYDO4TrLyQ": {
@@ -975,14 +1569,29 @@
       "last_reviewed": "2026-09-05",
       "status": "SEEN"
     },
+    "UCNOFetVSNSHpJJXg_B3YIjw": {
+      "fingerprint": "7c60d435b706a915",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
     "UCNU9oR7HzWD02LShddSOoeg": {
       "fingerprint": "fabdf1611ff18a50",
       "last_reviewed": "2026-09-05",
       "status": "SEEN"
     },
+    "UCNUrKMxWXEYgtEmB-Pn_VUA": {
+      "fingerprint": "7514fd72aa5287b7",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
     "UCNXWqRPePQc9UYkki6uy3FA": {
       "fingerprint": "9cac9c86b0e968f5",
       "last_reviewed": "2026-09-05",
+      "status": "SEEN"
+    },
+    "UCNYejKoEJ84iGgXPwTBkCCg": {
+      "fingerprint": "9cd26b67e954f2dd",
+      "last_reviewed": "2026-09-07",
       "status": "SEEN"
     },
     "UCNdNJJNfKtLq-jn9Uud12Gg": {
@@ -991,7 +1600,11 @@
       "status": "SEEN"
     },
     "UCNopQIzBSbRCNjslnsdYp7A": {
-      "fingerprint": "7260c6db2f2f7a3d",
+      "confirmed_lead": false,
+      "contact_platform": null,
+      "contact_status": null,
+      "contact_value": null,
+      "fingerprint": "65b46f1c73218490",
       "fit_tier": "REJECTED",
       "history": [
         {
@@ -999,14 +1612,23 @@
           "fit": 42,
           "fit_tier": "REJECTED",
           "timing": "LOW"
+        },
+        {
+          "date": "2026-09-07",
+          "fit": 25,
+          "fit_tier": "REJECTED",
+          "timing": "LOW"
         }
       ],
       "lane": "GLOBAL_PACKAGING_GAMING",
-      "last_fit": 42,
-      "last_reviewed": "2026-09-05",
+      "last_fit": 25,
+      "last_reviewed": "2026-09-07",
       "last_timing": "LOW",
       "name": "KAIZUKE FF",
-      "next_review_after": "2026-11-19",
+      "pain_confirmed": false,
+      "rejection_reasons": [
+        "NO_CLEAR_PAIN"
+      ],
       "status": "REJECTED"
     },
     "UCO-pBwoHl40sZFtRhKI-Blw": {
@@ -1033,9 +1655,19 @@
       "last_reviewed": "2026-09-05",
       "status": "SEEN"
     },
+    "UCO5j2yP5YhBaZVtEi2vIKlQ": {
+      "fingerprint": "22baf34de54409f1",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
     "UCO8YHPk43zHgfUFWv9FUttg": {
       "fingerprint": "9f537b7aac971872",
       "last_reviewed": "2026-09-05",
+      "status": "SEEN"
+    },
+    "UCONax_0CMWVL6b7tHulEQhA": {
+      "fingerprint": "5f97cd5cb8a04dfd",
+      "last_reviewed": "2026-09-07",
       "status": "SEEN"
     },
     "UCOO1R-H68cdwXFN748O8ZkA": {
@@ -1048,6 +1680,31 @@
       "last_reviewed": "2026-09-05",
       "status": "SEEN"
     },
+    "UCOXRjenlq9PmlTqd_JhAbMQ": {
+      "confirmed_lead": false,
+      "contact_platform": null,
+      "contact_status": null,
+      "contact_value": null,
+      "fingerprint": "b729371d813b31de",
+      "fit_tier": "WATCH",
+      "history": [
+        {
+          "date": "2026-09-07",
+          "fit": 50,
+          "fit_tier": "WATCH",
+          "timing": "LOW"
+        }
+      ],
+      "lane": "CIS_EDITING_TECH",
+      "last_fit": 50,
+      "last_reviewed": "2026-09-07",
+      "last_timing": "LOW",
+      "name": "Eric Tech",
+      "next_review_after": "2026-10-02",
+      "pain_confirmed": false,
+      "rejection_reasons": [],
+      "status": "WATCH"
+    },
     "UCOmQK13PhdtEJp3_4PxH07g": {
       "fingerprint": "fd179cd31dc9688d",
       "last_reviewed": "2026-09-05",
@@ -1056,6 +1713,11 @@
     "UCOyct1i3qxk3QlDk2MT6KMQ": {
       "fingerprint": "1a0875b863efe4ae",
       "last_reviewed": "2026-09-05",
+      "status": "SEEN"
+    },
+    "UCOynRdpGiTCNFhCgD0RTe1w": {
+      "fingerprint": "dfd5774ec41031b7",
+      "last_reviewed": "2026-09-07",
       "status": "SEEN"
     },
     "UCOzHUgAqUgTS6h6pMSBkFcw": {
@@ -1083,6 +1745,11 @@
       "last_reviewed": "2026-09-05",
       "status": "SEEN"
     },
+    "UCPHzAcg5sT62cO5hgAeTpVg": {
+      "fingerprint": "ae192061aaf1334c",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
     "UCPUBgWSsvuYwyRsGQ_Vt8lg": {
       "fingerprint": "826174452f94688e",
       "last_reviewed": "2026-09-05",
@@ -1091,6 +1758,21 @@
     "UCPbwhExawYrn9xxI21TFfyw": {
       "fingerprint": "6a01f40930d293e4",
       "last_reviewed": "2026-09-05",
+      "status": "SEEN"
+    },
+    "UCPgyMcOzwYQ88sStTqBDFtA": {
+      "fingerprint": "16636aae6e4c6bf8",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
+    "UCPk2s5c4R_d-EUUNvFFODoA": {
+      "fingerprint": "9fbc462600d963d4",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
+    "UCPlQpvns_JGg0YEhfRMZQZg": {
+      "fingerprint": "7f7ce38a33233aed",
+      "last_reviewed": "2026-09-07",
       "status": "SEEN"
     },
     "UCPrVjDohW98GDxq99E8eHUQ": {
@@ -1132,9 +1814,19 @@
       "last_reviewed": "2026-09-05",
       "status": "SEEN"
     },
+    "UCQCuNba9cPZJngLomPEaddg": {
+      "fingerprint": "788b462e5a7a8187",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
     "UCQIycDaLsBpMKjOCeaKUYVg": {
       "fingerprint": "d955af1d6370b0b1",
       "last_reviewed": "2026-09-05",
+      "status": "SEEN"
+    },
+    "UCQZvOz4SFewcoK3HClDNIig": {
+      "fingerprint": "94d7d4a3f1af5879",
+      "last_reviewed": "2026-09-07",
       "status": "SEEN"
     },
     "UCQ_AFiT74oS9BmLZIHpJCYg": {
@@ -1145,6 +1837,21 @@
     "UCQoxJOkwaCgyzQtiuAIDcuw": {
       "fingerprint": "40fd00396a63a675",
       "last_reviewed": "2026-09-05",
+      "status": "SEEN"
+    },
+    "UCQv1R-9u8zYejd8Rthh350w": {
+      "fingerprint": "9d506013b533af33",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
+    "UCQxSZSDVITnAIYiBdCtnbOA": {
+      "fingerprint": "e47b3030b85b3c72",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
+    "UCR6S7H_r5ZW1ilKeOO3FCBw": {
+      "fingerprint": "3e15ed6613b95367",
+      "last_reviewed": "2026-09-07",
       "status": "SEEN"
     },
     "UCR9Z-4R1Xqq1mlpOBjqQNiw": {
@@ -1182,19 +1889,29 @@
       ],
       "status": "REJECTED"
     },
+    "UCRofZD-gjScTDlpJyfOuI9w": {
+      "fingerprint": "279a39ee86267921",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
     "UCS8WNfPtyV709uQWqCBcKzw": {
       "fingerprint": "5dae613756b3bc6c",
       "last_reviewed": "2026-09-05",
       "status": "SEEN"
     },
     "UCSChftzAtfsOOb5opd9SYYA": {
-      "fingerprint": "7a8f25d59c7c28c2",
-      "last_reviewed": "2026-09-05",
+      "fingerprint": "f4271c0e0cab3f9c",
+      "last_reviewed": "2026-09-07",
       "status": "SEEN"
     },
     "UCSKqKPXmxfRZYvA9Z1YDgpw": {
       "fingerprint": "2aba06b1e6dc8683",
       "last_reviewed": "2026-09-05",
+      "status": "SEEN"
+    },
+    "UCS_2dapS69ABxt6NRHyefGQ": {
+      "fingerprint": "642adc36b4748801",
+      "last_reviewed": "2026-09-07",
       "status": "SEEN"
     },
     "UCSdQyusMFMRZ95s2wFUWCXQ": {
@@ -1209,12 +1926,43 @@
     },
     "UCTL6B3G7RBH7ALVRiJLnDRw": {
       "fingerprint": "ef746069ac9680b3",
-      "last_reviewed": "2026-09-05",
+      "last_reviewed": "2026-09-07",
       "status": "SEEN"
     },
     "UCTQKT5QqO3h7y32G8VzuySQ": {
       "fingerprint": "b9da7a8db85c8e70",
       "last_reviewed": "2026-09-05",
+      "status": "SEEN"
+    },
+    "UCTTrMz2JlMqVv3hZ_o7JhsA": {
+      "confirmed_lead": false,
+      "contact_platform": null,
+      "contact_status": null,
+      "contact_value": null,
+      "fingerprint": "bb815b134e2262a4",
+      "fit_tier": "REJECTED",
+      "history": [
+        {
+          "date": "2026-09-07",
+          "fit": 30,
+          "fit_tier": "REJECTED",
+          "timing": "LOW"
+        }
+      ],
+      "lane": "GLOBAL_PACKAGING_EDUCATION",
+      "last_fit": 30,
+      "last_reviewed": "2026-09-07",
+      "last_timing": "LOW",
+      "name": "Avika",
+      "pain_confirmed": false,
+      "rejection_reasons": [
+        "NO_CLEAR_PAIN"
+      ],
+      "status": "REJECTED"
+    },
+    "UCTW0FUhT0m-Bqg2trTbSs0g": {
+      "fingerprint": "1de070f19ade279b",
+      "last_reviewed": "2026-09-07",
       "status": "SEEN"
     },
     "UCTyvAMnHg_Zta5AecsD83eA": {
@@ -1237,9 +1985,34 @@
       "last_reviewed": "2026-09-05",
       "status": "SEEN"
     },
+    "UCUSkgwNQ3k5-pBwBg0No5EQ": {
+      "fingerprint": "3edf88fa12c381c6",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
+    "UCUWxS5nrZxFF38WeyHsMVKw": {
+      "fingerprint": "503d7c9796ca54da",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
+    "UCUsmj5wWRFeKNDBsTb9SoRQ": {
+      "fingerprint": "148c768c6dbc9df6",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
     "UCUvaFlGctnsY8hg9kEGM0TA": {
       "fingerprint": "c7547a3af22a9c5b",
       "last_reviewed": "2026-09-05",
+      "status": "SEEN"
+    },
+    "UCUyDOdBWhC1MCxEjC46d-zw": {
+      "fingerprint": "ad14ef4575bd5647",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
+    "UCV65EZyTRpztQ-uM3VnsANQ": {
+      "fingerprint": "878918364ca19d76",
+      "last_reviewed": "2026-09-07",
       "status": "SEEN"
     },
     "UCVCa-_J1CLBzpT52EwuZ3yQ": {
@@ -1251,6 +2024,32 @@
       "fingerprint": "ad733af57031b83e",
       "last_reviewed": "2026-09-05",
       "status": "SEEN"
+    },
+    "UCVK1gJujQ7o2nJ0eW_p_cqg": {
+      "confirmed_lead": false,
+      "contact_platform": null,
+      "contact_status": null,
+      "contact_value": null,
+      "fingerprint": "84f830b3e4ca95b2",
+      "fit_tier": "REJECTED",
+      "history": [
+        {
+          "date": "2026-09-07",
+          "fit": 35,
+          "fit_tier": "REJECTED",
+          "timing": "LOW"
+        }
+      ],
+      "lane": "CIS_EDITING_GAMING",
+      "last_fit": 35,
+      "last_reviewed": "2026-09-07",
+      "last_timing": "LOW",
+      "name": "89STRE\u0410M",
+      "pain_confirmed": false,
+      "rejection_reasons": [
+        "NO_CLEAR_PAIN"
+      ],
+      "status": "REJECTED"
     },
     "UCVNKdkLzWuy1oLuCuCv4NCA": {
       "fingerprint": "eeaa8dbc0b7ad54d",
@@ -1306,6 +2105,11 @@
       ],
       "status": "REJECTED"
     },
+    "UCVbj3oL3XhGxWQlboXwXGdA": {
+      "fingerprint": "7487938f951cd7f7",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
     "UCVdRlBpp6sBgORTEnCqh73g": {
       "fingerprint": "ff159d615c4fdfaa",
       "last_reviewed": "2026-09-05",
@@ -1331,9 +2135,24 @@
       "last_reviewed": "2026-09-05",
       "status": "SEEN"
     },
+    "UCWXgdrB3OeJk_ALHPfKXTFA": {
+      "fingerprint": "a2398f2079dda1bb",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
     "UCWabu0vYfIQA_va-AydZCIA": {
       "fingerprint": "2f8b1ac6a11bacba",
       "last_reviewed": "2026-09-05",
+      "status": "SEEN"
+    },
+    "UCWcBf6rz8n6lSqVFlWhG2og": {
+      "fingerprint": "e2ab54db1a1c7b6f",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
+    "UCWdtqDulIBaweRSnYn9pEbQ": {
+      "fingerprint": "9e4ec733a5121cca",
+      "last_reviewed": "2026-09-07",
       "status": "SEEN"
     },
     "UCWkIV8xqWoDEZ15xSBxTr3Q": {
@@ -1371,9 +2190,29 @@
       "last_reviewed": "2026-09-05",
       "status": "SEEN"
     },
+    "UCX6-zqHbJh3aky2UvRB8zvw": {
+      "fingerprint": "4ae6a10f2a60fdb5",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
     "UCX843E2jz5UkX0x8_CAaGCw": {
       "fingerprint": "7b58bf67b33e1166",
       "last_reviewed": "2026-09-05",
+      "status": "SEEN"
+    },
+    "UCXB19XeXpHM_mlqLjuOJCYA": {
+      "fingerprint": "3a44535fbe84ebc4",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
+    "UCXDapZH3uMZ-FZ4HNxS05Lg": {
+      "fingerprint": "e9fac2d9fb8176ed",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
+    "UCY0xFFEc7viwKoPAAdZ6U3Q": {
+      "fingerprint": "831fabd99f432c02",
+      "last_reviewed": "2026-09-07",
       "status": "SEEN"
     },
     "UCY6N8zZhs2V7gNTUxPuKWoQ": {
@@ -1401,6 +2240,11 @@
       "last_reviewed": "2026-09-05",
       "status": "SEEN"
     },
+    "UCYgY3h0H9_ZxAUpV0boE7gA": {
+      "fingerprint": "f2918175c708bb5f",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
     "UCYgzwgt29lL6KhV4_B9phOQ": {
       "fingerprint": "e2fa46013e8b4908",
       "last_reviewed": "2026-09-05",
@@ -1412,8 +2256,8 @@
       "status": "SEEN"
     },
     "UCZGRQllSXCu8lEAuWngVMmA": {
-      "fingerprint": "bfc739d8dc58a4b5",
-      "last_reviewed": "2026-09-05",
+      "fingerprint": "bb2ba86e6e8edbf9",
+      "last_reviewed": "2026-09-07",
       "status": "SEEN"
     },
     "UCZKJ_hgLq_jjoNtXF0PBDSw": {
@@ -1431,6 +2275,16 @@
       "last_reviewed": "2026-09-05",
       "status": "SEEN"
     },
+    "UCZRoADzkPMtlOzD-7cebGnw": {
+      "fingerprint": "40645c5b96bd795f",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
+    "UCZWySQbkM8AFec4IbARpNyQ": {
+      "fingerprint": "666ffb1579f6f61f",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
     "UCZpqwb8ud7T5uY01AKX-oYA": {
       "fingerprint": "b36d6886eefc0cba",
       "last_reviewed": "2026-09-05",
@@ -1439,6 +2293,16 @@
     "UCZtHjF_PmRI2MNfEhi9ADFg": {
       "fingerprint": "36894e9a9b1e9e95",
       "last_reviewed": "2026-09-05",
+      "status": "SEEN"
+    },
+    "UCZvBCMjsZYTme_XmkUfjZLQ": {
+      "fingerprint": "aee05e60462e83e5",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
+    "UC_1dFY0Pr31wAf0pqImpbOQ": {
+      "fingerprint": "c29a2961d23c4552",
+      "last_reviewed": "2026-09-07",
       "status": "SEEN"
     },
     "UC_3oKG5Szq-m6Xz-MjRZgpw": {
@@ -1451,6 +2315,11 @@
       "last_reviewed": "2026-09-05",
       "status": "SEEN"
     },
+    "UC_B5BParHXi2qD9B1KjL9uQ": {
+      "fingerprint": "0ed7ac3543d24a6c",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
     "UC_DlcI0msjcMdRM736f3cnQ": {
       "fingerprint": "e68a049c852eb692",
       "last_reviewed": "2026-09-05",
@@ -1458,12 +2327,22 @@
     },
     "UC_DunzgxDrqK343shToJICA": {
       "fingerprint": "061df830a7778fda",
-      "last_reviewed": "2026-09-05",
+      "last_reviewed": "2026-09-07",
       "status": "SEEN"
     },
     "UC_H0aZQd1G8xsiM-hsF6Npw": {
       "fingerprint": "c2ed529e118c4f3f",
       "last_reviewed": "2026-09-05",
+      "status": "SEEN"
+    },
+    "UC_HtEPrXQYKJ9Pihwg0u1Rw": {
+      "fingerprint": "b1ce1187fa81f348",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
+    "UC_TkLfpVw-ldCMobcLBiV2w": {
+      "fingerprint": "a666297cbfe28529",
+      "last_reviewed": "2026-09-07",
       "status": "SEEN"
     },
     "UC_dd6GbjaWEhLGzxvcxWuGw": {
@@ -1474,6 +2353,16 @@
     "UC_ec-x00g7RNAlGcaVm4QNg": {
       "fingerprint": "3af5534b45dc7ad4",
       "last_reviewed": "2026-09-05",
+      "status": "SEEN"
+    },
+    "UCa1ELTa3dVK_mhrNLnrQsbQ": {
+      "fingerprint": "b36e71cc93ae16f9",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
+    "UCa1i_cvfI5xWOjZhUhVakQQ": {
+      "fingerprint": "c26d1dc9e2062e30",
+      "last_reviewed": "2026-09-07",
       "status": "SEEN"
     },
     "UCafpueX9hFLls24ed6UddEQ": {
@@ -1499,6 +2388,11 @@
     "UCbBEkjzkcgOZgxDwGgicIcg": {
       "fingerprint": "e63afdedf064fde2",
       "last_reviewed": "2026-09-05",
+      "status": "SEEN"
+    },
+    "UCbBU02rexDFes6JjiA63zNg": {
+      "fingerprint": "f2bf8efd584bcfa4",
+      "last_reviewed": "2026-09-07",
       "status": "SEEN"
     },
     "UCbJR36yIOzXrrAhs23wmxEA": {
@@ -1532,9 +2426,14 @@
       ],
       "status": "REJECTED"
     },
+    "UCbeFGgljFYlduwUbhGdqxnw": {
+      "fingerprint": "5e3a9b809e22b179",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
     "UCbgq4Y6WypFnBBzrBDgR0zA": {
-      "fingerprint": "59bbb01b04a3a054",
-      "last_reviewed": "2026-09-05",
+      "fingerprint": "5f729a914f85cfd8",
+      "last_reviewed": "2026-09-07",
       "status": "SEEN"
     },
     "UCbsJaeNLXZNVdjnY9y9FFXw": {
@@ -1603,6 +2502,11 @@
       "last_reviewed": "2026-09-05",
       "status": "SEEN"
     },
+    "UCcKznubCyfVHGT-aBl9ZJGw": {
+      "fingerprint": "35938eea2927e018",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
     "UCcLTeuDmHE84Rb8fPmqpT2g": {
       "fingerprint": "13cbb492faf89047",
       "last_reviewed": "2026-09-05",
@@ -1613,9 +2517,19 @@
       "last_reviewed": "2026-09-05",
       "status": "SEEN"
     },
+    "UCcOFfDzXd8qiVCDryRbCt7A": {
+      "fingerprint": "8dd873f2c91e52b7",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
     "UCcVqCJ_9owb1zM43vqswMNQ": {
       "fingerprint": "7bbf2ae51f33519e",
       "last_reviewed": "2026-09-05",
+      "status": "SEEN"
+    },
+    "UCcnxA79vDhX0_dFpge3UvNg": {
+      "fingerprint": "5d6a40a8a82b01a7",
+      "last_reviewed": "2026-09-07",
       "status": "SEEN"
     },
     "UCcol6Mzd6jz9CI8AYWo7tQg": {
@@ -1641,6 +2555,21 @@
     "UCctI0doUr2CiA8FfzZnm_5A": {
       "fingerprint": "b6e328db011fc4d9",
       "last_reviewed": "2026-09-05",
+      "status": "SEEN"
+    },
+    "UCcyq283he07B7_KUX07mmtA": {
+      "fingerprint": "6ddeddf4418ee037",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
+    "UCdP_ixqLRmnFxLDGuYzY4pw": {
+      "fingerprint": "d0e1b7ea893dc8d8",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
+    "UCdRmrCi9P7VMmEWFCeNSDpA": {
+      "fingerprint": "1f9b6da63bae0f33",
+      "last_reviewed": "2026-09-07",
       "status": "SEEN"
     },
     "UCdTzzwf2A8WcXtOJGlMeCMg": {
@@ -1683,9 +2612,24 @@
       ],
       "status": "REJECTED"
     },
+    "UCdukEcJCWR_ajtx6quftiNQ": {
+      "fingerprint": "c1e977248ce5348c",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
+    "UCeO35axUlsoevHiRUyjbPqA": {
+      "fingerprint": "2f7999050a10331d",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
     "UCeOlqDoElKyft8VFexJnbnA": {
       "fingerprint": "73429821d88a82d4",
-      "last_reviewed": "2026-09-05",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
+    "UCeVMnSShP_Iviwkknt83cww": {
+      "fingerprint": "2c4b665413e28c73",
+      "last_reviewed": "2026-09-07",
       "status": "SEEN"
     },
     "UCeXvN8PxRKe6c6_fakTLyUw": {
@@ -1731,7 +2675,7 @@
     },
     "UCefl-5pmhZmljwZTE2KrcdA": {
       "fingerprint": "54608d32aa6d01cb",
-      "last_reviewed": "2026-09-05",
+      "last_reviewed": "2026-09-07",
       "status": "SEEN"
     },
     "UCeiBi8gptAwNoIHrZ3OUUbw": {
@@ -1744,9 +2688,44 @@
       "last_reviewed": "2026-09-05",
       "status": "SEEN"
     },
+    "UCemKrnBU6PDqkhw8arNwF4Q": {
+      "confirmed_lead": false,
+      "contact_platform": null,
+      "contact_status": null,
+      "contact_value": null,
+      "fingerprint": "ba4a01be4b006bc2",
+      "fit_tier": "WATCH",
+      "history": [
+        {
+          "date": "2026-09-07",
+          "fit": 45,
+          "fit_tier": "WATCH",
+          "timing": "LOW"
+        }
+      ],
+      "lane": "GLOBAL_PACKAGING_FITNESS",
+      "last_fit": 45,
+      "last_reviewed": "2026-09-07",
+      "last_timing": "LOW",
+      "name": "VeganProteins",
+      "next_review_after": "2026-10-02",
+      "pain_confirmed": false,
+      "rejection_reasons": [],
+      "status": "WATCH"
+    },
     "UCf5G5U3Y9pxyUWtx_gYKPbQ": {
       "fingerprint": "20ab28b0e1ea9d5c",
       "last_reviewed": "2026-09-05",
+      "status": "SEEN"
+    },
+    "UCf6t6uF-xMpstEVnnGrP7Ow": {
+      "fingerprint": "67d906ed5576543e",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
+    "UCfD-Msw32P2TbO0xhz-oVnA": {
+      "fingerprint": "353eccd602b92976",
+      "last_reviewed": "2026-09-07",
       "status": "SEEN"
     },
     "UCfDJfdU0aCiMTluHXKDahYg": {
@@ -1759,9 +2738,39 @@
       "last_reviewed": "2026-09-05",
       "status": "SEEN"
     },
+    "UCfRqvJFJ6LLQ62lKmOUXATw": {
+      "confirmed_lead": false,
+      "contact_platform": null,
+      "contact_status": null,
+      "contact_value": null,
+      "fingerprint": "08a89fff18937e88",
+      "fit_tier": "WATCH",
+      "history": [
+        {
+          "date": "2026-09-07",
+          "fit": 62,
+          "fit_tier": "WATCH",
+          "timing": "LOW"
+        }
+      ],
+      "lane": "GLOBAL_PACKAGING_FINANCE",
+      "last_fit": 62,
+      "last_reviewed": "2026-09-07",
+      "last_timing": "LOW",
+      "name": "Nick True - MappedOutMoney",
+      "next_review_after": "2026-10-02",
+      "pain_confirmed": false,
+      "rejection_reasons": [],
+      "status": "WATCH"
+    },
+    "UCfXWr3BnRWNO2DxNp6P5ozw": {
+      "fingerprint": "64966e872586b8cd",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
     "UCfjC7haue0jIqDaFfhW89bA": {
       "fingerprint": "7ddc62418470f90b",
-      "last_reviewed": "2026-09-05",
+      "last_reviewed": "2026-09-07",
       "status": "SEEN"
     },
     "UCfocHZTpBcD1CIZ4EJ6kT4A": {
@@ -1769,9 +2778,29 @@
       "last_reviewed": "2026-09-05",
       "status": "SEEN"
     },
+    "UCgKFOz_KrMbmypWrawtzDQg": {
+      "fingerprint": "87514e641f8da15a",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
     "UCgKTJAN-IrVyX-jIJ5INEhA": {
       "fingerprint": "a0fc360b39945117",
       "last_reviewed": "2026-09-05",
+      "status": "SEEN"
+    },
+    "UCgWF-ljs8fXb8_BrGB2mGWw": {
+      "fingerprint": "722eaeb8d99f9352",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
+    "UCg_LLr4aK0cASQbcXB8VB-w": {
+      "fingerprint": "ef036111dca7cca9",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
+    "UCgbtS3cmbl9xLhxu7WwOTUg": {
+      "fingerprint": "58d7ba4f3232d9c1",
+      "last_reviewed": "2026-09-07",
       "status": "SEEN"
     },
     "UCggPd3Vf9ooG2r4I_ZNWBzA": {
@@ -1792,6 +2821,11 @@
       "name": "Wint Wealth",
       "next_review_after": "2026-09-30",
       "status": "WATCH"
+    },
+    "UCgkeXJ0beDGPUfbFkv1dDQA": {
+      "fingerprint": "beef99be6689d9e4",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
     },
     "UCgxj31L32Z0LBybG0XbEeaw": {
       "fingerprint": "1330b0d271caefa1",
@@ -1841,6 +2875,16 @@
       "last_reviewed": "2026-09-05",
       "status": "SEEN"
     },
+    "UChDKyKQ59fYz3JO2fl0Z6sg": {
+      "fingerprint": "f6f3f509a1e6a60a",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
+    "UChFnGuCZ_Fb4DhbxRm9N9UQ": {
+      "fingerprint": "efa63d48d444719d",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
     "UChJURHebSGJtyl_2eVG03VA": {
       "fingerprint": "7d4ee58161cb4e32",
       "last_reviewed": "2026-09-05",
@@ -1868,6 +2912,11 @@
     "UChQ17UlC6lAYyWPnWeB_1vA": {
       "fingerprint": "927a1c63a7ecb3e1",
       "last_reviewed": "2026-09-05",
+      "status": "SEEN"
+    },
+    "UChRlaISXbl2gECFAmDzxgzg": {
+      "fingerprint": "ec286f4832b4d22c",
+      "last_reviewed": "2026-09-07",
       "status": "SEEN"
     },
     "UChZkKFm9d7ZvhRESa3JLxjQ": {
@@ -1899,14 +2948,59 @@
       "next_review_after": "2026-09-30",
       "status": "WATCH"
     },
+    "UChkC4u4KdnIDFh9hPqExLDg": {
+      "confirmed_lead": false,
+      "contact_platform": null,
+      "contact_status": "CONTACT_NEEDED",
+      "contact_value": null,
+      "fingerprint": "e89e99e5813685bb",
+      "fit_tier": "GOOD_FIT",
+      "history": [
+        {
+          "date": "2026-09-07",
+          "fit": 70,
+          "fit_tier": "GOOD_FIT",
+          "timing": "LOW"
+        }
+      ],
+      "lane": "GLOBAL_PACKAGING_AI_TECH",
+      "last_fit": 70,
+      "last_reviewed": "2026-09-07",
+      "last_timing": "LOW",
+      "name": "Low Level Game Dev",
+      "next_review_after": "2026-09-21",
+      "pain_confirmed": true,
+      "rejection_reasons": [],
+      "status": "GOOD_FIT"
+    },
+    "UChm8i-vg9qdUDl0qwB2U8Tg": {
+      "fingerprint": "ca73a8579ed51bbf",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
+    "UChup1h4_cPI0klwOq0Fa8zA": {
+      "fingerprint": "ea2b8a70fe0da43c",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
+    "UCi2MD4bkS-ErjUv8THdMe4g": {
+      "fingerprint": "b0114c3cff3ce6b5",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
     "UCi7GJNg51C3jgmYTUwqoUXA": {
-      "fingerprint": "7afe8b05a53f615e",
-      "last_reviewed": "2026-09-05",
+      "fingerprint": "f91d94ec3c90b9c6",
+      "last_reviewed": "2026-09-07",
       "status": "SEEN"
     },
     "UCiDQrA4M5dPUhb8zsMwbEqg": {
       "fingerprint": "6b954109a6923be6",
       "last_reviewed": "2026-09-05",
+      "status": "SEEN"
+    },
+    "UCiE4-9XNtXBp5LuHAPNhGSw": {
+      "fingerprint": "aeda05855bba0098",
+      "last_reviewed": "2026-09-07",
       "status": "SEEN"
     },
     "UCiF52fQwIFBcHfmuk086cUA": {
@@ -1915,8 +3009,8 @@
       "status": "SEEN"
     },
     "UCiZVMOinTQGb8HQu53VbV4Q": {
-      "fingerprint": "fa19674d602b7f3e",
-      "last_reviewed": "2026-09-05",
+      "fingerprint": "2595e059d9bb8040",
+      "last_reviewed": "2026-09-07",
       "status": "SEEN"
     },
     "UCiglVNXBgjgzRniFCdWFVJA": {
@@ -1924,14 +3018,34 @@
       "last_reviewed": "2026-09-05",
       "status": "SEEN"
     },
+    "UCinBbmsle_NUIWNubeKHlBw": {
+      "fingerprint": "b421e62ac3164312",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
     "UCitnv5n8T5yYvpGl5UNPa-g": {
       "fingerprint": "49eb73e8db9fb642",
       "last_reviewed": "2026-09-05",
       "status": "SEEN"
     },
+    "UCj7bSQWlq2O4lhGxGll5SUA": {
+      "fingerprint": "74d12d9b95d7272d",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
     "UCj9yUGuMVVdm2DqyvJPUeUQ": {
       "fingerprint": "6470e87fcde5bc76",
       "last_reviewed": "2026-09-05",
+      "status": "SEEN"
+    },
+    "UCjFztUZFRTDd1HTHxTFIXfQ": {
+      "fingerprint": "5c6b52509b632f34",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
+    "UCjTI56O6ibUavFAKNmpqOrg": {
+      "fingerprint": "f5c7dfa13ca10b70",
+      "last_reviewed": "2026-09-07",
       "status": "SEEN"
     },
     "UCjWs7BxyjO5SLqevxSmp4vQ": {
@@ -1940,8 +3054,8 @@
       "status": "SEEN"
     },
     "UCjXIw1GlwaY1IzpW_jN9iCQ": {
-      "fingerprint": "651ffecc08096a4e",
-      "last_reviewed": "2026-09-05",
+      "fingerprint": "7b68154c0e7f5734",
+      "last_reviewed": "2026-09-07",
       "status": "SEEN"
     },
     "UCjY5iJvottq-9k_L6VAR5sA": {
@@ -1949,9 +3063,24 @@
       "last_reviewed": "2026-09-05",
       "status": "SEEN"
     },
+    "UCj_ARBxhCoF5JxUItcEUs7Q": {
+      "fingerprint": "427a941b9d30b1bb",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
+    "UCjbPaMtmEd9ax5mT2R6KLkQ": {
+      "fingerprint": "4a59c9b743546ef9",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
     "UCjkBbBdN2wa9saELKFtocOA": {
       "fingerprint": "81e2202d203e1193",
       "last_reviewed": "2026-09-05",
+      "status": "SEEN"
+    },
+    "UCjneNXAxdLTl7_L53EvO7YA": {
+      "fingerprint": "1e137b4822809778",
+      "last_reviewed": "2026-09-07",
       "status": "SEEN"
     },
     "UCk2OpuAnsKolaxG5Ilg5xBQ": {
@@ -1960,8 +3089,8 @@
       "status": "SEEN"
     },
     "UCk6ntaC4zukSWRgBJMnZGng": {
-      "fingerprint": "5136bb9fd970459f",
-      "last_reviewed": "2026-09-05",
+      "fingerprint": "f25a17e01a6fd8fd",
+      "last_reviewed": "2026-09-07",
       "status": "SEEN"
     },
     "UCkBUdbYVLJ9rkq8jzZ7l4lg": {
@@ -1989,14 +3118,70 @@
       "last_reviewed": "2026-09-05",
       "status": "SEEN"
     },
+    "UCkTXMfsPsnOCg7D9lR_PLxw": {
+      "fingerprint": "14fe67e50c758c91",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
+    "UCkY6VI49IZaYphHQpCLhXqQ": {
+      "fingerprint": "7caf3a438f3d9fa2",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
     "UCkoujZQZatbqy4KGcgjpVxQ": {
-      "fingerprint": "619ccd23de4b54de",
-      "last_reviewed": "2026-09-05",
+      "fingerprint": "ee9178821f7140d1",
+      "last_reviewed": "2026-09-07",
       "status": "SEEN"
     },
     "UCkrTVqPpPcelShkUhkpspVQ": {
       "fingerprint": "162f2480b1be2a04",
       "last_reviewed": "2026-09-05",
+      "status": "SEEN"
+    },
+    "UCkwNMUBr8XwCzLiE39a5Ikw": {
+      "fingerprint": "4818644cedaac07e",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
+    "UClQoZIFV-NKQael2sguMcmQ": {
+      "confirmed_lead": false,
+      "contact_platform": null,
+      "contact_status": null,
+      "contact_value": null,
+      "fingerprint": "9da7b3dd43a45ce9",
+      "fit_tier": "REJECTED",
+      "history": [
+        {
+          "date": "2026-09-07",
+          "fit": 38,
+          "fit_tier": "REJECTED",
+          "timing": "LOW"
+        }
+      ],
+      "lane": "CIS_EDITING_ENTERTAINMENT",
+      "last_fit": 38,
+      "last_reviewed": "2026-09-07",
+      "last_timing": "LOW",
+      "name": "\u041d\u041e\u0412\u042b\u0419 \u0413\u0415\u0420\u041e\u0419",
+      "pain_confirmed": false,
+      "rejection_reasons": [
+        "NO_CLEAR_PAIN"
+      ],
+      "status": "REJECTED"
+    },
+    "UClfS3nRJotZouNKiTf7BlHg": {
+      "fingerprint": "7985bec69a5e047b",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
+    "UClqPxZUMwhb6AsflnEZdSrQ": {
+      "fingerprint": "c0461cc2e5536794",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
+    "UClrfkSBAxz1ZG2zWXzo9SJg": {
+      "fingerprint": "e97dbff3e4efe436",
+      "last_reviewed": "2026-09-07",
       "status": "SEEN"
     },
     "UCm2DweYV3pIQD84hyxZnMwg": {
@@ -2074,6 +3259,11 @@
       "rejection_reasons": [],
       "status": "WATCH"
     },
+    "UCmOJ9gnQuW2tUb_pCezq29g": {
+      "fingerprint": "ab43ef8cfee9c5d9",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
     "UCmRNXk6hpY7T8ct9gNIyMhQ": {
       "confirmed_lead": false,
       "contact_status": "CONTACT_NEEDED",
@@ -2127,11 +3317,38 @@
       "next_review_after": "2026-11-19",
       "status": "REJECTED"
     },
+    "UCmvxowUSpLTANa7tdqGrxwA": {
+      "confirmed_lead": false,
+      "contact_platform": null,
+      "contact_status": null,
+      "contact_value": null,
+      "fingerprint": "7e4521883d609646",
+      "fit_tier": "WATCH",
+      "history": [
+        {
+          "date": "2026-09-07",
+          "fit": 45,
+          "fit_tier": "WATCH",
+          "timing": "LOW"
+        }
+      ],
+      "lane": "GLOBAL_PACKAGING_ENTERTAINMENT",
+      "last_fit": 45,
+      "last_reviewed": "2026-09-07",
+      "last_timing": "LOW",
+      "name": "Diegesis",
+      "next_review_after": "2026-10-02",
+      "pain_confirmed": false,
+      "rejection_reasons": [],
+      "status": "WATCH"
+    },
     "UCn4Sml6YOxXxRC94qPXw5Zw": {
       "confirmed_lead": false,
-      "contact_status": "CONTACT_NEEDED",
-      "fingerprint": "872d3b64dceeb929",
-      "fit_tier": "GOOD_FIT",
+      "contact_platform": null,
+      "contact_status": null,
+      "contact_value": null,
+      "fingerprint": "36b51c5d50f3d4a1",
+      "fit_tier": "WATCH",
       "history": [
         {
           "date": "2026-09-05",
@@ -2144,17 +3361,78 @@
           "fit": 78,
           "fit_tier": "GOOD_FIT",
           "timing": "LOW"
+        },
+        {
+          "date": "2026-09-07",
+          "fit": 55,
+          "fit_tier": "WATCH",
+          "timing": "LOW"
         }
       ],
       "lane": "GLOBAL_PACKAGING_AUTOMOTIVE",
-      "last_fit": 78,
-      "last_reviewed": "2026-09-05",
+      "last_fit": 55,
+      "last_reviewed": "2026-09-07",
       "last_timing": "LOW",
       "name": "CJ Race Cars",
-      "next_review_after": "2026-09-19",
-      "pain_confirmed": true,
+      "next_review_after": "2026-10-02",
+      "pain_confirmed": false,
       "rejection_reasons": [],
-      "status": "GOOD_FIT"
+      "status": "WATCH"
+    },
+    "UCn4dfcINwD3_z41IDFPsFcA": {
+      "confirmed_lead": false,
+      "contact_platform": null,
+      "contact_status": null,
+      "contact_value": null,
+      "fingerprint": "80a77f4d5c001492",
+      "fit_tier": "WATCH",
+      "history": [
+        {
+          "date": "2026-09-07",
+          "fit": 60,
+          "fit_tier": "WATCH",
+          "timing": "LOW"
+        }
+      ],
+      "lane": "GLOBAL_PACKAGING_FINANCE",
+      "last_fit": 60,
+      "last_reviewed": "2026-09-07",
+      "last_timing": "LOW",
+      "name": "Chris Koerner on The Koerner Office Podcast",
+      "next_review_after": "2026-10-02",
+      "pain_confirmed": false,
+      "rejection_reasons": [],
+      "status": "WATCH"
+    },
+    "UCn8V4itSjrJBax-xLNJxeOQ": {
+      "confirmed_lead": false,
+      "contact_platform": null,
+      "contact_status": null,
+      "contact_value": null,
+      "fingerprint": "92e004c5c0957ce1",
+      "fit_tier": "WATCH",
+      "history": [
+        {
+          "date": "2026-09-07",
+          "fit": 62,
+          "fit_tier": "WATCH",
+          "timing": "LOW"
+        }
+      ],
+      "lane": "GLOBAL_PACKAGING_FINANCE",
+      "last_fit": 62,
+      "last_reviewed": "2026-09-07",
+      "last_timing": "LOW",
+      "name": "THE ECOM KING",
+      "next_review_after": "2026-10-02",
+      "pain_confirmed": false,
+      "rejection_reasons": [],
+      "status": "WATCH"
+    },
+    "UCnF52qNNgx3lvqSSGgnKeqg": {
+      "fingerprint": "600ea8ee28822e17",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
     },
     "UCnKzMVoSOBqgUlhoTaNtOxQ": {
       "fingerprint": "55f826eb89932623",
@@ -2164,6 +3442,11 @@
     "UCnUJX2S0MIlDPcxkZ17GxvA": {
       "fingerprint": "5965a6d2c2093de6",
       "last_reviewed": "2026-09-05",
+      "status": "SEEN"
+    },
+    "UCnUaZImjyqmjTxEOQyiY3pg": {
+      "fingerprint": "9c03061dc9905291",
+      "last_reviewed": "2026-09-07",
       "status": "SEEN"
     },
     "UCnVPiOF7iK5GAXl3G6aKwww": {
@@ -2210,6 +3493,11 @@
       "last_reviewed": "2026-09-05",
       "status": "SEEN"
     },
+    "UCoNpwWrDVNkUF_O7DQNZwcg": {
+      "fingerprint": "0551380627a359cd",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
     "UCoPA478mf3B4NSXQrq5EFOg": {
       "fingerprint": "07b71d53bc3d3b63",
       "fit_tier": "WATCH",
@@ -2234,6 +3522,16 @@
       "last_reviewed": "2026-09-05",
       "status": "SEEN"
     },
+    "UCowjUPovWLr3VhOSP36imsA": {
+      "fingerprint": "c87846b828820012",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
+    "UCpDzpaUTbIkdjkCZ9pmfMrA": {
+      "fingerprint": "5a8fa1bfdf4cc161",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
     "UCpOrOzBNdHhBiAlbC1WsPYw": {
       "fingerprint": "8d6b49509491f8d5",
       "last_reviewed": "2026-09-05",
@@ -2249,9 +3547,55 @@
       "last_reviewed": "2026-09-05",
       "status": "SEEN"
     },
+    "UCpqXJOEqGS-TCnazcHCo0rA": {
+      "fingerprint": "0c6f41e714026c78",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
     "UCpwFVuATxG2m4A4vSqWCvDA": {
       "fingerprint": "04d2158d5baa66cc",
       "last_reviewed": "2026-09-05",
+      "status": "SEEN"
+    },
+    "UCq7JZ8ATgQWeu6sDM1czjhg": {
+      "fingerprint": "a5eed28a017a554a",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
+    "UCq85vkzB-cMq5tTKTBRyBHg": {
+      "fingerprint": "984a2715a0973fd8",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
+    "UCqLYJkKUl5WqdlsoU_5Q9IQ": {
+      "confirmed_lead": false,
+      "contact_platform": null,
+      "contact_status": null,
+      "contact_value": null,
+      "fingerprint": "4ca829c7a47b429f",
+      "fit_tier": "REJECTED",
+      "history": [
+        {
+          "date": "2026-09-07",
+          "fit": 40,
+          "fit_tier": "REJECTED",
+          "timing": "LOW"
+        }
+      ],
+      "lane": "GLOBAL_PACKAGING_AI_TECH",
+      "last_fit": 40,
+      "last_reviewed": "2026-09-07",
+      "last_timing": "LOW",
+      "name": "Full Course",
+      "pain_confirmed": false,
+      "rejection_reasons": [
+        "NO_CLEAR_PAIN"
+      ],
+      "status": "REJECTED"
+    },
+    "UCqOfcuTuWEcsQkgQ1Hyxa6Q": {
+      "fingerprint": "f804906aa1cd0742",
+      "last_reviewed": "2026-09-07",
       "status": "SEEN"
     },
     "UCqPkccJz-TWlXcW8jX1SVUA": {
@@ -2269,6 +3613,16 @@
       "last_reviewed": "2026-09-05",
       "status": "SEEN"
     },
+    "UCr5_51qry1VWqRBslqmRabQ": {
+      "fingerprint": "6bf93f254318ff24",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
+    "UCr9I-69-1_HU7ItswNsMyuQ": {
+      "fingerprint": "c3b6d02d029afffb",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
     "UCrK65GyBnBv3wlo50WyBm6w": {
       "fingerprint": "2a92e7c9137a1928",
       "last_reviewed": "2026-09-05",
@@ -2279,19 +3633,60 @@
       "last_reviewed": "2026-09-05",
       "status": "SEEN"
     },
+    "UCrgTybrmp3gNTIYnQmA39_w": {
+      "confirmed_lead": false,
+      "contact_platform": null,
+      "contact_status": null,
+      "contact_value": null,
+      "fingerprint": "aedb91ed080ba2b4",
+      "fit_tier": "REJECTED",
+      "history": [
+        {
+          "date": "2026-09-07",
+          "fit": 42,
+          "fit_tier": "REJECTED",
+          "timing": "LOW"
+        }
+      ],
+      "lane": "GLOBAL_PACKAGING_AUTOMOTIVE",
+      "last_fit": 42,
+      "last_reviewed": "2026-09-07",
+      "last_timing": "LOW",
+      "name": "Derby City RC",
+      "pain_confirmed": false,
+      "rejection_reasons": [
+        "NO_CLEAR_PAIN"
+      ],
+      "status": "REJECTED"
+    },
+    "UCs1rQbMk40wptageJyBirUA": {
+      "fingerprint": "562d9d19bcdae6e5",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
+    "UCs2DTZsK_6t6JD-m3yTapxg": {
+      "fingerprint": "0a0ca6bf3654038e",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
     "UCsI6AfGWcnqeCQ4FA3teJkw": {
       "fingerprint": "aa65fcd93f3c8aa4",
       "last_reviewed": "2026-09-05",
       "status": "SEEN"
     },
     "UCsJjHUsdxewOuD8SWccvG8w": {
-      "fingerprint": "ce081fe05a8bdebe",
-      "last_reviewed": "2026-09-05",
+      "fingerprint": "151fe2e377b90d2b",
+      "last_reviewed": "2026-09-07",
       "status": "SEEN"
     },
     "UCsc80Vz4m9izHAAnAD0TDfA": {
       "fingerprint": "b088288b4e1ed20f",
       "last_reviewed": "2026-09-05",
+      "status": "SEEN"
+    },
+    "UCshPyRiu9XTQb2gEagNt-3A": {
+      "fingerprint": "008c5c4f11b7be60",
+      "last_reviewed": "2026-09-07",
       "status": "SEEN"
     },
     "UCsm6EOn4Qdbk6lchMolxS7A": {
@@ -2318,14 +3713,70 @@
       "last_reviewed": "2026-09-05",
       "status": "SEEN"
     },
+    "UCsrtozXVjSKFjcIDCNsFBIw": {
+      "fingerprint": "7c9fe0b5b08ecde2",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
+    "UCsvqVGtbbyHaMoevxPAq9Fg": {
+      "fingerprint": "89a6824608a89637",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
+    "UCt5eD9I83-UE4lzSJsfcQIA": {
+      "confirmed_lead": false,
+      "contact_platform": null,
+      "contact_status": null,
+      "contact_value": null,
+      "fingerprint": "c031d58054733086",
+      "fit_tier": "REJECTED",
+      "history": [
+        {
+          "date": "2026-09-07",
+          "fit": 35,
+          "fit_tier": "REJECTED",
+          "timing": "LOW"
+        }
+      ],
+      "lane": "GLOBAL_PACKAGING_EDUCATION",
+      "last_fit": 35,
+      "last_reviewed": "2026-09-07",
+      "last_timing": "LOW",
+      "name": "Lock In With Mac",
+      "pain_confirmed": false,
+      "rejection_reasons": [
+        "NO_CLEAR_PAIN"
+      ],
+      "status": "REJECTED"
+    },
+    "UCtA1wffy5eghibVMMdqBOaA": {
+      "fingerprint": "fbae250ab559a048",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
     "UCtI9TnVME5uoFq8J3aaMQbA": {
       "fingerprint": "6d5b5028122233d9",
       "last_reviewed": "2026-09-05",
       "status": "SEEN"
     },
+    "UCtsCAuG4sK9had2F-nnUfyA": {
+      "fingerprint": "6303ba5f17981842",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
     "UCtuJzZ86MTla-foLdr1MGgQ": {
       "fingerprint": "767ce25d65445d7a",
       "last_reviewed": "2026-09-05",
+      "status": "SEEN"
+    },
+    "UCu21l1IZKKFdj-emeyJ6yKw": {
+      "fingerprint": "7ae79e5a654a3ddf",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
+    "UCu5rqhU9yepwgkMiHR79hQQ": {
+      "fingerprint": "6970480ff1d744af",
+      "last_reviewed": "2026-09-07",
       "status": "SEEN"
     },
     "UCuEBUmKX5yY2m29_YS6u3Lw": {
@@ -2343,24 +3794,79 @@
       "last_reviewed": "2026-09-05",
       "status": "SEEN"
     },
+    "UCuUdclaP1rGIg3JGW3USI1A": {
+      "fingerprint": "e9314d3461449bf0",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
     "UCv6cJDchz6AyLDK3Fl5FHZw": {
       "fingerprint": "8d83a68082cca41d",
       "last_reviewed": "2026-09-05",
       "status": "SEEN"
+    },
+    "UCvEq9e3q3yb-qXge2ALgzCA": {
+      "confirmed_lead": false,
+      "contact_platform": null,
+      "contact_status": null,
+      "contact_value": null,
+      "fingerprint": "ee88846415a1128c",
+      "fit_tier": "WATCH",
+      "history": [
+        {
+          "date": "2026-09-07",
+          "fit": 50,
+          "fit_tier": "WATCH",
+          "timing": "LOW"
+        }
+      ],
+      "lane": "GLOBAL_PACKAGING_AUTOMOTIVE",
+      "last_fit": 50,
+      "last_reviewed": "2026-09-07",
+      "last_timing": "LOW",
+      "name": "Jack Builds It",
+      "next_review_after": "2026-10-02",
+      "pain_confirmed": false,
+      "rejection_reasons": [],
+      "status": "WATCH"
     },
     "UCvGIwxoZToGrDzz0fkPBihA": {
       "fingerprint": "a7e53948d25bf8cc",
       "last_reviewed": "2026-09-05",
       "status": "SEEN"
     },
+    "UCvI2jwUkpiSjAZpcBRrfHhA": {
+      "fingerprint": "e0c076459de4494f",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
     "UCvOKCA1sZ10NTd2BPGQKmfg": {
-      "fingerprint": "3aa9c7f196e1bc26",
-      "last_reviewed": "2026-09-05",
+      "fingerprint": "e3b56b3c3210344c",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
+    "UCvOvySaeIsjLT17k93d-VqA": {
+      "fingerprint": "373cbc8061ac368f",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
+    "UCvQXaJTjA3jRucTKN4CGiwg": {
+      "fingerprint": "3be1ae7bf94b4f62",
+      "last_reviewed": "2026-09-07",
       "status": "SEEN"
     },
     "UCvfIQ4bB0bCj7GVoL2L9IaA": {
       "fingerprint": "8f8eec2da88a24b7",
       "last_reviewed": "2026-09-05",
+      "status": "SEEN"
+    },
+    "UCvh1c_oA2fpyYTL-KT9CpDw": {
+      "fingerprint": "d49eb52d1ba53fd5",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
+    "UCvnIW2XbzSlBd3XH3ZbxodQ": {
+      "fingerprint": "13cb37f0cc0c9c86",
+      "last_reviewed": "2026-09-07",
       "status": "SEEN"
     },
     "UCvv4fwj_uxsUZMx-Dq5W71A": {
@@ -2406,14 +3912,24 @@
       "next_review_after": "2026-09-30",
       "status": "WATCH"
     },
+    "UCw9Y9C3oTSS02z1g7VEfo6g": {
+      "fingerprint": "7c4f66d353e4792b",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
+    "UCwLyA-3rg1qxWcFYDlyxAbA": {
+      "fingerprint": "0a0eae2dec2b991d",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
     "UCwSvdxAPRQcO5962ZMo4RYw": {
       "fingerprint": "66833ea65623eedc",
       "last_reviewed": "2026-09-05",
       "status": "SEEN"
     },
     "UCwV1tQmFyrFfl29BU5cJK4A": {
-      "fingerprint": "7da1fc84324e41da",
-      "last_reviewed": "2026-09-05",
+      "fingerprint": "59855cdb4dbb14ec",
+      "last_reviewed": "2026-09-07",
       "status": "SEEN"
     },
     "UCwVEhEzsjLym_u1he4XWFkg": {
@@ -2426,14 +3942,24 @@
       "last_reviewed": "2026-09-05",
       "status": "SEEN"
     },
+    "UCwmrix5TJ0wR5PYVOS6GSpA": {
+      "fingerprint": "e62f93f6f251c0f3",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
+    "UCwolMeOumtYQYthucDK3wTg": {
+      "fingerprint": "e68c224162e5cf63",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
     "UCwthPiepHVdSBkl7emGbs4Q": {
       "fingerprint": "de660f56a36cd063",
       "last_reviewed": "2026-09-05",
       "status": "SEEN"
     },
     "UCx-KWLTKlB83hDI6UKECtJQ": {
-      "fingerprint": "cc2f4a353313ae66",
-      "last_reviewed": "2026-09-05",
+      "fingerprint": "ec5714ead3db6ea6",
+      "last_reviewed": "2026-09-07",
       "status": "SEEN"
     },
     "UCxG1llmgOZ8GTioOhm-QjsA": {
@@ -2472,7 +3998,7 @@
     },
     "UCxa4NqcWwf41vzOvpBdV1Ng": {
       "fingerprint": "fb857468da40faf2",
-      "last_reviewed": "2026-09-05",
+      "last_reviewed": "2026-09-07",
       "status": "SEEN"
     },
     "UCxi13wzhDETxKkGkwNQ1-7Q": {
@@ -2531,14 +4057,19 @@
       "last_reviewed": "2026-09-05",
       "status": "SEEN"
     },
+    "UCyAembotwiiDV93LzA92RLw": {
+      "fingerprint": "8c30489060082b73",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
     "UCyGi3eCuxko37WB6uUr7LjA": {
-      "fingerprint": "318119758417ed28",
-      "last_reviewed": "2026-09-05",
+      "fingerprint": "c95b123f33bd2135",
+      "last_reviewed": "2026-09-07",
       "status": "SEEN"
     },
     "UCyjGdVmEhYLXgyPf9jNHPrw": {
-      "fingerprint": "6f917248372b4e79",
-      "last_reviewed": "2026-09-05",
+      "fingerprint": "8a81b2ab4e78c91b",
+      "last_reviewed": "2026-09-07",
       "status": "SEEN"
     },
     "UCyqgXN-ZUghY2GO1-VTwwmA": {
@@ -2570,6 +4101,11 @@
       "next_review_after": "2026-11-19",
       "status": "REJECTED"
     },
+    "UCzAmB87HvOL7yz5LxIO94jg": {
+      "fingerprint": "1b872fa17e5fc495",
+      "last_reviewed": "2026-09-07",
+      "status": "SEEN"
+    },
     "UCzIWiqlJ3CakJ7QpNaPHJNw": {
       "fingerprint": "833dab9084060ddb",
       "last_reviewed": "2026-09-05",
@@ -2587,7 +4123,7 @@
     },
     "UCzQUP1qoWDoEbmsQxvdjxgQ": {
       "fingerprint": "26286a7d69be1ca6",
-      "last_reviewed": "2026-09-05",
+      "last_reviewed": "2026-09-07",
       "status": "SEEN"
     },
     "UCzaRorDlS1gd6EROE-xGm-Q": {
@@ -2606,8 +4142,8 @@
       "status": "SEEN"
     },
     "UCzwCEE_PchiBULMnAJqhGVg": {
-      "fingerprint": "00077897f63805cc",
-      "last_reviewed": "2026-09-05",
+      "fingerprint": "5f98268103e76eca",
+      "last_reviewed": "2026-09-07",
       "status": "SEEN"
     },
     "UCzz6SFVhFdVe_pbrIrvru0A": {
@@ -2635,45 +4171,40 @@
     }
   },
   "lane_query_index": {
-    "CIS_EDITING_BUSINESS": 1,
-    "CIS_EDITING_EDUCATION": 1,
-    "CIS_EDITING_ENTERTAINMENT": 1,
-    "CIS_EDITING_GAMING": 1,
-    "CIS_EDITING_TECH": 1,
-    "GLOBAL_PACKAGING_AI_TECH": 2,
-    "GLOBAL_PACKAGING_AUTOMOTIVE": 2,
-    "GLOBAL_PACKAGING_BUSINESS": 3,
-    "GLOBAL_PACKAGING_EDUCATION": 1,
-    "GLOBAL_PACKAGING_ENTERTAINMENT": 1,
-    "GLOBAL_PACKAGING_FINANCE": 2,
-    "GLOBAL_PACKAGING_FITNESS": 2,
-    "GLOBAL_PACKAGING_GAMING": 2
+    "CIS_EDITING_BUSINESS": 2,
+    "CIS_EDITING_EDUCATION": 2,
+    "CIS_EDITING_ENTERTAINMENT": 2,
+    "CIS_EDITING_GAMING": 2,
+    "CIS_EDITING_TECH": 2,
+    "GLOBAL_PACKAGING_AI_TECH": 3,
+    "GLOBAL_PACKAGING_AUTOMOTIVE": 4,
+    "GLOBAL_PACKAGING_BUSINESS": 4,
+    "GLOBAL_PACKAGING_EDUCATION": 2,
+    "GLOBAL_PACKAGING_ENTERTAINMENT": 3,
+    "GLOBAL_PACKAGING_FINANCE": 3,
+    "GLOBAL_PACKAGING_FITNESS": 3,
+    "GLOBAL_PACKAGING_GAMING": 4
   },
   "last_output": [
     {
-      "channel_id": "UCWkIV8xqWoDEZ15xSBxTr3Q",
-      "name": "STYKO",
+      "channel_id": "UC6ITJIW6jgrrP5irR7WoHrw",
+      "name": "Sean Dollwet",
       "num": 1
     },
     {
-      "channel_id": "UCC0-NtJNSdfYZ9pImGsVWuw",
-      "name": "louiecs2",
+      "channel_id": "UC4LD8VDi7k8oG6MxYb8cLPA",
+      "name": "Bonge Gumede",
       "num": 2
     },
     {
-      "channel_id": "UCHtcNb0dDFEE1CCjufx0_HQ",
-      "name": "Counter Strike Proland",
+      "channel_id": "UC-j9xKUf03QpI-HljSlqK3A",
+      "name": "\u041f\u0430\u0448\u0430 \u0412\u041a\u043e\u043d\u0442\u0435\u043a\u0441\u0442\u0435",
       "num": 3
     },
     {
-      "channel_id": "UCERwo6x4GbVHS4-ROXRrvNw",
-      "name": "zephraN",
+      "channel_id": "UChkC4u4KdnIDFh9hPqExLDg",
+      "name": "Low Level Game Dev",
       "num": 4
-    },
-    {
-      "channel_id": "UCmL5KW_gOuCBvj376xNCs1A",
-      "name": "riaricsgo",
-      "num": 5
     }
   ],
   "query_stats": {
@@ -2683,57 +4214,58 @@
       "won": 1
     },
     "CIS_EDITING_BUSINESS": {
-      "runs": 1
+      "runs": 2,
+      "shown": 1
     },
     "CIS_EDITING_EDUCATION": {
-      "runs": 1
+      "runs": 2
     },
     "CIS_EDITING_ENTERTAINMENT": {
-      "runs": 1,
-      "shown": 1
+      "runs": 2,
+      "shown": 3
     },
     "CIS_EDITING_GAMING": {
-      "runs": 1,
-      "shown": 1
+      "runs": 2,
+      "shown": 2
     },
     "CIS_EDITING_TECH": {
-      "runs": 1,
-      "shown": 5
+      "runs": 2,
+      "shown": 6
     },
     "GLOBAL_PACKAGING_AI_TECH": {
-      "runs": 2,
-      "shown": 9
+      "runs": 3,
+      "shown": 11
     },
     "GLOBAL_PACKAGING_AUTOMOTIVE": {
-      "runs": 1,
-      "shown": 3
-    },
-    "GLOBAL_PACKAGING_BUSINESS": {
-      "runs": 2,
-      "shown": 4
-    },
-    "GLOBAL_PACKAGING_EDUCATION": {
-      "runs": 1,
-      "shown": 3
-    },
-    "GLOBAL_PACKAGING_ENTERTAINMENT": {
-      "runs": 1,
-      "shown": 1
-    },
-    "GLOBAL_PACKAGING_FINANCE": {
       "runs": 2,
       "shown": 7
     },
+    "GLOBAL_PACKAGING_BUSINESS": {
+      "runs": 3,
+      "shown": 4
+    },
+    "GLOBAL_PACKAGING_EDUCATION": {
+      "runs": 2,
+      "shown": 5
+    },
+    "GLOBAL_PACKAGING_ENTERTAINMENT": {
+      "runs": 2,
+      "shown": 3
+    },
+    "GLOBAL_PACKAGING_FINANCE": {
+      "runs": 3,
+      "shown": 12
+    },
     "GLOBAL_PACKAGING_FITNESS": {
-      "runs": 1,
-      "shown": 1
+      "runs": 2,
+      "shown": 4
     },
     "GLOBAL_PACKAGING_GAMING": {
-      "runs": 1,
-      "shown": 5
+      "runs": 2,
+      "shown": 7
     }
   },
-  "rotation_index": 4,
+  "rotation_index": 7,
   "runs": [
     {
       "claude_packs": 15,
@@ -2748,6 +4280,14 @@
       "filtered_survivors": 106,
       "pruned_accounts": 0,
       "raw_channels": 321,
+      "raw_videos": 400
+    },
+    {
+      "claude_packs": 25,
+      "date": "2026-09-07",
+      "filtered_survivors": 114,
+      "pruned_accounts": 0,
+      "raw_channels": 344,
       "raw_videos": 400
     }
   ],
